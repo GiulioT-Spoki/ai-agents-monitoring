@@ -1,0 +1,70 @@
+# Casp — Esami e preparazione
+
+## Disponibilità — gerarchia
+1) Se questo file dice non eseguibile a domicilio → non disponibile.
+2) Se dice organizzazione speciale → disponibile con org. speciale.
+3) Altrimenti se in nomenclatore/file esami → ordinariamente disponibile.
+4) Assente o classificazione non chiara → transfer Casp.
+Disponibilità non si deduce solo dal fatto che serve sangue/urine/campione. Nomenclatore = fonte ordinaria.
+
+## Organizzazione speciale (prenotazione normale, poi informare staff dopo create)
+Quantiferon (test stimolazione linfocitaria antigeni specifici); ammonio; omocisteina; urine 24h (qualsiasi esame); tamponi (qualsiasi tipo, tipologia chiara); emocolture.
+No autorizzazione preventiva: flusso normale → registra prestazione/nota → create → informare personale Casp. Org. può riguardare raccolta, materiali, tempi, conservazione, trasporto temp. controllata, centrifugazione, lab, ecc. Non comunicare all’Assistito dettagli tecnici non in KB.
+
+## Non eseguibili a domicilio
+Curve glicemiche; curve da carico; altri test dinamici con somministrazioni e prelievi seriati; breath test. Non prenotare sul servizio domiciliare ordinario. Alternative solo se espressamente in KB.
+
+## Denominazione e sinonimi
+Illeggibile / abbreviazione non riconosciuta / ambigua / non in KB → non interpretare né sostituire; transfer. Sinonimo OK solo se corrispondenza in nomenclatore/KB. Manoscritto: anche regole prescrizioni.
+
+## Età e condizioni paziente
+≥10 anni: flusso normale.
+>28 giorni e <10 anni: valutazione preventiva Casp prima del create; non decidere idoneità da età/peso/precedenti/dichiarazioni.
+Neonati ≤28 giorni: prelievo domiciliare non disponibile nel servizio normale; no create autonomo; eccezioni → transfer.
+Accesso venoso difficile: non esclusione; prenotare; nota operativa; non garantire successo.
+Allettati/disabilità/difficoltà motorie: non esclusione; flusso normale salvo altre regole.
+PICC, Midline, Port-a-Cath, CVC e altri dispositivi venosi già presenti chiaramente identificabili: disponibili; nota operativa; no valutazione preventiva obbligatoria. Dispositivo non chiaro o procedura diversa dal prelievo via dispositivo → transfer.
+
+## Urgente / aggiuntivi / non lab
+Casp non è emergenza. Emergenza sanitaria → 112 e interrompere (System Prompt). “Urgente/oggi/subito” amministrativo senza emergenza non apre slot su Calendar; fuori disponibilità → transfer.
+Esami verbali aggiuntivi non sulla ricetta: richiesta distinta; verifica disponibilità; flusso senza ricetta (staff predispone prima di inserirli). Non modificare ricetta esistente.
+Medicazioni, iniezioni, infusioni, ECG, parametri, assistenza infermieristica, altre prestazioni: non automatiche nel prelievo; solo se in KB; altrimenti transfer.
+Comunicare solo: disponibilità, preparazione, modalità amm./org. Non: motivo clinico, patologie, necessità, sostituzioni, interpretazione risultati.
+
+## Preparazione — generale
+Istruzioni specifiche per esame prevalgono sulle generali. Non inventare preparazioni/farmaci non in KB. Disponibilità ≠ digiuno automatico.
+
+## Digiuno e stile di vita
+Prelievi ematici che richiedono digiuno: ≥8 ore; preferibile ~12. Niente alimenti/bevande caloriche. Digiuno non automatico per ogni esame.
+Acqua naturale consentita (salvo indicazione diversa); quantità abituale, no eccessi subito prima; non sostituire con altre bevande.
+Durante digiuno vietati: caffè, tè, latte, succhi, zuccherate, energetiche, alcol. Preferibile no gomme subito prima.
+Giorno prima: alimentazione abituale senza eccessi. Alcol: evitare nelle 24h precedenti; vietato in digiuno.
+Fumo/nicotina: dalla mattina del prelievo fino all’esecuzione, raccomandato astenersi.
+Attività fisica intensa: evitare nelle 24h precedenti. Riposo ~15 min prima se possibile. Allettato non impedisce il servizio.
+
+## Farmaci
+Non sospendere/modificare/anticipare/posticipare terapie autonomamente. Seguire indicazioni del medico. Dubbi senza procedura KB → medico.
+Croniche: no sospensione autonoma. Anticoagulanti/antiaggreganti: no sospensione autonoma per prelievo venoso normale.
+Insulina/antidiabetici in digiuno: non dare dosi/orari personalizzati; seguire medico; se senza indicazioni → medico prima del prelievo.
+Gravidanza: non cambia automaticamente le regole generali; eventuali preparazioni specifiche prevalgono.
+
+## Urine — esame chimico/fisico/microscopico
+Raccogliere preferibilmente al mattino prima dell’infermiere. Igiene genitali esterni. Scartare primo getto; raccogliere getto intermedio nel contenitore senza toccare interno; finire nel WC; richiudere.
+Contenitore: solo urine con tappo trasferimento sottovuoto tipo Vacutainer (farmacia). No barattoli comuni. Non manomettere dispositivo sul tappo.
+Conservazione: chiuso a temperatura ambiente, riparo calore/luce; raccolta poco prima del ritiro.
+
+## Urinocoltura
+Come sopra per getto intermedio, al mattino. Lavare mani e genitali con acqua e sapone; no disinfettanti. Contenitore sterile Vacutainer. Preferibile prima di antibiotico; se terapia in corso non sospendere autonomamente; informare infermiere.
+Conservazione: chiuso a T ambiente; se ritardo >~2h dalla raccolta → frigo 2–8 °C.
+
+## Urine 24 ore
+Mattina giorno prima (preferibilmente prima delle 07:00): prima urina nel WC senza raccogliere; annotare orario (= inizio). Poi tutte le urine giorno+notte. Mattina dopo stessa ora: ultima minzione inclusa. Non perdere minzioni; se ne manca una → segnalare Casp.
+Contenitore graduato 24h (farmacia), capacità adeguata. Etichetta: nome/cognome, peso, altezza, orario inizio, orario fine.
+Conservazione: chiuso in luogo fresco, preferibilmente frigo, fino al ritiro. Istruzioni specifiche esame prevalgono.
+
+## Feci
+Campione appena emesso, evacuazione spontanea. Evitare contaminazione urina/acqua WC/carta. Paletta: piccola quantità da più punti. No lassativi salvo indicazione sanitaria.
+Contenitore sterile feci con tappo a vite e paletta (farmacia). Conservazione: poco prima dell’infermiere; chiuso, riparo calore; se esame specifico diversa regola → seguire quella.
+
+## Campione non corretto
+Contenitore sbagliato, conservazione errata, tempi superati, contaminato, incompleto: non garantire idoneità; valutazione prima dell’uso.

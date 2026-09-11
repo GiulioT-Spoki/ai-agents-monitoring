@@ -1,0 +1,1647 @@
+codice,mnemonico,descrizione,prezzo_eur,service,note,regime
+Prel2,2,Prelievo Microbiologico,4.00,,,privato
+Prel1,1,Prelievo Venoso,4.00,,,privato
+17ohprog,17ohprog,17-OH PROGESTERONE,14.00,,,privato
+Hpyliga,Hpyliga,A. A. Helicobacter pylori IgA,10.00,,,privato
+Hpyligg,Hpyligg,A. A. Helicobacter pylori IgG,10.00,,,privato
+Mycigg,Mycigg,A. A. Mycoplasma pneumoniae IgG,15.00,,,privato
+Mycigm,Mycigm,A. A. Mycoplasma pneumoniae IgM,15.00,,,privato
+Spikecov2,Spikecov2,A. A. Spike (Sars-CoV-2),25.00,,,privato
+Chligg,Chligg,A.A. Chlamydia Pneumoniae IgG,15.00,,,privato
+Chligm,Chligm,A.A. Chlamydia Pneumoniae IgM,15.00,,,privato
+HepSG,HepSG,A.A. Herpes Simplex 1+2 IgG,10.00,,,privato
+HepSM,HepSM,A.A. Herpes Simplex 1+2 IgM,10.00,,,privato
+Covidrap,Covidrap,A.A. SARS-CoV-2 IgG/IgM(Rapido),10.00,,,privato
+Varig,Varig,A.A. Varicella (Herpes Zoster) IgG,10.00,,,privato
+Varim,Varim,A.A. Varicella (Herpes Zoster) IgM,10.00,,,privato
+1022,FOL,ACIDO FOLICO,19.00,,,privato
+0310.,Ac ial,Acido Ialuronico (Farmaco Ecografie),70.00,,,privato
+Valpint,Valpint,Acido Valproico,15.00,,,privato
+Acth,Act,Acth,20.00,,,privato
+Albur,Albur,ALBUMINA URINARIA NELLE 24 ORE,5.00,,,privato
+130,ALBU,ALBUMINEMIA,3.00,,,privato
+451,AFP,ALPHA - FETO PROTEINA,16.00,,,privato
+36,AMIL,AMILASI,3.10,,,privato
+12124,AMYP,AMILASI PANCREATICA,5.00,,,privato
+37,AMLU,AMILASURIA,3.10,,,privato
+12514,ANA,ANA ( Anticorpi anti nucleo ),15.00,,,privato
+12516,ENAS,ANTI ENA ( Screening ),25.00,,,privato
+10377,MICR,ANTI MICROSOMI,29.00,,,privato
+12085,GLIAA,ANTI PEPTIDI DEAMIDATI DELLA GLIADINA IgA,22.00,,,privato
+12513,GLIAG,ANTI PEPTIDI DEAMIDATI DELLA GLIADINA IgG,22.00,,,privato
+262,ABGMIC,ANTIBIOGRAMMA M.I.C.,12.40,,,privato
+1002,ATG,ANTIC. ANTI-TIREOGLOBULINA,19.00,,,privato
+Ccp,Ccp,ANTI-CCP (A. A. Citrullina ),20.00,,,privato
+1003,ATPO,ANTICORPI ANTITIREOPEROSSIDASI,29.00,,,privato
+159,AT,ANTITROMBINA III,7.00,,,privato
+1,AZOT,AZOTEMIA,2.50,,,privato
+10286,AZOU,AZOTO URINARIO,2.50,,,privato
+4010,B2M,BETA-2-MICROGLOBULINEMIA,11.00,,,privato
+453,BHCG,BETA-HCG PLASMATICO,20.00,,,privato
+Dir,Dir,BILIRUBINA DIRETTA,4.50,,,privato
+7,BIT,BILIRUBINA TOTALE,2.50,,,privato
+9,BIF,BILIRUBINA TOTALE E FRAZIONATA,4.50,,,privato
+76,C4,C4,7.00,,,privato
+463,CA125,CA 125,22.00,,,privato
+464,CA153,CA 15.3,22.00,,,privato
+462,CA199,CA 19.9,21.00,,,privato
+115,CA,CALCIO,2.50,,,privato
+CAUR,CAUR,CALCIO URINARIO,2.50,,,privato
+122,CAU,CALCIO URINARIO (Urine 24 Ore),2.50,,,privato
+12492,CALCI,CALCITONINA,25.00,,,privato
+Calp,Calp,CALPROTECTINA Fecale,30.00,,,privato
+CFL,CFL,CAPACITA` FERROLEGANTE TOTALE,5.00,,,privato
+Carbint,Carbint,Carbamazepina,15.00,,,privato
+456,CEA,CEA,19.00,,,privato
+151,CMVG,CITOMEGALOVIRUS IgG,9.00,,,privato
+152,CMVM,CITOMEGALOVIRUS IgM,9.00,,,privato
+Ck-mb,Ck-mb,CK MB,7.00,,,privato
+5,CLEC,CLEARANCE CREATININA,5.00,,,privato
+12037,CLRU,CLEARANCE UREA,7.00,,,privato
+114,CL,CLORO,2.50,,,privato
+121,CLU,CLORO URINARIO (SU URINE 24H),2.50,,,privato
+CLOS,CLOS,CLOSTRIDIUM DIFFICILE,15.00,,,privato
+48,HDL,COLESTEROLO HDL,2.50,,,privato
+500,LDL,COLESTEROLO LDL,2.50,,,privato
+Col ldl,Col ldl,Colesterolo Ldl Diretto,3.00,,,privato
+45,COL,COLESTEROLO TOTALE,2.50,,,privato
+40,PCHE,COLINESTERASI (PSEUDO-CHE),2.50,,,privato
+26,EOS,CONTA EOSINOFILI,2.67,,,privato
+19,PLT,CONTA PIASTRINE,5.00,,,privato
+21,RET,CONTA RETICOLOCITI,8.00,,,privato
+Coproc,Coproc,COPROCOLTURA,20.00,,,privato
+1016,CORT,CORTISOLO,16.00,,,privato
+12495,cortcl,CORTISOLO in clinostatismo,16.00,,,privato
+12496,cortort,CORTISOLO in ortostatismo,16.00,,,privato
+Tamping,Tamping,Covid-19 Rapid Antigen Test (Nasopharyngeal Swab),15.00,,,privato
+39,CPK,CPK O CK ( CREATINCHINASI ),2.50,,,privato
+2560,Creunotte,Creatinina ( Urine Notte ),2.50,,,privato
+4,CREA,CREATININEMIA,2.50,,,privato
+129,CREU,CREATININURIA,2.50,,,privato
+10288,CURVOSIO,CURVOSIO,8.00,,,privato
+Dimero,Dimero,D-Dimero,15.00,,,privato
+Dimeroeia,Dimeroeia,D-Dimero ( EIA ),15.00,,,privato
+Delta,Delta,DELTA 4 ANDROSTENEDIONE,18.00,,,privato
+469,DHAS,DHEA - S,18.00,,,privato
+10201,DRUG,DRUG TEST 8 Droghe,40.00,,,privato
+Egrfca,Egrfca,eGFR (Velocita` Di Filtrazione Glomerulare),20.00,,,privato
+11,TP,ELETTROFORESI SIEROPROTEICA,8.00,,,privato
+18,HT,EMATOCRITO,0.78,,,privato
+Eletthb,Eletthb,Emoglobina Elettroforesi,15.00,,,privato
+12106,HBGL2,EMOGLOBINA GLICATA (HbA1c),11.00,,,privato
+70,GRUP,EMOGRUPPO E FATTORE RH,8.00,,,privato
+Hbvref,Hbvref,EPATITE B [HBV] REFLEX,40.00,,,privato
+Vcag,Vcaigg,Epstein Barr VCA IgG,20.00,,,privato
+Vcaigm,Vcaigm,Epstein Barr VCA IgM,20.00,,,privato
+2000,URIN,ESAME DELLE URINE,5.00,,,privato
+15,EMO,Esame Emocromocitometrico,10.00,,,privato
+10525,MICO,Esame Micologico,20.00,,,privato
+Paras,Paras,Esame Parassitologico Delle Feci,15.00,,,privato
+461,E2,ESTRADIOLO (E2),14.00,,,privato
+Etg,Etg,Etilglucuronide ( Urine),15.00,,,privato
+305,FER,FERRITINA,15.00,,,privato
+83,FIB,FIBRINOGENO,4.00,,,privato
+32,FALC,FOSFATASI ALCALINA,2.50,,,privato
+Fosfato,Fosfato,Fosfato Inorganico,2.50,,,privato
+Fosfatou,Fosfatou,Fosfato Inorganico Urinario (SU URINE 24H),2.50,,,privato
+116,PHOS,FOSFORO,2.50,,,privato
+123,PHOU,FOSFORO URINARIO (SU URINE 24H),2.50,,,privato
+Fosfpri,Fosafpri,FOSFORO URINARIO (URINE DEL MATTINO),2.50,,NON USARE,privato
+1110,1110,FOX Test (Pannello 286 Intolleranze Alimentari),180.00,,,privato
+10049,FSH,FSH,14.00,,,privato
+287,FT3,FT3 (TRIIODOTIRONINA LIBERA),15.00,,,privato
+289,FT4,FT4 (TIROXINA LIBERA),15.00,,,privato
+2,GLI,GLICEMIA,2.50,,,privato
+2P,2P,Glicemia Post Prandiale,2.50,,,privato
+1229,GLIU,GLICOSURIA,2.50,,,privato
+Hba2,Hba-2,Hb A2 Dosaggio,10.00,,,privato
+Hbfet,Hbfeta,Hb Fetale Dosaggio,10.00,,,privato
+475,HBCB,HBcAb Total,15.23,,,privato
+473,HBCM,HBcAb-IgM,15.23,,,privato
+477,HBEB,HBeAb,17.86,,,privato
+476,HBEG,HBeAg,15.87,,,privato
+474,HBSB,HBsAb,15.23,,,privato
+67,HBSAG,HBsAg,11.24,,,privato
+452,HCV,HCV,15.00,,,privato
+Hcvscr,Hcvscr,HCV Screening,0.00,,,privato
+306,HPFE,HELICOBACTER PYLORI NELLE FECI,10.00,,,privato
+455,HIV,HIV-TEST Combo,16.00,,,privato
+Homa,Homa,Homa Index ( Insulino Resistenza ),20.00,,,privato
+86,IDB,Identificazione Batterica,12.40,,,privato
+471,IGE,IGE TOTALI,12.71,,,privato
+10342,IGA,IMMUNOGLOBULINE (IgA),6.00,,,privato
+10343,IGG,IMMUNOGLOBULINE (IgG),6.00,,,privato
+10345,IGM,IMMUNOGLOBULINE (IgM),6.00,,,privato
+Kel,Kel,IMMUNOGLOBULINE KAPPA E LAMBDA SIERICHE,15.00,,,privato
+Sat,Sat,Indice Di Saturazione Della Transferrina,20.00,,,privato
+Roma,Roma,INDICE ROMA,45.00,,,privato
+38,LDH,LDH,2.50,,,privato
+10048,LH,LH,14.00,,,privato
+43,LIP,LIPASI,3.00,,,privato
+117,LIT,LITIO,10.00,,,privato
+118,MAG,MAGNESIO,2.50,,,privato
+124,MGU,MAGNESIO URINARIO (SU URINE 24H),2.52,,,privato
+202,MALB,MICROALBUMINURIA,5.00,,,privato
+68,Mono,Monotest,10.00,,,privato
+Ntprobnp,Ntprobnp,NT-ProBNP,30.00,,,privato
+41,NDBC,NUMERO DI DIBUCAINA,16.00,,,privato
+Omoc,Omoc,OMOCISTEINA,20.00,,,privato
+Amh,Amh,ORMONE ANTIMULLERIANO (AMH),36.00,,,privato
+320,Pap.t,Pap Test /90,22.00,90,,privato
+1005,PTH,PARATORMONE (PTH),25.00,,,privato
+Pepc,Pepc,PEPTIDE-C,15.00,,,privato
+113,K,POTASSIO,2.50,,,privato
+120,KU,POTASSIO URINARIO (SU URINE 24H),2.50,,,privato
+10353,PRELDOM,PRELIEVO DOMICILIARE,10.00,,,privato
+460,PRG,PROGESTERONE (S),14.00,,,privato
+457,PRL,PROLATTINA,14.00,,,privato
+161,PCR,PROTEINA C REATTIVA (quantitativa),4.50,,,privato
+10,PROT,PROTEINE TOTALI,2.50,,,privato
+214,TPU,PROTEINURIA,5.00,,,privato
+225,PTUN,PROTEINURIA NOTTURNA,5.00,,,privato
+221,BENC,PROTEINURIA DI BENCE- JONES,15.00,,,privato
+224,PTUD,PROTEINURIA DIURNA,5.00,,,privato
+80,PEM,PROVE EMOGENICHE,10.00,,,privato
+454,PSA,PSA (Antig. Prostatico Specifico),10.00,,,privato
+484,PSAF,PSA-FREE,15.00,,,privato
+82,PTT,PTT,3.00,,,privato
+Ratioalbcr,Ratioalbcr,Ratio Albuminuria/Creatinuria,15.00,,,privato
+162,RFT,REUMATEST,5.00,,,privato
+198,SGFE,RICERCA SANGUE OCCULTO NELLE FECI,5.00,,,privato
+149,RBG,RUBEO test-IgG,9.00,,,privato
+150,RBM,RUBEO test-IgM,9.00,,,privato
+194,SCOTCH,SCOTCH TEST,10.00,,,privato
+Shbg,Shb,Shbg,30.00,,,privato
+20,SID,SIDEREMIA (Ferro),2.50,,,privato
+112,NA,SODIO,2.50,,,privato
+119,NAU,SODIO URINARIO (Su Urine 24H),2.50,,,privato
+Fertility,Fertitily,Spermiogramma (SQA-Vision),50.00,,,privato
+12585,STRE,STREPTOCOCCUS PYOGENES nel tampone orofaringeo,10.00,,,privato
+171,STZ,STREPTOZYME TEST,16.00,,,privato
+12267,STRP,STRISCIO PERIFERICO,18.00,,,privato
+10290,TEM,TEMPO DI EMORRAGIA,3.00,,,privato
+131,ATP,TEMPO DI PROTROMBINA,4.00,,,privato
+Alexint,Alexint,TEST ALLERGOLOGICO ALEX,250.00,,,privato
+72,COOI,TEST DI COOMBS INDIRETTO,9.46,,,privato
+245,TIG,TEST IMMUNOLOGICO DI GRAVIDANZA,10.00,,,privato
+466,TEST,TESTOSTERONE,14.00,,,privato
+Testfree,Testfree,Testosterone Libero,30.00,,,privato
+1001,TG,TIREOGLOBULINA(TG),20.00,,,privato
+158,TAS,TITOLO ANTISTREPTOLISINICO,5.00,,,privato
+147,TOXG,TOXO test-IgG,9.00,,,privato
+148,TOXM,TOXO test-IgM,9.00,,,privato
+65,Tpha qual,Tpha ( Ricerca Qualitativa ),6.00,,,privato
+64,TPHA,TPHA (Ricerca quantitativa),6.00,,,privato
+Trabint,Trabint,TRAB - A. A. Recettore del TSH,30.00,,,privato
+31,GPT,TRANSAMINASI (ALT/GPT),2.50,,,privato
+30,GOT,TRANSAMINASI (AST/GOT),2.50,,,privato
+10056,TRANS,TRANSFERRINA,5.00,,,privato
+10318,TRANSA,TRANSGLUTAMINASI IgA,20.00,,,privato
+12511,TRANSG,TRANSGLUTAMINASI IgG,20.00,,,privato
+54,TRIG,TRIGLICERIDI,2.50,,,privato
+Tropoi,Tropoi,TROPONINA,20.00,,,privato
+285,TSH,TSH (TIREOTROPINA),13.00,,,privato
+Tshref,Tshref,TSH REFLEX,20.00,,,privato
+3,URIC,URICEMIA,2.50,,,privato
+125,URICU,URICURIA,2.50,,,privato
+202007,Uricurin,Uricuria ( Urine Del Mattino ),2.50,,NON USARE,privato
+157,VES,V.E.S.,2.50,,,privato
+62,VDRL,VDRL,3.50,,,privato
+1980,Ebv rapido,Virus Ebv Anticorpi Eterofili ( Test Rapido ),10.00,,,privato
+10068,B12,VITAMINA B12,15.50,,,privato
+10108,VITD,Vitamina D totale (25 OH),17.00,,,privato
+35,GGT,YGT,3.00,,,privato
+II4,II4,Interleuchina 4 / 10,100.00,10,sez. Bios,privato
+12292,11DCB,11-DEOSSICORTISOLO/10,80.00,10,sez. Bios,privato
+12336,U17K3,17 - CHETOSTEROIDI URINARI 17KS/10,18.00,10,sez. Bios,privato
+160000,Ui7oh,17-IDROSSICORTICOIDI URINARI/10,15.00,10,sez. Bios,privato
+12487,21ID1,A.A. 21 IDROSSILASI/10,76.00,10,sez. Bios,privato
+12521,AASC1,A.A. ASCA IgA/10,20.00,10,sez. Bios,privato
+12522,ASCG1,A.A. ASCA IgG/10,20.00,10,sez. Bios,privato
+12457,CNC1B,A.A. CANALE DEL CALCIO/10,220.00,10,sez. Bios,privato
+A.A.K,A.A.K,A.A. Canale Del Potassio /10,75.00,10,sez. Bios,privato
+A.a.cute,A.a.cute,A.A. Cute/10,15.00,10,sez. Bios,privato
+12337,1DESM,A.A. DESMOGLEINA - 1/10,42.00,10,sez. Bios,privato
+12338,3DESM,A.A. DESMOGLEINA - 3/10,42.00,10,sez. Bios,privato
+12564,FOSF3,A.A. FOSFOLIPIDI/10,94.00,10,sez. Bios,privato
+10273,LKM1,A.A. LKM/10,15.00,10,sez. Bios,privato
+310,AAMT1,A.A. MITOCONDRIO ( AMA )/10,40.00,10,sez. Bios,privato
+10159,Antimi,A.A. Mitocondrio/10,40.00,10,sez. Bios,privato
+12185,MSAB2,A.A. MUSCOLO STRIATO/10,15.00,10,sez. Bios,privato
+12409,MUSK1,A.A. MuSK/10,174.00,10,sez. Bios,privato
+Pla2r,Pla2r,A.A. Recettore Fosfolipasi A2 (PLA 2R)/10,60.00,10,sez. Bios,privato
+18040,Retab,A.A. Reticolina/10,18.00,10,sez. Bios,privato
+Trichi,Trichi,A.A. Trichinella/10,40.00,10,sez. Bios,privato
+12118,ABPA1,A.A.Cellula Insulare( ICA )/10,23.00,10,sez. Bios,privato
+10367,10367,A.A.CELLULA PARIETALE (APCA) IgA /10,24.00,10,sez. Bios,privato
+10368,APCA1,A.A.CELLULA PARIETALE (APCA) IgG /10,24.00,10,sez. Bios,privato
+10171,CEAB1,A.A.CENTROMERO ( ACA )/10,22.00,10,sez. Bios,privato
+12117,IA2B/10,A.A.IA2/10,70.00,10,sez. Bios,privato
+12120,IAAB,A.A.INSULINA ( IAA )/10,23.00,10,sez. Bios,privato
+12214,AIPOF,A.A.IPOFISI/10,28.00,10,sez. Bios,privato
+17030,Mbg,A.A.Membrana Basale Del Glomerulo/10,29.00,10,sez. Bios,privato
+10262,AAML1,A.A.MUSCOLO LISCIO ( ASMA )/10,18.60,10,sez. Bios,privato
+10163,AANU2,A.A.NUCLEO ( ANA )/10,15.82,10,sez. Bios,privato
+12213,OVAB2,A.A.OVAIO/10,17.00,10,sez. Bios,privato
+12129,PIAB1,A.A.PIASTRINE Test Indiretto/10,150.00,10,sez. Bios,privato
+10443,ACABB,A.A.RECETTORI ACETILCOLINA/10,48.00,10,sez. Bios,privato
+220000,Siasu,A.A.Spermatozoo ( L. Seminale )/10,55.00,10,sez. Bios,privato
+10395,SIASS,A.A.SPERMATOZOO ( SANGUE )/10,55.00,10,sez. Bios,privato
+12222,TETA2,A.A.TETANO IgG/10,28.00,10,sez. Bios,privato
+10276,AAMC3,A.A.TIROIDE ( MICROSOMIALI )/10,29.00,10,sez. Bios,privato
+Ala deidra,Ala deidra,A.L.A. Deidrasi Eritrocitaria/10,20.00,10,sez. Bios,privato
+Anti-viii,anti-viii,Ab Anti-Fattore VIII /10,35.00,10,sez. Bios,privato
+Dengue g,Dengue g,Ab Virus Dengue IgG /10,38.00,10,sez. Bios,privato
+Dengue M,Dengue M,Ab Virus Dengue IgM /10,38.00,10,sez. Bios,privato
+10539,SERO3,AC. 5-OH INDOLACETICO ( 5HIAA )/10,28.00,10,sez. Bios,privato
+10387,AIPM2,AC. IPPURICO/METILIPPURICO/10,26.00,10,sez. Bios,privato
+12519,UOMOV,AC. OMOVANILLICO URINARIO/10,32.00,10,sez. Bios,privato
+12555,UACF1,AC. S-FENILMERCAPTURICO URINARIO/10,53.00,10,sez. Bios,privato
+12575,TCAB,AC. TRICLOROACETICO URINARIO/10,25.00,10,sez. Bios,privato
+10491,UVMAB,AC. VANILMANDELICO URINARIO/10,32.00,10,sez. Bios,privato
+10397,TTMU2,AC.T.T. MUCONICO URINARIO/10,42.00,10,sez. Bios,privato
+10548,ACEB,ACE ( ANGIOTENSI CONV. ENZYME )/10,24.00,10,sez. Bios,privato
+12008,ACBI,ACIDI BILIARI/10,24.00,10,sez. Bios,privato
+Agcl,Agcl,Acidi Grassi A Catena Lunga /10,87.00,10,sez. Bios,privato
+15000006,Uorgb,Acidi Organici Urinari/10,280.00,10,sez. Bios,privato
+12291,MEMAB,ACIDO METIL MALONICO/10,73.00,10,sez. Bios,privato
+1026,ACVA2,ACIDO VALPROICO/10,15.50,10,sez. Bios,privato
+ACQUI,ACQUI,Acquaporina 4 Anticorpi - IgG /10,120.00,10,sez. Bios,privato
+1023,ACTH,ACTH ( CORTICOTROPINA )/10,25.00,10,sez. Bios,privato
+10116,10116,Adenovirus Anticorpi IgA/10 (NON USARE),20.00,10,NON USARE; sez. Bios,privato
+10117,ADEG,Adenovirus Anticorpi IgG/10 (NON USARE),20.00,10,NON USARE; sez. Bios,privato
+10118,ADEM,Adenovirus Anticorpi IgM/10 (NON USARE),20.00,10,NON USARE; sez. Bios,privato
+Adip,Adip,Adiponectina /10,85.00,10,sez. Bios,privato
+1234567,Agfr,Agglutinine Da Freddo/10,36.00,10,sez. Bios,privato
+12411,UALAB,ALA ( AC.D.AMINOLEVULINICO ) URINARIO/10,28.00,10,sez. Bios,privato
+21502,Albuu,Albumina Urine 24H/10,15.00,10,sez. Bios,privato
+10168,CDT,"ALCOOL, Abuso cronico (CDT) TRANSF.DESIAL./10",22.00,10,sez. Bios,privato
+Alcooluri,Alcoolur,Alcooluria/10,24.00,10,sez. Bios,privato
+12064,EALDB,ALDOLASI/10,14.00,10,sez. Bios,privato
+10268,PAB2,ALDOSTERONE A RIP. CLINOSTAT./10,17.07,10,sez. Bios,privato
+10269,PA2,ALDOSTERONE DOPO MOTO ORTOSTAT./10,17.07,10,sez. Bios,privato
+10417,PAU3,ALDOSTERONE URINARIO/10,17.07,10,sez. Bios,privato
+486,ALD,ALDOSTERONE/10,17.07,10,sez. Bios,privato
+10438,EANTR,ALFA 1 ANTITRIPSINA/10,15.50,10,sez. Bios,privato
+10501,EMUCO,Alfa 1 Glicoproteina (Mucoproteine) /10,18.00,10,sez. Bios,privato
+81,EA1G,ALFA 1 GLICOPROTEINA ACIDA/10,16.00,10,sez. Bios,privato
+23045,Alfamic,ALFA 1 MICROGLOBULINA URINARIA/10,28.00,10,sez. Bios,privato
+16036,Alfa2ma,Alfa 2 Macroglobulina/10,14.00,10,sez. Bios,privato
+12345,F76,ALFA LATTOALBUMINA ( F76 nBOS d4 )/10,38.00,10,sez. Bios,privato
+12486,EALLU,ALLUMINIO PLASMATICO/10,24.00,10,sez. Bios,privato
+13106,Allu,Alluminio Urinario/10,24.00,10,sez. Bios,privato
+Ameba,Ameba,Ameba Anticorpi /10,60.00,10,sez. Bios,privato
+16501,16501,Amilasi Isoenzimi /10,72.00,10,sez. Bios,privato
+AMINO,AMINO,AMINOACIDI PLASMATICI /10,200.00,10,sez. Bios,privato
+Aau,Aau,AMINOACIDI URINARI /10,360.00,10,sez. Bios,privato
+1206a,Amiodarone,Amiodarone E Metabolita /10,86.00,10,sez. Bios,privato
+10411,EAMM1,AMMONIO PLASMATICO/10,12.00,10,sez. Bios,privato
+12293,AND3B,ANDROSTENEDIOLO 3 ALFA/10,18.00,10,sez. Bios,privato
+10094,D43,ANDROSTENEDIONE DELTA 4/10,24.28,10,sez. Bios,privato
+12107,ANG21,ANGIOTENSINA II/10,78.00,10,sez. Bios,privato
+200000,Anisg,Anisakis Igg ( Anticorpi )/10,62.00,10,sez. Bios,privato
+Annex g+m,Annex g+m,Annexina IgG+IgM /10,110.00,10,sez. Bios,privato
+12261,ANTMIC,ANTIBIOGRAMMA/10,16.00,10,sez. Bios,privato
+123567,Tiabb,Anticorpi Anti - Titina/10,45.00,10,sez. Bios,privato
+20001,Acquapor,Anticorpi Anti Acquaporina IgG/10 ( No ),150.00,10,NON USARE; sez. Bios,privato
+1020,Ampa,Anticorpi Anti AMPA/10,75.00,10,sez. Bios,privato
+1400000,A.mag,Anticorpi Anti Mag/10,26.00,10,sez. Bios,privato
+Antimielin,Antimielina,Anticorpi Anti Mielina/10,55.00,10,sez. Bios,privato
+MOGP,MOGP,Anticorpi Anti Mog /10,60.00,10,sez. Bios,privato
+1027,Nmda,Anticorpi Anti NMDA/10,185.00,10,sez. Bios,privato
+12565,APROT,ANTICORPI ANTIPROTROMBINA IgG/10,25.00,10,sez. Bios,privato
+Antiprotm,Antiprotm,Anticorpi Antiprotrombina IgM/10,25.00,10,sez. Bios,privato
+12306,DNAB,ANTIDNASI B Abs/10,18.00,10,sez. Bios,privato
+1018,Neuro,Antigeni Onconeuronali Abs /10,150.00,10,sez. Bios,privato
+Apoa,Apoa,APOLIPOPROTEINA A1 (APO A1)/10,14.00,10,sez. Bios,privato
+Apoa2,Apoa2,APOLIPOPROTEINA A2 (APO A2)/10,36.00,10,sez. Bios,privato
+12247,EAPOB,APOLIPOPROTEINA B ( APO B )/10,18.00,10,sez. Bios,privato
+12248,EAPOE,APOLIPOPROTEINA E ( APO E )/10,32.00,10,sez. Bios,privato
+12165,Aptog,Aptoglobina/10,10.00,10,sez. Bios,privato
+12560,F422,Ara h1 Arachis Hypogaea ( RAST MOLEC. F422 )/10,38.00,10,sez. Bios,privato
+12562,F352,"Ara h8 Peanut, Arachis Hyp.(RAST MOLEC.F352)/10",38.00,10,sez. Bios,privato
+13007,Agur,Argento Urinario/10,26.00,10,sez. Bios,privato
+12321,ARGI,ARGININA PLASMATICA/10,78.00,10,sez. Bios,privato
+13289.,Ase,Arsenico Ematico/10,45.00,10,sez. Bios,privato
+13104,Arsenico urinar,Arsenico Urinario/10,26.00,10,sez. Bios,privato
+Asbesto,Asbesto,Asbesto E Amianto Nell` Espettorato/10,30.00,10,sez. Bios,privato
+Galatt,Galatt,Aspergillus Ag. (Galattomannano)/10,30.00,10,NON USARE; sez. Bios,privato
+12370,Asperg Fumig,Aspergillus Fumig. IgG /10,20.00,10,sez. Bios,privato
+19563,19563,Bap Test ( Barriera Antioss. )/10,42.00,10,sez. Bios,privato
+Bap,Bap,BAP-Test (Potenziale Biolog Di Attivaz.)/10 NON US,36.00,10,NON USARE; sez. Bios,privato
+12344,UBARi,BARBITURICI URINARI/10,20.00,10,sez. Bios,privato
+12320,BAHEB,BARTONELLA HENSELAE Abs ( Igg+Igm )/10,94.00,10,sez. Bios,privato
+Bartigg,Bartigg,BARTONELLA HENSELAE IGG/10,47.00,10,sez. Bios,privato
+Bartigm,Bartigm,BARTONELLA HENSELAE IGM/10,47.00,10,sez. Bios,privato
+1900003,Bat-1,Bat (Attivazione Basofili) : 1 Allergene/10,150.00,10,sez. Bios,privato
+Benzod,Benzod,BENZODIAZEPINA /10,25.00,10,sez. Bios,privato
+10559,UBEN4,BENZODIAZEPINE URINARIE/10,20.00,10,sez. Bios,privato
+12523,B2M2U,BETA 2 MICROGLOBULINA URINARIA/10,16.97,10,sez. Bios,privato
+12346,F77,BETA LATTOGLOBULINA ( F77 nBOS d5 )/10,38.00,10,sez. Bios,privato
+12137,BIC1,BICARBONATI SIERICI/10,12.00,10,sez. Bios,privato
+10529,TEBI,BI-TEST O DUO-TEST/10,76.00,10,sez. Bios,privato
+10110,PERG1,Bordetella Pert. (PERTOSSE) IgG/10 (NON USARE),16.00,10,NON USARE; sez. Bios,privato
+10111,PERM1,Bordetella Pert. (PERTOSSE) IgM/10 (NON USARE),16.00,10,NON USARE; sez. Bios,privato
+10545,BOBU2,BORRELIA BURGDORFERI ANTICORPI/10,32.00,10,sez. Bios,privato
+500005,Borgi,BORRELIA IgG Test di conferma/10,90.00,10,sez. Bios,privato
+500006,Bormi,BORRELIA IgM Test di conferma/10,90.00,10,sez. Bios,privato
+Bp180,Bp180,BP 180/10,42.00,10,sez. Bios,privato
+Bp230,Bp230,BP 230/10,42.00,10,sez. Bios,privato
+Lattulo,Lattulo,Breath T. Lattulosio Transito /10,86.00,10,sez. Bios,privato
+54236,Btgo,BREATH TEST GLUCOSIO OVERGROWTH/10,85.00,10,sez. Bios,privato
+12533,BTA,BTA ( BLADDER TUMOR ANTIGEN )/10 (NON USARE),43.00,10,NON USARE; sez. Bios,privato
+10082,C1I,C1 INIBITORE COMPLEMENTO/10,30.00,10,sez. Bios,privato
+12268,C1Q,C1Q Complemento/10,20.00,10,sez. Bios,privato
+12269,C3PRO,C3 pro attivatore/10,20.00,10,sez. Bios,privato
+13503,Ca125ro,Ca 125 Per Indice Roma/10,16.00,10,sez. Bios,privato
+10271,CA50B,CA 50/10,34.00,10,sez. Bios,privato
+12577,C724S,CA 72-4 ( TAG 72 )/10,30.00,10,sez. Bios,privato
+12526,CADMB,CADMIO EMATICO/10,18.00,10,sez. Bios,privato
+12527,UCADM,CADMIO URINARIO/10,18.00,10,sez. Bios,privato
+12265,CAION,CALCIO IONE ( CALCIO LIBERO )/10,16.00,10,sez. Bios,privato
+210,VCAU1,CALCOLI URINARI/10,20.00,10,sez. Bios,privato
+10536,CNDA,CANDIDA ALBICANS - ESAME COLTURALE/10,12.00,10,sez. Bios,privato
+Cand iga,Cand iga,Candida Albicans IgA/10 (NON USARE),22.00,10,NON USARE; sez. Bios,privato
+Cand igg,Cand igg,Candida Albicans IgG/10,22.00,10,sez. Bios,privato
+Cand igm,Cand igm,Candida Albicans IgM/10,22.00,10,sez. Bios,privato
+290,CARB1,CARBAMAZEPINA/10,25.00,10,sez. Bios,privato
+17000,Cohb,Carbossiemoglobina ( COHb )/10,25.00,10,sez. Bios,privato
+10541,MAPCRC,CARIOTIPO S. PERIF.(MAPPA CROMOS.) COPPIA/10,240.00,10,sez. Bios,privato
+10540,MACR,CARIOTIPO S. PERIFERICO (MAPPA CROMOSONICA )/,130.00,10,sez. Bios,privato
+Carni,Carni,Carnitina Totale E Libera/10,78.00,10,sez. Bios,privato
+12347,F78,CASEINA LATTE ( F78 nBOS d8 )/10,38.00,10,sez. Bios,privato
+12239,ECATE,CATECOLAMINE PLASMATICHE/10,34.00,10,sez. Bios,privato
+12229,UCAFD,CATECOLAMINE UR.FRAZ.+DOPAMINA/10,43.00,10,sez. Bios,privato
+10164,UCAF,CATECOLAMINE URINARIE FRAZIONATE/10,38.00,10,sez. Bios,privato
+10249,Cerul,Ceruloplasmina/10,10.50,10,sez. Bios,privato
+12425,CHOFB,CHIMOTRIPSINA FECALE/10,33.00,10,sez. Bios,privato
+10198,Chlapm,Chlamidia Pneumoniae Igm/10,19.00,10,sez. Bios,privato
+10149,CHPNG,CHLAMYDIA PNEUMONIAE IgG/10,19.00,10,sez. Bios,privato
+0006,Echp1,Chlamydia Psittaci Ab Igm/10,18.00,10,sez. Bios,privato
+50008,1chl1,"CHLAMYDIA PSITTACI Ab, IgG/10",18.00,10,sez. Bios,privato
+10533,CLAT,CHLAMYDIA- Ricerca su T. Vaginale/10,26.00,10,sez. Bios,privato
+10542,CHTRA,CHLAMYDIA TRACHOMATIS IgA/10,23.00,10,sez. Bios,privato
+10150,CHLAIGG,CHLAMYDIA TRACHOMATIS IgG/10,23.00,10,sez. Bios,privato
+10284,CTIga,CHLAMYDIA TRACHOMATIS IgM/10,23.00,10,sez. Bios,privato
+10532,CHTD1,CHLAMYDIA TRACHOMATIS SEMINALE/10,26.00,10,sez. Bios,privato
+10531,CHSV1,CHLAMYDIA TRACHOMATIS VAGINALE/10,26.00,10,sez. Bios,privato
+10523,CHTU,CHLAMYDIA TRACHOMATIS(STRISCIO URETR. PROST.,27.00,10,sez. Bios,privato
+10534,CLAS,CHLAMYDIA-Liquido Seminale Immunofl. Diretta/10,26.00,10,sez. Bios,privato
+12038,chlur,CHLAMYDIA-Ricerca su Urine/10,26.00,10,sez. Bios,privato
+12441,Cicloa,Ciclosporina A Dopo Farmaco /10,29.00,10,sez. Bios,privato
+12058,Ciclosp,Ciclosporina A Prima Del Farmaco/10,29.00,10,sez. Bios,privato
+10482,CIME1,CIPRESSO MEDITERRANEO /10,11.50,10,sez. Bios,privato
+12583,CIST2,CISTATINA C/10,48.00,10,sez. Bios,privato
+10557,LSCITO,CITOLOGICO LIQUIDO SEMINALE/10,30.00,10,sez. Bios,privato
+12507,CMVQG,CITOMEGALOVIRUS ( PCR ) QUANTITAT./10,150.00,10,sez. Bios,privato
+10538,ACMV,CITOMEGALOVIRUS AVIDITY IgG/10,36.00,10,sez. Bios,privato
+12506,Citopcr,Citomegalovurus ( Pcr Qualitativo)/10,90.00,10,sez. Bios,privato
+12264,ISOCK,CK ISOENZIMI/10,76.00,10,sez. Bios,privato
+10000,CKMBM,CK-MB ( Massa )/10,12.00,10,sez. Bios,privato
+Clobazam,Clobazam,Clobazam/10,60.00,10,sez. Bios,privato
+48043,Cloza,Clozapina Desmethyl - Clozapina/10,78.00,10,sez. Bios,privato
+12351,UCOBA,COBALTO URINARIO/10,26.00,10,sez. Bios,privato
+12350,COBAL,COBALTO/10,26.00,10,sez. Bios,privato
+15555,Coq10,Coenzima Q10/10,130.00,10,sez. Bios,privato
+200001,Vldlp,Colesterolo Vldl/10,12.00,10,sez. Bios,privato
+12391,CEBK,COLTURA ESPETTORATO PER B.K./10,35.00,10,sez. Bios,privato
+12121,CH501,COMPLEMENTEMIA TOTALE ( CH 50 )/10,39.00,10,sez. Bios,privato
+12032,CO26G,CONNESSINA ( SORDITA' CONGENITA )/10,92.00,10,sez. Bios,privato
+12260,Copr,Coprocoltura ( Germi Comuni )/10,16.00,10,sez. Bios,privato
+1400017,Coprop,Coproporfirine Urinarie/10 NON USARE,25.00,10,NON USARE; sez. Bios,privato
+F428,F428,Cor A1 Corylus Avellana (RAST MOLEC F428) /10,38.00,10,sez. Bios,privato
+12557,F425,Cor a8 Corylus Avellana ( RAST MOLEC. F425 )/10,38.00,10,sez. Bios,privato
+100,Cortilibu,Cortisolo Libero Urinario/10 (NON USARE),42.00,10,NON USARE; sez. Bios,privato
+16801,Cort sal circ,Cortisolo Salivare Circadiano (NON USARE),38.00,10,NON USARE; sez. Bios,privato
+16800,Corsc,Cortisolo Salivare/10 (NON USARE),36.00,10,NON USARE; sez. Bios,privato
+12262,FU3,CORTISOLO URINARIO/10,20.00,10,sez. Bios,privato
+12279,COTI1,COTININA ( METABOLITA NICOTINA ) PLASMATICA/10,32.00,10,sez. Bios,privato
+12278,UCOT1,COTININA ( METABOLITA NICOTINA ) URINARIA/10,32.00,10,sez. Bios,privato
+12246,COXm2,COXSACKIE ( B1-2-3-4-5-6 ) Ab Mix/10 (Non Usare),25.00,10,NON USARE; sez. Bios,privato
+2000008,Coxgi,Coxsackie Virus A Igg/10,62.00,10,sez. Bios,privato
+2000009,Coxmi,Coxsackie Virus A Igm/10,62.00,10,sez. Bios,privato
+20000005,Coxim,Coxsackie Virus B Igm/10,62.00,10,sez. Bios,privato
+10247,CPK MB,CREATINCHINASI ISOENSIMA MB/10,12.00,10,sez. Bios,privato
+12349,UCROM,CROMO URINARIO/10,26.00,10,sez. Bios,privato
+12348,Crom,Cromo/10,26.00,10,sez. Bios,privato
+10157,CGA1,CROMOGRANINA A/10,85.00,10,sez. Bios,privato
+10554,LAPS,CROSS LAPS SIERICI (CTX)/10,50.00,10,sez. Bios,privato
+12135,CROLB,CROSSLINKS URINARI/10,90.00,10,sez. Bios,privato
+2156,Ctx urin,Ctx ( Telopept. C. Term. Collagene) Urine/10,70.00,10,sez. Bios,privato
+12468,T226,Cup a1 Cupres. ariz. (RAST MOLEC. T226)/10,30.00,10,sez. Bios,privato
+4505,CUPR,CUPREMIA ( RAME SIERICO )/10,30.00,10,sez. Bios,privato
+10503,Cup,Cupremia/10,30.00,10,sez. Bios,privato
+12174,UCUPR,CUPRURIA ( RAME URINARIO )/10,30.00,10,sez. Bios,privato
+12402,CIFR1,CYFRA 21/1/10,36.00,10,sez. Bios,privato
+50003,D205,D205 rDer p10 Dermat.pteronys/10,30.00,10,sez. Bios,privato
+18005,Daotest,Dao Test ( Diaminossidasi ) /10,96.00,10,sez. Bios,privato
+10185,DDIM2,D-DIMERO ( DIMER TEST )/10,20.00,10,sez. Bios,privato
+12465,D202,Der p1 Dermat. pteron.(RAST MOLEC. D202)/10,30.00,10,sez. Bios,privato
+12466,D203,Der p2 Dermat. ptern.(RAST MOLEC. D203)/10,30.00,10,sez. Bios,privato
+D209,D209,Der P23 Dermat. Pteronys.(RAST MOLEC) /10,38.00,10,sez. Bios,privato
+4789,Dehy,DHEA (DEHYDROEPIANDROSTERONE)/10,19.00,10,sez. Bios,privato
+4548,DHES,DHEA-S Test da stimolo/10,65.66,10,sez. Bios,privato
+12432,DIFTB,DIFTERITE Abs/10,68.00,10,sez. Bios,privato
+10384,DHT3,DIHYDROTESTOSTERONE ( DHT )/10,54.00,10,sez. Bios,privato
+13100,Disbi,Disbiosi Test/10,49.00,10,sez. Bios,privato
+12240,EDOPA,DOPAMINA PLASMATICA/10,23.00,10,sez. Bios,privato
+12485,OXCBZ,Dosaggio OXCARBAZEPINA/10,20.00,10,sez. Bios,privato
+DPDG,DPDG,DPD (Diidropirimidina Deidrogenasi)/10,200.00,10,sez. Bios,privato
+12184,METOS,D-ROMS-TEST (METABOLITI REATTIVI OSSIGENO)/10,38.00,10,NON USARE; sez. Bios,privato
+500000,E94,E94 Fel D1 Felis Domesticus/10,46.00,10,sez. Bios,privato
+10243,ECHIB,ECHINOCOCCO Abs IgG/30,30.00,30,sez. Bios,privato
+10010,echi,ECHINOTEST/10 (Non Usare),25.00,10,NON USARE; sez. Bios,privato
+120006,Echoiga,Echo-Virus Iga/10,26.00,10,sez. Bios,privato
+120003,Echoigg,Echo-Virus Igg/10,26.00,10,sez. Bios,privato
+1200063,Echoigm,Echo-Virus Igm/10,26.00,10,sez. Bios,privato
+309,EMA,EMA/10,52.00,10,sez. Bios,privato
+12302,Emoc,Emocoltura/10,48.00,10,sez. Bios,privato
+12283,HFE3I,EMOCROMATOSI ( HFE ) 3 MUTAZIONI/10,148.00,10,sez. Bios,privato
+10165,EHBA2,EMOGLOBINA A2 Hb A2/10,18.00,10,sez. Bios,privato
+10502,EEHB,EMOGLOBINA ELETTROFORESI/10,15.00,10,sez. Bios,privato
+10143,EHBF,EMOGLOBINA FETALE ( Hb F )/10,18.00,10,sez. Bios,privato
+10196,EVAH1,EMOGLOBINE VARIANTI/10,27.00,10,sez. Bios,privato
+12228,SC70B,ENA ANTIGENE SCL 70 Abs/10,24.00,10,sez. Bios,privato
+12448,RNP1,ENA ANTIGENE SM/RNP - Abs/10,24.00,10,sez. Bios,privato
+12049,SSAB,ENA ANTIGENE SS-A ( RO ) - Abs/10,24.00,10,sez. Bios,privato
+12050,SSBB,ENA ANTIGENE SS-B ( LA ) - Abs/10,24.00,10,sez. Bios,privato
+12227,ENAP3,"ENA-PROFILE, ANTICORPI/10",72.00,10,sez. Bios,privato
+10508,ENOL3,ENOLASE NSE/10,32.00,10,sez. Bios,privato
+EPXAP,EPXAP,EPARINA (Anti-Fattore Xa)/10,50.00,10,sez. Bios,privato
+220001,Hev2b,Epatite E IgG/10,38.00,10,sez. Bios,privato
+220002,220002,Epatite E IgM /10,50.00,10,sez. Bios,privato
+Epicane,Epicane,Epitelio di Cane /10,11.50,10,sez. Bios,privato
+10279,EBEA1,EPSTEIN BARR V. Ab ( EA )/10,22.00,10,sez. Bios,privato
+10119,EBNA1,EPSTEIN BARR V.Ab (EBNA)/10,18.00,10,sez. Bios,privato
+10103,VCAG2,EPSTEIN BARR VCA Ab IgG/10,18.00,10,sez. Bios,privato
+10105,VCAM2,EPSTEIN BARR VCA Ab IgM/10,18.00,10,sez. Bios,privato
+10447,EPO,ERITROPOIETINA/10,37.00,10,sez. Bios,privato
+1200,1200,Es. Chimico Fisico E Microsc. Liquido Sinoviale/10,20.00,10,sez. Bios,privato
+200004,Citod,Es. Citologico Ago-Aspirato /10,60.00,10,sez. Bios,privato
+12219,MDERB,Es.micologico ricerca DERMATOF. MICROSCOPICO/10,19.00,10,sez. Bios,privato
+12217,CDERB,Es.micologico ricerca DERMATOFITI COLTURALE/10,23.00,10,sez. Bios,privato
+21515,Espetcito,Esame Citologico Espettorato/10,30.00,10,sez. Bios,privato
+Sino,Sino,Esame Citologico Su Liquido Sinoviale/10,25.00,10,sez. Bios,privato
+10556,CITO4,ESAME CITOLOGICO URINARIO/10,30.00,10,sez. Bios,privato
+12183,ISTO4,ESAME ISTOLOGICO (CAMP. IN FORMALINA 10%)/10,122.00,10,sez. Bios,privato
+10453,E1S,ESTRONE E1/10,24.00,10,sez. Bios,privato
+Etil.,Etil,Etilglucuronide Urinario /10,20.00,10,sez. Bios,privato
+13105,Etosucc,Etosuccimide/10,18.00,10,sez. Bios,privato
+12393,EVERB,EVEROLIMUS/10,47.00,10,sez. Bios,privato
+F218,F218,F218 PAPRICA Immunocap /10,14.00,10,sez. Bios,privato
+1800000,F233,F233 Mgal D1 Ovomuc. Gallus Spp/10,33.00,10,sez. Bios,privato
+18000001,F323,F323 Mgal D2 Ovalb. Gallus Spp/10,33.00,10,sez. Bios,privato
+16000000,F355,F355 Rcyp C1 Cyprimus Carpio/10,30.00,10,sez. Bios,privato
+123345678,O5g,F416 Rtri A19 Triticum Spp (Omega 5 Gliadina)/10,36.00,10,sez. Bios,privato
+F426,F426,F426 Rgad C1 Gadus Morhua (RAST MOL.) /10,30.00,10,sez. Bios,privato
+Ltp,Ltp,F433 rTri a14 LTP / 10,37.00,10,sez. Bios,privato
+Rast gliad,Rast gliad,F98 - IgE Gliadina /10,36.00,10,sez. Bios,privato
+130009,Ristoc,Fatt.V.W.Ristocetina Cofattore/10,46.00,10,sez. Bios,privato
+16002,16002,Fattore II ( Protrombina )/10,42.00,10,sez. Bios,privato
+10096,FAT2I,Fattore II Mutazione G20210A/10,83.00,10,sez. Bios,privato
+10467,FAT9B,FATTORE IX COAGULAZIONE/10,70.00,10,sez. Bios,privato
+13502,Fattv,Fattore V Coagulazione/10,44.00,10,sez. Bios,privato
+4533,LEIDI,FATTORE V DI LEIDEN ( MUTAZIONE G1691A )/10,88.00,10,sez. Bios,privato
+10281,FAT7B,FATTORE VII COAGULAZIONE/10,57.00,10,sez. Bios,privato
+10561,FA8CB,FATTORE VIIIC COAGULAZIONE/10,36.00,10,sez. Bios,privato
+10468,FA11B,FATTORE XI COAGULAZIONE/10,42.00,10,sez. Bios,privato
+12073,FA13B,FATTORE XIII COAGULAZIONE/10,64.00,10,sez. Bios,privato
+10348,FC4M,FATTORI COAGULATIVI (4 MUTAZIONI)/10,180.00,10,sez. Bios,privato
+12606,Fenci,Fenciclidina (Pcp) Uninaria /10 (NON USARE),35.00,10,NON USARE; sez. Bios,privato
+18058,Fenlb,Fenilalanina/10,96.00,10,sez. Bios,privato
+286,FENIB,FENITOINA/10,20.00,10,sez. Bios,privato
+12180,FENB1,FENOBARBITAL ( IN TERAPIA )/10,38.00,10,sez. Bios,privato
+13108,Ferro urinario,Ferro Urinario/10,16.00,10,sez. Bios,privato
+10413,FICGEN,Fibr. cistica Screening 34 Mutazioni (COPPIA)/10 N,243.00,10,sez. Bios,privato
+18300,Fibrt,Fibromax Test/10,165.00,10,sez. Bios,privato
+10264,FCS,Fibrosi Cistica 34 Mutazioni ( Cftr )/40 NON USARE,0.00,40,NON USARE; sez. Bios,privato
+300000,Filaria,Filariasi Anticorpi/10,70.00,10,sez. Bios,privato
+10504,FOAC1,FOSFATASI ACIDA TOTALE/10,12.00,10,sez. Bios,privato
+16700,16700,Fosfatasi Alcalina Isoenzimi/10,28.00,10,sez. Bios,privato
+10101,EBAP1,FOSFATASI ALCALINA OSSEA ( OSTASE )/1C,29.00,10,sez. Bios,privato
+12104,PLAP,FOSFATASI ALCALINA PLACENTARE/10,78.00,10,sez. Bios,privato
+10505,Fosfpro,Fosfatasi Prostatica ( Pap )/10,18.00,10,sez. Bios,privato
+2000000,Phi1b,Fosfoesoisomerasi ( Phi )/10,48.00,10,sez. Bios,privato
+10449,FBHCG,FREE- BHCG/10,27.50,10,sez. Bios,privato
+10123,EFTAIGG,FTA Ab IgG/10,19.00,10,sez. Bios,privato
+10124,EFTAIGM,FTA Ab IgM/10,19.00,10,sez. Bios,privato
+27,EG6P2,G6PDH ERITROCITARIO/10,15.00,10,sez. Bios,privato
+Ganglio,Ganglio,Gangliosidi profilo Abs (IgG/IgM) /10,130.00,10,sez. Bios,privato
+12372,GARD,GARDNERELLA VAGINALIS COLTURA/10 (Non Usare),16.00,10,NON USARE; sez. Bios,privato
+12363,GARDG,GARDNERELLA VAGINALIS PCR QUAL./10,86.00,10,sez. Bios,privato
+12178,Gast,Gastrina/10,27.00,10,sez. Bios,privato
+12354,GASTRP,GASTROPANEL/10,178.00,10,sez. Bios,privato
+12285,FGIAR,GIARDIA RICERCA Ag FECI/10 (NON USARE),28.00,10,NON USARE; sez. Bios,privato
+Gluc,Gluc,Glucagone/10,15.00,10,sez. Bios,privato
+17031,Gldhm,Glutammato Deidrogenasi ( Gldh )/10,38.00,10,sez. Bios,privato
+Glut,Glut,Glutatione Perossidasi / 10,60.00,10,sez. Bios,privato
+30000,Glutb,Glutatione Totale/10,62.00,10,sez. Bios,privato
+1563211,1563211,Guanosina Deossidata Urin. ( 8-Ohdg )/10,82.00,10,sez. Bios,privato
+2000006,Hhv6g,H.Virus-6 Human (Hhv-6) IgG (Vi Malattia)/10,34.00,10,sez. Bios,privato
+200003,Hv6mi,H.Virus-6 Human (Hhv-6) IgM (Vi Malattia)/10,34.00,10,sez. Bios,privato
+12433,HAEM,HAEMOPHILUS INFLUENZAE TIPO B Abs/10,24.00,10,sez. Bios,privato
+HAV Ab IgG,HAV IgG,HAV Ab IgG /10,17.00,10,sez. Bios,privato
+HAV Ab IgM,HAV IgM,HAV Ab IgM /10,17.00,10,sez. Bios,privato
+10560,HBDNG,HBV/DNA QUALITATIVO/10,115.00,10,sez. Bios,privato
+10234,HCVTC,HCV AB TEST DI CONFERMA ( RIBA )/10,110.00,10,sez. Bios,privato
+10535,HCVGI,HCV/RNA GENOTIPO/10,160.00,10,sez. Bios,privato
+10242,HCDNI,HCV/RNA QUALITATIVO/10,104.00,10,sez. Bios,privato
+326,HCVQI,HCV/RNA QUANTITATIVO/10,149.00,10,sez. Bios,privato
+10125,HDVB,HDV Ab Ig TOTALI/10,15.00,10,sez. Bios,privato
+10497,HE4,HE4/10,75.00,10,sez. Bios,privato
+10517,HERM,HERPES VIRUS ( 1+2 ) Ab IgM/10,18.00,10,sez. Bios,privato
+10506,HERG1,HERPES VIRUS 1 Ab IgG/10,20.00,10,sez. Bios,privato
+500004,Herpi,HERPES VIRUS 1+2 (PCR)/10,135.00,10,sez. Bios,privato
+10519,Her2igg,Herpes Virus 2 Ab Igg/10,20.00,10,sez. Bios,privato
+14000,Hv8db,Herpes Virus 8 Dna ( Hhv8 )/10,130.00,10,sez. Bios,privato
+12036,TBHV,HERPES VIRUS PCR TAMP.BUCCALE/10,147.00,10,sez. Bios,privato
+12035,HVPCR,HERPES VIRUS PCR/10,147.00,10,sez. Bios,privato
+200002,Hvstr,Herpes Virus Striscio/10,28.00,10,sez. Bios,privato
+10283,STH1,HGH ( Sth) - ORMONE SOMATOTROPO/10,22.00,10,sez. Bios,privato
+12148,HIDNG,HIV/RNA QUALITATIVO/10,138.00,10,sez. Bios,privato
+12149,HIVQG,HIV/RNA QUANTITATIVO/10,166.00,10,sez. Bios,privato
+12352,MCHLI,HLA- Morbo celiaco/10,150.00,10,sez. Bios,privato
+15300,15300,Hpl ( Ormone Lattogeno Placentare )/10,15.00,10,sez. Bios,privato
+12207,HPVGS,HPV GENOTIPIZZAZIONE/10,140.00,10,sez. Bios,privato
+12208,HPVSG,HPV SCREENING + GENOTIPO/10,276.00,10,sez. Bios,privato
+12206,HPV4,HPV SCREENING/10,136.00,10,sez. Bios,privato
+10270,HTLVB,HTLV 1/2 ANTICORPI/10,69.00,10,sez. Bios,privato
+180001,Idf2b,Idrossipirene - Fine Turno/10,38.00,10,sez. Bios,privato
+180002,Idi2b,Idrossipirene - Inizio Turno/10,38.00,10,sez. Bios,privato
+18001,Iga sal,Iga Salivari/10,24.00,10,sez. Bios,privato
+10428,MAND1,IgE MANDORLE ( RAST ALIM. F20 )/10,11.50,10,sez. Bios,privato
+Ac.clavul,Ac.clavul,IgE- Ac. Clavulanico /10,13.00,10,sez. Bios,privato
+Albcoc,Albicoc,Ige Albicocche/10,12.50,10,sez. Bios,privato
+12379,ADLI1,IgE ALIM. AGLIO - F47/10,11.50,10,sez. Bios,privato
+18000002,Cipo1,Ige Alim. Cipolla F48/10,13.50,10,sez. Bios,privato
+15000001,Lent,Ige Alim. Lenticchia ( F235 )/10,12.50,10,sez. Bios,privato
+22006,Maor1,Ige Alim. Malto D`Orzo F90/10,12.50,10,sez. Bios,privato
+200005,Orzo1,Ige Alim. Orzo F6/10,12.50,10,sez. Bios,privato
+12578,ALTE1,IgE ALTERNARIA TENUIS ( RAST MUFFE M6 )/10,11.50,10,sez. Bios,privato
+10427,IGE A,IgE ARACHIDI/10,0.00,10,sez. Bios,privato
+12098,W5,Ige ARTEMISIA ABSINTHIUM/10,0.00,10,sez. Bios,privato
+12201,W6,IgE ARTEMISIA VULGARIS/10,14.00,10,sez. Bios,privato
+Bet,Bet,Ige Betulla /10,11.50,10,sez. Bios,privato
+10219,UOVO,IgE BIANCO D'UOVO/10,12.30,10,sez. Bios,privato
+12301,SCARB,IgE BLATTELLA GERMANICA ( RAST INSETTI )/10,11.50,10,sez. Bios,privato
+456321,F260,IgE Broccoli F260 ( IMMUNOCAP )/10,14.00,10,sez. Bios,privato
+12528,CACA2,IgE CACAO ( RAST ALIM. F93 )/10,11.50,10,sez. Bios,privato
+10478,IGECA,IgE CAFFE'/10,12.50,10,sez. Bios,privato
+12097,IGECANDIDA,IGE CANDIDA ALBICANS/10,13.00,10,sez. Bios,privato
+12415,F27,IgE CARNE DI BUE - F27/10,11.50,10,sez. Bios,privato
+12275,MAIA1,IgE CARNE DI MAIALE ( RAST ALIM. F26 )/10,11.50,10,sez. Bios,privato
+12414,F83,IgE CARNE DI POLLO - F83/10,11.50,10,sez. Bios,privato
+10180,IGECI,IgE CIOCCOLATO/10,0.00,10,sez. Bios,privato
+12070,IgEcip,IgE Cipresso/10,0.00,10,sez. Bios,privato
+Ige cortis,Ige cortis,Ige cortisone/10,11.50,10,sez. Bios,privato
+12099,CYNO,IgE CYNOIDON DACTYLON/10,0.00,10,sez. Bios,privato
+12456,MAZG4,IgE DACTYLIS GLOM. (MAZZOLINA) G3/10,11.50,10,sez. Bios,privato
+10481,IDED,IgE DERMATOPHAGOIDE FARINAE/10,11.50,10,sez. Bios,privato
+12043,igedp,IgE Dermatophagoide Phteronyssimus/10,11.50,10,sez. Bios,privato
+12319,EPGA1,IgE EPITELIO DI GATTO - E1/10,11.50,10,sez. Bios,privato
+1700034,Iger,Ige Epitelio Ratto E73/10,15.00,10,sez. Bios,privato
+1700035,Iget,Ige Epitelio Topo E71/10,15.00,10,sez. Bios,privato
+12003,igcn,Ige erba canina - gramin.cynodon dactylon/10,11.50,10,sez. Bios,privato
+3265,Azitro,IgE FARM. AZITROMICINA - C194/10,11.50,10,sez. Bios,privato
+190005,Cipro,Ige Farm. Ciprofloxacina-C108/10,18.00,10,sez. Bios,privato
+1800063,Claritro,Ige Farm. Claritromicina - C170/10,18.00,10,sez. Bios,privato
+180012,Clora,Ige Farm. Cloramfenicolo - C152/10,23.00,10,sez. Bios,privato
+18011,Desam,Ige Farm. Desametasone - C125/10,23.00,10,sez. Bios,privato
+19321,Diclo,Ige Farm. Diclofenac - C79/10,15.00,10,sez. Bios,privato
+18000064,Eritro,Ige Farm. Eritromicina - C61/10,18.00,10,sez. Bios,privato
+1700064,Ibuprof,Ige Farm. Ibuprofene - C78/10,15.00,10,sez. Bios,privato
+Keto,Keto,IgE Farm. Ketoprofene - C172/10,15.00,10,sez. Bios,privato
+Napross,Napross,Ige Farm. Naprossene C 110/10,15.00,10,sez. Bios,privato
+2400000,Acsa,Ige Farm.Ac.Acetilsalic.-C51/10,18.00,10,sez. Bios,privato
+2600,Igeamoxi,Ige Farmaco Amoxicillina/10,13.00,10,sez. Bios,privato
+2601,Ige ampicil,Ige Farmaco Ampicillina/10,13.00,10,sez. Bios,privato
+190000367,Igeartic,Ige Farmaco Articaina - C68/10,15.00,10,sez. Bios,privato
+12476,PENG1,IgE FARMACO PENICILLINA G-C1/10,13.00,10,sez. Bios,privato
+12477,PENV1,IgE FARMACO PENICILLINA V-C2/10,13.00,10,sez. Bios,privato
+12388,FOCA1,IgE FORFORA CANE - E5/10,11.50,10,sez. Bios,privato
+190000,Focav,Ige Forfora Cavallo - E3/10,11.50,10,sez. Bios,privato
+10479,IGEFO,IgE FORMAGGIO/10,0.00,10,sez. Bios,privato
+10183,IGEFR,IgE FRAGOLE/10,0.00,10,sez. Bios,privato
+Igefunghi,Igefunghi,Ige Funghi Chapmignon/10,12.50,10,sez. Bios,privato
+12041,igegam,Ige Gambero/10,0.00,10,sez. Bios,privato
+12378,PHPR2,IgE GRAM. PHLEUM PRATENSE - G6/10,11.50,10,sez. Bios,privato
+12004,igagr,Ige Graminacee - Agrostis stolonifera/10,0.00,10,sez. Bios,privato
+12006,igeas,Ige graminacee Avena Sativa/10,12.50,10,sez. Bios,privato
+12272,GRAN1,IgE GRANO ( RAST ALIM. F4 )/10,11.50,10,sez. Bios,privato
+17000061,Taban,Ige Insetti Taban. Spec. ( Tafano )-I1204/10,15.00,10,NON USARE; sez. Bios,privato
+12330,APE1,"IgE INSETTI, VELENI APE - I1/10",15.00,10,sez. Bios,privato
+12331,VESP,"IgE INSETTI, VELENI VESPA - I3/10",20.00,10,sez. Bios,privato
+10563,IGEKI,IgE KIWI/10,11.50,10,sez. Bios,privato
+18021,Epla,Ige Lana Pecora - E81/10,11.50,10,sez. Bios,privato
+381,IGEL,IgE LATTE/10,12.50,10,sez. Bios,privato
+10552,IGELA,IgE LATTICE - K82/10 ( Non Usare ),11.50,10,NON USARE; sez. Bios,privato
+Igek218,K218,IgE LATTICE : K218 rHev b5 /10,30.00,10,sez. Bios,privato
+K220,K220,IgE LATTICE : K220 rHev b6. 02 /10,30.00,10,sez. Bios,privato
+12365,LIEV1,IgE LIEVITO F45/10,11.50,10,sez. Bios,privato
+2511,Ige lolium,IgE Lolium Perenne/10,0.00,10,sez. Bios,privato
+12276,MELA,IgE MELA ( RAST ALIM. F49 ),11.50,10,sez. Bios,privato
+12042,igemer,Ige Merluzzo/10,12.50,10,sez. Bios,privato
+F55,F55,Ige miglio Comune- F55 / 10,15.00,10,sez. Bios,privato
+10186,GRAMB,IgE MIX GRAMINACEE - GP1/10,12.50,10,sez. Bios,privato
+Igemorfina,Igemorfina,IgE Morfina /10,18.00,10,sez. Bios,privato
+12377,ASFU1,"IgE MUFFE, ASPERGILLUS FUMIGATUS - M3/10",11.50,10,sez. Bios,privato
+10181,IGEN,IgE NOCCIOLE/10,12.50,10,sez. Bios,privato
+10189,IGEO,IgE OLIVO/10,12.50,10,sez. Bios,privato
+2000001,Anis1,IgE Parassita Anisakis-P4/10,13.50,10,sez. Bios,privato
+4562,PAJU,IgE PARIETARIA JUDAICA - W21/10,15.23,10,sez. Bios,privato
+4560,PAOFF,IgE PARIETARIA OFFICINALIS - W19/10,15.23,10,sez. Bios,privato
+10184,IGEPC,IgE PELO CONIGLIO/10,13.50,10,sez. Bios,privato
+12175,IGEPN,IgE PEPE NERO/10,0.00,10,sez. Bios,privato
+10564,IGEPE,IgE PESCA/10,12.50,10,sez. Bios,privato
+12416,SPADB,IgE PESCE SPADA - F312/10,11.50,10,sez. Bios,privato
+10430,POA P,IgE POA PRATENSIS/10,11.50,10,sez. Bios,privato
+12303,POGR2,IgE POLVERE CASA GREER LABS-H1/10,11.50,10,sez. Bios,privato
+12304,POHO2,IgE POLVERE CASA HOLLISTER-H2/10,11.50,10,sez. Bios,privato
+10179,IGEP,IgE POMODORO/10,12.50,10,sez. Bios,privato
+10218,UOVOR,IgE ROSSO D'UOVO/10,12.30,10,sez. Bios,privato
+54632,F41,IgE Salmone F41 ( IMMUNOCAP )/10,14.00,10,sez. Bios,privato
+10188,IGES,IgE SALSOLA/10,0.00,10,sez. Bios,privato
+1235698,K84,IgE SEMI DI GIRASOLE - K84 ( IMMUNOCAP )/10,14.00,10,sez. Bios,privato
+123659,F14,IgE SEMI DI SOIA - F14 ( IMMUNOCAP )/10,14.00,10,sez. Bios,privato
+160010,Tonno,Ige Tonno - F40/10,12.50,10,sez. Bios,privato
+10429,ORTB,IgE URTICA DIOICA/10,0.00,10,sez. Bios,privato
+2063,Ige zucca,IgE Zucca/10,11.50,10,sez. Bios,privato
+Cefaclor,Cefaclor,IgE-Cefaclor /10,13.00,10,sez. Bios,privato
+Igf-bp3,Igf-bp3,IGF- BP3 /10,90.00,10,sez. Bios,privato
+10562,CICB,IMMUNOCOMPLESSI CIRCOLANTI/10,16.00,10,sez. Bios,privato
+12368,IMEL1,IMMUNOELETTROFORESI SIERICA/10,36.00,10,sez. Bios,privato
+10275,IF1,IMMUNOFISSAZIONE SIERICA ( IF )/10,48.00,10,sez. Bios,privato
+12252,UIF2,IMMUNOFISSAZIONE URINARIA ( IF )/10,50.00,10,sez. Bios,privato
+21501,Immd,Immunoglobuline D ( Igd )/10,12.00,10,sez. Bios,privato
+10432,IGSC2,IMMUNOGLOBULINE G SOTTOCLASSI/10,75.00,10,sez. Bios,privato
+10521,EKAP2,IMMUNOGLOBULINE SIERO : C. KAPPA/10,24.00,10,sez. Bios,privato
+10520,ELAM2,IMMUNOGLOBULINE SIERO : C. LAMBDA/10,24.00,10,sez. Bios,privato
+Igg-4,Igg-4,Immunoglobuline Sottoclasse IgG4 /10,27.00,10,sez. Bios,privato
+15509,Indro,Indice Roma/10,0.00,10,sez. Bios,privato
+Ini,Ini,INIBINA A /10,100.00,10,sez. Bios,privato
+12029,Inibb,Inibina B/10,74.00,10,sez. Bios,privato
+Intergamma,Inergamma,Interferone Gamma/10,60.00,10,sez. Bios,privato
+Int10,Int10,INTERLEUCHINA 10 /10,100.00,10,sez. Bios,privato
+INT1a,INT1a,Interleuchina 1Alfa /10,150.00,10,sez. Bios,privato
+Inter2,Inter2,Interleuchina 2/10,150.00,10,sez. Bios,privato
+12345667,INT6,INTERLEUCHINA 6 ( CITOCHINA )/10,150.00,10,sez. Bios,privato
+32698,IL8,INTERLEUCHINA 8 ( IL8 )/10,100.00,10,sez. Bios,privato
+Intniche,Intniche,Intolleranza Al Nichel/10 NON USARE,90.00,10,NON USARE; sez. Bios,privato
+2056,Intoll,Intolleranze Alimentari (108 Cibi)/10 NON USARE,200.00,10,NON USARE; sez. Bios,privato
+18002,Isac,Isac ( Esami Allergologici 112 Allergeni )/10,330.00,10,sez. Bios,privato
+12366,ISTAM,ISTAMINA/10,89.00,10,sez. Bios,privato
+12286,ISTUR,ISTAMINURIA/10,87.00,10,sez. Bios,privato
+Lacosa,Lacosa,Lacosamide/10,48.00,10,sez. Bios,privato
+250000,Lamot,Lamotrigina/10,24.00,10,sez. Bios,privato
+2502,Lap,Lap ( Leucino Aminopeptidasi)/10,70.00,10,sez. Bios,privato
+10486,LATTA,LATTATO ( ACIDO LATTICO )/10,12.00,10,sez. Bios,privato
+Lattof,Lattof,Lattoferrina Abs /10,50.00,10,sez. Bios,privato
+16060,Latfb,Lattoferrina Fecale/10,94.00,10,sez. Bios,privato
+12139,LDHI1,LDH ISOENZIMI/10,27.00,10,sez. Bios,privato
+Ldlox,Ldlox,Ldl Ossidate/10,60.00,10,sez. Bios,privato
+12071,LUER1,LE TEST/10,0.00,10,sez. Bios,privato
+12573,LEGM1,LEGIONELLA PNEUMOPHILA Ab IgG/10,25.00,10,sez. Bios,privato
+12572,LEGI1,LEGIONELLA PNEUMOPHILA Ab IgM/10,25.00,10,sez. Bios,privato
+12574,LEGPS,LEGIONELLA PNEUMOPHILA Ag URINARIO/10,32.00,10,sez. Bios,privato
+Leispcr,Leispcr,Leishmania - Pcr (Qualitativa) /10,0.00,10,sez. Bios,privato
+1600,1600,Leishmania Ab IgG/10,21.00,10,sez. Bios,privato
+1601,1601,Leishmania Ab IgM/10,21.00,10,sez. Bios,privato
+Leptina,Leptina,LEPTINA /10,90.00,10,sez. Bios,privato
+12621,Levet,Levetiracetam/10,72.00,10,sez. Bios,privato
+17000063,Lidoc,Lidocaina/10,15.00,10,sez. Bios,privato
+Lipidog,Lipidog,Lipidogramma /10,15.00,10,sez. Bios,privato
+10147,LIPA,LIPOPROTEINA ( A )/10,12.00,10,sez. Bios,privato
+12570,LIQCE,LIQUOR CONTA DELLE CELLULE/10,24.00,10,sez. Bios,privato
+12212,ELIS1,LISTERIA ANTICORPI/10 (NON USARE),24.00,10,NON USARE; sez. Bios,privato
+1800006,Loreb,Lorazepam/10,54.00,10,sez. Bios,privato
+10175,LAAB1,LUPUS ANTICOAGULANT ( LAC )/10,18.00,10,sez. Bios,privato
+10192,LUPS,LUPUS ANTICOAGULANT/10Non Usare,18.00,10,NON USARE; sez. Bios,privato
+16070,Mprlm,Macroprolattina/10,60.00,10,sez. Bios,privato
+12296,MAGEB,MAGNESIO ERITROCITARIO/10,16.00,10,sez. Bios,privato
+19023,Mang,Manganese/10,24.00,10,sez. Bios,privato
+2015,MCA/10,Mca/10 / Non Usare,30.00,10,NON USARE; sez. Bios,privato
+126011,Melat,Melatonina Sierica/10,52.00,10,sez. Bios,privato
+32165,Menigg,"MENINGOCOCCO IgG ( A,C,Y,W 135 )/10",45.00,10,sez. Bios,privato
+12356,EHG2,MERCURIO EMATICO/10,22.00,10,sez. Bios,privato
+12357,UHG4,MERCURIO URINARIO/10,22.00,10,sez. Bios,privato
+2000004,Imeta,Metadone Urinario/10,18.00,10,sez. Bios,privato
+2000003,Met2,Metaemoglobina/10,16.00,10,sez. Bios,privato
+12499,UMET1,METANEFRINE - NORMETANEFRINE URIN.10,65.00,10,sez. Bios,privato
+12173,EMETA,METANEFRINE PLASMATICHE/10 NON USARE,82.00,10,NON USARE; sez. Bios,privato
+10553,META3,METANEFRINE URINARIE/10 Non Usare,32.00,10,NON USARE; sez. Bios,privato
+12358,METIO,METIONINA PLASMATICA/10,78.00,10,sez. Bios,privato
+Metossi,Metossi,Metossitiramina Urinaria/10,90.00,10,sez. Bios,privato
+10251,MICG1,MICOPLASMA PNEUMONIAE Ab IgG/10,16.00,10,sez. Bios,privato
+10252,MICM1,MICOPLASMA PNEUMONIAE Ab IgM/10,16.00,10,sez. Bios,privato
+Miner,Miner,MINERALOGRAMMA (Gas-Massa Su Capello) /10,160.00,10,sez. Bios,privato
+10190,Mioglo,Mioglobina/10,24.00,10,sez. Bios,privato
+18041,Umiob,Mioglobinuria ( Urine 24 H )/10 NON USARE,18.00,10,NON USARE; sez. Bios,privato
+1900682,Mioglob,Mioglobinuria (Urine Sterili)/10,18.00,10,sez. Bios,privato
+10410,MORBG,MORBILLO ANTICORPI IgG/10,16.00,10,sez. Bios,privato
+10409,MORBM,MORBILLO ANTICORPI IgM/10,16.00,10,sez. Bios,privato
+Tirosinasi,Tirosinasi,MRNA Tirosinasi /10 (NON USARE),280.00,10,NON USARE; sez. Bios,privato
+12024,OMOMI,MTHFR ( OMOCISTEINA ) MUTAZIONE A1298C/10,134.00,10,sez. Bios,privato
+12023,MTHF1,MTHFR ( OMOCISTEINA ) MUTAZIONE C677T/10,134.00,10,sez. Bios,privato
+10266,MTHFR,MTHFR/10,130.00,10,sez. Bios,privato
+10199,MYCG,MYCOPLASMA A.A IGG/10,20.00,10,sez. Bios,privato
+10200,MYIGM,MYCOPLASMA A.A. IGM/10,20.00,10,sez. Bios,privato
+1500001,Gopc1,Neisseria Gonorrhoeae ( Dna ) Su Urine/10,180.00,10,sez. Bios,privato
+12255,GONDNA,NEISSERIA GONORRHOEAE DNA SU LIQ. SEM./10,180.00,10,sez. Bios,privato
+12364,GONDN,NEISSERIA GONORRHOEAE DNA SU TAMP.VAG./10,180.00,10,sez. Bios,privato
+12258,NICKB,NICHEL EMATICO/10,26.00,10,sez. Bios,privato
+12259,UNIC2,NICHEL URINARIO/10,26.00,10,sez. Bios,privato
+10558,PBNP1,NT pro BNP/10,75.00,10,sez. Bios,privato
+12282,T224,Ole e1 Olea Europea ( Rast Molec. T224 )/10,30.00,10,sez. Bios,privato
+18004,Omscree,Omega Screening/10,78.00,10,sez. Bios,privato
+997,Omo,Omocisteina/10 ( Non Usare ),30.00,10,NON USARE; sez. Bios,privato
+10555,AMH2,ORMONE ANTI-MULLERIANO/10,65.00,10,sez. Bios,privato
+12146,EOSM1,OSMOLALITA' SIERICA/10,32.00,10,sez. Bios,privato
+12147,UOSM1,OSMOLALITA' URINARIA/10,32.00,10,sez. Bios,privato
+12138,UOSS1,OSSALATI URINARI ( OSSALURIA )/10,42.00,10,sez. Bios,privato
+10507,OSTE2,OSTEOCALCINA ( BGP )/10,26.00,10,sez. Bios,privato
+Sclerosi,Sclerosi,Pannello Anticorpi Sclerosi Sistemica/10,50.00,10,sez. Bios,privato
+EPATOP,EPATOP,Pannello Epatopatia Autoimmune /10,115.00,10,sez. Bios,privato
+10490,PAPT,PAP TEST/10,22.00,10,sez. Bios,privato
+10445,PAPPA,PAPP-A/10,30.00,10,sez. Bios,privato
+12469,W211,Par j2 Pariet. jud. (RAST MOLEC. W211)/10,30.00,10,sez. Bios,privato
+30002,Malaria,Parassita Malarico Anticorpi/10,26.00,10,sez. Bios,privato
+10155,PAROG,PAROTITE ANTICORPI IgG/10,18.00,10,sez. Bios,privato
+10153,PAROM,PAROTITE ANTICORPI IgM/10,18.00,10,sez. Bios,privato
+12078,PARG1,PARVOVIRUS B19 Ab IgG/10,24.00,10,sez. Bios,privato
+12079,PARM2,PARVOVIRUS B19 Ab IgM/10 (Non Usare),24.00,10,NON USARE; sez. Bios,privato
+12159,PCA3,PCA3/10,420.00,10,sez. Bios,privato
+1600039,Prcsens,PCR High Sensitivity (Cardiophase) /10,14.00,10,sez. Bios,privato
+12467,F351,Pen a1 Penaeus azt. (RAST MOLEC. F351)/10,30.00,10,sez. Bios,privato
+Pep test,Pep test,Pep Test/10,70.00,10,sez. Bios,privato
+10372,PEPC2,PEPTIDE- C SIERICO/10,16.00,10,sez. Bios,privato
+10466,SATR,PERCENT. SATURAZ. TRANSFERRINA/10,22.00,10,sez. Bios,privato
+12470,G205,Phl p1 Phleum prat. (RAST MOLEC. G205)/10,30.00,10,sez. Bios,privato
+12473,G212,Phl p12 Phleum prat. (RAST MOLEC. G212)/10,30.00,10,sez. Bios,privato
+12471,G215,Phl p5b Phleum prat. (RAST MOLEC. G215)/10,30.00,10,sez. Bios,privato
+12472,G210,Phl p7 Phleum prat. (RAST MOLEC. G210)/10,30.00,10,sez. Bios,privato
+12189,PIOM2,PIOMBO EMATICO ( PIOMBEMIA )/10,26.00,10,sez. Bios,privato
+12525,UPIO3,PIOMBO URINARIO ( PIOMBURIA ) 24 h/10,26.00,10,sez. Bios,privato
+12453,PIRUB,PIRUVATO/10,48.00,10,sez. Bios,privato
+17000000,Plc2b,Plac Test/10,50.00,10,sez. Bios,privato
+180000,Pnegb,Pneumococco Igg/10,27.00,10,sez. Bios,privato
+12431,POVIB,POLIOVIRUS Abs/10,98.00,10,sez. Bios,privato
+Vip,Vip,Polipeptide Intestinale Vasoattivo/10,90.00,10,sez. Bios,privato
+1700006,Porub,Porfirine Urinarie Totali/10,25.00,10,sez. Bios,privato
+12412,PBGP,PORFOBILINOGENO URINE 24h/10,18.00,10,sez. Bios,privato
+12405,PREAL,PREALBUMINA 0 TRANSTIRETINA/10,15.00,10,sez. Bios,privato
+12503,PREG1,PREGNENOLONE SOLFATO/10,80.00,10,sez. Bios,privato
+3001,Primid,Primidone/10,25.00,10,sez. Bios,privato
+12113,PRCA1,PROCALCITONINA ( PCT )/10,84.00,10,sez. Bios,privato
+Fdp,Fdp,Prodotti Di Degradazione Del Fibrinogeno (FDP) /10,20.00,10,sez. Bios,privato
+10178,PGOH1,PROGESTERONE 17-OH ( 17OHP )/10,22.00,10,sez. Bios,privato
+10137,PRC,PROTEINA C COAGULATIVA/10,24.00,10,sez. Bios,privato
+130061,Ecp,Proteina Cationica Eosinofila ( Ecp )/10,43.00,10,sez. Bios,privato
+13101,S100b,Proteina S-100/10,75.00,10,sez. Bios,privato
+332,EFPS3,PROTEINA S-FREE ( FPS )/10,28.00,10,sez. Bios,privato
+160016500,Pro,Prova/10,2.00,10,sez. Bios,privato
+12558,F419,Pru p1 Prunus Persica ( RAST MOLEC. F419 )/10,38.00,10,sez. Bios,privato
+12176,F420,Pru p3 Prunus persica ( RAST MOLEC. F420 )/10,38.00,10,sez. Bios,privato
+12559,F421,Pru p4 Profilin Peach ( RAST MOLEC. F421 )/10,44.00,10,sez. Bios,privato
+12009,2PRO,PSA - 2PRO PHI/10,186.00,10,sez. Bios,privato
+12582,QUE1B,QUETIAPINA/10,68.00,10,sez. Bios,privato
+10207,RASTD,RAST DPT/10,23.00,10,sez. Bios,privato
+Carbo,Carbo,Rast Farm. Carbocaina - C 87/10,20.00,10,sez. Bios,privato
+Mepiva,Mepiva,Rast Farm. Mepivacaina - C88/10,15.00,10,sez. Bios,privato
+Parac,Parac,RAST FARMACO: PARACETAMOLO - C85/10,20.00,10,sez. Bios,privato
+2316549,C71,Rast Insulina Bovina C71/10,18.00,10,sez. Bios,privato
+123569878,C70,Rast Insulina Porcina C70/10,18.00,10,sez. Bios,privato
+2365932,C73,Rast Insulina Umana C73/10,18.00,10,sez. Bios,privato
+50004,Pale1,"RAST: GRAM.,PALEO DEI PRATI-G4/10",12.50,10,sez. Bios,privato
+50005,Paod,"RAST: GRAM.,PALEO ODOROSO-G1/10",12.50,10,sez. Bios,privato
+Il2r,Il2r,Recettore Interleuchina2 (IL2) /10,150.00,10,sez. Bios,privato
+10282,PRAS,RENINA A RIPOSO CLINOSTATICO/10,24.00,10,sez. Bios,privato
+10303,PRA,RENINA DOPO MOTO ORTOSTATICO/10,24.00,10,sez. Bios,privato
+12376,RENI,RENINA/10,24.00,10,sez. Bios,privato
+10202,RPCA4,RESISTENZA PROTEINA C ATTIVATA/10,22.00,10,sez. Bios,privato
+12546,RESIB,RESPIRATORIO SINCIZIALE IgG/10 (NON USARE),22.00,10,NON USARE; sez. Bios,privato
+Rbp,Rbp,Retinol Binding Protein/10,30.00,10,sez. Bios,privato
+12238,RICK2,RICKETT SIA CONORII Ab IgG/IgM10,28.00,10,sez. Bios,privato
+10459,AROS,ROSOLIA AVIDITY/10,36.00,10,sez. Bios,privato
+180007,Rogim,ROTAVIRUS Anticorpi IgG/10 ( Non Usare ),27.00,10,NON USARE; sez. Bios,privato
+180009,Romim,ROTAVIRUS Anticorpi IgM/10 ( Non Usare ),27.00,10,NON USARE; sez. Bios,privato
+ERPR,ERPR,RPR /10,10.00,10,sez. Bios,privato
+Srv Igg,Srv Igg,RSV Virus (sinciziale) IgG /10,18.00,10,sez. Bios,privato
+19000031,Salib,Salicilati/10,15.00,10,sez. Bios,privato
+10425,SELP,SELENIO PLASMATICO/10,24.00,10,sez. Bios,privato
+12251,ESERO,SEROTONINA SIERICA/10,16.00,10,sez. Bios,privato
+USERO,USERO,Serotonina Urinaria/10,16.00,10,sez. Bios,privato
+10226,SHBG1,SHBG ( SEX HORM. BINDING GLOBUL. )/10,30.00,10,sez. Bios,privato
+19030,Siam1,Sieroamiloide/10,25.00,10,sez. Bios,privato
+SM LDL,SM LDL,Small Dense LDL Colesterolo /10,80.00,10,sez. Bios,privato
+10258,SOMA1,SOMATOMEDINA-C ( IGF-1 )/10,34.00,10,sez. Bios,privato
+Std,Std,STD6 (Pacchetto MTS) /10,220.00,10,sez. Bios,privato
+12484,PNEUM,STREPTOCOCCO PNEUMONAE Ag URINARIO/10,65.00,10,sez. Bios,privato
+Stress,Stress,STRESS OSSIDATIVO /10,50.00,10,sez. Bios,privato
+Strongil,Strongiloidiasi,Strongiloidiasi Abs /10,32.00,10,sez. Bios,privato
+281,T32,T3 ( TRIIODOTIRONINA )/10,9.00,10,sez. Bios,privato
+T3rev,T3rev,T3 REVERSE/10,40.00,10,sez. Bios,privato
+283,T42,T4 ( TIROXINA )/10,9.00,10,sez. Bios,privato
+10146,TA43,TA-4 ( SCC ) ANTIGENE/10,22.00,10,sez. Bios,privato
+18556,Tacro,Tacrolimus Fk 506/10,48.00,10,sez. Bios,privato
+1400018,Tbg,Tbg ( Globulina Tiroxinalegante )/10,18.00,10,sez. Bios,privato
+Teof,Teof,Teofillina/10,20.00,10,sez. Bios,privato
+71,ECOOD,TEST DI COOMBS DIRETTO/10,16.00,10,sez. Bios,privato
+10514,Testli,Testosterone Libero/10,25.00,10,sez. Bios,privato
+13508,Testu,Testosterone Urinario/10,37.00,10,sez. Bios,privato
+12312,TLINFI,TIPIZZAZIONE LINFOCITARIA ( IMMUNOTEST )/10,230.00,10,sez. Bios,privato
+L1927,L1927,Tipizzazione Linfociti CD19+CD27 /10,0.00,10,sez. Bios,privato
+250011,Staph,Titolo Antistafilolisinico- TAF/10,10.00,10,sez. Bios,privato
+Tnf,Tnf,TNF (Tumor Necrosis Factor) /10,48.00,10,sez. Bios,privato
+12202,TOPIR,TOPIRAMATO/10,88.00,10,sez. Bios,privato
+1610,1610,Toxocara Canis/10,68.00,10,sez. Bios,privato
+12288,ATOX1,TOXOPLASMA AVIDITY IgG/10,36.00,10,sez. Bios,privato
+10511,TPA1,TPA ( ANTIGENE TISSUTALE )/10,25.00,10,sez. Bios,privato
+276,TSHr,TR-Ab/10 ( Non Usare ),34.00,10,NON USARE; sez. Bios,privato
+1800030,Trgb1,Treponema Pallidum Abs Igg/10,18.00,10,sez. Bios,privato
+10114,TROP3,TROPONINA I/10,21.00,10,sez. Bios,privato
+Uropo,Uropo,Uroporfirine Urinarie /10,25.00,10,sez. Bios,privato
+10547,VARM1,VARICELLA ANTICORPI IgM/10,16.00,10,sez. Bios,privato
+10546,VARG1,VARICELLA ANTICORPI IgG/10,16.00,10,sez. Bios,privato
+10302,ADHB,VASOPRESSINA - ADIURETINA ( ADH )/10,48.00,10,sez. Bios,privato
+10426,VITAB,VITAMINA A ( LIPOSOLUBILE )/10,26.00,10,sez. Bios,privato
+12143,B1,VITAMINA B1 ( IDROSOLUBILE )/10,22.00,10,sez. Bios,privato
+12144,B2,VITAMINA B2 ( IDROSOLUBILE )/10,18.00,10,sez. Bios,privato
+12313,VPPB,VITAMINA B3 opp. VITAMINA PP/10,54.00,10,sez. Bios,privato
+12039,B61,VITAMINA B6/10,60.00,10,sez. Bios,privato
+12145,VIB92,VITAMINA B9 ( Acido Folico Intraeritrocitario)/10,43.00,10,sez. Bios,privato
+12421,VITC,VITAMINA C ( ACIDO ASCORBICO )/10,68.00,10,sez. Bios,privato
+1800001,Vd125,Vitamina D ( 1 - 25 Diidrossi )/10,86.00,10,sez. Bios,privato
+12600,12600,Vitamina D Totale 25-Oh-D ( D2 + D3 )/10,25.00,10,sez. Bios,privato
+12166,VITEB,VITAMINA E (Tocoferolo)/10,30.00,10,sez. Bios,privato
+12361,VITKB,VITAMINA K/10,180.00,10,sez. Bios,privato
+12066,EvFG1,VOLUME FILTRATO GLOMERULARE ( GFR )/10,48.00,10,sez. Bios,privato
+160003,Wrose,Waaler Rose/10,10.00,10,sez. Bios,privato
+12442,YERS,YERSINIA ENTEROCOLITICA/10,28.00,10,sez. Bios,privato
+1500000,Zikgm,ZIKA VIRUS (ZIKV) IgG/10,68.00,10,sez. Bios,privato
+15000000,Zikmm,ZIKA VIRUS (ZIKV) IgM/10,68.00,10,sez. Bios,privato
+10156,ZINC2,ZINCO SIERICO/10,26.00,10,sez. Bios,privato
+Zincourine,Zincourine,Zinco Urinario/10,26.00,10,sez. Bios,privato
+12020,ZNPPB,ZINCOPROTOPORFIRINA ERITROCITARIA/10,28.00,10,sez. Bios,privato
+18020,Fzonb,Zonulina Fecale/10,160.00,10,sez. Bios,privato
+Dfs,Dfs,A. A. DFS70 / 20,30.00,20,sez. Bios,privato
+Anti ZnT8,Anti ZnT8,A. A. Trasportatore Dello Zinco (Anti ZnT8) / 20,42.00,20,sez. Bios,privato
+Trepig,Trepig,A.A. TREPONEMA PALLIDUM TOTAL /20,12.00,20,sez. Bios,privato
+Scl70,Scl70,Ab Anti SCL 70 Quantitativo/20,20.00,20,sez. Bios,privato
+1900,Angio,Ace ( Angiotensina )/20,36.00,20,sez. Bios,privato
+101,Acth-20,Acth/20,25.00,20,sez. Bios,privato
+12509,ADEF,ADENOVIRUS ( FECI ) /20,15.00,20,sez. Bios,privato
+10392,Adenog,Adenovirus Igg/20,20.00,20,sez. Bios,privato
+10296,Adenom,Adenovirus Igm/20,20.00,20,sez. Bios,privato
+25550,Adenovirus,Adenovirus In Materiali Biologici (Met.Rapido)/20,15.00,20,sez. Bios,privato
+12318,ADH,ADH (Adiuretina) /20,32.00,20,sez. Bios,privato
+12497,ADRE,ADRENALINA O EPINEFRINA URINARIA /20,30.00,20,sez. Bios,privato
+1038,Aldo clino,Aldosterone In Clinostatismo/20,25.00,20,sez. Bios,privato
+10370,Aldo,Aldosterone In Ortostatismo/20,25.00,20,sez. Bios,privato
+12404,Alfa1,Alfa1 Antitripsina/20,10.00,20,sez. Bios,privato
+Alfa1,Alfa,Alfa1 Glicoproteina Acida/20,10.00,20,sez. Bios,privato
+Afp20,Afp20,ALFA-FETO PROTEINA/20,20.00,20,sez. Bios,privato
+10389,ALLER,ALLERGOLOGIA,0.00,10,sez. Bios,privato
+25001,Alfa1glic,Alpha 1 Glicoproteina Acida/20,12.00,20,sez. Bios,privato
+10365,AMA,AMA ( ANTICORPI ANTI MITOCONDRI)/20,20.00,20,sez. Bios,privato
+12263,AMMO,AMMONIEMIA /20,12.00,20,sez. Bios,privato
+25000,Ana20,Ana/20,15.00,20,sez. Bios,privato
+10374,ANCA,ANCA/20,22.00,20,sez. Bios,privato
+2018,Anfis,Anti Anfisisima/20,20.00,20,sez. Bios,privato
+12375,ABGPIA,ANTI BETA2 GPI (COFATT.CARDIOLIPINA) IGA /20,20.00,20,sez. Bios,privato
+12373,ABGPIG,ANTI BETA2 GPI (COFATT.CARDIOLIPINA) IGG /20,20.00,20,sez. Bios,privato
+12374,ABGPIM,ANTI BETA2 GPI (COFATT.CARDIOLIPINA) IGM /20,20.00,20,sez. Bios,privato
+12451,abrucg,ANTI BRUCELLE IGG /20,22.00,20,sez. Bios,privato
+12452,abrucm,ANTI BRUCELLE IGM /20,22.00,20,sez. Bios,privato
+10330,CARDigA,ANTI CARDIOLIPINA IgA /20,20.00,20,sez. Bios,privato
+10328,CARD IgG,ANTI CARDIOLIPINA IgG/20,20.00,20,sez. Bios,privato
+10329,CARDigM,ANTI CARDIOLIPINA IgM/20,20.00,20,sez. Bios,privato
+10320,A-CCP,ANTI CCP ( Anticorpi anticitrullina ) /20,25.00,20,sez. Bios,privato
+10382,CELGAST,ANTI CELLULE PARIETALI GASTRICHE/20,16.00,20,sez. Bios,privato
+1029,Cv2,Anti Cv2/20,20.00,20,sez. Bios,privato
+10331,ENAA,ANTI ENA ( antigeni nucleari estraibili ) /20,25.00,20,sez. Bios,privato
+10346,ENDOM,ANTI ENDOMISIO IgA /20,18.00,20,sez. Bios,privato
+12140,INTR,ANTI FATTORE INTRINSECO /20,36.00,20,sez. Bios,privato
+12223,AGAD,Anti GAD /20,25.00,20,sez. Bios,privato
+125555,Hav tot,Anti HAV IgG/20,17.00,20,sez. Bios,privato
+1030,Hu,Anti HU/20,20.00,20,sez. Bios,privato
+10375,ABINS,ANTI INSULINA/20,20.00,20,sez. Bios,privato
+12353,LKMA,ANTI LKMA /20,12.00,20,sez. Bios,privato
+10388,AMCARD,ANTI MUSCOLO CARDIACO/20,15.00,20,sez. Bios,privato
+10361,ANTI-DNA,ANTI n-DNA (ds-DNA)/20,16.00,20,sez. Bios,privato
+12524,NUCL,ANTI NUCLEOSOMI /20,36.00,20,sez. Bios,privato
+12085,GLIAA,ANTI PEPTIDI DEAMIDATI DELLA GLIADINA IgA,22.00,10,sez. Bios,privato
+1015,PnMa2,Anti PN MA2/20,0.00,20,sez. Bios,privato
+12400,ANTPRO,ANTI PROTROMBINA (COFATT. CARDIOLIPINA) /20,20.00,20,sez. Bios,privato
+1033,Ri,Anti Ri/20,20.00,20,sez. Bios,privato
+10376,ABSURR,ANTI SURRENE /20,30.00,20,sez. Bios,privato
+1037,Yo,Anti Yo/20,20.00,20,sez. Bios,privato
+Abg,Antibiog,Antibiogramma/20,18.00,20,sez. Bios,privato
+Slalp,Slalp,Anticorpi anti- Antigeni Epatici /20,90.00,20,sez. Bios,privato
+Cic,Cic,Anticorpi Anti C1Q (CIC)/20,36.00,20,sez. Bios,privato
+Ica,Ica,Anticorpi Anti Insula Pancreatica (Ica) /20,12.00,20,sez. Bios,privato
+12100,Parotg,Anticorpi Anti Parotite Igg/20,17.00,20,sez. Bios,privato
+12101,Parotm,Anticorpi Anti Parotite Igm/20,17.00,20,sez. Bios,privato
+Anti pf4,Anti pf4,Anticorpi Anti Pf4 ( HIT Ab )/20,100.00,20,sez. Bios,privato
+3000,Antiacetil,Anticorpi Anti Recettore Acetilcolina/20 NON USARE,36.00,20,NON USARE; sez. Bios,privato
+BRLIGG,BORRELIAIGG,Anticorpi Borrelia IgG /20,13.00,20,sez. Bios,privato
+BRLIGM,BORRELIAIGM,Anticorpi Borrelia IgM /20,13.00,20,sez. Bios,privato
+0369,SarsqntG,Anticorpi IgG Anti-Sars Cov 2 (NON USARE),15.00,10,NON USARE; sez. Bios,privato
+03051,SarsqntM,Anticorpi IgM Anti-Sars Cov 2 (NON USARE),15.00,10,NON USARE; sez. Bios,privato
+Sars,Sars,Anticorpi SARS CoV-2 Spike-RBD IgG /20,25.00,20,sez. Bios,privato
+1215,Anti- hav igm,Anti-HAV IgM/20,17.00,20,sez. Bios,privato
+12225,APCRES,APC Resistance /20,15.00,20,sez. Bios,privato
+10391,APTO,APTOGLOBINA/20,9.00,20,sez. Bios,privato
+12127,ASCAA,ASCA IgA /20,28.00,20,sez. Bios,privato
+12128,ASCAG,ASCA IgG /20,28.00,20,sez. Bios,privato
+10383,AML,ASMA (Anticorpi anti muscolo liscio)/20,15.00,20,sez. Bios,privato
+POLIM3,POLIM3,AUTOANTICORPI ANTI POLIMERASI III/20,40.00,20,sez. Bios,privato
+12096,CROSS,BETA CROSSLAPS/20,30.00,20,sez. Bios,privato
+12210,HCGER,BETA HCG FREE /20,27.50,20,sez. Bios,privato
+10349,LATTO-TEST,BETA LATTO TEST- Beta-Lattoglobulina f77 IgG /20,22.00,20,sez. Bios,privato
+20200,B.p.IgA,Bordetella Pertussis Tossina IgA/20,16.00,20,sez. Bios,privato
+10322,B.p.IgG,Bordetella pertussis Tossina IgG/20,16.00,20,sez. Bios,privato
+10323,B.p.IgM,Bordetella pertussis Tossina IgM/20,16.00,20,sez. Bios,privato
+12501,C1 INAT,C1 INATTIVATORE /20,10.00,20,sez. Bios,privato
+10385,CA72.4,CA 72.4/20,30.00,20,sez. Bios,privato
+10352,CALPRO,CALPROTECTINA FECALE /20,30.00,20,sez. Bios,privato
+12443,CML,CARIOTIPO DA METAFASI LINFOCITARIE/20,150.00,20,sez. Bios,privato
+105555,Kappau,Catene Leggere K (Urine)/20,20.00,20,sez. Bios,privato
+105556,Lamdaurin,Catene Leggere Lamda ( Urine )/20,20.00,20,sez. Bios,privato
+12474,CCD,CCD( CROSSREACT.CARB.DETERM.RAST MOL.)/20,20.00,20,sez. Bios,privato
+10393,CERU,CERULOPLASMINA/20,13.00,20,sez. Bios,privato
+10336,CLAPA,CHLAMYDIA pneumoniae IgA /20,20.00,20,sez. Bios,privato
+10334,CLAPG,CHLAMYDIA pneumoniae IgG /20,20.00,20,sez. Bios,privato
+10335,CLAPM,CHLAMYDIA pneumoniae IgM /20,20.00,20,sez. Bios,privato
+10311,CLAMA,CHLAMYDIA t. IgA /20,22.00,20,sez. Bios,privato
+10312,CLAMG,CHLAMYDIA t. IgG /20,22.00,20,sez. Bios,privato
+10313,CLAMM,CHLAMYDIA t. IgM /20,22.00,20,sez. Bios,privato
+Chlamdna,Clamdanatamp,Chlamydia Trachomatis DNA - Tampone Cervicale/20,75.00,20,sez. Bios,privato
+Chlamoc,Chlamoc,Chlamydia Trachomatis DNA Tampone Oculare/20,75.00,20,sez. Bios,privato
+Chlamuretr,Chlamuretrdna,Chlamydia Trachomatis DNA Tampone Uretrale/20,75.00,20,sez. Bios,privato
+Chlamurin,Chlamurindna,Chlamydia Trachomatis DNA Urine/20,75.00,20,sez. Bios,privato
+12590,CHLAL,CHLAMYDIA-DNA LIQUIDO SEMINALE /20,75.00,20,sez. Bios,privato
+12235,CICLO,CICLOSPORINA /20,29.00,20,sez. Bios,privato
+12152,CITOA,CITO IgG Avidity /20,36.00,20,sez. Bios,privato
+Citodna,Citodna,CITOMEGALOVIRUS DNA quantitativa /20,100.00,20,sez. Bios,privato
+47,CKMB,CK-MB /20,9.00,20,sez. Bios,privato
+12300,clost,CLOSTRIDIUM tossina A+B /20,15.00,20,sez. Bios,privato
+12551,CMVPCRS,CMV DNA (PCR) Siero /20,70.00,20,sez. Bios,privato
+12552,CVMPCRU,CMV DNA (PCR) Urine /20,70.00,20,sez. Bios,privato
+12548,IBLCMVA,CMV Immunoblotting Ig A /20,40.00,20,sez. Bios,privato
+12549,IBLCMVG,CMV Immunoblotting Ig G (test di conferma) /20,40.00,20,sez. Bios,privato
+12550,IBLCMVM,CMV Immunoblotting Ig M (test di conferma) /20,40.00,20,sez. Bios,privato
+12444,CBBG,COLORAZ. AGGIUNT. IN BANDE BANDEGGIO G/20,36.00,20,sez. Bios,privato
+12608,Linfo,Coltura Di Linfociti Periferici Con Pha/20,130.00,20,sez. Bios,privato
+12396,ESPETT,COLTURA ESPETTORATO /20,20.00,20,sez. Bios,privato
+Gono,Gono,Coltura Per Gonococco Su Liquido Seminale/20,10.00,20,sez. Bios,privato
+T.ferita,T.ferita,Coltura Tampone Ferita (Chirurgica) /20,25.00,20,sez. Bios,privato
+12445,CLPHA,COLTURE DI LINFOCITI CON PHA/20,115.00,20,sez. Bios,privato
+12518,CONS,CONSERVAZIONE CAMPIONE /20,60.00,20,sez. Bios,privato
+12299,COPRO,COPROCOLTURA ( Germi Comuni )/20,20.00,20,sez. Bios,privato
+10364,C-PEP,C-PEPTIDE/20,20.00,20,sez. Bios,privato
+10386,CROMO,CROMOGRANINA - A /20,70.00,20,sez. Bios,privato
+12532,CYFRA,CYFRA 21.1 /20,25.00,20,sez. Bios,privato
+12475,G216,Cyn d1 Cynodon dact. (RAST MOLEC. G216),15.00,10,sez. Bios,privato
+1028,D-dimer,D-Dimero ( EIA )/20,20.00,20,sez. Bios,privato
+1294,D-DIM,D-DIMERO/20,20.00,20,sez. Bios,privato
+10324,ANDROS,DELTA 4 ANDROSTENEDIONE /20,20.00,20,sez. Bios,privato
+12125,DHEA,DHEA /20,19.00,20,sez. Bios,privato
+2610,Digos,DIGOSSINA/20,14.00,20,sez. Bios,privato
+12428,DHT,DIIDRO TESTOSTERONE (DHT) /20,30.00,20,sez. Bios,privato
+10359,VALPRO,DOSAGGIO ACIDO VALPROICO/20,25.00,20,sez. Bios,privato
+10360,CARBA,DOSAGGIO CARBAMAZEPINA/20,24.00,20,sez. Bios,privato
+Kliberesie,Klibere siero,Dosaggio Catene Leggere Libere K (Siero)/20,20.00,20,sez. Bios,privato
+Catlamda,Catliblamda,Dosaggio Catene Leggere Libere Lamba (Siero)/20,20.00,20,sez. Bios,privato
+1233,FENITO,DOSAGGIO FENITOINA/20,25.00,20,sez. Bios,privato
+12001,FENOB,DOSAGGIO FENOBARBITAL/20,16.00,20,sez. Bios,privato
+12446,DQ2-8,DQ2-DQ8 (SCREENING) /20,160.00,20,sez. Bios,privato
+12447,Dq2-8typ,Dq2-Dq8 Typing/20,300.00,20,sez. Bios,privato
+10381,EBV EA IGG,EBV Early Diffuse IgG/20,21.00,20,sez. Bios,privato
+10380,EBNAG,EBV EBNA IgG /20,20.00,20,sez. Bios,privato
+10355,VCAG,EBV VCA IgG/20,20.00,20,sez. Bios,privato
+10357,VCAM,EBV VCA IgM/20,20.00,20,sez. Bios,privato
+24,HB2,ELETTROFORESI DELLE EMOGLOBINE /20,40.00,20,sez. Bios,privato
+12316,EPU20,Elettroforesi Proteine Urinarie /20,10.00,20,sez. Bios,privato
+12593,EMOCOL,EMOCOLTURA /20,40.00,20,sez. Bios,privato
+10195,EPO3,ERITROPOIETINA ( EPO ) /20,35.00,20,sez. Bios,privato
+Chimfis,Chimfis,Esame Chimico Fisico Delle Feci/20,15.00,20,sez. Bios,privato
+Sinov,Sinoviale,Esame Colturale Liquido Sinoviale / 20,40.00,20,sez. Bios,privato
+Parass,Parass,Esame Parassitologico Delle Feci/20,25.00,20,sez. Bios,privato
+12387,estrz,Estrazione DNA/RNA,59.05,10,sez. Bios,privato
+2020,Fattore II,FATTORE II/20,25.00,20,sez. Bios,privato
+12618,Fatix,FATTORE IX/20,20.00,20,sez. Bios,privato
+10338,FATT V,FATTORE V /20,25.00,20,sez. Bios,privato
+10362,VII,FATTORE VII/20,25.00,20,sez. Bios,privato
+12168,FAT8,FATTORE VIII /20,20.00,20,sez. Bios,privato
+100012,Fatvonwillag,Fattore von Willebrand (antigene)/20,34.00,20,sez. Bios,privato
+10011,Vonwillcof,Fattore Von Willebrand (Ric.Cof.)/20,34.00,20,sez. Bios,privato
+10363,FATT.X,FATTORE X /20,20.00,20,sez. Bios,privato
+Fatt xi,Fatt xi,FATTORE XI/20,20.00,20,sez. Bios,privato
+Fatt xii,Fatt xii,FATTORE XII/20,20.00,20,sez. Bios,privato
+Fatt xiii,Fatt xiii,FATTORE XIII/20,20.00,20,sez. Bios,privato
+12454,FIBRO,FIBROSI CISTICA ( Cftr )/20,250.00,20,sez. Bios,privato
+10341,FOSF.OSS.,FOSFATASI ALCALINA OSSEA/20,25.00,20,sez. Bios,privato
+12224,FRUTT,FRUCTOSAMMINA /20,10.00,20,sez. Bios,privato
+12426,GASTR,GASTRINA /20,20.00,20,sez. Bios,privato
+12111,GH20,GH ( ORMONE SOMATOTROPO ) /20,22.00,20,sez. Bios,privato
+Giardia,Giardia,Giardia Lamblia Ag/20,12.00,20,sez. Bios,privato
+10332,G6PD,GLUCOSIO-6-FOSFATO DEIDROGENASI/20,15.00,20,sez. Bios,privato
+12199,hba2,HB A2 dosaggio /20,15.00,20,sez. Bios,privato
+12200,hbfet,HB FETALE Dosaggio /20,10.00,20,sez. Bios,privato
+20010,Hbsagconf,HbsAg ( Test Di Conferma )/20,25.00,20,sez. Bios,privato
+12430,HBVANI,HBV DNA Qualitativo/20,90.00,20,sez. Bios,privato
+12483,HBVONT,HBV DNA Quantitativo/20,90.00,20,sez. Bios,privato
+12156,HCVCONF,HCV TEST DI CONFERMA /20,100.00,20,sez. Bios,privato
+12403,HCVG,HCV TIPIZZAZIONE GENOMICA/20,136.00,20,sez. Bios,privato
+12462,HDV IGG,HDV ANTICORPI (IgG) /20,15.00,20,sez. Bios,privato
+12463,HDV IGM,HDV ANTICORPI (IgM) /20,22.00,20,sez. Bios,privato
+12464,HDVAG,HDVag /20,20.00,20,sez. Bios,privato
+12230,He,He4/20,50.00,20,sez. Bios,privato
+240,HER1,Herpes Virus 1/2 Ab IgG /20,20.00,20,sez. Bios,privato
+Hsv2dna,Hsv2dna,Herpes Hsv 2 DNA (Tampone Vaginale )/20,94.00,20,sez. Bios,privato
+16559,Hsv1,Herpes Virus 1 Dna Tampone Vaginale/20,94.00,20,sez. Bios,privato
+2027,HERP,Herpes virus 1+2 Ab IgM/20,18.00,20,sez. Bios,privato
+10086,her2,Herpes Virus 2 Ab IgG/20,18.00,20,sez. Bios,privato
+12540,HHV6,HHV6 DNA /20,80.00,20,sez. Bios,privato
+12541,HHV8,HHV8 DNA /20,80.00,20,sez. Bios,privato
+12429,HIVRNA,HIV ANALISI QUALITATIVA DI RNA/20,36.00,20,sez. Bios,privato
+12389,HIVR,HIV RNA QUANTITATIVO/20,100.00,20,sez. Bios,privato
+12553,HIVI,HIV TEST DI CONFERMA IMMUNOBLOTTING/20,55.00,20,sez. Bios,privato
+12158,HLAB27,HLA-B27 /20,90.00,20,sez. Bios,privato
+12544,HPVLIQ,HPV DNA SCREENING LIQUIDO SEMINALE /20,90.00,20,sez. Bios,privato
+1555,Hpv,HPV DNA Screening Tampone Cervicale/20,94.00,20,sez. Bios,privato
+12545,HPVURET,HPV DNA SCREENING TAMPONE URETRALE /20,90.00,20,sez. Bios,privato
+1655,Hpvsv,Hpv Dna Screening Tampone Vaginale/20,94.00,20,sez. Bios,privato
+15556,Hpv tip,Hpv Dna Su Tampone CervicaleTipizzazione/20,60.00,20,sez. Bios,privato
+16669,Hpvtv,Hpv Dna Tipizzazione Tampone Vaginale/20,60.00,20,sez. Bios,privato
+Identi,Identificazione,Identificazione Batterica/20,18.00,20,sez. Bios,privato
+12478,CEFAL,IgE CEFALOSPORINE/20,11.00,20,sez. Bios,privato
+12479,PENI1,IgE PENICILLINA G-C1/20,13.00,20,sez. Bios,privato
+12480,PENI2,IgE PENICILLINA V-C2/20,13.00,20,sez. Bios,privato
+12424,ige 12,IgE Specifiche (12 TEST) /20,100.00,20,sez. Bios,privato
+Ige12,Ige12,IgE Specifiche (Pannello 12 Prestazioni )/20,100.00,20,sez. Bios,privato
+Ige12,Ige12,IgE Specifiche (Pannello 12 Prestazioni )/20,8.33,20,sez. Bios,privato
+10369,IGESP,IGE SPECIFICHE/20,13.00,20,sez. Bios,privato
+12167,IGF1,IGF1 ( SOMATOMEDINA C ) /20,42.00,20,sez. Bios,privato
+25101,Ank,IgG Anisakis/20,25.00,20,sez. Bios,privato
+12612,Immua,Immunocomplessi Circolanti Iga/20,10.00,20,sez. Bios,privato
+12613,Immug,Immunocomplessi Circolanti Igg/20,10.00,20,sez. Bios,privato
+12614,Immum,Immunocomplessi Circolanti Igm/20,10.00,20,sez. Bios,privato
+12339,IMMS,IMMUNOFISSAZIONE SIERICA /20,50.00,20,sez. Bios,privato
+12340,IMMUR,IMMUNOFISSAZIONE URINE /20,45.00,20,sez. Bios,privato
+10092,EKAP,Immunoglobuline Siero C. Kappa/20,10.00,20,sez. Bios,privato
+10091,ELAM,Immunoglobuline Siero C.Lambda/20,10.00,20,sez. Bios,privato
+12556,JUGR1,Jug r1 NOCE ( RAST MOLEC. )/20,15.00,20,sez. Bios,privato
+Tubdna,Tubdna,M. Tuberculosis Dna Espettorato /20,80.00,20,sez. Bios,privato
+2501,Micobatturine,Micobatteri - Coltura /20,150.00,20,sez. Bios,privato
+Micesp,Miceswp,Micobatteri -Microscopico In Espettorato /20,15.00,20,sez. Bios,privato
+Micoureo,Mycoureo,Micoplasmi E Ureaplasmi/20,36.00,20,sez. Bios,privato
+1234,MIOG,MIOGLOBINA/20,17.00,20,sez. Bios,privato
+10339,MORG,MORBILLO IgG /20,16.00,20,sez. Bios,privato
+10340,MORM,MORBILLO IGM /20,16.00,20,sez. Bios,privato
+12195,MT1298,MTHFR A1298C Real-Time/20,80.00,20,sez. Bios,privato
+12196,MT677,MTHFR C677T Real-Time/20,80.00,20,sez. Bios,privato
+12439,ACE,MUTAZIONE ACE/20,72.00,20,sez. Bios,privato
+12438,APOB,MUTAZIONE APO B/20,72.00,20,sez. Bios,privato
+12437,APOEC,MUTAZIONE APO E ( C112R )/20,72.00,20,sez. Bios,privato
+12436,APOER,MUTAZIONE APO E ( R158C )/20,72.00,20,sez. Bios,privato
+12435,BFIBR,MUTAZIONE BETA FIBRINOGENO/20,72.00,20,sez. Bios,privato
+12198,MUFII,Mutazione Fattore II /20,80.00,20,sez. Bios,privato
+12197,MUTVLE,Mutazione Fattore V Leiden /20,80.00,20,sez. Bios,privato
+12434,FXIII,MUTAZIONE FATTORE XIII/20,72.00,20,sez. Bios,privato
+12136,PAI-1,MUTAZIONE PAI-1 4G/5G /20,80.00,20,sez. Bios,privato
+12169,TROMBO,MUTAZIONI ASSOCIATE ALLA TROMBOFILIA /20,220.00,20,sez. Bios,privato
+10314,MYCA,MYCOPLASMA p. IgA /20,20.00,20,sez. Bios,privato
+10315,Micog,Mycoplasma P. IgG/20,20.00,20,sez. Bios,privato
+10316,MYCM,MYCOPLASMA p. IgM /20,20.00,20,sez. Bios,privato
+12498,NORA,NORADRENALINA O NOREPINEFRINA URINARIA /20,30.00,20,sez. Bios,privato
+Noro,Noro,NOROVIRUS Antigene Fecale / 20,15.00,20,sez. Bios,privato
+299,NSE,NSE (Enolasi neurone specifica) /20,25.00,20,sez. Bios,privato
+12164,HAM2,Ormone Anti Mulleriano /20,40.00,20,sez. Bios,privato
+269,OSTE,OSTEOCALCINA /20,38.00,20,sez. Bios,privato
+Abor,Abor,Pannello Abortivit Ripetuta/20,260.00,20,sez. Bios,privato
+12209,Papp,Papp-A/20,28.00,20,sez. Bios,privato
+12203,Parvog,Parvovirus B19 IgG /20,15.00,20,sez. Bios,privato
+12205,parvoM,Parvovirus B19 IgM /20,15.00,20,sez. Bios,privato
+PLASM,PLASM,PLASMINOGENO/20,30.00,20,sez. Bios,privato
+2500,Procalcit,Procalcitonina/20,30.00,20,sez. Bios,privato
+12108,17OH,Progesterone-17-OH /20,16.00,20,sez. Bios,privato
+1232,PCANTI,PROTEINA C ANTICOAGULANTE/20,15.00,20,sez. Bios,privato
+1231,PSANTI,PROTEINA S ANTICOAGULANTE LIBERA/20,20.00,20,sez. Bios,privato
+19003,Pru3,Pru P3 Prunus Persica rast molecole ( F420 )/20,20.00,20,sez. Bios,privato
+195603,Pru4,Pru P4 Profilin Peach Rast Molecole ( F421 )/20,20.00,20,sez. Bios,privato
+2596,Quansp,Quantiferon Con Antigeni Specifici/20,55.00,20,sez. Bios,privato
+12598,Quantmit,Quantiferon Con Mitogeno/20,65.00,20,sez. Bios,privato
+10223,Rast mol,Rast Molecole/20,20.00,20,sez. Bios,privato
+12401,ratio,Ratio Kappa/Lamda siero /20,0.00,20,sez. Bios,privato
+2201,Renina clino,Renina In Clinostatismo/20,32.00,20,sez. Bios,privato
+2200,Renina,Renina In Ortostatismo/20,32.00,20,sez. Bios,privato
+12211,CHLALS,Ricerca Chlamydia (Liq. seminale) /20,15.00,20,sez. Bios,privato
+12215,CHLCRV,Ricerca Chlamydia (Tampone Cervicale) /20,15.00,20,sez. Bios,privato
+12220,CHLATV,Ricerca Chlamydia (Tampone Vaginale) /20,15.00,20,sez. Bios,privato
+Chlamuret,Chlamuret,Ricerca Chlamydia T. ( Tampone Uretrale )/20,15.00,20,sez. Bios,privato
+12407,RICG,Rickettsia conorii IgG /20,10.00,20,sez. Bios,privato
+12408,RICM,Rickettsia conorii IgM /20,10.00,20,sez. Bios,privato
+12392,ROTA,ROTAVIRUS (FECI) /20,15.00,20,sez. Bios,privato
+12150,RUBA,RUBEO IgG Avidity /20,36.00,20,sez. Bios,privato
+Rub imm,Rub imm,RUBEO IGG IMMUNOBLOTTING /20,54.00,20,sez. Bios,privato
+Rubrna,Rubrna,RUBEO RNA QUANTITATIVO /20,100.00,20,sez. Bios,privato
+Scarificaz,Scarificaz,Scarificazione Cute (Miceti) /20,35.00,20,sez. Bios,privato
+294,SHBG,SHBG /20,30.00,20,sez. Bios,privato
+T.orecchio,T.orecchio,Tampone Auricolare /20,25.00,20,sez. Bios,privato
+Tampvgon,Tampvgon,Tampone Cervicale Per Gonococco /20,10.00,20,sez. Bios,privato
+Tampone,Tampone colt,Tampone Colturale/20,25.00,20,sez. Bios,privato
+Klebs,Klebs,Tampone Rettale Per Enterobat. Muliresistenti/20,15.00,20,sez. Bios,privato
+Rett,Rett,Tampone Rettale Per Ric. Salmonella/20,16.00,20,sez. Bios,privato
+201,Tamp cov2,Tampone Sars-Cov-2/20,50.00,20,sez. Bios,privato
+Neiss,Neiss,Tampone Uretrale Per Gonococco/20,10.00,20,sez. Bios,privato
+20251,20251,Tampone Vaginale (Esame Colturale) /20,15.00,20,sez. Bios,privato
+12355,Coomdir,Test Di Coombs Diretto/20,25.00,20,sez. Bios,privato
+Coombs ind,Coombs ind,Test di Coombs Indiretto /20,0.00,20,sez. Bios,privato
+10347,Testfai,Testosterone Libero ( fai )/20,50.00,20,sez. Bios,privato
+480,TESTLIB,TESTOSTERONE LIBERO/20,20.00,20,sez. Bios,privato
+Tipizz,Tipizz,Tipizzazione Linfocitaria /20,130.00,20,sez. Bios,privato
+12153,TOXOA,Toxoplasma gondii IgG Avidity /20,36.00,20,sez. Bios,privato
+467,TPA,TPA (ANTIGENE TISSUTALE )/20,26.00,20,sez. Bios,privato
+10317,TRAB,TRAB ( ANTI RECETTORI DEL TSH) /20,40.00,20,sez. Bios,privato
+10325,CTD,TRANSFERRINA DESIALATA /20,25.00,20,sez. Bios,privato
+Trpiga,Trpiga,TREPONEMA PALLIDUM - IgG IMMUNOBLOTTING/20,40.00,20,sez. Bios,privato
+Trepoigm,Trepoigm,TREPONEMA PALLIDUM - IgM IMMUNOBLOTTING/20,40.00,20,sez. Citoistodiagnosis,privato
+12305,TRIT,Tri Test /20,35.00,20,sez. Citoistodiagnosis,privato
+Tricho,Tricho,Trichomonas Vaginalis Ric.Antigene su liq.Sem./20,8.00,20,sez. Citoistodiagnosis,privato
+Trich,Trich,Trichomonas Vaginalis Su Tampone Vaginale/20,10.00,20,sez. Citoistodiagnosis,privato
+12455,TRP20,TRIPTASI /20,36.00,20,sez. Citoistodiagnosis,privato
+10354,TROPO,TROPONINA/20,21.00,20,sez. Citoistodiagnosis,privato
+12242,VARG,Varicella (Anticorpi) IgG /20,15.00,20,sez. Citoistodiagnosis,privato
+12243,VARM,Varicella (Anticorpi) IgM /20,15.00,20,sez. Citoistodiagnosis,privato
+Rsvigg,Rsvigg,Virus Respiratorio Sinciziale (Ag Diretto)/20,15.00,20,sez. Citoistodiagnosis,privato
+25100,Yersinia,Yersinia Nelle Feci-Esame Colturale/20,20.00,20,sez. Citoistodiagnosis,privato
+Istol,Istol,Esame Istologico /90,120.00,90,sez. Citoistodiagnosis,privato
+10396,Antisperm,A.A. Anti-Spermatozoi /30,50.00,30,sez. Fleming,privato
+Coxg,Coxg,"A.A. COXACKIE B (1,2,3,4,5,6) IgG /30",66.00,30,sez. Fleming,privato
+Coxm,Coxm,"A.A. COXACKIE B (1,2,3,4,5,6) IgM /30",66.00,30,sez. Fleming,privato
+12409S,12409S,A.A. Musk/30,80.00,30,sez. Fleming,privato
+12359,ACGLU,ACIDO GLUTAMMICO/30,95.00,30,sez. Fleming,privato
+12531,ADENF,ADENOVIRUS RICERCA ANTIGENICA FECI/30,18.00,30,sez. Fleming,privato
+505,RST,ALTERNARIA TENUIS ( RAST MUFFE )/30,15.23,30,sez. Fleming,privato
+Amino-plas,Amino-plas,Aminoacidi Plasmatici /30,418.00,30,sez. Fleming,privato
+12060,AMDR,AMIODARONE E METABOLITA/30,86.00,30,sez. Fleming,privato
+Anti BP180,Anti BP180,Anti BP180 /30,42.00,30,sez. Fleming,privato
+Anti BP230,Anti BP230,Anti BP230 /30,42.00,30,sez. Fleming,privato
+Desmo1,Desmo1,Anti Desmogleina-1 /30,42.00,30,sez. Fleming,privato
+Desmo3,Desmo3,Anti Desmogleina-3 /30,42.00,30,sez. Fleming,privato
+16808,Antimic,Antimicogramma/30,15.00,30,sez. Fleming,privato
+12280,BENZE,BENZENE EMATICO/30,28.90,30,sez. Fleming,privato
+12281,BENZU,BENZENE URINARIO/30,37.82,30,sez. Fleming,privato
+16508,C1eia,C1 Esterasi Inibitore Attivita` /30,45.00,30,sez. Fleming,privato
+Caniga,Caniga,candida albicans IgA /30,18.00,30,sez. Fleming,privato
+Canighg,Canighg,candida albicans IgG /30,18.00,30,sez. Fleming,privato
+Canigm,Canigm,candida albicans IgM /30,18.00,30,sez. Fleming,privato
+Chimotrips,Chimotrip,Chimotripsina Fecale /30,30.00,30,sez. Fleming,privato
+186662,186662,Chlamydia Trachomatis DNA /30,50.00,30,sez. Fleming,privato
+18003,Ciur,Citrato Urine 24 H/30,25.00,30,sez. Fleming,privato
+23005,Cloro1,Cloroformio Urinario Fine Turno/30,24.00,30,sez. Fleming,privato
+230000,Cloro,Cloroformio Urinario Inizio Turno/30,24.00,30,sez. Fleming,privato
+23009,Dicloro1,Cloruro Di Metilene Urin.(Diclorometano)Fine T./30,24.00,30,NON USARE; sez. Fleming,privato
+230006,Dicloro,Cloruro Di Metilene Urin.(Diclorometano)Iniz.T./30,24.00,30,NON USARE; sez. Fleming,privato
+12459,CHEE,COLINESTERASI ERITROCITARIA/30,20.00,30,sez. Fleming,privato
+66,ECRIO,CRIOGLOBULINE /30,20.00,30,sez. Fleming,privato
+12051,CRMNA,CROMATINA - A.A.NUCLEOSOMI/30,30.00,30,sez. Fleming,privato
+Cupremia,Cupremia,Cupremia/30,15.00,30,sez. Fleming,privato
+Cupruria,Cupruria,Cupruria/30,20.00,30,sez. Fleming,privato
+12380,DEPI,DESOSSIPIRIDINOLINA URINE 24 h/30,45.00,30,sez. Fleming,privato
+Disb30,Disb30,Disbiosi Test / 30,50.00,30,sez. Fleming,privato
+12494,ECHIS,ECHINOCOCCO ABS SCREENING/30 ( Non Usare),96.00,30,NON USARE; sez. Fleming,privato
+10496,FELPAFE,ELASTASI PANCREATICA FECALE/30,48.00,30,sez. Fleming,privato
+12072,uepr1,Elettroforesi delle proteine Urinarie/30,18.00,30,sez. Fleming,privato
+10278,EpstDna,Epstein Barr DNA - Ricerca/30,50.00,30,sez. Fleming,privato
+12490,FAINT,FATTORE INTRINSECO ABS/30,38.00,30,sez. Fleming,privato
+12055,FTVWA,FATTORE VON WILLEBRAND ANTIGENE/30,38.00,30,sez. Fleming,privato
+20500,Febbre gialla,Febbre Gialla Abs/30,45.00,30,sez. Fleming,privato
+160007,Fencic,Fenciclidina Urine/30,24.00,30,sez. Fleming,privato
+Fibromax,Fibromax,FIBROMAX Test /30,250.00,30,sez. Fleming,privato
+12076,fluo,Fluoro/30,75.00,30,sez. Fleming,privato
+12386,Fact,Fosfatasi Acida Totale/30,12.00,30,sez. Fleming,privato
+Gaba,Gaba,GABA (ACIDO AMINOBUTIRRICO) /30,100.00,30,sez. Fleming,privato
+12460,GANGG,GANGLIOSIDI PROFILO COMPLETO AbS IgG/30,80.00,30,sez. Fleming,privato
+12461,GANGM,GANGLIOSIDI PROFILO COMPLETO AbS IgM/30,80.00,30,sez. Fleming,privato
+12062,Gasto,Gastropanel/30,178.00,30,sez. Fleming,privato
+Il10,Il10,Gene IL10 (variazione1082 G/A) /30,110.00,30,sez. Fleming,privato
+12045,HIGH90,HIGEA PANEL 109/30,370.00,30,sez. Fleming,privato
+12044,high40,HIGEA PANEL/30,240.00,30,sez. Fleming,privato
+23198,Hiv1rna,HIV 1 RNA RESISTENZA AI FARMACI/30,850.00,30,sez. Fleming,privato
+323,IDR,IDROSSIPROLINURIA/30,44.00,30,sez. Fleming,privato
+12298,IGG4,IMMUNOGLOBULINE IgG4/30,28.00,30,sez. Fleming,privato
+12284,IMU575,IMMUNOGLOBULINE URINARIE ( IgG )/30,32.00,30,sez. Fleming,privato
+12311,IODS,IODIO SIERICO TOTALE30,120.00,30,sez. Fleming,privato
+12310,IODU,IODIO URINARIO URINE 24 h/30,120.00,30,sez. Fleming,privato
+12123,ISTO,ISTONI ABS/30,34.00,30,sez. Fleming,privato
+10148,LAMO,LAMOTRIGINA/30,24.00,30,sez. Fleming,privato
+Lattfec,Lattfec,Lattoferrina Fecale /30,80.00,30,sez. Fleming,privato
+12122,LEPTO,LEPTOSPIRA ABS/30,25.00,30,sez. Fleming,privato
+12092,6208,LEVETIRACETAM/30,40.00,30,sez. Fleming,privato
+12075,Iszs,LISOZIMA SIERICO/30,54.00,30,sez. Fleming,privato
+16570,Mecu,Miceti Esame Colturale Unghia/30,15.00,30,sez. Fleming,privato
+16770,Memu,Miceti Esame Microscopico Unghia/30,15.00,30,sez. Fleming,privato
+12056,6740,MONOIDROSSICARBAZEPINA/30,22.00,30,sez. Fleming,privato
+12254,NEGOCO,NEISSERIA GONORRHOEAE COLTURA SU LIQ. SEM./30,15.00,30,sez. Genoma,privato
+12567,NGOTV,NEISSERIA GONORRHOEAE COLTURA SU TAMPone/30,15.00,30,sez. Genoma,privato
+186663,Neisseria,Neisseria Gonorrhoeae DNA /30,40.00,30,sez. Genoma,privato
+130098,Newpap,Newpap-Pap Test + Ricerca E Tipizz. Hpv/30,55.00,30,sez. Genoma,privato
+18014,Omega screen,Omega Screening /30,78.00,30,sez. Genoma,privato
+12538,ORNS,ORNITINA SIERICA/30,96.00,30,sez. Genoma,privato
+20055,Ornuri,Ornitina Urinaria/30,96.00,30,sez. Genoma,privato
+19040,Poliderm,Pannello Polimiositi/Dermatomiositi/30,135.00,30,sez. Genoma,privato
+12381,PIRI,PIRIDINOLINA URINE 24 h/30,45.00,30,sez. Genoma,privato
+10485,PICHER,PIRUVATO CHINASI ERITROCITARIA/30,16.00,30,sez. Genoma,privato
+12040,PTRFR,"PROTROMBINA FRAMMENTI 1,2/30",53.00,30,sez. Genoma,privato
+10471,TESSI,RES. OSM. ERITROCITARIA ( TEST SIMMEL)/30,16.00,30,sez. Genoma,privato
+12406,ROTAF,ROTAVIRUS RICERCA ANTIGENICA FECI/30,18.00,30,sez. Genoma,privato
+1034,Phadiatop,Screening Multiallergenico Qualitat. Phadiatop/30,50.00,30,sez. Genoma,privato
+12093,SWT,SWELLING TEST/30 ( Non Piu` ),0.00,30,NON USARE; sez. Genoma,privato
+12360,TAUR,TAURINA SIERICA/30,95.00,30,sez. Genoma,privato
+12077,TPLN,TEICOPLANINA/30,58.00,30,sez. Genoma,privato
+10225,tecp,Telopeptide c -Terminale CTX/30,84.00,30,sez. Genoma,privato
+12517,LTTNI,TEST TRASFORM. LINFOC.( LTT ) NICHEL/30,80.00,30,sez. Genoma,privato
+12554,CD3CD19,TIPIZ. LINF.B TOTALI ( CD3-CD19 ) %/30 (NON USARE),32.00,30,NON USARE; sez. Genoma,privato
+Tiptk,Titk,Tipiz. Linf.T8 Natural Killer(CD3- CD56+ Cd16+)/30,30.00,30,sez. Genoma,privato
+Tpt4,Tipt4,Tipiz. Linfoc. t4 Helper-Inducer (CD3+CD4+)/30,25.00,30,sez. Genoma,privato
+Tipt8,Tit8,Tipiz. Linfoc. t8 Suppressor-Citotox (CD3+CD8+)/30,25.00,30,sez. Genoma,privato
+19000036,0600,Tipizzaz. Leuc.Completa (Cd3-Cd4-Cd8-Cd19-Cd56)/30,155.00,30,sez. Genoma,privato
+Tipt3,Tipt3,Tipizzazione Linfocitaria t3 (CD3+)/30,25.00,30,sez. Genoma,privato
+13103,Trichom,Trichomonas Vaginalis Esame Colturale/30,22.00,30,sez. Genoma,privato
+230090,Tripsina,Tripsina/30,78.00,30,sez. Genoma,privato
+10528,Tri,Tri-Test/30,68.00,30,sez. Genoma,privato
+12419,UROU,UROPORFIRINE URINE 24h/30,25.00,30,sez. Genoma,privato
+1800002,"Vitamina D 1,25","Vitamina D 1,25 Diidrossi /30",86.00,30,sez. Genoma,privato
+1900368,1062,Vitamina H ( Biotina )/30,56.00,30,sez. Genoma,privato
+41203,Xilem,Xilosio Ematico/30,24.00,30,sez. Genoma,privato
+4530,Xilur,Xilosio Urinario/30,18.00,30,sez. Genoma,privato
+Znt8,Znt8,Zn T8 Anticorpi/30,55.00,30,sez. Genoma,privato
+Zonfe,Zonfe,ZONULINA FECALE /30,150.00,30,sez. Genoma,privato
+Zonulina,Zonulina,Zonulina Sierica /70,100.00,70,sez. Genoma,privato
+21idrossi,21idrossi,21 Idrossilasi Deficit/40,250.00,40,sez. Genoma,privato
+ACE,ACEm,ACE- Mutazione /40,85.00,40,sez. Genoma,privato
+Adrenol,Adrenol,Adrenoleucodistrofia Gene A B C D1(Intero Gene)/40,800.00,40,sez. Genoma,privato
+Leiden40,Leiden40,FATTORE V DI LEIDEN (G1691A / R506Q) /40,50.00,40,sez. Genoma,privato
+456897,HONG KONG,FATTORE V HONG KONG ( Mut. R306G )/40,126.00,40,sez. Genoma,privato
+XIII,XIII,Fattore XIII (Mutazione)/40,50.00,40,sez. Genoma,privato
+17500,Mefvpm,Febbre Mediterranea Fam.( Mefv) Princip. Mutaz./40,190.00,40,sez. Genoma,privato
+17501,Mefvig,Febbre Mediterranea Famil. ( Mefv ) Intero Gene/40,340.00,40,sez. Genoma,privato
+18060,Fencheto,Fenilchetonuria ( Pah )/40,520.00,40,sez. Genoma,privato
+1200300,Fib152,Fibrosi Cistica ( 152 Mutazioni )/40,180.00,40,sez. Genoma,privato
+19007,Fib139,Fibrosi Cistica ( Cftr 139 Mut. Europe )/40,150.00,40,sez. Genoma,privato
+10264,FCS,Fibrosi Cistica 34 Mutazioni ( Cftr )/40 NON USARE,120.00,40,NON USARE; sez. Genoma,privato
+17032,Cftr,Fibrosi Cistica Analisi Intero Gene ( Cftr )/40,250.00,40,sez. Genoma,privato
+12245,FISHSP,FISH TEST SU LIQUIDO SPERMATICO/40,190.00,40,sez. Genoma,privato
+12088,FLSEM,FRAMMENT. DNA SPERM.(Apoptosi-Tunel Test)/40,220.00,40,sez. Genoma,privato
+15000009,Garvag,Gardnerella Vaginalis ( Pcr ) /40,86.00,40,sez. Genoma,privato
+1900321,Fmo3,Gene Fmo3 Analisi In Ngs(Trimetilaminuria)/40,750.00,40,sez. Genoma,privato
+Gencom,Gencom,GENESAFE COMPLETE /40,950.00,40,sez. Genoma,privato
+Genscr,Genscr,GeneScreen Easy / 40,500.00,40,sez. Genoma,privato
+1700009,G6pdfav,Gluc. 6 Fosfato Deidr.Deficiency(G6PD) Favismo/40,880.00,40,sez. Genoma,privato
+20000006,Gstm1,Gstm1/40,110.00,40,sez. Genoma,privato
+Hpyldna,Hpyldna,H. PYLORI NELLE FECI - RICERCA GENOMICA /40,60.00,40,sez. Genoma,privato
+Hbv quali,Hbv quali,HBV DNA (Pcr) Qualitativo /40,60.00,40,sez. Genoma,privato
+Hbv,Hbv,Hbv Quantitativo-Pcr Real-Time/40,60.00,40,sez. Genoma,privato
+Hcvqua,Hcvqua,Hcv Rna Qualitativo/40,50.00,40,sez. Genoma,privato
+Hcvquanasp,Hcvquanasp,HCV RNA Quantitativo(X Campagna ASP)/40,0.00,40,sez. Genoma,privato
+Hcvquan,Hcvquan,HCV RNA Quantitativo/40,50.00,40,sez. Genoma,privato
+4520,Hcvtut,HCV Tipizzazione (Tutti I Ceppi Virali) /40,120.00,40,sez. Genoma,privato
+Hcvtpiz,Hcvtip,Hcv Tipizzazione Genomica/40,100.00,40,sez. Genoma,privato
+Hhv6dna,Hhv6dna,HHV 6 DNA ( Herpes Virus Tipo 6 DNA) /40,100.00,40,sez. Genoma,privato
+12619,Hivqual,Hiv 1 Rna Qualitativo/40,58.00,40,sez. Genoma,privato
+12620,Hivquant,Hiv 1 Rna Quantitativo/40,88.00,40,sez. Genoma,privato
+12335,HLA-G,HLA - G ( ANTIGENE LEUCOCITARIO UMANO G )/40,160.00,40,sez. Genoma,privato
+20000031,Hlab51,Hla ( Locus B51 ) Tipizzazione/40,160.00,40,sez. Genoma,privato
+12112,HLS27,HLA (Locus B27)Tipizzazione/40,87.00,40,sez. Genoma,privato
+12179,HLA1,HLA CLASSE I ( LOCI A - B - C )/40,350.00,40,sez. Genoma,privato
+12332,HLAA,HLA CLASSE I ( LOCUS A )/40,160.00,40,sez. Genoma,privato
+12333,HLAB,HLA CLASSE I ( LOCUS B )/40,160.00,40,sez. Genoma,privato
+12334,HLAC,HLA CLASSE I ( LOCUS C )/40,160.00,40,sez. Genoma,privato
+12342,HLADQB,HLA CLASSE II ( LOCUS DQB1 )/40,160.00,40,sez. Genoma,privato
+12341,HLADR,HLA CLASSE II ( LOCUS DRB1 )/40,160.00,40,sez. Genoma,privato
+12089,HLAP,HLA per morbo Celiaco ( Dq2-Dq8) /40,150.00,40,sez. Genoma,privato
+Hpvtut,Hpvtut,Hpv Screening+Genotipizz. (Tutti I Tipi Virali)/40,75.00,40,sez. Genoma,privato
+Hpv+tip,Hpv+tip,Hpv Screening+Genotipizzazione/40 (Non Usare),70.00,40,NON USARE; sez. Genoma,privato
+10464,HUGI,HUNTINGTON/40,190.00,40,sez. Genoma,privato
+1236589,Inter6,INTERLEUCHINA 6 In PCR (G-174C / G-634C)/40,120.00,40,sez. Genoma,privato
+Intfr,Intfr,Intolleranza Genetica Al Fruttosio / 40,80.00,40,sez. Genoma,privato
+Jak2,Jak2,JAK2 (Mutazione V617F) / 40,130.00,40,sez. Genoma,privato
+12307,Men 1,Men 1 ( Neoplasia Endocrina Multipla Di Tipo 1)/40,280.00,40,sez. Genoma,privato
+12502,MDCRY,MICRODELEZIONI CROMOSOMA Y/40,150.00,40,sez. Genoma,privato
+Mthfr-2,Mthfr-2,MTHFR (Mutazione A1298C)/40,46.00,40,sez. Genoma,privato
+Mthfr-1,Mthfr-1,MTHFR (Mutazione C677T) /40,46.00,40,sez. Genoma,privato
+Betafib,Betafib,Mutazione Beta Fibrinogeno/40,50.00,40,sez. Genoma,privato
+12194,BRCA2,MUTAZIONE TOT GENE BRCA2 /40,560.00,40,sez. Genoma,privato
+12192,BRCA1,MUTAZIONE TOT. GENE BRCA1 /40,560.00,40,sez. Genoma,privato
+MycoT-pcr,MycoT-pcr,Mycobacterium Tuberculosis (Real Time PCR) /40,90.00,40,sez. Genoma,privato
+12329LS,MHPCRLS,MYCOPL. HOMINIS PCR (Liqu.Sem.)/40 NON USARE,46.00,40,NON USARE; sez. Genoma,privato
+12327LS,MGPCRLS,MYCOPLASMA GENITALIUM PCR (Liquido Seminale)/40,46.00,40,sez. Genoma,privato
+12327,MGPCRU,MYCOPLASMA GENITALIUM PCR (urina)/40,46.00,40,sez. Genoma,privato
+Myco(pcr),Myco(pcr),Mycoplasma Hominis (PCR)/40,46.00,40,sez. Genoma,privato
+12329,MHPCRU,MYCOPLASMA HOMINIS PCR (urina)/40,46.00,40,sez. Genoma,privato
+2000036,Negpcr,Neisseria Gonorrhoeae (PCR) /40,46.00,40,sez. Genoma,privato
+2052,Notch3,Notch3/40,900.00,40,sez. Genoma,privato
+Oncorisk c,Oncorisk c,ONCO NEXT RISK - COMPLETE /40,900.00,40,sez. Genoma,privato
+Oncorisk,Oncorisk,ONCO NEXT RISK /40,750.00,40,sez. Genoma,privato
+PAI1,PAI1,PAI-1/40,46.00,40,sez. Genoma,privato
+12605,Ptar5,Pann. Trombofilia Abortivita` Ric.(5)/40 NON USARE,180.00,40,NON USARE; sez. Genoma,privato
+15000,15000,Pannello Epilessia/40,900.00,40,sez. Genoma,privato
+160000008,Fans,Pannello Intero Risposta Ai Fans/40,580.00,40,sez. Genoma,privato
+Risinf,Risinf,Pannello Nutrigenetica - Risposta Infiammatoria/40,130.00,40,sez. Genoma,privato
+Pann3,Pann3,Pannello Ricerca Molecolare 3 Patogeni /40,100.00,40,sez. Genoma,privato
+18000,Tbx5sall4,Pannello Tbx5 + Sall4/40,1.20,40,sez. Genoma,privato
+12162,SPG3A,PARAPARESI SPAST.TIPO 3(STRUMPELL LORRAIN)/40,550.00,40,sez. Genoma,privato
+12420,DPD,POLIMORFISMI DPD/40,148.00,40,sez. Genoma,privato
+12547,PRPRS,PRELIEVO PRENATAL- SAFE/40,30.00,40,sez. Genoma,privato
+Pren3,Pren3,Prenatal-Safe 3 /40,690.00,40,sez. Genoma,privato
+12343,PRNSA,PRENATAL-SAFE 5/40,690.00,40,sez. Genoma,privato
+Prencom,Prencom,PrenatalSafe complete Plus /40,1.30,40,sez. Genoma,privato
+12384,PRMP,PRENATAL-SAFE E MAPPA CROMOSOM. GENITORI/40,1.20,40,sez. Genoma,privato
+16012,Prekaryo,Prenatal-Safe Karyo Plus/40,890.00,40,sez. Genoma,privato
+1700000,Presafe,Prenatal-Safe Plus +Pann.Microd+Trisomie 9 E 16/40,690.00,40,sez. Genoma,privato
+12010,PSEN1,PSEN1 ( ALZHEIMER FAMILIARE )/40,280.00,40,sez. Genoma,privato
+12011,PSEN2,PSEN2 ( ALZHEIMER FAMILIARE )/40,450.00,40,sez. Genoma,privato
+13500,Vdr,Recettore Della Vitamina D ( Vdr )/40,138.00,40,sez. Genoma,privato
+12188,TSC1 e 2,SCLEROSI TUBEROSA ( TSC1 e TSC2 )/40,900.00,40,sez. Genoma,privato
+1900035,Jmc,Screening Mal. Mieloproliferat. (Jak2-Mpl-Carl)/40,860.00,40,sez. Genoma,privato
+180000236,Flgtnf,Sensibilita` Al Nichel ( Flg - Tnf Alfa )/40,100.00,40,sez. Genoma,privato
+1300000,Solfiti,Sensibilita` Ai Solfiti ( Suox - Cbs )/40,110.00,40,sez. Genoma,privato
+Gilbert,Gilbert,Sindrome di Gilbert (gene UGT1A1) /40,180.00,40,sez. Genoma,privato
+13109,Sod1,Sla : Sclerosi Laterale Amiotrofica ( Sod1 )/40,750.00,40,sez. Sofar Breath Test,privato
+130005,Stress oss.,Stress Ossidat.-Antiaging( Polim.:Gstm1-E Altr)/40,140.00,40,sez. Sofar Breath Test,privato
+20056,Suppl,Supplemento Campione Non Standard/40,70.00,40,sez. Sofar Breath Test,privato
+12362,TBX5,TBX5 HOLT-ORAM/40,430.00,40,sez. Sofar Breath Test,privato
+12142,GILB,TEST DI GILBERT/40,180.00,40,sez. Sofar Breath Test,privato
+12277,TSCO,TEST DI Paternita` - USO INFORMATIVO/40,360.00,40,sez. Sofar Breath Test,privato
+12083,PATU,TEST DI PATERNITA'-Urgenza/40,468.00,40,sez. Sofar Breath Test,privato
+12067,smpd,Test Niemann Pick tipo A/B/40,1.10,40,sez. Sofar Breath Test,privato
+1800023,Tpi12,Test Pat.Inf. Padre-Figlio1-Figlio2/40,550.00,40,sez. Sofar Breath Test,privato
+12586,TPAT4,TEST PATERNITA' INF.( PADRE-FIGLIO 1-2-3 )/40,740.00,40,sez. Sofar Breath Test,privato
+12413,TPPN,TEST PATERNITA' PRENATALE/40,1.80,40,sez. Sofar Breath Test,privato
+Patern3,Patern3,Test Paternita` (Uso Informat.) Padre-Figlio1-2/40,500.00,40,sez. Sofar Breath Test,privato
+Preecl,Preecl,Test Pre-Eclampsia /40,70.00,40,sez. Sofar Breath Test,privato
+10244,TREP,TEST RICONOSC. PATERNITA'-USO LEGALE/50,680.00,50,sez. Sofar Breath Test,privato
+12529,TOXODNA,TOXOPLASMA DNA /40,60.00,40,sez. Sofar Breath Test,privato
+Tricomonas,Tricomonas,Tricomonas Vaginalis (PCR) /40,50.00,40,sez. Sofar Breath Test,privato
+10261,12 PAN,TROMBOFILIA PAN. 15 MUTAZIONI/40,240.00,40,sez. Sofar Breath Test,privato
+12027,PAN4M,TROMBOFILIA PAN. 4 MUT./40,100.00,40,sez. Sofar Breath Test,privato
+12326LS,UUPCRLS,UREAPL. UREALYTICUM PCR (Liqu.Sem.)/40 NON USAR,46.00,40,NON USARE; sez. Sofar Breath Test,privato
+Urea(pcr),Urea(pcr),Ureaplasma Urealiticum (PCR)/40,46.00,40,sez. Sofar Breath Test,privato
+12326,UUPCRU,UREAPLASMA UREALYTICUM PCR (urina)/40,46.00,40,sez. Sofar Breath Test,privato
+1234567890,VEGF,VEGF/40,75.00,40,sez. Sofar Breath Test,privato
+12068,VHL,VHL VON HIPPEL LINDAU/40,360.00,40,sez. Sofar Breath Test,privato
+12488,XFRA,X-FRAGILE ( FRAXA )/40,148.00,40,sez. Sofar Breath Test,privato
+12489,XFRE,X-FRAGILE ( FRAXE )/40,148.00,40,sez. Sofar Breath Test,privato
+10550L,10550L,BREATH TEST AL LATTULOSIO,86.00,70,sez. Sofar Breath Test,privato
+10439,BRGLU,BREATH TEST GLUCOSIO/70,85.00,70,sez. Sofar Breath Test,privato
+10551,BTLA,BREATH TEST LATTOSIO/70 ( Non Usare ),85.00,70,NON USARE; sez. Sofar Breath Test,privato
+10550,BTHP,BREATH TEST RICERCA HP/70 (NON USARE),68.00,70,NON USARE; sez. Sofar Breath Test,privato
+12381U,12381U,Deossipiridinoline (Urine) /70,45.00,70,sez. Varelli,privato
+Hhv6 tot,Hhv6tot,Herpes Virus Tipo 6 (HHV6) Abs Total /70,40.00,70,sez. Varelli,privato
+Hhv6m,Hhv6m,Herpes Virus Tipo 6 (HHV6) IgM /70,60.00,70,sez. Varelli,privato
+17prg,17prg,17 ALFA IDROSSIPROGESTERONE /70,15.00,70,sez. Varelli,privato
+3aandro,3aandro,3 Alfa Androstenediolo /70,20.00,70,sez. Varelli,privato
+A.cell.par,A.cell.par,A.A. Cellule Parietali Gastriche /70,16.00,70,sez. Varelli,privato
+CardioA,CardioA,Ab ANTI CARDIOLIPINA IgA /70,15.00,70,sez. Varelli,privato
+CardioG,CardioG,Ab ANTI CARDIOLIPINA IgG /70,15.00,70,sez. Varelli,privato
+CardioM,CardioM,Ab ANTI CARDIOLIPINA IgM /70,15.00,70,sez. Varelli,privato
+Abcentro,Abcentro,Ab ANTI CENTROMERO /70,22.00,70,sez. Varelli,privato
+Dnasi,Dnasi,Ab ANTI DNasi B /70,18.00,70,sez. Varelli,privato
+Dna ds,Dna ds,Ab ANTI ds DNA /70,16.00,70,sez. Varelli,privato
+INTR,INTRINS,Ab Anti Fattore Intrinseco / 70,50.00,70,sez. Varelli,privato
+Antiinsuli,Antiinsuli,Ab Anti Insulina /70,23.00,70,sez. Varelli,privato
+Leish,Leish,Ab Anti Leishmania D. (Tot.) /70,42.00,70,sez. Varelli,privato
+Ama,Ama-,Ab ANTI MITOCONDRIO (IFA) AMA/70,20.00,70,sez. Varelli,privato
+Anti-nucle,Anti-nucle,Ab ANTI NUCLEO (Ana) /70,15.00,70,sez. Varelli,privato
+AAsperma,AAsperma,Ab Anti Spermatozoi (siero) /70,30.00,70,sez. Varelli,privato
+AbHAVg,AbHAVg,Ab HAV IgG /70,17.00,70,sez. Varelli,privato
+AbHAVm,AbHAVm,Ab HAV IgM /70,17.00,70,sez. Varelli,privato
+Listerig,Listerig,Ab Listeria IgG /70,20.00,70,sez. Varelli,privato
+Listerim,Listerim,Ab Listeria IgM /70,20.00,70,sez. Varelli,privato
+Abacetil,Abacetil,Ab Recettore-Acetilcolina /70,36.00,70,sez. Varelli,privato
+Indol,Indol,Ac. 5-OH Indoloacetico /70,28.00,70,sez. Varelli,privato
+Vanilm,Vanilm,Ac. Vanilmandelico Urinario /70,25.00,70,sez. Varelli,privato
+Ac.bilia,Ac.bilia,Acidi Biliari /70,10.00,70,sez. Varelli,privato
+Ac.valpr,Ac.valpr,Acido Valproico /70,15.00,70,sez. Varelli,privato
+Adeno G,Adeno G,Adenovirus IgG Abs /70,20.00,70,sez. Varelli,privato
+Adeno M,Adeno M,Adenovirus IgM Abs /70,20.00,70,sez. Varelli,privato
+Adipo,Adipo,Adiponectina /70,85.00,70,sez. Varelli,privato
+adiure,Adiure,Adiuretina (ADH) /70,32.00,70,sez. Varelli,privato
+Aldol,Aldol,Aldolasi /70,14.00,70,sez. Varelli,privato
+AldoCLINO,AldoCLINO,ALDOSTERONE In Clinostatismo /70,25.00,70,sez. Varelli,privato
+AldoORTO,AldoORTO,ALDOSTERONE In Ortostatismo /70,25.00,70,sez. Varelli,privato
+Aldo uri,Aldo uri,Aldosterone Urinario /70,15.00,70,sez. Varelli,privato
+ALEX,Alex,ALEX Test / 70 (NON USARE),250.00,70,NON USARE; sez. Varelli,privato
+Antitrip,Antitrip,ALFA 1 ANTITRIPSINA /70,10.00,70,sez. Varelli,privato
+F76,F76-,Alfa Lattoalbumina (F76) /70,20.00,70,sez. Varelli,privato
+Alluminio,Alluminio,Alluminio Ematico /70,20.00,70,sez. Varelli,privato
+Al uri,Al uri,Alluminio Urinario /70,24.00,70,sez. Varelli,privato
+Brca1-2,Brca1-2,Analisi Geni BRCA1+ BRCA2 /70,500.00,70,sez. Varelli,privato
+ANCA,ANCA,"ANCA (P-anca, C-anca) /70",22.00,70,sez. Varelli,privato
+Beta2glico,Beta2glico,Anti Beta 2 Glicoproteina IgG/IgM /70,40.00,70,sez. Varelli,privato
+BP 230,BP 230,Anti BP 230 Abs / 70,50.00,70,sez. Varelli,privato
+BP 180,BP 180,Anti BP180 Abs / 70,50.00,70,sez. Varelli,privato
+Antipancr,Antipancr,Anti Insula Pancreatica (IC) /70,12.00,70,sez. Varelli,privato
+Lkma,Lkma-,ANTI MICROSOMI EPATICI REN.(LKMA)/70,12.00,70,sez. Varelli,privato
+Asma,Asma,ANTI MUSCOLO LISCIO (ASMA) /70,15.00,70,sez. Varelli,privato
+Enaprof,Enaprof,Anti-ENA (Profile) / 70,60.00,70,sez. Varelli,privato
+EnaT,EnaT,Anti-ENA (Screening) /70,15.00,70,sez. Varelli,privato
+Ta4,Ta4,ANTIGENE TA4 (SCC)/70,22.00,70,sez. Varelli,privato
+Iston,Iston,Anti-Istoni Abs /70,25.00,70,sez. Varelli,privato
+ApolipoA,ApolipoA,Apolipoproteina A /70,15.00,70,sez. Varelli,privato
+Apo B,Apo B,Apolipoproteina B /70,8.00,70,sez. Varelli,privato
+Arse,Arse,ARSENICO URINARIO /70,15.00,70,sez. Varelli,privato
+Asca a,Asca a,ASCA IgA /70,24.00,70,sez. Varelli,privato
+Asca g,Asca g,ASCA IgG /70,24.00,70,sez. Varelli,privato
+M3asperg,M3asperg,Aspergillus Fumigatus (M3) /70,13.00,70,sez. Varelli,privato
+Renorto,Renorto,ATTIVITA` RENINICA In Ortostatismo /70,25.00,70,sez. Varelli,privato
+Renin,Renin,ATTIVITA` RENINICA In Clinostatismo /70,30.00,70,sez. Varelli,privato
+Bartonella,Bartonella,Bartonella Henselae IgG /70,35.00,70,sez. Varelli,privato
+Bartonell,Bartonell,Bartonella Henselae IgM /70,35.00,70,sez. Varelli,privato
+Benze uri,Benze uri,Benzene Urinario /70,20.00,70,sez. Varelli,privato
+Benzodiaze,Benzodiaze,BENZODIAZEPINE SIERICHE /70,50.00,70,sez. Varelli,privato
+F77,F77-,Beta Lattoglobulina (F77) /70,20.00,70,sez. Varelli,privato
+BIC SIER,BIC SIER,Bicarbonati Sierici / 70,5.00,70,sez. Varelli,privato
+Bitest,Bitest,Bi-Test /70,0.00,70,sez. Varelli,privato
+Borrelia G,Borrelia G,Borrelia Burgdoferii IgG /70,20.00,70,sez. Varelli,privato
+Borrelia M,Borrelia M,Borrelia Burgdoferii IgM /70,20.00,70,sez. Varelli,privato
+Bt-fru,Bt-fru,Breath Test FRUTTOSIO /70,85.00,70,sez. Varelli,privato
+1800039,Btla2,Breath Test Lattosio/70,120.00,70,sez. Varelli,privato
+C1 inib,C1 inib,C1 INIBITORE / 70,10.00,70,sez. Varelli,privato
+C1q,C1 q,C1q Complemento/70,15.00,70,sez. Varelli,privato
+C3 attivat,C3 attivat,C3 ATTIVATORE /70,15.00,70,sez. Varelli,privato
+Ca 50,Ca 50,CA 50 /70,34.00,70,sez. Varelli,privato
+CA 72-4,CA 72-4,CA 72-4/70,25.00,70,sez. Varelli,privato
+Ca++,Ca++,CALCIO IONIZZATO /70,5.00,70,sez. Varelli,privato
+Calcoli,Calcoli,Calcoli Urinari / 70,0.00,70,sez. Varelli,privato
+Candida G,Candida G,CANDIDA A. IgG Abs /70,30.00,70,sez. Varelli,privato
+Candida M,Candida M,CANDIDA A. IgM Abs /70,30.00,70,sez. Varelli,privato
+Carbam,Carbam,Carbamazepina /70,15.00,70,sez. Varelli,privato
+Cariot,Cariot,Cariotipo Da Sangue Periferico /70,100.00,70,sez. Varelli,privato
+Cate siero,Cate siero,CATECOLAMINE SIERICHE /70,30.00,70,sez. Varelli,privato
+Cate uri,Cate uri,Catecolamine Urinarie Totali /70,30.00,70,sez. Varelli,privato
+Kurine,Kurine,Catene Leggere Kappa Urine /70,20.00,70,sez. Varelli,privato
+L-urine,-urine,Catene Leggere Lambda Urine /70,20.00,70,sez. Varelli,privato
+K-libere s,K-libere s,Catene Leggere Libere Sieriche /70,80.00,70,sez. Varelli,privato
+Cerulopl,Cerulopl,CERULOPLASMINA SIERICA /70,15.00,70,sez. Varelli,privato
+Chim-fis,Chim-fis,Chimico-Fisico Feci /70,10.00,70,sez. Varelli,privato
+Cista,Cista,Cistatina C /70,45.00,70,sez. Varelli,privato
+Cito avi,Cito avi,Citomegalovirus IgG Avidity /70,35.00,70,sez. Varelli,privato
+Clampneu g,Clampneu g,CLAMIDIA Pneumoniae IgG /70,20.00,70,sez. Varelli,privato
+Clampneu m,Clampneu m,CLAMIDIA Pneumoniae IgM /70,20.00,70,sez. Varelli,privato
+10310,10310,CLAMIDIA Trachom. IgG /70,22.00,70,sez. Varelli,privato
+10309,10309,CLAMIDIA Trachom. IgM /70,22.00,70,sez. Varelli,privato
+Clam t a,Clam t a,Clamidia Trachomatis IgA/70,22.00,70,sez. Varelli,privato
+Ch50,Ch50,Complementemia Totale (CH50) /70,32.00,70,sez. Varelli,privato
+Copr,Copa,COPROCOLTURA /70,15.00,70,sez. Varelli,privato
+Copr.Allar,Copr.Allar,COPROCOLTURA ALLARGATA /70,25.00,70,sez. Varelli,privato
+COPR2,COPR2,Coproporfirine Urinarie /70,25.00,70,sez. Varelli,privato
+Cort.sal,Cort.sal,Cortisolo Salivare /70,36.00,70,sez. Varelli,privato
+Cortiuri,Cortiuri,Cortisolo Urinario /70,20.00,70,sez. Varelli,privato
+Cox IgG,Cox IgG,Coxsackie IgG / 70,62.00,70,sez. Varelli,privato
+Cox IgM,Cox IgM,Coxsackie IgM / 70,62.00,70,sez. Varelli,privato
+C-peptide,C-peptide,C-PEPTIDE/70,20.00,70,sez. Varelli,privato
+Crioglob,Crioglob,Crioglobuline /70,10.00,70,sez. Varelli,privato
+Cromo,Cro,Cromo/70,20.00,70,sez. Varelli,privato
+CromoA,CromoA,Cromogranina A /70,60.00,70,sez. Varelli,privato
+Crom y mic,Crom y microdel,Cromosoma Y Microdelezione DNA / 70,120.00,70,sez. Varelli,privato
+P1np,P1np,CROSS LAPS (P1NP + CTX) /70,120.00,70,sez. Varelli,privato
+Ctx,Ctx,CTX Telopeptide C-Terminale /70,50.00,70,sez. Varelli,privato
+Rame,Rame-,CUPREMIA /70,25.00,70,sez. Varelli,privato
+Cupru,Cupru,CUPRURIA (Rame Urinario) /70,25.00,70,sez. Varelli,privato
+CYFRA 21-1,CYFRA 21-1,CYFRA 21-1 /70,25.00,70,sez. Varelli,privato
+Dao,Dao,DAO Test /70,90.00,70,sez. Varelli,privato
+D4andro,D4andro,Delta 4 Androstenedione /70,20.00,70,sez. Varelli,privato
+dhea,dhea ormone,DHEA /70,19.00,70,sez. Varelli,privato
+DHT,DHT-,DHT - DIIDROTESTOSTERONE/70,30.00,70,sez. Varelli,privato
+Digo,Digo,Digossina /70,8.00,70,sez. Varelli,privato
+Disbiosi,Disbiosi,DISBIOSI TEST /70,49.00,70,sez. Varelli,privato
+Dopau,Dopau,Dopamina Urinaria/70,22.00,70,sez. Varelli,privato
+Citrt.urin,Citr.urin,Dosaggio Citrati Urinari / 70,36.00,70,sez. Varelli,privato
+Ossal uri,Ossal uri,Dosaggio Ossalato Urinario /70,40.00,70,sez. Varelli,privato
+Echi,Ech,Echinococco IgG /70,30.00,70,sez. Varelli,privato
+Epf,Epf,Elastasi Pancreatica Fecale /70,50.00,70,sez. Varelli,privato
+Enola,Enola,ENOLASE NSE/70,20.00,70,sez. Varelli,privato
+Ace70,Ace70,Enzima ACE / 70,20.00,70,sez. Varelli,privato
+Eritr,Eritr,Eritropoietina/70,30.00,70,sez. Varelli,privato
+Citolog,Citolog,Es.Citologico Urinario (1-3 Campioni) /70,50.00,70,sez. Varelli,privato
+Citoesp,Citoesp,Esame Citologico Espettorato /70,36.00,70,sez. Varelli,privato
+Parasfeci,Parasfeci,Esame Parassitologico Feci /70,15.00,70,sez. Varelli,privato
+Estriolo,Estriolo,Estriolo /70,15.00,70,sez. Varelli,privato
+Eto,Eto,Etosuccimide/70,18.00,70,sez. Varelli,privato
+Fatt II,Fatt II,Fattore II /70,25.00,70,sez. Varelli,privato
+Fatt ix,fatt ix,Fattore IX Coagulazione /70,20.00,70,sez. Varelli,privato
+Cambridge,Cambridg,Fattore V CAMBRIDGE (R306T) /70,120.00,70,sez. Varelli,privato
+FattV,FttV,Fattore V Coagulazione /70,20.00,70,sez. Varelli,privato
+Fatt vii,fatt vii,Fattore VII Coagulazione /70,20.00,70,sez. Varelli,privato
+Fatt VIII,Fatt VIII,Fattore VIII /70,20.00,70,sez. Varelli,privato
+Fatt X,Fatt X,Fattore X Coagulazione /70,20.00,70,sez. Varelli,privato
+Fenit,Fenit,Fenitoina /70,15.00,70,sez. Varelli,privato
+Fenoba,Fenoba,Fenobarbital /70,15.00,70,sez. Varelli,privato
+Fe uri,Fe uri,Ferro Urinario /70,16.00,70,sez. Varelli,privato
+fosfat. ac,Fosfatasi acida,Fosfatasi Acida / 70,5.00,70,sez. Varelli,privato
+APosseo,APosseo,Fosfatasi Alcalina (Isoenzima Osseo) /70,25.00,70,sez. Varelli,privato
+Gastrina,Gastrina,Gastrina /70,20.00,70,sez. Varelli,privato
+Gastrop,Gastrop,Gastropanel /70,100.00,70,sez. Varelli,privato
+GH ormone,GH ormone,GH /70,22.00,70,sez. Varelli,privato
+G6pdh,G6pdh,Glucosio 6 Fosfato Deidrogenasi /70,15.00,70,sez. Varelli,privato
+HPBT,HPBT,Helicobacter P. Breath Test /70,50.00,70,sez. Varelli,privato
+HerpG,HerpG,HERPES 1/2 IgG /70,18.00,70,sez. Varelli,privato
+HerpM,HerpM,HERPES 1/2 IgM /70,18.00,70,sez. Varelli,privato
+Herpg2,Herpg2,HERPES GENITALIS-HSV2 IgG /70,18.00,70,sez. Varelli,privato
+HPVT,HPVT,HPV Tipizzazione /70,0.00,70,sez. Varelli,privato
+HTLV,HTLV,HTLV1/2 Abs Totali /70,50.00,70,sez. Varelli,privato
+Idrossipro,Idrossipro,Idrossiprolinuria /70,40.00,70,sez. Varelli,privato
+Secr,Secr,IgA Secretorie Totali /70,10.00,70,sez. Varelli,privato
+C51,C51,IgE - Ac.Acetilsalicilico (ASA) /70,13.00,70,sez. Varelli,privato
+C57,C57,IgE - Trimethoprim /70,13.00,70,sez. Varelli,privato
+D2,D2,IgE Dermatoph.Farinae (D2) /70,13.00,70,sez. Varelli,privato
+D1,D1,IgE Dermatoph.Pteronyss. (D1) /70,13.00,70,sez. Varelli,privato
+GX2,GX2,IgE Mix Graminacee ( GX2) /70,0.00,70,sez. Varelli,privato
+Rast,Rast,IgE Specifiche /70,10.00,70,sez. Varelli,privato
+F208,F208,IgE Specifiche- F208 LIMONE /70,10.00,70,sez. Varelli,privato
+Immunocomp,Immunocomp,Immunocomplessi Circolanti /70,16.00,70,sez. Varelli,privato
+IE urine,IE urine,Immunoelettroforesi Proteine Urinarie /70,40.00,70,sez. Varelli,privato
+Immunoelet,Immunoelet,Immunoelettroforesi Sierica /70,50.00,70,sez. Varelli,privato
+SottoclasG,SottoclasG,Immunoglobuline IgG Sottoclassi /70,40.00,70,sez. Varelli,privato
+Indice PHI,Indice PHI,Indice PHI / 70,180.00,70,sez. Varelli,privato
+R.O.M.A.,R.O.M.A.,INDICE R.O.M.A. /70,50.00,70,sez. Varelli,privato
+Inib B,Inib B,Inibina B /70,50.00,70,sez. Varelli,privato
+Iodio U,Iodio U,Iodio Urinario /70,60.00,70,sez. Varelli,privato
+Amilasi,Amilasi,Isoenzimi Amilasi /70,30.00,70,sez. Varelli,privato
+Istamina,Istamina,Istamina /70,120.00,70,sez. Varelli,privato
+Istam. Fec,Istamina Fecale,Istamina Fecale /70,120.00,70,sez. Varelli,privato
+Lacosamide,Lacosamide,LACOSAMIDE /70,45.00,70,sez. Varelli,privato
+Leve,Leve,Levetiracetam (Keppra) /70,38.00,70,sez. Varelli,privato
+LipoA,LipoA,LIPOPROTEINA a /70,20.00,70,sez. Varelli,privato
+Liso,Liso,LISOZIMA SIERICO /70,15.00,70,sez. Varelli,privato
+Lupus anti,Lupus anti,Lupus Anticoagulant (non usare),20.00,70,NON USARE; sez. Varelli,privato
+LAC,LAC,Lupus Anticoagulant (LAC) /70,20.00,70,sez. Varelli,privato
+Macroprl,Macroprl,Macroprolattina /70,50.00,70,sez. Varelli,privato
+Merc Em,Merc Em,Mercurio Ematico / 70,15.00,70,sez. Varelli,privato
+Hg uri,Hg uri,Mercurio Urinario /70,22.00,70,sez. Varelli,privato
+Meta pla,Meta pla,METANEFRINE PLASMATICHE /70,50.00,70,sez. Varelli,privato
+Meta uri,Meta uri,METANEFRINE URINARIE /70,50.00,70,sez. Varelli,privato
+Micopla G,Micopla G,Micoplasma P. IgG /70,20.00,70,sez. Varelli,privato
+Micopla M,Micopla M,Micoplasma P. IgM /70,20.00,70,sez. Varelli,privato
+Microb,Microb,MICROBIOTA INTESTINALE in PCR / 70,350.00,70,sez. Varelli,privato
+Mioglobina,Mioglobina,MIOGLOBINA /70,17.00,70,sez. Varelli,privato
+Morbillo g,Morbillo g,Morbillo IgG Abs /70,15.00,70,sez. Varelli,privato
+Morbillo m,Morbillo m,Morbillo IgM Abs /70,15.00,70,sez. Varelli,privato
+Leiden,Leiden,Mutazione F. V Di Leiden /70,40.00,70,sez. Varelli,privato
+H1299R,HR,Mutazione Fatt.V H1299R /70,40.00,70,sez. Varelli,privato
+Fatt2,Fatt2,Mutazione Fattore II /70,40.00,70,sez. Varelli,privato
+mthfr tot,Mthfr tot,Mutazione MTHFR (C677T - A1298C) /70,80.00,70,sez. Varelli,privato
+Nickel,Nickel,NICHEL EMATICO /70,25.00,70,sez. Varelli,privato
+Osteoc,Osteoc,Osteocalcina /70,30.00,70,sez. Varelli,privato
+Anfos,Anfos,Pannello Ab Anti-Fosfolipidi /70,90.00,70,sez. Varelli,privato
+Pan14,Pan14,Pannello Molecolare 14 Patogeni / 70,140.00,70,sez. Varelli,privato
+Pan28,Pan28,Pannello Molecolare 28 patogeni / 70,240.00,70,sez. Varelli,privato
+7 patogeni,7 patogeni,Pannello Molecolare 7 Patogeni / 70,70.00,70,sez. Varelli,privato
+PT6,PT6,Pannello Trombof. 6 Mutaz /70,100.00,70,sez. Varelli,privato
+W19,W19,Parietaria Officinalis (W19) /70,13.00,70,sez. Varelli,privato
+Parot g,Parot g,Parotite IgG Abs /70,17.00,70,sez. Varelli,privato
+Parot m,Parot m,Parotite IgM Abs /70,17.00,70,sez. Varelli,privato
+Parvov g,Parvov g,Parvovirus B19 IgG Abs /70,24.00,70,sez. Varelli,privato
+Parvov m,Parvov m,Parvovirus B19 IgM Abs /70,24.00,70,sez. Varelli,privato
+Pcr HS,Pcr HS,PCR AD ALTA SENSIBILITA` /70,20.00,70,sez. Varelli,privato
+PEPSINOG I,PEPSINOGENO I,PEPSINOGENO I / 70,30.00,70,sez. Varelli,privato
+PEPSINO II,PEPSINOGENO I,PEPSINOGENO II / 70,30.00,70,sez. Varelli,privato
+Pb uri,Pb uri,Piombo Uriunario /70,25.00,70,sez. Varelli,privato
+Piruvato K,Piruvato K,Piruvato Kinasi Eritrocitaria /70,40.00,70,sez. Varelli,privato
+Plgf precl,Plgf precl,PLGF (Test Pre-Eclampsia) /70,50.00,70,sez. Varelli,privato
+CYP2C19,CYP2C19,POLIMORFISMO CYP2C19 /70,180.00,70,sez. Varelli,privato
+S100B,S100,Proteina S-100 /70,35.00,70,sez. Varelli,privato
+Quan,Quan,Quantiferon / 70,120.00,70,sez. Varelli,privato
+Rcor8,Rcor8,rCor a8 Nocciola - LTP /70,37.00,70,sez. Varelli,privato
+Weil-felix,Weil-felix,REAZIONE DI WEIL FELIX /70,10.00,70,sez. Varelli,privato
+ApcR,ApcR,RES. PROTEINA C ATTIVATA (APCR) /70,15.00,70,sez. Varelli,privato
+Res.glob.,Res.glob.,RESISTENZA GLOBULARE /70,16.00,70,sez. Varelli,privato
+RickeG,RickeG,Rickettsia IgG Abs /70,0.00,70,sez. Varelli,privato
+RickeM,RickeM,Rickettsia IgM Abs /70,0.00,70,sez. Varelli,privato
+Selenio,Selenio,Selenio /70,20.00,70,sez. Varelli,privato
+Sieroami,Sieroami,Sieroamiloide /70,25.00,70,sez. Varelli,privato
+Somato,Somato,Somatomedina (IGF-1) /70,35.00,70,sez. Varelli,privato
+Tetano,Tetano,TETANO Abs /70,28.00,70,sez. Varelli,privato
+TIP2,TIP2,Tipizzazione Linfocitaria /70,150.00,70,sez. Varelli,privato
+Topamax,Topamax,Topiramato (Topamax) /70,45.00,70,sez. Varelli,privato
+Toxo avidi,Toxo avidi,Toxoplasma IgG Avidity /70,30.00,70,sez. Varelli,privato
+Tpa,Tpa,TPA /70,20.00,70,sez. Varelli,privato
+CDT,CDT-,Transferrina Carboidrato C. (CDT) /70,25.00,70,sez. Varelli,privato
+Satur.tran,Satur.tran,Transferrina Satura /70,15.00,70,sez. Varelli,privato
+Triptasi,Triptasi,Triptasi /70,70.00,70,sez. Varelli,privato
+Tromb5,Tromb5,Trombofilia Pannello (5 Mutazioni) /70,100.00,70,sez. Varelli,privato
+VariceG,VariceG,Varicella Zoster IgG Abs /70,15.00,70,sez. Varelli,privato
+VariceM,VariceM,Varicella Zoster IgM Abs /70,15.00,70,sez. Varelli,privato
+Vidal,Vidal,Vidal Wright /70,10.00,70,sez. Varelli,privato
+Retinolo,Retinolo,Vitamina A (Retinolo) /70,34.00,70,sez. Varelli,privato
+Vitb1,Vitb1,Vitamina B1 /70,28.00,70,sez. Varelli,privato
+Vitb5,Vitb5,Vitamina B5 /70,25.00,70,sez. Varelli,privato
+VitaminaB6,VitaminaB6,Vitamina B6 /70,40.00,70,sez. Varelli,privato
+Vit c,Vit c,VITAMINA C (Ac.Ascorbico) /70,60.00,70,sez. Varelli,privato
+Vit e,Vit e,VITAMINA E (Tocoferolo) /70,30.00,70,sez. Varelli,privato
+W.rose,W.rose,Waaler Rose /70,10.00,70,sez. Varelli,privato
+Zn,Zn,ZINCO (Sierico) /70,20.00,70,sez. Varelli,privato
+Zonulina,Zonulina,Zonulina Sierica /70,180.00,70,sez. Varelli,privato

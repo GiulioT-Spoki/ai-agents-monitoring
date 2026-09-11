@@ -1,0 +1,110 @@
+region,city,address,code
+abruzzo,pescara,via milano angolo via trento,PESCARA_TRENTO
+basilicata,potenza,via del gallitello 72,POTENZA_GALLITELLO
+calabria,cosenza,corso mazzini 86,COSENZA_MAZZINI
+calabria,reggio calabria,corso garibaldi 201,REGGIO_GARIBALDI
+campania,afragola,via s. maria la nova (cc le porte di napoli),AFRAGOLA_VILLAGE
+campania,caserta,corso trieste 154/156,CASERTA_TRIESTE
+campania,napoli,via dei greci 70/76,NAPOLI_GRECI
+campania,napoli,via santa caterina a chiaia 23,NAPOLI_CHIAIA
+campania,napoli,piazza garibaldi (stazione centrale),NAPOLI_EXPRESS
+campania,napoli,aeroporto capodichino,NAPOLI_AEROPORTO
+campania,pontecagnano faiano,via pacinotti (cc maximall),PONTECAGNANO_VILLAGE
+campania,salerno,corso vittorio emanuele 230,SALERNO_EMANUELE
+emilia-romagna,bologna,piazza ravegnana 1,BOLOGNA_RAVEGNANA
+emilia-romagna,bologna,via de' giudei 3,BOLOGNA_GIUDEI
+emilia-romagna,bologna,via dei mille 12,BOLOGNA_MILLE
+emilia-romagna,casalecchio di reno,via marylin monroe 2 (cc gran reno),CASALECCHIO_VILLAGE
+emilia-romagna,ferrara,via garibaldi 30/a,FERRARA_GARIBALDI
+emilia-romagna,forli,corso della repubblica 144,FORLI_REPUBBLICA
+emilia-romagna,modena,via cesare battisti 17,MODENA_BATTISTI
+emilia-romagna,modena,via emilia ovest 1480 (cc grandemilia),MODENA_VILLAGE
+emilia-romagna,parma,via della repubblica 2,PARMA_REPUBBLICA
+emilia-romagna,parma,via emilio lepido 1 (cc parma retail),PARMA_VILLAGE
+emilia-romagna,piacenza,via cavour 1,PIACENZA_CAVOUR
+emilia-romagna,ravenna,via iv novembre 7,RAVENNA_NOVEMBRE
+emilia-romagna,reggio emilia,via emilia s. stefano 2,REGGIO_STEFANO
+emilia-romagna,rimini,largo giulio cesare 4,RIMINI_CESARE
+friuli-venezia giulia,basiliano,via d'antoni 1 (cc arcobaleno),BASILIANO_VILLAGE
+friuli-venezia giulia,trieste,via mazzini 39,TRIESTE_MAZZINI
+friuli-venezia giulia,udine,via canciani 15,UDINE_CANCIANI
+lazio,aprilia,via riserva nuova (cc aprilia 2),APRILIA_VILLAGE
+lazio,fiumicino,aeroporto leonardo da vinci,ROMA_FIUMICINO
+lazio,latina,via diaz 10,LATINA_DIAZ
+lazio,roma,largo di torre argentina 5/a,ROMA_ARGENTINA
+lazio,roma,via appia nuova 427,ROMA_APPIA
+lazio,roma,galleria alberto sordi,ROMA_COLONNA
+lazio,roma,viale libia 186,ROMA_LIBIA
+lazio,roma,viale marconi 188,ROMA_MARCONI
+lazio,roma,via vittorio emanuele orlando 78,ROMA_ORLANDO
+lazio,roma,viale giulio cesare 88,ROMA_GIULIO_CESARE
+lazio,roma,via del babuino 102,ROMA_RED
+lazio,roma,via tomacelli 23,ROMA_TOMACELLI
+liguria,genova,via xx settembre 231,GENOVA_SETTEMBRE
+liguria,genova,via ceccardi 16,GENOVA_CECCARDI
+liguria,la spezia,via fontana (cc le terrazze),LASPEZIA_VILLAGE
+lombardia,assago,viale milanofiori (cc carrefour),ASSAGO_VILLAGE
+lombardia,bergamo,via zambonate 18,BERGAMO_ZAMBONATE
+lombardia,brescia,corso zanardelli 3,BRESCIA_ZANARDELLI
+lombardia,brescia,via d'antoni (cc elnos),BRESCIA_ELNOS
+lombardia,cremona,corso mazzini 20,CREMONA_MAZZINI
+lombardia,curno,via della crocetta (cc curno),CURNO_VILLAGE
+lombardia,erbusco,via rovato (cc le porte franche),ERBUSCO_VILLAGE
+lombardia,mantova,via roma 10,MANTOVA_ROMA
+lombardia,milano,piazza duomo,MILANO_DUOMO
+lombardia,milano,corso buenos aires 33,MILANO_BUENOSAIRES
+lombardia,milano,piazza piemonte 2,MILANO_PIEMONTE
+lombardia,milano,corso xxii marzo 4,MILANO_XXIIMARZO
+lombardia,milano,stazione centrale,MILANO_CENTRALE
+lombardia,milano,stazione porta garibaldi,MILANO_GARIBALDI
+lombardia,milano,via pasubio 11,MILANO_PASUBIO
+lombardia,milano,piazza gae aulenti 1,MILANO_GAEAULENTI
+lombardia,milano,via don luigi sturzo 13,MILANO_RED_STURZO
+lombardia,milano,via sapri 11 (cc portello),MILANO_PORTELLO
+lombardia,milano,aeroporto linate,MILANO_LINATE
+lombardia,milano,aeroporto malpensa,MILANO_MALPENSA
+lombardia,monza,via carlo alberto 4,MONZA_ALBERTO
+lombardia,novate milanese,via amoretti (cc metropoli),NOVATE_VILLAGE
+lombardia,orio al serio,via portico 71 (cc orio center),ORIO_VILLAGE
+lombardia,pavia,via degli ordonni 10,PAVIA_ORDONNI
+lombardia,sesto san giovanni,viale sarca (cc sarca),SESTO_VILLAGE
+lombardia,varese,corso moro 3,VARESE_MORO
+marche,ancona,corso garibaldi 35,ANCONA_GARIBALDI
+marche,macerata,corso della repubblica 4,MACERATA_REPUBBLICA
+piemonte,alessandria,via migliara 17,ALESSANDRIA_MIGLIARA
+piemonte,biella,via italia 36,BIELLA_ITALIA
+piemonte,grugliasco,via crevacuore (cc shopville le gru),GRUGLIASCO_VILLAGE
+piemonte,torino,piazza castello 9,TORINO_CASTELLO
+piemonte,torino,piazza cln 251,TORINO_CLN
+piemonte,torino,stazione porta nuova,TORINO_PORTANUOVA
+piemonte,torino,via nizza 262 (cc lingotto),TORINO_VILLAGE
+puglia,bari,via melo 119,BARI_MELO
+puglia,bari,via santa caterina (cc bari s. caterina),BARI_VILLAGE
+puglia,casamassima,via alimentare (cc casamassima),CASAMASSIMA_VILLAGE
+puglia,lecce,via templari 9,LECCE_TEMPLARI
+sardegna,cagliari,via roma 173,CAGLIARI_ROMA
+sardegna,olbia,aeroporto costa smeralda,OLBIA_EXPRESS
+sardegna,quartucciu,via delle serre (cc le vele),QUARTUCCIU_VILLAGE
+sicilia,catania,via etnea 283,CATANIA_ETNEA
+sicilia,messina,via mazzini 35,MESSINA_MAZZINI
+sicilia,misterbianco,corso carlo marx (cc centro sicilia),MISTERBIANCO_VILLAGE
+sicilia,palermo,via maqueda 459,PALERMO_MAQUEDA
+sicilia,palermo,via cavour 133,PALERMO_CAVOUR
+toscana,arezzo,via garibaldi 107,AREZZO_POINT
+toscana,firenze,via de' cerretani 40/r,FIRENZE_CERRETANI
+toscana,firenze,piazza della stazione,FIRENZE_STAZIONE
+toscana,firenze,piazza della repubblica 26,FIRENZE_RED
+toscana,lucca,via beccheria 29,LUCCA_BECCHERIA
+toscana,pisa,corso italia 50,PISA_ITALIA
+toscana,pistoia,corso gramsci 31,PISTOIA_GRAMSCI
+toscana,prato,via garibaldi 30,PRATO_GARIBALDI
+toscana,siena,via banchi di sopra 64,SIENA_BANCHI
+trentino-alto adige,trento,via mazzini 20,TRENTO_MAZZINI
+umbria,perugia,corso vannucci 78,PERUGIA_VANNUCCI
+veneto,marcon,via mattei (cc valecenter),MARCON_VILLAGE
+veneto,padova,via san francesco 7,PADOVA_FRANCESCO
+veneto,padova,via venezia (cc giotto),PADOVA_VILLAGE
+veneto,treviso,via vico 1,TREVISO_VICO
+veneto,venezia,mestre - piazza xxvii ottobre 1,VENEZIA_MESTRE
+veneto,verona,via quattro spade 2,VERONA_SPADE
+veneto,vicenza,corso palladio 12,VICENZA_PALLADIO

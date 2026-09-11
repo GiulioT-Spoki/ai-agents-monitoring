@@ -1,0 +1,51 @@
+# Casp — Dati necessari per la prenotazione
+
+## Regola
+Per ogni nuova prenotazione servono i dati per identificare Assistito, ricetta, prestazioni, luogo, recapiti, consegna referto, data e note organizzative applicabili. Ordine domande, riutilizzo dati, domande per messaggio e momento create: System Prompt. Ogni Assistito separato anche se stesso domicilio.
+
+## Obbligatori (quando applicabili)
+Nome e cognome; codice fiscale; recapito telefonico operativo; ricetta amministrativamente gestibile; esami/prestazioni; indirizzo effettivo; comune; modalità consegna referto; data con slot ordinario libero su Calendar; altri dati obbligatori del caso.
+
+## Anagrafica e telefono
+Nome/cognome = Assistito del prelievo. Se leggibili su ricetta/fonte affidabile: non richiederli di nuovo. CF obbligatorio (ricetta/Assistito/documento). Non ricostruire/completare/correggere dati dubbi. Discordanza non chiaribile → staff Casp.
+Recapito operativo: deve consentire contatto Casp. Può essere il WA della chat se già corretto; può essere Assistito/familiare/caregiver. Ultimo numero confermato vince.
+Prenotazione da terzi: OK; dati sanitari/anagrafici sempre dell’Assistito; se utile registrare nome/rapporto/recapito di chi organizza.
+
+## Ricetta ed esami
+Gestire tipologia/validità/esami secondo KB. Ricetta riferita all’Assistito e gestibile. Dati leggibili: non richiedere di nuovo.
+Senza ricetta: raccogliere anagrafica, recapito, esami desiderati; verificare disponibilità; solvenza; no create prima che staff predispone/gestisce ricetta; poi riprendere dal primo mancante.
+Dematerializzata: nome/cognome, CF, NRE (solo regole NRE), data, prestazioni/quantità, esenzione, altri dati necessari.
+Rossa: solo dati applicabili; non richiedere NRE solo perché serve alla dematerializzata.
+Privata: dati applicabili; validità e costi secondo KB.
+Esami: solo quelli sulla ricetta (o richiesti nel flusso senza); verificare disponibilità nomenclatore; non aggiungere/eliminare/sostituire né sinonimi non previsti. Org. speciale: registrare nota operativa.
+Esenzione: acquisire se leggibile; assenza ≠ dato mancante; non interpretare autonomia (economia in costi).
+
+## Indirizzo e copertura
+Luogo effettivo del prelievo (non residenza automatica, non ricetta, non chi prenota). Via/piazza/contrada + civico se esiste + comune. CAP facoltativo se già identificabile. Non inventare civico. Se assenza civico → regole Posizione WhatsApp (copertura).
+Comune certo; copertura da regole comuni/Posizione. Conta solo luogo effettivo.
+Posizione WhatsApp quando prevista (contrade/campagne/rurali/case sparse e casi KB): obbligatoria. Non sostitutivi: Maps, coordinate scritte, foto, testi, riferimenti. Coordinate Calendar CUP solo da Posizione ricevuta.
+Info accesso solo se utili: piano, ascensore, citofono, cancello, ingresso, strada privata, difficoltà. Animali: nota se interferiscono con accesso sicuro. Persona di riferimento: solo se utile.
+
+## Referto, email, preparazione, costi
+Modalità consegna obbligatoria in nuova prenotazione (WhatsApp / email / cartacea / solo FSE — dettagli file referti). Email: acquisire, ripetere, confermare; non correggere. WhatsApp: identificare numero destinazione. Cartacea: dati consegna. Solo FSE: registrare scelta.
+Preparazione: comunicare istruzioni essenziali prima del create (non è dato anagrafico).
+Economia prima della conferma: costo servizio, ticket stimabile, solvenza, costi aggiuntivi previsti, pagamento — distinti.
+
+## Data e note
+Data solo da Calendar CUP tramite get_available_slots (slot ordinari 15 minuti, 06:00–08:30, calendari "Prenotazioni Spoki - Linea N"). Same-day / domani / fascia: file disponibilità.
+Preferenza oraria: nota operativa, non orario garantito.
+Note operative utili: accesso difficile; PICC/Midline/Port-a-Cath/CVC; accesso venoso difficile; allettato; difficoltà motorie; animali; preferenza oraria; referente; esami speciali.
+No storia clinica generale. Solo info sanitarie richieste da procedura KB. Non chiedere diagnosi/patologie/terapie generiche. Info spontanee: non usarle per diagnosi/consigli.
+
+## Più Assistiti stesso domicilio
+Dati amministrativi e sanitari separati per ciascun Assistito: nome, CF, ricette, NRE, prestazioni, esenzioni, modalità referto, note. Condivisibili se comuni: indirizzo, Posizione, accesso, recapito organizzativo.
+Capacità Calendar per domicilio/accesso: stessa data e stesso accesso = un solo slot e un solo evento, con tutti gli Assistiti nella descrizione. Non creare un evento per Assistito.
+
+## Prima del create — checklist
+Identificazione Assistito; CF; telefono operativo; ricetta gestibile + dati amm. necessari; esami e disponibilità; indirizzo/comune/copertura; Posizione se obbligatoria; accesso indispensabile; modalità referto + dati; note obbligatorie; preparazione comunicata; economia comunicata; data con slot libero verificato su Calendar; conferma finale Assistito. No create se elementi applicabili incompleti.
+
+## Modifiche
+Prima del create: ultimo valore confermato; ri-verificare (nuovo indirizzo → copertura; nuovo comune → territorio+disponibilità; nuova data → disponibilità; nuova ricetta → amm./esami; nuovo referto → dati).
+Dopo create: non modificare autonomamente; solo staff (file modifica/cancellazione).
+Riutilizzo: non richiedere di nuovo dati affidabili stabili (nome, CF, recapiti confermati). Non riutilizzare automaticamente per nuova prenotazione: ricetta, NRE, esami, esenzione, data precedente, preparazione precedente, ticket precedente.
+Correzione pre-create: ultima conferma sostituisce; niente dati incompatibili attivi sullo stesso elemento.

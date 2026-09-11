@@ -1,0 +1,67 @@
+# Casp — Prescrizioni e validità
+
+## Tipologie accettate
+Normale: ricetta elettronica/dematerializzata SSN; ricetta rossa SSN; ricetta privata (bianca/solvenza). Anche Assistito senza ricetta, con procedura sotto. Validità temporale: regole in questo file.
+
+## Invio e leggibilità
+Prescrizione completa e leggibile; preferibile un’immagine per ricetta. Più ricette in un’immagine OK se ciascuna interamente visibile. Non: tagliata, sfocata, scura, coperta, riflessi, troppo lontana. Se illeggibile: un solo nuovo invio nitido; se ancora insufficiente → transfer Casp.
+PDF OK se contenuto accessibile; altrimenti chiedere immagine. Se anche immagini non leggibili → transfer.
+
+## Ricetta elettronica SSN
+Identificare quando presenti: nome/cognome, CF, NRE, data emissione, prestazioni e quantità, esenzione, altri dati amministrativi necessari.
+NRE: solo se completamente leggibile; mai ricostruire/correggere/completare/dedurre. Dopo lettura: conferma Assistito prima dell’uso. Un solo carattere incerto e nuovo invio non risolve → transfer.
+
+## Ricetta rossa SSN
+Dati necessari: Assistito, prestazioni/quantità, data se prevista, esenzione, altri dati amministrativi. Non richiedere NRE solo perché previsto per dematerializzata. Manoscritto/aggiunte a mano → regole manoscritte.
+
+## Ricetta privata
+Identificare Assistito, prestazioni, medico. Economia in solvenza. Manoscritto → regole manoscritte.
+
+## Manoscritte e anomalie
+Qualsiasi manoscritta, o stampata/elettronica con aggiunte/correzioni rilevanti a mano → sempre transfer Casp. Non interpretare/dedurre esami, abbreviazioni, quantità, dati amministrativi/Assistito, correzioni. Non significa automaticamente no servizio, ma no autonomia.
+Cancellature, sovrascritture, modifiche, NRE/data alterati, altre anomalie → transfer; non stabilire validità da soli.
+Prescrizione solo farmaceutica: non utilizzabile per lab; chiarire o transfer.
+
+## Prestazioni sulla ricetta
+Solo prestazioni presenti e chiaramente identificabili. Non aggiungere/eliminare/sostituire/rinominare, né interpretare abbreviazioni dubbie né suggerire esami. Disponibilità da nomenclatore/KB esami. Prestazione non chiara → transfer.
+
+## Assistito e più ricette
+Ricetta deve riferirsi all’Assistito del servizio. Dati leggibili riutilizzabili. Se sembra altra persona: chiarire; se discordanza → transfer.
+Più ricette stesso Assistito stesso accesso: OK; non mescolare NRE/prestazioni/esenzioni/note. Costo servizio Casp non moltiplicato automaticamente (regole costi).
+Più Assistiti: ogni ricetta solo al proprio intestatario; non mescolare anagrafica/CF/NRE/esami/esenzioni.
+
+## Esenzione e priorità
+Assenza esenzione ≠ errore. Codice solo se leggibile; non attribuire codici assenti. Economia esenzione: file costi. Classe priorità: acquisibile come dato; non modifica la disponibilità delle date su Calendar.
+
+## Senza ricetta
+Raccogliere dati utili e esami desiderati; verificare disponibilità in KB. Informare: senza SSN → solvenza a pagamento. Poi transfer Casp per predisposizione ricetta. Non create_event prima dell’intervento staff. Dopo predisposizione/approvazione: riprendere dal primo requisito mancante senza richiedere di nuovo i dati già acquisiti.
+
+## Originale cartaceo
+Giorno del prelievo: consegnare cartaceo delle ricette usate (ricordarlo prima del create). Senza cartaceo il prelievo può non essere eseguito; ritiro da infermiere. Consegna preventiva in sede solo su appuntamento; di norma non necessaria se acquisizione canali prenotazione ok.
+
+## Validità — regola generale
+Verificare validità amministrativa prima del create. Solo: tipologia, data emissione se prevista, dati sul documento, regole KB. Non: validità clinica/appropriatezza. Se incerto → transfer.
+Data rilevante = data della prenotazione (non serve che la ricetta sia ancora valida anche il giorno del prelievo).
+
+## Periodi
+Dematerializzata SSN: 180 giorni da emissione.
+Rossa SSN: 180 giorni da emissione.
+Privata datata: 2 anni dalla data (politica organizzativa Casp, non presentare come legge).
+Privata senza data: valida per politica Casp; assenza data da sola non blocca e non richiede transfer; non inventare data. Eccezione solo private: SSN senza data leggibile → transfer.
+Prossima scadenza: usabile se ancora valida; no priorità/urgenza/anticipo/modifica disponibilità.
+Scaduta chiaramente: non create autonomo; transfer. Non dichiarare inutilizzabile/accettabile a priori; non suggerire aggiramenti.
+Data illeggibile/incompleta/ambigua/alterata: nuovo invio; se ancora no → transfer. Non ricostruire da WhatsApp, dichiarazioni, data foto, contesto.
+Data futura/impossibile/incoerente: verificare data corrente; se anomalia confermata → transfer.
+
+## Utilizzo, duplicati, sostituzione
+Già utilizzata integralmente o già associata a prestazione/prenotazione e uso incerto → transfer; non riutilizzare automaticamente.
+Parziale → transfer; non decidere residui.
+Annullata (medico/SSN/CUP/altro) → transfer.
+Ristampa stesso NRE = stessa ricetta, non aggiuntiva. NRE diversi = distinte salvo prova contraria.
+Documenti apparentemente duplicati: se NRE coincidenti = stessa; se non distinguibili → transfer.
+NRE presente ≠ da solo validità. Più prestazioni su una ricetta: una sola validità temporale sulla ricetta.
+Esenzione/priorità non modificano periodo di validità.
+Dati incoerenti (date incompatibili, Assistito discordante, ecc.): non reinterpretare; transfer.
+Sostituzione medico prima del create: usare ultima ricetta valida fornita; sottoporre a verifiche normali.
+Dopo create: qualsiasi sostituzione/modifica ricetta → solo staff; non modificare Calendar CUP, non cancellare, non create sostitutivo.
+No valutazione clinica (necessità, appropriatezza, rifacimento).

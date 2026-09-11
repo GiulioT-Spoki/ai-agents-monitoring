@@ -1,0 +1,172 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://spoki.app/schemas/voice-outbound-sales-webhook.json",
+  "title": "VoiceOutboundSalesWebhook",
+  "description": "Payload inviato dall'agente vocale outbound venditore al webhook n8n/CRM a fine chiamata.",
+  "type": "object",
+  "required": ["event", "timestamp", "vertical", "contact", "qualification", "next_action", "summary"],
+  "additionalProperties": false,
+  "properties": {
+    "event": {
+      "type": "string",
+      "const": "voice_outbound.completed"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 UTC. Compilato da n8n se non fornito dall'agente."
+    },
+    "vertical": {
+      "type": "string",
+      "enum": ["generic_b2b", "automotive", "local_services", "real_estate"]
+    },
+    "contact": {
+      "type": "object",
+      "required": ["phone"],
+      "additionalProperties": false,
+      "properties": {
+        "phone": {
+          "type": "string",
+          "pattern": "^\\+[1-9]\\d{6,14}$",
+          "description": "E.164"
+        },
+        "first_name": { "type": "string" },
+        "last_name": { "type": "string" },
+        "email": { "type": "string", "format": "email" },
+        "company_name": { "type": "string" },
+        "role": { "type": "string" },
+        "crm_contact_id": { "type": "string" },
+        "assigned_rep_id": { "type": "string" },
+        "language": { "type": "string" }
+      }
+    },
+    "qualification": {
+      "type": "object",
+      "required": ["status"],
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": ["qualified", "not_qualified", "nurture"]
+        },
+        "interest_level": {
+          "type": "string",
+          "enum": ["hot", "warm", "cold"]
+        },
+        "need": { "type": "string" },
+        "current_solution": { "type": "string" },
+        "budget_range": { "type": "string" },
+        "timeline": { "type": "string" },
+        "decision_maker": { "type": "string" },
+        "company_size": { "type": "string" },
+        "industry": { "type": "string" },
+        "objections": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "competitor_mentioned": { "type": "string" },
+        "disqualification_reason": { "type": "string" }
+      }
+    },
+    "product_context": {
+      "type": "object",
+      "additionalProperties": true,
+      "description": "Campi vertical-specific. Chiavi dipendono da vertical-config.json.",
+      "properties": {
+        "marca": { "type": "string" },
+        "modello": { "type": "string" },
+        "regione": { "type": "string" },
+        "vehicle_condition": {
+          "type": "string",
+          "enum": ["new", "used", "km_zero", "undecided"]
+        },
+        "trade_in": { "type": "string" },
+        "financing_interest": { "type": "boolean" },
+        "preferred_dealership": { "type": "string" },
+        "transaction_type": {
+          "type": "string",
+          "enum": ["buy", "rent", "sell"]
+        },
+        "area": { "type": "string" },
+        "property_size": { "type": "string" },
+        "property_type": { "type": "string" }
+      }
+    },
+    "location": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "address": { "type": "string" },
+        "city": { "type": "string" },
+        "postal_code": { "type": "string" },
+        "region": { "type": "string" }
+      }
+    },
+    "next_action": {
+      "type": "object",
+      "required": ["type"],
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "callback_requested",
+            "appointment_booked",
+            "send_quote",
+            "send_brochure",
+            "call_back_later",
+            "no_interest"
+          ]
+        },
+        "preferred_datetime": {
+          "type": "string",
+          "description": "ISO 8601 con offset, es. 2026-07-04T10:00:00+02:00"
+        },
+        "appointment_datetime": { "type": "string" },
+        "appointment_location": { "type": "string" },
+        "assigned_rep_id": { "type": "string" },
+        "consent_to_contact": { "type": "boolean" }
+      }
+    },
+    "call": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Metadata aggiunti da n8n/piattaforma, non dall'LLM in chiamata.",
+      "properties": {
+        "conversation_id": { "type": "string" },
+        "call_direction": {
+          "type": "string",
+          "const": "outbound"
+        },
+        "call_started_at": { "type": "string", "format": "date-time" },
+        "call_ended_at": { "type": "string", "format": "date-time" },
+        "duration_seconds": { "type": "integer", "minimum": 0 },
+        "outcome": {
+          "type": "string",
+          "enum": ["answered", "no_answer", "busy", "voicemail", "wrong_number"]
+        },
+        "attempt": { "type": "integer", "minimum": 1 },
+        "agent_id": { "type": "string" },
+        "campaign_id": { "type": "string" },
+        "language_detected": { "type": "string" },
+        "transferred_to_human": { "type": "boolean" },
+        "transfer_reason": { "type": "string" },
+        "recording_url": { "type": "string", "format": "uri" },
+        "transcript_url": { "type": "string", "format": "uri" }
+      }
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 10,
+      "description": "Riepilogo discorsivo per il venditore."
+    },
+    "key_quotes": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "open_questions": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

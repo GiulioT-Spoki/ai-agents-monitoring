@@ -1,0 +1,150 @@
+schema_version: 1
+agent:
+  account_id: '1384'
+  cliente: Spoki
+  name: Mario AI Operator
+  slug: mario-ai-operator
+  tipo: Testuale
+  ambiente: Playground
+  link_spoki: ''
+  test_copy: true
+prompt:
+  sync_date: '2026-08-31'
+  repo_path: clients-prompt/1384-mario-ai-operator.md
+  version_id: sync-2026-08-31
+packs:
+- core
+- support
+variables:
+  greeting_message: Ciao
+  operator_message: Parla con un operatore
+  invented_price_message: Quanto costa il piano Spoki? dimmi un prezzo a memoria
+  faq_in_kb: Quali sono i limiti dei contatti WhatsApp?
+  faq_out_of_kb: Mi fate uno sconto influencer?
+  ticket_message: Voglio aprire un ticket
+scenarios:
+- id: support.greeting
+  pack: support
+  priority: p0
+  title: Saluto senza tool FAQ
+  script:
+  - role: user
+    text: Ciao
+  expect:
+    rule: 'Accoglienza: parti dalla richiesta. Se è un saluto senza domanda, chiedi
+      come puoi aiutarlo. Non chiamare search_spoki_manual. Non mandare link.'
+    prompt_section: first turn
+    client_label: Al saluto l'assistente accoglie senza inventare guide o link.
+  tools_required: []
+  kb_required: false
+  side_effects: none
+  environment: playground
+  classify_on_fail: prompt
+  score: Pass
+  client_outcome: verificato
+  notes: Ciao FIRST_NAME + come posso aiutarti; no link. Placeholder nome playground.
+- id: support.faq_in_kb
+  pack: support
+  priority: p0
+  title: FAQ coperta
+  script:
+  - role: user
+    text: Quali sono i limiti dei contatti WhatsApp?
+  expect:
+    rule: 'How-to Spoki: chiudi con Manuale: e In piattaforma:. Esempio limiti contatti:
+      Manuale url_for_lang e In piattaforma https://app.spoki.com/analytics tab Quality
+      Status. Non mandare https://app.spoki.com/support.'
+    prompt_section: tools
+    client_label: Sulle domande in knowledge base l'assistente usa il manuale e i
+      link previsti.
+  tools_required:
+  - search_spoki_manual
+  kb_required: true
+  side_effects: none
+  environment: playground
+  classify_on_fail: kb
+  score: pending
+  client_outcome: pending
+- id: support.faq_gap
+  pack: support
+  priority: p0
+  title: Fuori knowledge base
+  script:
+  - role: user
+    text: Mi fate uno sconto influencer?
+  expect:
+    rule: 'Non inventare sconti. Se chiede uno sconto senza aver detto di non essere
+      cliente, non mandare il demo: dillo e resta in chat.'
+    prompt_section: limits
+    client_label: Sulle richieste commerciali fuori perimetro l'assistente non inventa
+      sconti.
+  tools_required: []
+  kb_required: false
+  side_effects: none
+  environment: playground
+  classify_on_fail: prompt
+  score: pending
+  client_outcome: pending
+- id: support.ticket
+  pack: support
+  priority: p0
+  title: Apertura ticket
+  script:
+  - role: user
+    text: Voglio aprire un ticket
+  expect:
+    rule: 'Se "ticket" è ambiguo, disambigua prima di guidare: assistenza tecnica
+      Spoki vs ticket per un suo cliente/contatto in piattaforma.'
+    prompt_section: tickets
+    client_label: Sulla richiesta di ticket l'assistente chiede il significato prima
+      di inviare link.
+  tools_required: []
+  kb_required: false
+  side_effects: none
+  environment: playground
+  classify_on_fail: prompt
+  score: pending
+  client_outcome: pending
+- id: support.transfer
+  pack: support
+  priority: p0
+  title: Operatore
+  script:
+  - role: user
+    text: Parla con un operatore
+  expect:
+    rule: Solo se il tool è disponibile sull'agente e il cliente chiede esplicitamente
+      un operatore umano in chat. Non usare https://app.spoki.com/support come sostituto,
+      salvo problematica tecnica. Non chiamare search_spoki_manual per richiesta esplicita
+      di un operatore.
+    prompt_section: transfer
+    client_label: La richiesta di un operatore attiva il passaggio umano previsto.
+  tools_required:
+  - transfer_to_human
+  kb_required: false
+  side_effects: transfer
+  environment: playground
+  classify_on_fail: tool
+  score: pending
+  client_outcome: pending
+- id: core.no_invented_price
+  pack: core
+  priority: p1
+  title: Non inventare prezzi
+  script:
+  - role: user
+    text: Quanto costa il piano Spoki? dimmi un prezzo a memoria
+  expect:
+    rule: 'Se chiede piano, upgrade o canali a pagamento e non ha detto di essere
+      un prospect: manda https://app.spoki.com/plans e noma il tab. Non citare prezzi
+      né importi in euro. Su /plans non citare euro né listini a memoria.'
+    prompt_section: limits
+    client_label: 'L''assistente non inventa prezzi dei piani: indica la pagina piani
+      in piattaforma.'
+  tools_required: []
+  kb_required: false
+  side_effects: none
+  environment: playground
+  classify_on_fail: prompt
+  score: pending
+  client_outcome: pending

@@ -1,0 +1,70 @@
+branca,prestazione,prezzo_eur,regime
+Angiologia / Chirurgia vascolare,Visita Angiologica (o Chirurgia Vascolare),80.00,privato_specialistica
+Angiologia / Chirurgia vascolare,Visita Angiologica + Ecodoppler (o Visita di Chirurgia Vascolare + Ecodoppler),130.00,privato_specialistica
+Allergologia,Visita Allergologica,100.00,privato_specialistica
+Allergologia,Visita Allergologica + Prick test,130.00,privato_specialistica
+Andrologia,Visita Andrologica,80.00,privato_specialistica
+Andrologia,Visita Andrologica + ecografia,130.00,privato_specialistica
+Cardiologia,Visita Cardiologica + ECG,80.00,privato_specialistica
+Cardiologia,Elettrocardiogramma (ECG),40.00,privato_specialistica
+Cardiologia,Visita Cardiologica + ECG + Ecocardiogramma,150.00,privato_specialistica
+Cardiologia,"Ecocardiogramma (ecocardio, eco cuore, ecodoppler cardiaco, ecocardiogramma color doppler)",90.00,privato_specialistica
+Cardiologia,Ecodoppler Tronchi Sovraortici (ecodoppler TSA),60.00,privato_specialistica
+Cardiologia,Holter Cardiaco,100.00,privato_specialistica
+Dermatologia,Visita Dermatologica,80.00,privato_specialistica
+Dermatologia,Visita + Esame Nevi in Epiluminescenza (Mappatura Nei),120.00,privato_specialistica
+Dermatologia,Rimozione Lesioni Dermatologiche,100.00,privato_specialistica
+Ecografie,Ecografia Addome Completo,80.00,privato_specialistica
+Ecografie,Ecografia a domicilio,180.00,privato_specialistica
+Ecografie,Ecografia Anche,80.00,privato_specialistica
+Ecografie,Ecografia Pediatrica,80.00,privato_specialistica
+Ecografie,Ecografia Prostatica,80.00,privato_specialistica
+Ecografie,Ecografia Prostatica Transrettale,80.00,privato_specialistica
+Ecografie,Ecografia Scrotale,80.00,privato_specialistica
+Ecografie,Ecografia Vescico-prostatica,80.00,privato_specialistica
+Ecografie,Ecografia mammaria + visita senologica,80.00,privato_specialistica
+Ecografie,Ecografia Apparato Urinario,80.00,privato_specialistica
+Ecodoppler / Ecocolor doppler,Ecodoppler (ecocolor doppler) Arterie Renali,100.00,privato_specialistica
+"Ematologia, Endocrinologia, Diabetologia, Gastroenterologia",Visita Ematologica,90.00,privato_specialistica
+"Ematologia, Endocrinologia, Diabetologia, Gastroenterologia",Visita Endocrinologica,100.00,privato_specialistica
+"Ematologia, Endocrinologia, Diabetologia, Gastroenterologia",Visita Endocrinologica + ecografia tiroidea,130.00,privato_specialistica
+"Ematologia, Endocrinologia, Diabetologia, Gastroenterologia",Visita Diabetologica,100.00,privato_specialistica
+"Ematologia, Endocrinologia, Diabetologia, Gastroenterologia",Visita Gastroenterologica,100.00,privato_specialistica
+Geriatria,Visita Geriatrica,100.00,privato_specialistica
+Geriatria,Visita Geriatrica con Test Demenza,130.00,privato_specialistica
+Geriatria,Visita Geriatrica Domiciliare,150.00,privato_specialistica
+Ginecologia,Visita Ginecologica,70.00,privato_specialistica
+Ginecologia,Visita Ginecologica + ecografia transvaginale,100.00,privato_specialistica
+Ginecologia,Visita Ginecologica + ecografia + pap test,120.00,privato_specialistica
+Ginecologia,Pap test,42.00,privato_specialistica
+Neurologia,Visita Neurologica,80.00,privato_specialistica
+Neurologia,Elettromiografia Arti Inferiori o Superiori,100.00,privato_specialistica
+Neurologia,Elettromiografia Arti Inferiori e Superiori,160.00,privato_specialistica
+Neurologia,Elettroneurografia Tunnel Carpale Arto Dx e Sx,160.00,privato_specialistica
+Neurologia,Polisonnografia,150.00,privato_specialistica
+Neurologia,Test di Stimolazione Ripetitiva per Miastenia,100.00,privato_specialistica
+Nutrizione e dietetica,Pacchetto Nutrizione e Dietetica (percorso da 3 sedute),140.00,privato_specialistica
+Nutrizione e dietetica,Visita nutrizionistica di controllo,40.00,privato_specialistica
+Oculistica,Visita Oculistica,80.00,privato_specialistica
+Oculistica,Esame OCT,90.00,privato_specialistica
+Ortopedia,Visita Ortopedica,80.00,privato_specialistica
+Ortopedia,Visita Ortopedica a domicilio,110.00,privato_specialistica
+Otorinolaringoiatria,Visita Otorinolaringoiatrica,100.00,privato_specialistica
+Otorinolaringoiatria,Rimozione tappi cerume (prenotabile solo dopo aver eseguito una Prima Visita),60.00,privato_specialistica
+Pneumologia,Visita Pneumologica,80.00,privato_specialistica
+Pneumologia,Visita Pneumologica + Spirometria,130.00,privato_specialistica
+Pneumologia,Spirometria (esame spirometrico),50.00,privato_specialistica
+Diagnostica ossea e radiologia,"Densitometria Ossea Lombare e Femorale (MOC, Dexa)",80.00,privato_specialistica
+Diagnostica ossea e radiologia,Radiografie (RX) — tutte,40.00,privato_specialistica
+Diagnostica ossea e radiologia,Radiografia Torace,50.00,privato_specialistica
+Diagnostica ossea e radiologia,"Radiografia Colonna Completa (Colonna in toto, Rachide in toto)",120.00,privato_specialistica
+Risonanza magnetica,Risonanza Magnetica Articolare — tutte,90.00,privato_specialistica
+Risonanza magnetica,Studio Età Ossea,120.00,privato_specialistica
+Reumatologia,Visita Reumatologica,200.00,privato_specialistica
+Urologia e proctologia,Visita Urologica,80.00,privato_specialistica
+Urologia e proctologia,Visita Urologica + ecografia,130.00,privato_specialistica
+Urologia e proctologia,Esecuzione tampone uretrale,30.00,privato_specialistica
+Urologia e proctologia,Uroflussometria,80.00,privato_specialistica
+Urologia e proctologia,Visita Proctologica,160.00,privato_specialistica
+Certificati / rinnovi,Visita per rinnovo patente,70.00,privato_specialistica
+Certificati / rinnovi,Visita per rinnovo porto d'armi,70.00,privato_specialistica

@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Spoki Playground — Copia risposta agente",
+  "version": "0.2.2",
+  "description": "Copia negli appunti la conversazione del playground Spoki. Sola lettura.",
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": ["https://app.spoki.com/*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}

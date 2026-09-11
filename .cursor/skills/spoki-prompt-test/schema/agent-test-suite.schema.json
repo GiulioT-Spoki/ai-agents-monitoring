@@ -1,0 +1,178 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://spoki.com/schemas/agent-test-suite/v1.json",
+  "title": "Spoki agent test suite",
+  "description": "Executable suite stored next to the markdown suite. expect must be a rule from the prompt version under test, never a global rubric.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "agent", "prompt", "scenarios"],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "agent": { "$ref": "#/$defs/agent" },
+    "prompt": { "$ref": "#/$defs/prompt_ref" },
+    "packs": {
+      "type": "array",
+      "items": { "type": "string", "enum": ["core", "booking", "support", "voice"] },
+      "description": "Pack ids instantiated into scenarios. Omit unused packs."
+    },
+    "variables": {
+      "type": "object",
+      "additionalProperties": { "type": "string" },
+      "description": "Resolved pack placeholders (hours, fake name, price). Empty string not allowed for required pack vars."
+    },
+    "scenarios": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/scenario" }
+    }
+  },
+  "$defs": {
+    "agent": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["account_id", "name", "tipo", "ambiente"],
+      "properties": {
+        "account_id": { "type": "string", "pattern": "^[0-9]+$" },
+        "cliente": { "type": "string" },
+        "name": { "type": "string", "minLength": 1 },
+        "slug": { "type": "string" },
+        "tipo": { "type": "string", "enum": ["Testuale", "Vocale"] },
+        "ambiente": { "type": "string", "enum": ["Playground", "Live", "Entrambi"] },
+        "link_spoki": { "type": "string" },
+        "test_copy": { "type": "boolean", "description": "True if this is a playground copy, not live." },
+        "twin_text_link": {
+          "type": "string",
+          "description": "Vocale only: URL of the textual twin agent (same prompt body, same tools) used as the scalable test bench."
+        },
+        "test_contact": {
+          "type": "string",
+          "description": "Test contact whose %%FIELDS%% are populated. Required for twin_text and voice_outbound scenarios."
+        }
+      }
+    },
+    "prompt_ref": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["sync_date"],
+      "properties": {
+        "sync_date": { "type": "string", "description": "ISO date or suite header date of last Spoki paste." },
+        "repo_path": { "type": "string" },
+        "version_id": {
+          "type": "string",
+          "description": "Opaque id of the system prompt body used for this suite (hash or Spoki revision). Required for L3 judge."
+        }
+      }
+    },
+    "priority": { "type": "string", "enum": ["p0", "p1", "p2"] },
+    "side_effects": {
+      "type": "string",
+      "enum": ["none", "calendar_create", "transfer", "tag"]
+    },
+    "environment": {
+      "type": "string",
+      "enum": ["playground", "live_ok", "twin_text", "voice_playground", "voice_outbound"],
+      "description": "Where the scenario is actually runnable. playground = textual sandbox / test copy. live_ok = may run on WhatsApp live after playground pass. twin_text = textual twin of a voice agent, with a test contact whose %%FIELDS%% are populated (scalable: no phone call). voice_playground = Start Call in the voice playground; %%FIELDS%% are EMPTY there, so it cannot host scenarios needing contact data. voice_outbound = real call placed by a Spoki Voice automation to the test contact; the only voice path with populated %%FIELDS%%."
+    },
+    "classify_on_fail": {
+      "type": "string",
+      "enum": ["prompt", "kb", "tool", "platform"]
+    },
+    "client_outcome": {
+      "type": "string",
+      "enum": ["verificato", "da_correggere", "non_eseguibile", "pending"]
+    },
+    "internal_score": {
+      "type": "string",
+      "enum": ["Pass", "Pass*", "Fail", "Skip", "pending"]
+    },
+    "turn": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["role", "text"],
+      "properties": {
+        "role": { "type": "string", "enum": ["user"] },
+        "text": { "type": "string", "minLength": 1 },
+        "channel": {
+          "type": "string",
+          "enum": ["typed", "spoken"],
+          "description": "spoken = dì / simula ASR (voice playground). typed = WhatsApp paste. Omit: infer from agent.tipo."
+        },
+        "attach": {
+          "type": "string",
+          "description": "Optional attachment hint (image, pdf). Playground may Skip if unsupported."
+        }
+      }
+    },
+    "expect": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["rule"],
+      "properties": {
+        "rule": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Verbatim or close paraphrase of a rule in the prompt under test."
+        },
+        "prompt_section": {
+          "type": "string",
+          "description": "Heading or section id in the system prompt, if any."
+        },
+        "client_label": {
+          "type": "string",
+          "description": "One Italian sentence for the client Test tab. No internal IDs."
+        }
+      }
+    },
+    "scenario": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "priority",
+        "script",
+        "expect",
+        "tools_required",
+        "side_effects",
+        "environment",
+        "classify_on_fail"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(\\.[a-z0-9_-]+)+$",
+          "description": "Stable id, e.g. core.greeting or casp.b1"
+        },
+        "pack": { "type": "string", "enum": ["core", "booking", "support", "voice"] },
+        "priority": { "$ref": "#/$defs/priority" },
+        "title": { "type": "string" },
+        "script": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/turn" }
+        },
+        "expect": { "$ref": "#/$defs/expect" },
+        "require_prompt_rule": {
+          "type": "string",
+          "description": "If this text (or equivalent) is absent from the prompt, drop the scenario. Do not Fail."
+        },
+        "tools_required": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Tool names that must exist on the agent. Empty = none. Missing tool → Skip / non_eseguibile, not Fail."
+        },
+        "kb_required": { "type": "boolean", "default": false },
+        "requires_contact_fields": {
+          "type": "boolean",
+          "default": false,
+          "description": "Scenario depends on %%FIELDS%% resolved from a contact. Not runnable in voice_playground (fields are empty there): move it to twin_text or voice_outbound, or Skip as platform."
+        },
+        "side_effects": { "$ref": "#/$defs/side_effects" },
+        "environment": { "$ref": "#/$defs/environment" },
+        "classify_on_fail": { "$ref": "#/$defs/classify_on_fail" },
+        "score": { "$ref": "#/$defs/internal_score" },
+        "client_outcome": { "$ref": "#/$defs/client_outcome" },
+        "notes": { "type": "string" }
+      }
+    }
+  }
+}

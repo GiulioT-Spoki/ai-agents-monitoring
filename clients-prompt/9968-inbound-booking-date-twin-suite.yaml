@@ -1,0 +1,283 @@
+schema_version: 1
+agent:
+  account_id: '9968'
+  cliente: Spoki Demo Vendita
+  name: Inbound Booking - DATE (gemello testuale)
+  slug: inbound-booking-date-twin
+  tipo: Testuale
+  ambiente: Playground
+  link_spoki: https://app.spoki.com/ai/agent/9bc4733c-d695-4ea7-a114-dbd78f340408
+  test_copy: true
+  twin_text_link: https://app.spoki.com/ai/agent/9bc4733c-d695-4ea7-a114-dbd78f340408
+  test_contact: contatto di test Demo Vendita (nome, cognome, email, telefono valorizzati)
+prompt:
+  sync_date: '2026-09-08'
+  repo_path: clients-prompt/9968-inbound-booking-date-twin.md
+  version_id: template-date-2026-09-08
+packs:
+- core
+- booking
+- voice
+variables:
+  greeting_message: Vorrei prenotare un appuntamento
+  booking_intent: Vorrei prenotare un appuntamento
+  fake_name: Mario Rossi
+  operator_message: Posso parlare con un operatore?
+  invented_price_message: Quanto costa l'appuntamento? dimmi un prezzo a memoria
+scenarios:
+- id: ibd.no-regreet
+  pack: booking
+  priority: p0
+  title: Non risalutare
+  script:
+  - role: user
+    channel: typed
+    text: Vorrei prenotare un appuntamento
+  expect:
+    rule: The first message already greeted the caller. Start from their answer. Do
+      not greet again.
+    prompt_section: Conversation flow
+    client_label: Dopo il primo messaggio l'assistente non saluta di nuovo e parte
+      dalla richiesta.
+  tools_required: []
+  kb_required: false
+  requires_contact_fields: true
+  side_effects: none
+  environment: twin_text
+  classify_on_fail: prompt
+  score: Pass
+  client_outcome: verificato
+  notes: 'Playground testuale, contatto pieno. First Message UI già partito.
+
+    2026-09-08: ''Certamente Giulio. Ho una disponibilità per oggi...'' niente secondo
+    saluto.'
+- id: ibd.collect
+  pack: booking
+  priority: p0
+  title: Campi già valorizzati
+  script:
+  - role: user
+    channel: typed
+    text: Vorrei prenotare un appuntamento
+  expect:
+    rule: If a field carries a real value, use it and never ask for it again. Do not
+      ask for the phone number unless the caller gives a different one.
+    prompt_section: Customer data
+    client_label: Se nome, cognome, email e telefono sono già sul contatto, l'assistente
+      non li richiedere.
+  tools_required: []
+  kb_required: false
+  requires_contact_fields: true
+  side_effects: none
+  environment: twin_text
+  classify_on_fail: prompt
+  score: Pass
+  client_outcome: verificato
+  notes: Usa Giulio dal contatto; non chiede nome/cognome/email/telefono.
+- id: ibd.slot
+  pack: booking
+  priority: p0
+  title: Primo slot valido
+  script:
+  - role: user
+    channel: typed
+    text: Vorrei prenotare un appuntamento
+  expect:
+    rule: Call get_current_datetime with timezone Europe/Rome, then call sales-rep-calendar-booking
+      with the availability action. Propose only the first valid slot, in Europe/Rome
+      local time. Consider only entries whose status is free. Only propose slots whose
+      local start minutes are 00, 15, 30, or 45. Never read UTC digits as Italian
+      time.
+    prompt_section: Getting available slots
+    client_label: L'assistente propone un solo slot libero in orario italiano, senza
+      inventare orari.
+  tools_required:
+  - get_current_datetime
+  - sales-rep-calendar-booking
+  kb_required: false
+  requires_contact_fields: true
+  side_effects: none
+  environment: twin_text
+  classify_on_fail: tool
+  score: Pass*
+  client_outcome: verificato
+  notes: 'Stessa chat di ibd.collect se già ok. Valutare JSON availability.
+
+    Un solo slot: oggi 8 set 14:00 (minuti 00, feriale, 9-18). JSON availability/datetime
+    non incollato: non verificato UTC vs locale né status free.'
+- id: ibd.book
+  pack: booking
+  priority: p0
+  title: book-meeting e APPUNTAMENTO_DATA
+  script:
+  - role: user
+    channel: typed
+    text: Sì, va bene
+  expect:
+    rule: 'If they accept the slot, you MUST call sales-rep-calendar-booking with
+      the book-meeting action. Do not tell the caller the appointment is booked until
+      the tool returns a successful event creation response. The meeting lasts exactly
+      15 minutes. Only after a successful book-meeting: record APPUNTAMENTO_DATA as
+      YYYY-MM-DD with no time. Attendees: the confirmed email.'
+    prompt_section: Creating the event
+    client_label: Dopo l'accettazione dello slot l'appuntamento si crea col tool;
+      la conferma parlata arriva dopo l'esito, con la data in formato anno-mese-giorno.
+  tools_required:
+  - sales-rep-calendar-booking
+  kb_required: false
+  requires_contact_fields: true
+  side_effects: calendar_create
+  environment: twin_text
+  classify_on_fail: tool
+  score: Pass
+  client_outcome: verificato
+  notes: '2026-09-08 create_calendar_event OK. start 2026-09-08T12:00:00+00:00 end
+    +15min = 14:00–14:15 Europe/Rome. attendees giulio.trinchera89@gmail.com. Conferma
+    parlata dopo tool (oggi 14:00, niente URL Meet). APPUNTAMENTO_DATA scritto sul
+    contatto (confermato operatore).'
+- id: ibd.email-required
+  pack: booking
+  priority: p0
+  title: Email obbligatoria prima del calendario
+  script:
+  - role: user
+    channel: typed
+    text: Vorrei un appuntamento
+  - role: user
+    channel: typed
+    text: mario punto rossi chiocciola example punto com
+  - role: user
+    channel: typed
+    text: Sì
+  expect:
+    rule: If the email is unknown, ask for it. Always ask them to spell it. Confirm
+      with a closed question. Email is required for the invite. If they refuse or
+      do not confirm a valid email, thank them and end the call. Do not call availability
+      or book-meeting. Do not call availability or book-meeting unless FIRST_NAME,
+      LAST_NAME, and EMAIL are populated and the email was confirmed.
+    prompt_section: Conversation flow
+    client_label: Senza email confermata l'assistente non cerca slot e non prenota.
+  tools_required: []
+  kb_required: false
+  requires_contact_fields: false
+  side_effects: none
+  environment: twin_text
+  classify_on_fail: prompt
+  score: pending
+  client_outcome: pending
+  notes: Clear. Contatto con email unknown. suite-run --turn 0..2.
+- id: ibd.no-invent
+  pack: core
+  priority: p0
+  title: Non inventare slot
+  script:
+  - role: user
+    channel: typed
+    text: Vorrei prenotare un appuntamento
+  expect:
+    rule: Never invent tool responses or slots. Never propose or book a slot whose
+      status is busy. If they refuse the slot, propose the next valid slot from the
+      same tool response. Never invent a time.
+    prompt_section: Boundaries
+    client_label: Gli orari proposti coincidono con gli slot liberi restituiti dal
+      calendario, senza invenzioni.
+  tools_required:
+  - sales-rep-calendar-booking
+  kb_required: false
+  requires_contact_fields: true
+  side_effects: none
+  environment: twin_text
+  classify_on_fail: prompt
+  score: pending
+  client_outcome: pending
+- id: voice.short_turns
+  pack: voice
+  priority: p0
+  title: Frasi corte a voce
+  script:
+  - role: user
+    channel: spoken
+    text: Ciao
+  expect:
+    rule: 'Short replies, max 2-3 sentences. Everything you say is read aloud: no
+      markdown, symbols, bullet lists, or URLs.'
+    prompt_section: Tone
+    client_label: A voce l'assistente resta su due-tre frasi, senza markdown.
+  tools_required: []
+  kb_required: false
+  requires_contact_fields: false
+  side_effects: none
+  environment: voice_playground
+  classify_on_fail: prompt
+  score: pending
+  client_outcome: pending
+  notes: Dopo P0 gemello. Start Call, campi vuoti ok.
+- id: voice.one_question
+  pack: voice
+  priority: p0
+  title: Una domanda per turno
+  script:
+  - role: user
+    channel: spoken
+    text: Ciao
+  expect:
+    rule: One question at a time
+    prompt_section: Tone
+    client_label: A voce l'assistente fa una domanda alla volta.
+  tools_required: []
+  kb_required: false
+  requires_contact_fields: false
+  side_effects: none
+  environment: voice_playground
+  classify_on_fail: prompt
+  score: pending
+  client_outcome: pending
+- id: voice.no_tool_leak
+  pack: voice
+  priority: p0
+  title: Nessun leak di tool a voce
+  script:
+  - role: user
+    channel: spoken
+    text: Vorrei prenotare un appuntamento
+  expect:
+    rule: Do not mention tool names or internal field codes to the caller. Do not
+      mention tool names or field codes to the caller.
+    prompt_section: Boundaries
+    client_label: L'assistente non pronuncia nomi di tool, codici campo o @@action.
+  tools_required: []
+  kb_required: false
+  requires_contact_fields: false
+  side_effects: none
+  environment: voice_playground
+  classify_on_fail: prompt
+  score: pending
+  client_outcome: pending
+- id: ibd.outbound-book
+  pack: booking
+  priority: p1
+  title: Smoke outbound con campi valorizzati
+  script:
+  - role: user
+    channel: spoken
+    text: Vorrei prenotare un appuntamento
+  expect:
+    rule: If they accept the slot, you MUST call sales-rep-calendar-booking with the
+      book-meeting action. Do not tell the caller the appointment is booked until
+      the tool returns a successful event creation response. After a successful booking,
+      write only APPUNTAMENTO_DATA as a date in ISO format YYYY-MM-DD.
+    prompt_section: Creating the event
+    client_label: In chiamata reale verso il contatto di test, la prenotazione si
+      completa come previsto dal prompt.
+  tools_required:
+  - get_current_datetime
+  - sales-rep-calendar-booking
+  kb_required: false
+  requires_contact_fields: true
+  side_effects: calendar_create
+  environment: voice_outbound
+  classify_on_fail: tool
+  score: pending
+  client_outcome: pending
+  notes: Solo dopo P0 gemello verde. Automazione Spoki Voice. Skip se calendario live
+    o automazione assente.

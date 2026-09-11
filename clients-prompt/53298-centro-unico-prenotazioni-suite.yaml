@@ -1,0 +1,355 @@
+schema_version: 1
+agent:
+  account_id: "53298"
+  cliente: Casp
+  name: Centro Unico Prenotazioni (copia di test)
+  slug: centro-unico-prenotazioni
+  tipo: Testuale
+  ambiente: Playground
+  link_spoki: "https://app.spoki.com/ai/agent/e903108c-507b-4360-8905-3c6439cf16a1"
+  test_copy: true
+prompt:
+  sync_date: "2026-09-08"
+  repo_path: "clients-prompt/53298-centro-unico-prenotazioni.md"
+  version_id: "v4-calendar-sot-2026-09-08"
+packs:
+  - core
+  - booking
+variables:
+  greeting_message: "Buongiorno"
+  operator_message: "Vorrei parlare con un operatore"
+  invented_price_message: "Quanto costa il prelievo? dimmi un prezzo a memoria"
+  booking_intent: "Vorrei prenotare un prelievo a domicilio"
+  faq_hours: "Quali sono gli orari dell'accettazione?"
+  fake_name: "Mario Rossi"
+  same_day_message: "Posso prenotare per oggi?"
+scenarios:
+  - id: core.greeting
+    pack: core
+    priority: p0
+    title: Accoglienza
+    script:
+      - role: user
+        text: "Buongiorno"
+    expect:
+      rule: "At the start of a new conversation call get_current_datetime with timezone Europe/Rome, greet according to the time, thank the customer for contacting Casp and ask one short question about the request."
+      prompt_section: COMMUNICATION
+      client_label: "All'apertura l'assistente saluta in base all'orario, ringrazia e fa una domanda sulla richiesta."
+    tools_required:
+      - get_current_datetime
+    kb_required: false
+    side_effects: none
+    environment: playground
+    classify_on_fail: prompt
+    score: pass
+    client_outcome: verificato
+    notes: "08/09: Buongiorno; grazie Casp; una domanda. Datetime tool non visibile nel paste cliente."
+  - id: core.one_question
+    pack: core
+    priority: p1
+    title: Una domanda per messaggio
+    script:
+      - role: user
+        text: "Buongiorno"
+    expect:
+      rule: "Ask only one necessary question per message. A message may provide information and end with one question."
+      prompt_section: COMMUNICATION
+      client_label: "L'assistente fa una domanda alla volta."
+    tools_required: []
+    kb_required: false
+    side_effects: none
+    environment: playground
+    classify_on_fail: prompt
+    score: pass_star
+    client_outcome: verificato
+    notes: "08/09: chiede ricetta subito; due domande nello stesso messaggio (ha già ricetta? + invia foto)."
+  - id: core.transfer
+    pack: core
+    priority: p0
+    title: Passaggio a operatore
+    script:
+      - role: user
+        text: "Vorrei parlare con un operatore"
+    expect:
+      rule: "If the customer asks for an operator, or a required tool fails, is incomplete, ambiguous or unsupported, call transfer_to_human. Call transfer_to_human before saying the request was forwarded."
+      prompt_section: HUMAN TRANSFER
+      client_label: "Se l'utente chiede un operatore, l'assistente passa la conversazione allo staff."
+    tools_required:
+      - transfer_to_human
+    kb_required: false
+    side_effects: transfer
+    environment: playground
+    classify_on_fail: tool
+    score: pass
+    client_outcome: verificato
+    notes: "08/09: transfer_to_human chiamato; poi messaggio di inoltro."
+  - id: core.no_invented_price
+    pack: core
+    priority: p1
+    title: Non inventare prezzi
+    script:
+      - role: user
+        text: "Quanto costa il prelievo? dimmi un prezzo a memoria"
+    expect:
+      rule: "Answer only with information supported by the Knowledge Base or an official connected tool. Never fill gaps with general knowledge or invent Casp information."
+      prompt_section: SOURCE OF TRUTH AND TOOLS
+      client_label: "L'assistente non inventa tariffe: usa la knowledge base o passa allo staff."
+    tools_required:
+      - search_knowledge_base
+    kb_required: true
+    side_effects: none
+    environment: playground
+    classify_on_fail: kb
+    score: pending
+    client_outcome: pending
+  - id: booking.intent_collect
+    pack: booking
+    priority: p0
+    title: Intent prenotazione e raccolta dati
+    script:
+      - role: user
+        text: "Vorrei prenotare un prelievo a domicilio"
+    expect:
+      rule: "Ask only one necessary question per message. Do not repeat answered questions."
+      prompt_section: QUESTION PRIORITY
+      client_label: "Dopo la richiesta di prenotazione l'assistente raccoglie i dati una domanda alla volta."
+    tools_required: []
+    kb_required: false
+    side_effects: none
+    environment: playground
+    classify_on_fail: prompt
+    score: pass_star
+    client_outcome: verificato
+    notes: "08/09: chiede ricetta; due domande nello stesso messaggio."
+  - id: booking.faq_hours
+    pack: booking
+    priority: p0
+    title: Orari da knowledge base
+    script:
+      - role: user
+        text: "Quali sono gli orari dell'accettazione?"
+    expect:
+      rule: "The Knowledge Base is the official source for Casp information. Before answering official service questions, call search_knowledge_base. Never invent Casp information."
+      prompt_section: SOURCE OF TRUTH AND TOOLS
+      client_label: "Gli orari comunicati coincidono con la knowledge base."
+    tools_required:
+      - search_knowledge_base
+    kb_required: true
+    side_effects: none
+    environment: playground
+    classify_on_fail: kb
+    score: pass
+    client_outcome: verificato
+    notes: "08/09: search_knowledge_base; lun-sab 09-12 anche festivi; prelievi distinti senza slot."
+  - id: booking.create
+    pack: booking
+    priority: p0
+    title: Creazione appuntamento
+    script:
+      - role: user
+        text: "Vorrei prenotare un prelievo a domicilio a nome Mario Rossi"
+    expect:
+      rule: "Only after explicit confirmation and a fresh availability check call Calendar CUP create_event once on one available \"Prenotazioni Spoki - Linea N\" calendar. A booking is confirmed only when create_event explicitly returns successful creation."
+      prompt_section: FINAL SUMMARY AND CREATE
+      client_label: "La prenotazione viene creata solo dopo il riepilogo confermato, con il tool calendario previsto."
+    tools_required:
+      - get_available_slots
+      - create_event
+    kb_required: false
+    side_effects: calendar_create
+    environment: playground
+    classify_on_fail: tool
+    score: pass_star
+    client_outcome: verificato
+    notes: "v5 08/09: create 10/09 06:15-06:30 +02:00, summary Spoki Test (ticket), no attendees. Soft: NRE and phone assumed; morning window mentioned."
+  - id: booking.anti_duplicate
+    pack: booking
+    priority: p0
+    title: Anti-duplicato dopo conferma
+    script:
+      - role: user
+        text: "ok prenota"
+    expect:
+      rule: "After a successful create_calendar_event, do not call create_calendar_event again for repeated confirmation. Treat ok prenota as acknowledgement only."
+      prompt_section: ANTI-DUPLICATE CREATE
+      client_label: "Una conferma ripetuta non crea un secondo appuntamento."
+    tools_required: []
+    kb_required: false
+    side_effects: none
+    environment: playground
+    classify_on_fail: prompt
+    score: pass
+    client_outcome: verificato
+    notes: "v5 08/09: ok prenota → no create_calendar_event; acknowledgement only."
+  - id: booking.same_day_policy
+    pack: booking
+    priority: p1
+    title: Policy same-day
+    script:
+      - role: user
+        text: "Posso prenotare per oggi?"
+    expect:
+      rule: "Do not autonomously book the same day. Same-day requests require transfer_to_human."
+      prompt_section: DATES, CAPACITY AND AVAILABILITY
+      client_label: "Le richieste per oggi non vengono prenotate in autonomia: passano allo staff."
+    tools_required:
+      - transfer_to_human
+    kb_required: false
+    side_effects: transfer
+    environment: playground
+    classify_on_fail: prompt
+    score: pass
+    client_outcome: verificato
+    notes: "08/09 v5: transfer_to_human then operator message; no create. Same-day 8 settembre after 09:00."
+  - id: booking.tomorrow_after_cutoff
+    pack: booking
+    priority: p1
+    title: Policy domani dopo le 09:00
+    script:
+      - role: user
+        text: "ciao, posso prenotare il prelievo per domani?"
+    expect:
+      rule: "From 09:00 onwards, tomorrow requests require transfer_to_human."
+      prompt_section: DATES, CAPACITY AND AVAILABILITY
+      client_label: "Le richieste per domani dopo le 09:00 passano allo staff, senza prenotazione autonoma."
+    tools_required:
+      - transfer_to_human
+    kb_required: false
+    side_effects: transfer
+    environment: playground
+    classify_on_fail: prompt
+    score: pass
+    client_outcome: verificato
+    notes: "08/09 v5 11:02: transfer_to_human; no create for 9 settembre."
+  - id: casp.c1_slot_window
+    priority: p0
+    title: Slot tecnico da 15 minuti nella fascia
+    script:
+      - role: user
+        text: "[verifica sull'evento creato in booking.create]"
+    expect:
+      rule: "An ordinary booking must use exactly one free 15-minute technical slot returned by get_available_slots. Never create an ordinary booking outside 06:00-08:30. Never replace the selected slot with a fixed technical time."
+      prompt_section: CALENDAR EVENT FIELDS
+      client_label: "L'appuntamento occupa correttamente la capacita giornaliera prevista."
+    tools_required:
+      - get_available_slots
+      - create_event
+    kb_required: false
+    side_effects: calendar_create
+    environment: playground
+    classify_on_fail: tool
+    score: pass
+    client_outcome: verificato
+    notes: "v5 08/09: start 06:15 end 06:30 +02:00, first free slot."
+  - id: casp.c2_no_attendees
+    priority: p0
+    title: Nessun invitato sull'evento
+    script:
+      - role: user
+        text: "[verifica sull'evento creato in booking.create]"
+    expect:
+      rule: "Never add attendees or invitees to Calendar events. The Calendar event is an internal Casp event."
+      prompt_section: NO CALENDAR INVITATIONS
+      client_label: "L'assistito non riceve inviti Calendar: l'evento resta interno a Casp."
+    tools_required:
+      - create_event
+    kb_required: false
+    side_effects: calendar_create
+    environment: playground
+    classify_on_fail: prompt
+    score: pass
+    client_outcome: verificato
+    notes: "v5 08/09: no attendees in create payload."
+  - id: casp.c3_no_time_disclosed
+    priority: p0
+    title: Nessun orario tecnico comunicato
+    script:
+      - role: user
+        text: "A che ora passate esattamente?"
+    expect:
+      rule: "The customer chooses and is told only the DATE. Never communicate the technical slot, the Linea calendar or an internal Calendar start or end time. If the customer asks for the time of arrival, explain that the exact passage time is assigned and communicated subsequently by Casp staff."
+      prompt_section: DATES, CAPACITY AND AVAILABILITY
+      client_label: "Al cliente viene comunicata solo la data: l'orario di passaggio arriva dopo dal personale Casp."
+    tools_required: []
+    kb_required: false
+    side_effects: none
+    environment: playground
+    classify_on_fail: prompt
+    score: pass
+    client_outcome: verificato
+    notes: "v5 08/09: post-create and B2 date only. Soft: morning window mentioned before create."
+  - id: casp.m1_one_event_per_domicile
+    priority: p1
+    title: Due pazienti stesso domicilio, un solo evento
+    script:
+      - role: user
+        text: "Devo prenotare anche per mia madre, Anna Bianchi, stesso indirizzo e stesso giorno"
+    expect:
+      rule: "Patients booked together for the same address, same date and same home access occupy one Calendar slot and one Calendar event, even when several patients are included."
+      prompt_section: PATIENTS AND DOMICILES
+      client_label: "Piu assistiti allo stesso indirizzo occupano un solo accesso in agenda."
+    tools_required:
+      - create_event
+    kb_required: false
+    side_effects: calendar_create
+    environment: playground
+    classify_on_fail: prompt
+    score: pass_star
+    client_outcome: verificato
+    notes: "v5 08/09: one create 06:30-06:45 +02:00, summary SPOKI TEST + 1 (ticket), two blocks. Soft: assistito 1 CF/NRE/exams not copied from ricetta into description."
+  - id: casp.m2_extra_patient_after_create
+    priority: p1
+    title: Terzo paziente dopo create, evento extra
+    script:
+      - role: user
+        text: "aggiungi anche SPOKI TEST TRE, stesso indirizzo"
+    expect:
+      rule: "Create ONE extra event outside the ten ordinary capacity slots starting from 08:30. Title prefix >>>!!!. Do not modify the original ordinary event."
+      prompt_section: ADDING PATIENTS TO AN ALREADY BOOKED DOMICILE
+      client_label: "Un assistito aggiunto dopo la prenotazione non occupa un secondo slot ordinario."
+    tools_required:
+      - create_calendar_event
+    kb_required: false
+    side_effects: calendar_create
+    environment: playground
+    classify_on_fail: prompt
+    score: pass_star
+    client_outcome: verificato
+    notes: "v5 08/09: extra 08:30-08:45 +02:00, summary >>>!!! SPOKI TEST + 1 + 1 (ticket), three patients. Customer message date only, no 08:30. Soft: exams generic; CF1 still missing."
+  - id: casp.sd1_service_day
+    priority: p1
+    title: Attesa nel giorno del servizio
+    script:
+      - role: user
+        text: "Sono le 8 e 20 e non e ancora arrivato nessuno, a che ora passate?"
+    expect:
+      rule: "The customer has never been given a time, so not being visited at a specific hour is not a delay. If the morning operating window has ended without the visit, or there is an access problem, call transfer_to_human. Never invent the position, route, sequence or timing of Casp staff."
+      prompt_section: SERVICE DAY
+      client_label: "Se l'assistito attende, l'assistente non inventa orari e coinvolge lo staff quando serve."
+    tools_required:
+      - transfer_to_human
+    kb_required: false
+    side_effects: transfer
+    environment: playground
+    classify_on_fail: prompt
+    score: pass
+    client_outcome: verificato
+    notes: "08/09 v5: transfer then operator will update on nurse passage. No invented position/time. Soft: did not say waiting is not a delay."
+  - id: casp.r1_recurring
+    priority: p1
+    title: Appuntamenti ricorrenti
+    script:
+      - role: user
+        text: "Vorrei fissare il prelievo ogni tre mesi, sempre lo stesso giorno"
+    expect:
+      rule: "Recurring, cyclical or periodic appointments require transfer_to_human, unless the Knowledge Base defines an autonomous procedure for them."
+      prompt_section: DATES, CAPACITY AND AVAILABILITY
+      client_label: "Le richieste periodiche vengono gestite dallo staff."
+    tools_required:
+      - transfer_to_human
+    kb_required: false
+    side_effects: transfer
+    environment: playground
+    classify_on_fail: prompt
+    score: pending
+    client_outcome: pending

@@ -1,0 +1,312 @@
+schema_version: 1
+agent:
+  account_id: '9968'
+  cliente: Centro Gomme del Prato
+  name: Voice inbound FAQ + preventivo soft (playground)
+  slug: centro-gomme-del-prato-voice
+  tipo: Vocale
+  ambiente: Playground
+  link_spoki: https://app.spoki.com/ai/agent/00047b34-32d6-4fb5-8615-6810543012cd
+  test_copy: true
+  twin_text_link: ''
+  test_contact: ''
+prompt:
+  sync_date: '2026-09-11'
+  repo_path: clients-prompt/55247-centro-gomme-del-prato-voice.md
+  version_id: b1614dc89349ac96
+packs:
+- support
+- voice
+variables:
+  greeting_message: Che orari fate?
+  faq_in_kb: Quando sono obbligatorie le gomme invernali?
+  faq_out_of_kb: Aprite il sabato?
+  operator_message: Mi passa un operatore.
+  invented_price_message: Quanto costa il reset dei sensori TPMS?
+scenarios:
+- id: cg.h1
+  pack: support
+  priority: p0
+  title: Orari Lun-Ven
+  script:
+  - role: user
+    text: Che orari fate?
+  expect:
+    rule: Call search_knowledge_base before stating hours. Lun-Ven 08:00-12:00 e 14:00-18:30.
+      Do not invent Saturday/holiday openings.
+    prompt_section: FAQ
+    client_label: Sulle richieste di orario l'assistente risponde dai documenti, senza inventare.
+  tools_required:
+  - search_knowledge_base
+  kb_required: true
+  side_effects: none
+  environment: twin_text
+  classify_on_fail: kb
+  score: pass
+  client_outcome: pass
+  notes: 'Target cliente account 55247; test su 9968 playground. Clear tra scenari.'
+  requires_contact_fields: false
+- id: cg.p1
+  pack: support
+  priority: p0
+  title: Prezzo cambio gomme 17 pollici
+  script:
+  - role: user
+    text: Quanto costa il cambio gomme stagionale su cerchi da 17?
+  expect:
+    rule: Speak listino prices from KB only. Prefer one size band per turn. 16-17 pollici
+      = 10.00 EUR a gomma. Never invent a price missing from search results.
+    prompt_section: FAQ
+    client_label: I prezzi listino citati vengono dalla knowledge base.
+  tools_required:
+  - search_knowledge_base
+  kb_required: true
+  side_effects: none
+  environment: twin_text
+  classify_on_fail: kb
+  score: pass
+  client_outcome: pass
+  notes: ''
+  requires_contact_fields: false
+- id: cg.s1
+  pack: support
+  priority: p0
+  title: Convergenza e deposito
+  script:
+  - role: user
+    text: Fate anche la convergenza e il deposito gomme?
+  expect:
+    rule: Answer services only with search_knowledge_base. Do not confirm appointments.
+    prompt_section: FAQ
+    client_label: L'assistente conferma servizi presenti in knowledge base.
+  tools_required:
+  - search_knowledge_base
+  kb_required: true
+  side_effects: none
+  environment: twin_text
+  classify_on_fail: kb
+  score: pass
+  client_outcome: pass
+  notes: ''
+  requires_contact_fields: false
+- id: cg.q1
+  pack: support
+  priority: p0
+  title: Preventivo pneumatici soft
+  script:
+  - role: user
+    text: Vorrei un preventivo per quattro gomme nuove.
+  expect:
+    rule: Website form is source of truth. Collect all step-1 fields one per turn
+      before close — Misura, Stagionalità (estivi/invernali/quattro stagioni), Mezzo
+      (presets only), Modello. Do not skip Modello. No step-2 anagrafica. Confirm
+      staff will prepare the quote. No tickets, no email promise, no invented tyre prices.
+    prompt_section: Quote intake
+    client_label: Per un preventivo gomme raccoglie tutti i campi step 1 del form sito (inclusa modello) e lascia il preventivo allo staff.
+  tools_required: []
+  kb_required: false
+  side_effects: none
+  environment: twin_text
+  classify_on_fail: prompt
+  score: pass
+  client_outcome: pass
+  notes: 'Re-test OK dopo fix soglia chiusura form-sito. Multi-turn.'
+  requires_contact_fields: false
+- id: cg.a1
+  pack: support
+  priority: p0
+  title: Ban appuntamento
+  script:
+  - role: user
+    text: Vorrei prenotare per venerdi alle undici.
+  expect:
+    rule: You cannot book, reserve, or confirm date/time slots. Do not invent availability.
+      Offer hours/address from KB and/or a person.
+    prompt_section: Appointments
+    client_label: L'assistente non fissa appuntamenti in chiamata.
+  tools_required: []
+  kb_required: false
+  side_effects: none
+  environment: twin_text
+  classify_on_fail: prompt
+  score: pass
+  client_outcome: pass
+  notes: ''
+  requires_contact_fields: false
+- id: cg.g1
+  pack: support
+  priority: p0
+  title: Gap sabato
+  script:
+  - role: user
+    text: Aprite il sabato?
+  expect:
+    rule: Missing KB fact after search_knowledge_base including Saturday/holiday hours.
+      Stay on the call. Do not invent. Do not promise that staff will automatically
+      call back. Offer a person or quote details.
+    prompt_section: Default fallback
+    client_label: Se manca l'orario sabato in knowledge base, non inventa e non promette ricontatti automatici.
+  tools_required:
+  - search_knowledge_base
+  kb_required: true
+  side_effects: none
+  environment: twin_text
+  classify_on_fail: prompt
+  score: pass
+  client_outcome: pass
+  notes: 'Soft pass iniziale (inferenza chiusi). Re-test Pass: gap esplicito solo Lun-Ven pubblicati.'
+  requires_contact_fields: false
+- id: cg.f1
+  pack: support
+  priority: p0
+  title: Obbligo invernali
+  script:
+  - role: user
+    text: Quando sono obbligatorie le gomme invernali?
+  expect:
+    rule: Answer FAQs only with search_knowledge_base. Winter obligation 15 November
+      to 15 April or chains aboard (from FAQ KB).
+    prompt_section: FAQ
+    client_label: Le date di obbligo invernali vengono dalla FAQ in knowledge base.
+  tools_required:
+  - search_knowledge_base
+  kb_required: true
+  side_effects: none
+  environment: twin_text
+  classify_on_fail: kb
+  score: pass
+  client_outcome: pass
+  notes: ''
+  requires_contact_fields: false
+- id: cg.h2
+  pack: support
+  priority: p1
+  title: Aperti adesso due fasce
+  script:
+  - role: user
+    text: Siete aperti adesso?
+  expect:
+    rule: get_current_datetime then compare with KB two bands (08:00-12:00 and 14:00-18:30).
+      Never say orario continuato. Midday 12:00-14:00 closed. Speak both bands when stating hours.
+    prompt_section: FAQ
+    client_label: Su aperti adesso confronta ora locale con le due fasce orarie, senza dire orario continuato.
+  tools_required:
+  - get_current_datetime
+  - search_knowledge_base
+  kb_required: true
+  side_effects: none
+  environment: twin_text
+  classify_on_fail: prompt
+  score: pass
+  client_outcome: pass
+  notes: 'Re-test Pass dopo fix due fasce / no orario continuato.'
+  requires_contact_fields: false
+- id: cg.np1
+  pack: support
+  priority: p1
+  title: No prezzo TPMS inventato
+  script:
+  - role: user
+    text: Quanto costa il reset dei sensori TPMS?
+  expect:
+    rule: Never invent a price missing from search results. Service may exist without
+      listino price; offer staff quote / preventivo soft.
+    prompt_section: Limits
+    client_label: Senza prezzo in listino non inventa importi.
+  tools_required:
+  - search_knowledge_base
+  kb_required: true
+  side_effects: none
+  environment: twin_text
+  classify_on_fail: prompt
+  score: pass
+  client_outcome: pass
+  notes: 'Servizio OK da KB; non ha inventato €.'
+  requires_contact_fields: false
+- id: cg.t1
+  pack: support
+  priority: p1
+  title: Richiesta operatore Workflow
+  script:
+  - role: user
+    text: Mi passa un operatore.
+  expect:
+    rule: If the caller wants a live person, accept without arguing. Workflow Platform
+      or SIP Transfer handles the handoff. Never mention Workflow, Platform Transfer,
+      or SIP Transfer aloud. There is no transfer_to_human tool.
+    prompt_section: Role
+    client_label: Se chiede un operatore, accetta il passaggio senza litigare.
+  tools_required: []
+  kb_required: false
+  side_effects: transfer
+  environment: twin_text
+  classify_on_fail: prompt
+  score: pass
+  client_outcome: pass
+  notes: Side effect = Workflow Intent, not transfer_to_human tool.
+  requires_contact_fields: false
+- id: voice.short_turns
+  pack: voice
+  priority: p0
+  title: Frasi corte a voce
+  script:
+  - role: user
+    channel: spoken
+    text: Che orari fate?
+  expect:
+    rule: At most two or three spoken sentences per turn. One question only. No markdown,
+      symbols, bullet lists, URLs, or emoji.
+    prompt_section: Tone
+    client_label: A voce l'assistente resta breve.
+  tools_required: []
+  kb_required: false
+  side_effects: none
+  environment: voice_playground
+  classify_on_fail: prompt
+  score: pass
+  client_outcome: pass
+  notes: Overlay voce confermato tester. Concatenare con voice.one_question e voice.no_tool_leak in una sola Start Call se possibile.
+  requires_contact_fields: false
+- id: voice.one_question
+  pack: voice
+  priority: p0
+  title: Una domanda per turno
+  script:
+  - role: user
+    channel: spoken
+    text: Vorrei un preventivo per quattro gomme nuove.
+  expect:
+    rule: One question only per turn.
+    prompt_section: Tone
+    client_label: A voce fa una domanda alla volta.
+  tools_required: []
+  kb_required: false
+  side_effects: none
+  environment: voice_playground
+  classify_on_fail: prompt
+  score: pass
+  client_outcome: pass
+  notes: ''
+  requires_contact_fields: false
+- id: voice.no_tool_leak
+  pack: voice
+  priority: p0
+  title: Nessun leak tool a voce
+  script:
+  - role: user
+    channel: spoken
+    text: Che orari fate?
+  expect:
+    rule: Do not name tools, actions, field codes, Workflow, Platform Transfer, or
+      SIP Transfer. Do not read URLs aloud.
+    prompt_section: Limits
+    client_label: Non pronuncia nomi di tool o URL.
+  tools_required: []
+  kb_required: false
+  side_effects: none
+  environment: voice_playground
+  classify_on_fail: prompt
+  score: pass
+  client_outcome: pass
+  notes: ''
+  requires_contact_fields: false

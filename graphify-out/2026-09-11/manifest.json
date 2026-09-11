@@ -1,0 +1,622 @@
+{
+  "clients-prompt/49878-centro-formazione-innovazione-kb.json": {
+    "mtime": 1783432760.0119038,
+    "ast_hash": "2468a078f124a6b00954f8eb57f8bbd7",
+    "semantic_hash": ""
+  },
+  "outbound-sales-agent/vertical-config.json": {
+    "mtime": 1783494375.1237428,
+    "ast_hash": "d162f067406b4bcd4033321e98bd4feb",
+    "semantic_hash": ""
+  },
+  "outbound-sales-agent/webhook-payload.example.json": {
+    "mtime": 1783494375.1253188,
+    "ast_hash": "7583373f31e60494abb224971fc076a7",
+    "semantic_hash": ""
+  },
+  "outbound-sales-agent/webhook-payload.schema.json": {
+    "mtime": 1783494375.123807,
+    "ast_hash": "d5df7001aa7267e0494c1252036aa185",
+    "semantic_hash": ""
+  },
+  "Libreria-prompt/add-note-webhook-tool.md": {
+    "mtime": 1780574575.3156385,
+    "ast_hash": "a9a582e17ca1188e2e7645c54ffff73a",
+    "semantic_hash": ""
+  },
+  "Libreria-prompt/collect-data-webhook-tool.md": {
+    "mtime": 1783494375.1236436,
+    "ast_hash": "0b53b455f7f921676509c38b91d1fcda",
+    "semantic_hash": ""
+  },
+  "Libreria-prompt/get-contact-id-webhook-tool.md": {
+    "mtime": 1780568829.3642523,
+    "ast_hash": "5a3cd0953e1ad4d731e77bbc4e982014",
+    "semantic_hash": ""
+  },
+  "Libreria-prompt/ghl-appointment-spoki-webhook.md": {
+    "mtime": 1783520678.1308734,
+    "ast_hash": "d6387ce532720d6cab88dd0764f69ff7",
+    "semantic_hash": ""
+  },
+  "Libreria-prompt/helevo-echo-test-webhook-tool.md": {
+    "mtime": 1782901274.1330132,
+    "ast_hash": "3af29963e09a9b026cb711f9a13f49dd",
+    "semantic_hash": ""
+  },
+  "Libreria-prompt/helevo-get-conventions-webhook-tool.md": {
+    "mtime": 1782901274.1428752,
+    "ast_hash": "3462dbf919c49a67ae9121c4ce1a8279",
+    "semantic_hash": ""
+  },
+  "Libreria-prompt/helevo-get-recommended-places-webhook-tool.md": {
+    "mtime": 1782901274.142882,
+    "ast_hash": "5b557e50ca4e78595a26b7c530b419f5",
+    "semantic_hash": ""
+  },
+  "Libreria-prompt/open-ticket-webhook-tool.md": {
+    "mtime": 1780483997.6083143,
+    "ast_hash": "a6c5b1286395a657840b7e7e51514fc6",
+    "semantic_hash": ""
+  },
+  "Libreria-prompt/set-callback-datetime-webhook-tool.md": {
+    "mtime": 1784285447.074452,
+    "ast_hash": "d8538e5f5ed2eb3c172a6368f7e3b5d4",
+    "semantic_hash": ""
+  },
+  "Libreria-prompt/transfer-human-webhook-tool.md": {
+    "mtime": 1780567935.6843677,
+    "ast_hash": "a50eaf84297c48875bbac2dd730f5d70",
+    "semantic_hash": ""
+  },
+  "Libreria-prompt/voice-outbound-sales-crm-mapping.md": {
+    "mtime": 1783494375.1241932,
+    "ast_hash": "a83f83b440a7992de4095840302abf95",
+    "semantic_hash": ""
+  },
+  "Libreria-prompt/voice-outbound-sales-webhook-tool.md": {
+    "mtime": 1783494375.1237586,
+    "ast_hash": "6ecd1a2bd5ad05f7438b5f560d50fadb",
+    "semantic_hash": ""
+  },
+  "Libreria-prompt/webhook-url-dinamici-spoki.md": {
+    "mtime": 1782901274.1334372,
+    "ast_hash": "fe3c880a7a5e2cc42265b0cca229c674",
+    "semantic_hash": ""
+  },
+  "backend-prompts/agent-1-prompt.md": {
+    "mtime": 1779797630.61217,
+    "ast_hash": "e4817dc7e53118ec0c713642b5abedf3",
+    "semantic_hash": ""
+  },
+  "backend-prompts/agent-2-prompt.md": {
+    "mtime": 1779797995.1626172,
+    "ast_hash": "228b545cf52bed4b5b98e5d8100cdc95",
+    "semantic_hash": ""
+  },
+  "backend-prompts/calendar-booking.md": {
+    "mtime": 1782212587.6511393,
+    "ast_hash": "a1fe2516535843e33f2d45f9508e524f",
+    "semantic_hash": ""
+  },
+  "backend-prompts/olly-prompt.md": {
+    "mtime": 1781263007.9870574,
+    "ast_hash": "a245795dd70e2021ded5a4811f862bcc",
+    "semantic_hash": ""
+  },
+  "backend-prompts/spoki-supervisor-prompt.md": {
+    "mtime": 1779286803.0931463,
+    "ast_hash": "54e555e1ac3792b201f78a9ef72f809a",
+    "semantic_hash": ""
+  },
+  "backend-prompts/support-agent-prompt-ticket-en.md": {
+    "mtime": 1781192901.7484574,
+    "ast_hash": "8f14bd30e7b3c7c06dff23eac6e8b63f",
+    "semantic_hash": ""
+  },
+  "backend-prompts/support-agent-prompt-ticket.md": {
+    "mtime": 1781017108.2988985,
+    "ast_hash": "b91cc948ce64c494cfbf4f6693a08759",
+    "semantic_hash": ""
+  },
+  "backend-prompts/voice-calendar-booking.md": {
+    "mtime": 1782723343.71598,
+    "ast_hash": "bb4e0693824a112de73f0a47f939ef51",
+    "semantic_hash": ""
+  },
+  "backend-prompts/voice-support-prompt-zendesk.md": {
+    "mtime": 1782735004.925918,
+    "ast_hash": "377dfeef1b1e2e3919d719704a3ff8d2",
+    "semantic_hash": ""
+  },
+  "clients-kb/37312-tecno-clinic-knowledge-base.md": {
+    "mtime": 1780909955.454485,
+    "ast_hash": "ff9ccb8f1ae51548240b925a7d47e877",
+    "semantic_hash": ""
+  },
+  "clients-kb/38515-farmaciagruppocoviello-kb.md": {
+    "mtime": 1783937024.0359285,
+    "ast_hash": "e320841bf4cc661f6391be2bb8087e75",
+    "semantic_hash": ""
+  },
+  "clients-kb/47493-dimann-kb-10-informazioni-core.md": {
+    "mtime": 1784206655.2689593,
+    "ast_hash": "81262cfc5c129a9563598a817c0770bb",
+    "semantic_hash": ""
+  },
+  "clients-kb/47493-dimann-kb-casi-speciali.md": {
+    "mtime": 1784206655.2900794,
+    "ast_hash": "12ff3f2aa42fa08bd705e7ab7478e146",
+    "semantic_hash": ""
+  },
+  "clients-kb/47493-dimann-kb-chiusura.md": {
+    "mtime": 1784206655.2680705,
+    "ast_hash": "b953360a374434b0f4db1ca7dd8eac7f",
+    "semantic_hash": ""
+  },
+  "clients-kb/47493-dimann-kb-concierge-red-flag.md": {
+    "mtime": 1784637142.5341341,
+    "ast_hash": "ee5e0c5c38957dd1b123db921d0c1fe7",
+    "semantic_hash": ""
+  },
+  "clients-kb/47493-dimann-kb-flusso-caso-1.md": {
+    "mtime": 1784206655.2689497,
+    "ast_hash": "483f167a5b5f4510f78da71dfee10279",
+    "semantic_hash": ""
+  },
+  "clients-kb/47493-dimann-kb-red-flag.md": {
+    "mtime": 1784206655.2777283,
+    "ast_hash": "ee5e0c5c38957dd1b123db921d0c1fe7",
+    "semantic_hash": ""
+  },
+  "clients-kb/53298-casp-kb-index.md": {
+    "mtime": 1785225868.5032775,
+    "ast_hash": "190eb05dd3a072336e842e5d525695d7",
+    "semantic_hash": ""
+  },
+  "clients-kb/53298-casp-kb-tariffario-esami.md": {
+    "mtime": 1785225623.1572397,
+    "ast_hash": "8651195f52b962ec06ac1294e1fac3e6",
+    "semantic_hash": ""
+  },
+  "clients-kb/53298-casp-kb-zone-costi.md": {
+    "mtime": 1785225614.5165467,
+    "ast_hash": "874eeaf68780e4d9e36d0f4af6691482",
+    "semantic_hash": ""
+  },
+  "clients-kb/54633-digitalsharing-kb-progetto.md": {
+    "mtime": 1784206655.277733,
+    "ast_hash": "c9956894421bcffb459e65e68436e41c",
+    "semantic_hash": ""
+  },
+  "clients-kb/54633-digitalsharing-kb-sede.md": {
+    "mtime": 1784206655.268691,
+    "ast_hash": "82135504ac7867b62f576bee9f75688a",
+    "semantic_hash": ""
+  },
+  "clients-kb/acv-concierge-kb.md": {
+    "mtime": 1782901274.13333,
+    "ast_hash": "9ab49b20b6b8791c8c54b42124cf57a0",
+    "semantic_hash": ""
+  },
+  "clients-kb/elisabetta_stanca_toto_prompt.md": {
+    "mtime": 1781102208.3872988,
+    "ast_hash": "3d46684116d2dd963cd60450fa8d6970",
+    "semantic_hash": ""
+  },
+  "clients-kb/mcp-demo-kb.md": {
+    "mtime": 1783507209.8982265,
+    "ast_hash": "e17818dfd574df8d4f6fc7b43b59b33b",
+    "semantic_hash": ""
+  },
+  "clients-prompt/11024-formula12-duodea.md": {
+    "mtime": 1782981888.512025,
+    "ast_hash": "00167fca3f558faa1288a798bb70ddaa",
+    "semantic_hash": ""
+  },
+  "clients-prompt/11934-eym-academy-prompt.md": {
+    "mtime": 1770906514.7276642,
+    "ast_hash": "6c7669d8d5195fea1727633db3f48097",
+    "semantic_hash": ""
+  },
+  "clients-prompt/19077-nuova-auto-alpina-prompt.md": {
+    "mtime": 1774443663.537135,
+    "ast_hash": "ed599039c376399d2cb84b65866d878f",
+    "semantic_hash": ""
+  },
+  "clients-prompt/19077-nuovaautoaplina-text.md": {
+    "mtime": 1782477749.4978669,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": ""
+  },
+  "clients-prompt/22639-Keyin Web Agency-prompt.md": {
+    "mtime": 1779454295.6440933,
+    "ast_hash": "50e0305fb023c5efefb5a46f0acf77b1",
+    "semantic_hash": ""
+  },
+  "clients-prompt/25025-allyouneedexpressitsrls-knowledge-base.md": {
+    "mtime": 1779723737.3215535,
+    "ast_hash": "085250cc7ebed7de06fd86e42c458435",
+    "semantic_hash": ""
+  },
+  "clients-prompt/25025-allyouneedexpressitsrls-prompt.md": {
+    "mtime": 1779797409.4290068,
+    "ast_hash": "6a23ff6d59260925fa88ec9f5ebb528a",
+    "semantic_hash": ""
+  },
+  "clients-prompt/28187-orizzontedocenti-prompt.md": {
+    "mtime": 1779376546.3074925,
+    "ast_hash": "5b29aa995f1b3461c2af0860a89945b5",
+    "semantic_hash": ""
+  },
+  "clients-prompt/32281-fantamat-policarbonato-prompt-test.md": {
+    "mtime": 1773735072.350988,
+    "ast_hash": "949f75ddddb79e68a778a3dec134692c",
+    "semantic_hash": ""
+  },
+  "clients-prompt/32369-kingkongwork-prompt.md": {
+    "mtime": 1779434476.1018631,
+    "ast_hash": "6e10bcb1246917bb6ff47fb8c966ef45",
+    "semantic_hash": ""
+  },
+  "clients-prompt/32369-kingkongwork-prompt_italian.md": {
+    "mtime": 1779439331.478151,
+    "ast_hash": "c2afa7af918ddb00dfff5a620518c8ec",
+    "semantic_hash": ""
+  },
+  "clients-prompt/34768-calatafimi-med-prompt-lucia.md": {
+    "mtime": 1778664599.6078665,
+    "ast_hash": "650a43ea5dce0707177bede3499d4417",
+    "semantic_hash": ""
+  },
+  "clients-prompt/34768-calatafimi-med-prompt.md": {
+    "mtime": 1779195519.3860977,
+    "ast_hash": "4da04af93e859391b88864eadc59a427",
+    "semantic_hash": ""
+  },
+  "clients-prompt/36473-MA-FRA-prompt.md": {
+    "mtime": 1779783053.9545887,
+    "ast_hash": "965bf98c5ca6f477cf160d15dfc460a1",
+    "semantic_hash": ""
+  },
+  "clients-prompt/36473-mafra-prompt.md": {
+    "mtime": 1770901401.37516,
+    "ast_hash": "6f268a975f7573c6be03e279c8585fa2",
+    "semantic_hash": ""
+  },
+  "clients-prompt/37312-tecno-clinic-text-prompt.md": {
+    "mtime": 1780820107.805665,
+    "ast_hash": "282eecf293e01dc86239ac27f610779c",
+    "semantic_hash": ""
+  },
+  "clients-prompt/38515-farmaciagruppocoviello-test-suite.md": {
+    "mtime": 1783937024.023763,
+    "ast_hash": "7f6e97d74409525497fb296e120011db",
+    "semantic_hash": ""
+  },
+  "clients-prompt/38515-farmaciagruppocoviello-text.md": {
+    "mtime": 1783938733.2668679,
+    "ast_hash": "cf958a638733476041989a47879beb23",
+    "semantic_hash": ""
+  },
+  "clients-prompt/42543-claudia.md": {
+    "mtime": 1783004632.4297047,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": ""
+  },
+  "clients-prompt/43885-boldrin-group-prompt-v2-ab-test.md": {
+    "mtime": 1783937024.039031,
+    "ast_hash": "42df7b8e761449fbbbd682c01b8f0878",
+    "semantic_hash": ""
+  },
+  "clients-prompt/43885-boldrin-group-prompt.md": {
+    "mtime": 1780479966.533994,
+    "ast_hash": "15bee28fccb6c3ad6b3b71f0dd1ef135",
+    "semantic_hash": ""
+  },
+  "clients-prompt/45552-perdichizzi-gioiellerie-prompt.md": {
+    "mtime": 1779198391.9546542,
+    "ast_hash": "829d50b020234e9f1a830a7842ac8bf3",
+    "semantic_hash": ""
+  },
+  "clients-prompt/45828-accademia-oms-prompt-anestesia.md": {
+    "mtime": 1774439227.70797,
+    "ast_hash": "d761ebd9ca3c810f38725876f2016428",
+    "semantic_hash": ""
+  },
+  "clients-prompt/45828-accademia-oms-prompt-endocrinologia.md": {
+    "mtime": 1775221822.4608202,
+    "ast_hash": "03fc0a802f49fc254093d3c09c56a34d",
+    "semantic_hash": ""
+  },
+  "clients-prompt/46384-esserenergia-prompt.md": {
+    "mtime": 1776941189.455001,
+    "ast_hash": "b2614e5084a6eed9659d969bb659e586",
+    "semantic_hash": ""
+  },
+  "clients-prompt/46604-albali-centros-formacion-prompt-outbound.md": {
+    "mtime": 1771346569.432222,
+    "ast_hash": "f8b2696d3426d6a4666ab25afdc82dc9",
+    "semantic_hash": ""
+  },
+  "clients-prompt/47493 - Agente Concierge (Ricontatto).md": {
+    "mtime": 1784637142.5341077,
+    "ast_hash": "ff1737af4ad584a07a06d0653c10f316",
+    "semantic_hash": ""
+  },
+  "clients-prompt/47493 - Agente HCP.md": {
+    "mtime": 1784637142.5341253,
+    "ast_hash": "08e6f89f240fe30ebe3c01361a6daf09",
+    "semantic_hash": ""
+  },
+  "clients-prompt/47493 - Triage AI (Primo contatto - Trigger).md": {
+    "mtime": 1784206655.2680907,
+    "ast_hash": "ef6966847d49904856dc264891793916",
+    "semantic_hash": ""
+  },
+  "clients-prompt/47493-dimann-automazioni-spiegazione.html": {
+    "mtime": 1785222034.5872552,
+    "ast_hash": "0ce0de66a2466a794e3c4ff5f1e2275f",
+    "semantic_hash": ""
+  },
+  "clients-prompt/47493-dimann-concierge-test-suite.md": {
+    "mtime": 1784637142.5341413,
+    "ast_hash": "0a5f25533e7e961ac81ded65030a4cec",
+    "semantic_hash": ""
+  },
+  "clients-prompt/47493-dimann-follow-up-email-2026-07-20.md": {
+    "mtime": 1784637142.5340064,
+    "ast_hash": "bf3f624c4552fbab42f2b38365c79cfb",
+    "semantic_hash": ""
+  },
+  "clients-prompt/47493-dimann-hcp-test-suite.md": {
+    "mtime": 1784637142.534149,
+    "ast_hash": "a36b3ef8010d98310bcc53577f379d2b",
+    "semantic_hash": ""
+  },
+  "clients-prompt/47493-dimann-proposta-executive.html": {
+    "mtime": 1783498919.1325753,
+    "ast_hash": "73a90fe7193426ce3f50a7dcc0265865",
+    "semantic_hash": ""
+  },
+  "clients-prompt/47493-dimann-spoki-verifica.md": {
+    "mtime": 1785222034.58727,
+    "ast_hash": "51a571d8a37ab89473574052a9cfa731",
+    "semantic_hash": ""
+  },
+  "clients-prompt/47493-dimann-triage-test-suite.md": {
+    "mtime": 1784206655.268887,
+    "ast_hash": "bc5ea35620a5be0fc1804361ed3d239a",
+    "semantic_hash": ""
+  },
+  "clients-prompt/48237-New Genesis Clinic-prompt.md": {
+    "mtime": 1779712968.3412035,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": ""
+  },
+  "clients-prompt/49878-centro-formazione-innovazione-faqs.md": {
+    "mtime": 1779808943.7418396,
+    "ast_hash": "fda2d211e536865f897208676cb2c403",
+    "semantic_hash": ""
+  },
+  "clients-prompt/49878-centro-formazione-innovazione-kb.md": {
+    "mtime": 1780308693.6066322,
+    "ast_hash": "ce508b349dca08648b46e8be6469b1c7",
+    "semantic_hash": ""
+  },
+  "clients-prompt/49878-centro-formazione-innovazione-prompt.md": {
+    "mtime": 1779879043.282801,
+    "ast_hash": "acd5181331d5283527e2d0e711d6ee98",
+    "semantic_hash": ""
+  },
+  "clients-prompt/49878-prompt.md": {
+    "mtime": 1782144096.7445319,
+    "ast_hash": "5fd340123ebac460233945fa7384aa76",
+    "semantic_hash": ""
+  },
+  "clients-prompt/50011-Prime srl-knowledge-base.md": {
+    "mtime": 1779717410.9582708,
+    "ast_hash": "83f1d8b90dfd261d5d8750845c55f8c7",
+    "semantic_hash": ""
+  },
+  "clients-prompt/50011-Prime srl-prompt.md": {
+    "mtime": 1779721540.6210375,
+    "ast_hash": "460fef41c1df972351469c45100e4c44",
+    "semantic_hash": ""
+  },
+  "clients-prompt/50404-living-proof-espana-prompt.md": {
+    "mtime": 1779097587.6659775,
+    "ast_hash": "86b4f94beb40944cec61f9c91aa5b4eb",
+    "semantic_hash": ""
+  },
+  "clients-prompt/52409-bloom-capital-prompt-en.md": {
+    "mtime": 1779195519.3835275,
+    "ast_hash": "3216ac363b240228f38fd8bf3a1c2067",
+    "semantic_hash": ""
+  },
+  "clients-prompt/52576-pharmalab-knowledgebase.md": {
+    "mtime": 1780580232.4676049,
+    "ast_hash": "0346dc276c9fff3d2c17a54efa2c9469",
+    "semantic_hash": ""
+  },
+  "clients-prompt/52756-pharmalab-srl-prompt.md": {
+    "mtime": 1780581350.5396943,
+    "ast_hash": "b1ca6dec5ccbcf1f63101e9d96498164",
+    "semantic_hash": ""
+  },
+  "clients-prompt/53298-centro-unico-prenotazioni-test-suite.md": {
+    "mtime": 1785225868.5027802,
+    "ast_hash": "e26d2c2a3f5092ff79fe7d133c0574b6",
+    "semantic_hash": ""
+  },
+  "clients-prompt/53298-centro-unico-prenotazioni.md": {
+    "mtime": 1785225867.9438488,
+    "ast_hash": "5cb60587e42f3ca501bd9c643dd66ef9",
+    "semantic_hash": ""
+  },
+  "clients-prompt/53298-prelievo-domicilio-prompt.md": {
+    "mtime": 1784637142.5341644,
+    "ast_hash": "df2f78fb3d4deae7f7a87aaea615cd91",
+    "semantic_hash": ""
+  },
+  "clients-prompt/5442-bioitalia-natural-life-dynamic-fields.md": {
+    "mtime": 1779289690.8124144,
+    "ast_hash": "e28949be61c6228680ef5446dd8b73e2",
+    "semantic_hash": ""
+  },
+  "clients-prompt/5442-bioitalia-natural-life.md": {
+    "mtime": 1779287404.2564008,
+    "ast_hash": "00124bfec6c4b4ba73e6190fbd6b4d7d",
+    "semantic_hash": ""
+  },
+  "clients-prompt/54633-digital-prompt.md": {
+    "mtime": 1781595396.5772567,
+    "ast_hash": "eee97b3cbd4608c863d2586e716265d4",
+    "semantic_hash": ""
+  },
+  "clients-prompt/58726-sprint-prompt-aggiornato.md": {
+    "mtime": 1779109760.9836562,
+    "ast_hash": "5d88a1736afc303bfd02227fd89ad29f",
+    "semantic_hash": ""
+  },
+  "clients-prompt/9968-spoki-antowebinar-prompt.md": {
+    "mtime": 1779180537.0681825,
+    "ast_hash": "0b883c5fa1e6be4b4996c02e93ff2959",
+    "semantic_hash": ""
+  },
+  "clients-prompt/acv-concierge-prompt.md": {
+    "mtime": 1782461525.7540932,
+    "ast_hash": "9b985383b98ad71ac333c839705dc053",
+    "semantic_hash": ""
+  },
+  "clients-prompt/casp-prelievo-kb.md": {
+    "mtime": 1783519452.0355494,
+    "ast_hash": "6173f81a55553ada929af830fe2d4770",
+    "semantic_hash": ""
+  },
+  "clients-prompt/casp-prelievo-prompt.md": {
+    "mtime": 1783519425.632078,
+    "ast_hash": "68695f242e162182b96f279c64661d7a",
+    "semantic_hash": ""
+  },
+  "clients-prompt/dimann-brainstorming.md": {
+    "mtime": 1785222034.5872424,
+    "ast_hash": "8cecc89a3490407cce514a0508ff4e2b",
+    "semantic_hash": ""
+  },
+  "clients-prompt/feltrinelli-ai.md": {
+    "mtime": 1783934426.2876058,
+    "ast_hash": "39ecc435e64ec7a9a62dfc3ca9145144",
+    "semantic_hash": ""
+  },
+  "clients-prompt/ilovebikini-prompt.md": {
+    "mtime": 1782203556.7717333,
+    "ast_hash": "c02c0bb83611119de8e74bc37005d7bf",
+    "semantic_hash": ""
+  },
+  "clients-prompt/kaidor-brainstorming.md": {
+    "mtime": 1785222034.6060362,
+    "ast_hash": "937284df80ebea17262640db7b57eead",
+    "semantic_hash": ""
+  },
+  "clients-prompt/mcp-demo-checklist.md": {
+    "mtime": 1783586016.4466894,
+    "ast_hash": "1e0bcfea283517f01133dbbac6992a3d",
+    "semantic_hash": ""
+  },
+  "clients-prompt/mcp-demo-prompt.md": {
+    "mtime": 1783586016.4463956,
+    "ast_hash": "6633f1e7f303aa4ac1bc2c097cf66b0d",
+    "semantic_hash": ""
+  },
+  "clients-prompt/reference.md": {
+    "mtime": 1771434482.859128,
+    "ast_hash": "5a5ff0a0bfa20fb35bed539771a89f0d",
+    "semantic_hash": ""
+  },
+  "clients-prompt/tecno-clinic-prompt-voice.md": {
+    "mtime": 1782201370.7155993,
+    "ast_hash": "192841234568c5db9935b4e73aa14387",
+    "semantic_hash": ""
+  },
+  "guida-prompt-spoki.md": {
+    "mtime": 1780306917.024899,
+    "ast_hash": "227a2744cbb309e7cfae16343c599f20",
+    "semantic_hash": ""
+  },
+  "voice-agents-prompts/19077-giovanna.md": {
+    "mtime": 1782993689.301658,
+    "ast_hash": "6de3fcfe302c99551fe8d27690fc52b7",
+    "semantic_hash": ""
+  },
+  "voice-agents-prompts/54633-digitalsharing-callback-writer.md": {
+    "mtime": 1784285444.885682,
+    "ast_hash": "2558c527ccc453eb66289279f6419c17",
+    "semantic_hash": ""
+  },
+  "voice-agents-prompts/54633-digitalsharing-spoki-ui.md": {
+    "mtime": 1784285447.5790093,
+    "ast_hash": "e2697cebfb6a5deec23705e79da95cd4",
+    "semantic_hash": ""
+  },
+  "voice-agents-prompts/54633-digitalsharing-test-suite.md": {
+    "mtime": 1784282884.3588872,
+    "ast_hash": "7f663f794cde75d5c0886040fabefd5f",
+    "semantic_hash": ""
+  },
+  "voice-agents-prompts/54633-digitalsharing-voice-outbound.md": {
+    "mtime": 1784282884.3588016,
+    "ast_hash": "436429f12ddbc206c1ca7731e5098061",
+    "semantic_hash": ""
+  },
+  "voice-agents-prompts/data-collection-voice-outbound.md": {
+    "mtime": 1783494375.1236765,
+    "ast_hash": "9aa6ab193673d203fc635a3878e5e35c",
+    "semantic_hash": ""
+  },
+  "voice-agents-prompts/lead-qualification-voice-inbound.md": {
+    "mtime": 1782976975.8726823,
+    "ast_hash": "1fc4b1527fb17ab292e7293c8dbfb3d2",
+    "semantic_hash": ""
+  },
+  "voice-agents-prompts/lead-qualification-voice-outbound.md": {
+    "mtime": 1782976628.2368982,
+    "ast_hash": "e36c3f74f5ffb873312f8c83cdb337a5",
+    "semantic_hash": ""
+  },
+  "voice-agents-prompts/sales-rep-voice-outbound.md": {
+    "mtime": 1783494375.123659,
+    "ast_hash": "9c8387d6ecb6902161b218e7f068d459",
+    "semantic_hash": ""
+  },
+  "voice-agents-prompts/sara_ai_voice.md": {
+    "mtime": 1782987608.3565495,
+    "ast_hash": "f8ec3d3fa48f7c3f3b1f011c97380bbd",
+    "semantic_hash": ""
+  },
+  "voice-agents-prompts/spoki-demo-vendita-prompt-calendar.md": {
+    "mtime": 1779983407.601983,
+    "ast_hash": "c17c04744d8aaaf087d558f81723b0fb",
+    "semantic_hash": ""
+  },
+  "voice-agents-prompts/voice-agent-debug-checklist.md": {
+    "mtime": 1784206655.2676873,
+    "ast_hash": "330c051be9b32e22fa4e230123bad53e",
+    "semantic_hash": ""
+  },
+  "webinar/scaletta-ripresa-video.md": {
+    "mtime": 1780932088.4091136,
+    "ast_hash": "6c2f6f5f635ae75a4df66ebc8532817e",
+    "semantic_hash": ""
+  },
+  "webinar/webinar-agenti-spoki-script.md": {
+    "mtime": 1779786891.583704,
+    "ast_hash": "bda807080eea5a1bd5de7b60c853e30d",
+    "semantic_hash": ""
+  },
+  "clients-kb/53298-casp-kb-source-16c39342.pdf": {
+    "mtime": 1785225590.9135125,
+    "ast_hash": "10d6bec7aff68cb694fdabbfd426c36e",
+    "semantic_hash": ""
+  }
+}

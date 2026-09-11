@@ -1,0 +1,177 @@
+{
+  "$schema": "./webhook-payload.schema.json",
+  "version": "1.0.0",
+  "default_vertical": "generic_b2b",
+  "verticals": {
+    "generic_b2b": {
+      "label": "Vendita B2B generica",
+      "description": "Qualifica lead outbound per venditori SaaS/servizi/consulenza.",
+      "spoki_dynamic_fields": {
+        "pre_populated": ["PHONE", "FIRST_NAME", "LAST_NAME", "EMAIL", "COMPANY_NAME", "CRM_CONTACT_ID", "ASSIGNED_REP_ID"],
+        "custom_fields": []
+      },
+      "required": {
+        "contact": ["first_name"],
+        "qualification": ["need", "timeline"],
+        "next_action": ["type"]
+      },
+      "optional": {
+        "contact": ["last_name", "email", "company_name", "role"],
+        "qualification": [
+          "status",
+          "interest_level",
+          "current_solution",
+          "budget_range",
+          "decision_maker",
+          "company_size",
+          "industry",
+          "objections",
+          "competitor_mentioned",
+          "disqualification_reason"
+        ],
+        "next_action": [
+          "preferred_datetime",
+          "appointment_datetime",
+          "appointment_location",
+          "consent_to_contact"
+        ],
+        "summary": ["summary", "key_quotes", "open_questions"]
+      },
+      "collection_order": [
+        "first_name",
+        "need",
+        "timeline",
+        "role_and_company",
+        "budget_range",
+        "email",
+        "next_action_type",
+        "preferred_datetime"
+      ],
+      "lead_complete_when": "first_name AND need AND timeline AND next_action.type",
+      "qualification_status_values": ["qualified", "not_qualified", "nurture"],
+      "next_action_values": [
+        "callback_requested",
+        "appointment_booked",
+        "send_quote",
+        "send_brochure",
+        "call_back_later",
+        "no_interest"
+      ]
+    },
+    "automotive": {
+      "label": "Concessionaria automotive",
+      "description": "Qualifica lead per ricontatto consulente vendita auto.",
+      "spoki_dynamic_fields": {
+        "pre_populated": ["PHONE", "FIRST_NAME", "MARCA", "MODELLO", "REGIONE", "CRM_CONTACT_ID", "ASSIGNED_REP_ID"],
+        "custom_fields": ["MARCA", "MODELLO", "REGIONE"]
+      },
+      "required": {
+        "contact": ["first_name"],
+        "product_context": ["marca", "modello", "regione"],
+        "next_action": ["type"]
+      },
+      "optional": {
+        "contact": ["last_name", "email"],
+        "product_context": ["vehicle_condition", "trade_in", "financing_interest", "preferred_dealership"],
+        "qualification": ["interest_level", "timeline", "objections"],
+        "next_action": ["preferred_datetime", "appointment_datetime", "appointment_location"],
+        "summary": ["summary"]
+      },
+      "collection_order": [
+        "first_name",
+        "marca",
+        "modello",
+        "regione",
+        "vehicle_condition",
+        "trade_in",
+        "next_action_type",
+        "preferred_datetime"
+      ],
+      "lead_complete_when": "first_name AND marca AND modello AND regione AND next_action.type",
+      "qualification_status_values": ["qualified", "not_qualified", "nurture"],
+      "next_action_values": [
+        "callback_requested",
+        "appointment_booked",
+        "call_back_later",
+        "no_interest"
+      ]
+    },
+    "local_services": {
+      "label": "Servizi locali / appuntamento a domicilio",
+      "description": "Qualifica lead con raccolta indirizzo e slot per tecnico/consulente.",
+      "spoki_dynamic_fields": {
+        "pre_populated": ["PHONE", "FIRST_NAME", "LAST_NAME", "EMAIL", "CRM_CONTACT_ID", "ASSIGNED_REP_ID"],
+        "custom_fields": []
+      },
+      "required": {
+        "contact": ["first_name", "phone"],
+        "qualification": ["need"],
+        "location": ["city", "postal_code"],
+        "next_action": ["type"]
+      },
+      "optional": {
+        "contact": ["last_name", "email"],
+        "location": ["address", "region"],
+        "qualification": ["timeline", "interest_level", "objections"],
+        "next_action": ["preferred_datetime", "appointment_datetime"],
+        "summary": ["summary"]
+      },
+      "collection_order": [
+        "first_name",
+        "need",
+        "city",
+        "postal_code",
+        "address",
+        "preferred_datetime",
+        "next_action_type"
+      ],
+      "lead_complete_when": "first_name AND need AND city AND postal_code AND next_action.type",
+      "qualification_status_values": ["qualified", "not_qualified"],
+      "next_action_values": [
+        "appointment_booked",
+        "callback_requested",
+        "call_back_later",
+        "no_interest"
+      ]
+    },
+    "real_estate": {
+      "label": "Immobiliare",
+      "description": "Qualifica acquirenti/affittuari per ricontatto agente.",
+      "spoki_dynamic_fields": {
+        "pre_populated": ["PHONE", "FIRST_NAME", "LAST_NAME", "EMAIL", "CRM_CONTACT_ID", "ASSIGNED_REP_ID"],
+        "custom_fields": []
+      },
+      "required": {
+        "contact": ["first_name"],
+        "product_context": ["transaction_type", "area"],
+        "qualification": ["timeline"],
+        "next_action": ["type"]
+      },
+      "optional": {
+        "contact": ["last_name", "email"],
+        "product_context": ["budget_range", "property_size", "property_type"],
+        "qualification": ["need", "interest_level", "objections"],
+        "next_action": ["preferred_datetime", "appointment_datetime", "appointment_location"],
+        "summary": ["summary"]
+      },
+      "collection_order": [
+        "first_name",
+        "transaction_type",
+        "area",
+        "budget_range",
+        "timeline",
+        "next_action_type",
+        "preferred_datetime"
+      ],
+      "lead_complete_when": "first_name AND transaction_type AND area AND timeline AND next_action.type",
+      "qualification_status_values": ["qualified", "not_qualified", "nurture"],
+      "next_action_values": [
+        "appointment_booked",
+        "callback_requested",
+        "send_brochure",
+        "call_back_later",
+        "no_interest"
+      ]
+    }
+  }
+}

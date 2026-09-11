@@ -1,0 +1,152 @@
+codice_regionale,descrizione,prezzo_ticket_eur,regime,fonte
+90.01.2,17-OH PROGESTERONE,11.70,ticket_ssn,Wgeslaan
+91.02.5,A. A. Mycoplasma pneumoniae IgG,13.40,ticket_ssn,Wgeslaan
+91.02.5,A. A. Mycoplasma pneumoniae IgM,13.40,ticket_ssn,Wgeslaan
+90.23.2,ACIDO FOLICO,5.15,ticket_ssn,Wgeslaan
+90.03.4,Acido Valproico,7.00,ticket_ssn,Wgeslaan
+90.15.2,ACTH,10.85,ticket_ssn,Wgeslaan
+90051.S,ALBUMINEMIA,1.10,ticket_ssn,Wgeslaan
+90.05.5,ALPHA-FETOPROTEINA (AFP),7.40,ticket_ssn,Wgeslaan
+90064.S,AMILASI,1.25,ticket_ssn,Wgeslaan
+90.06.5,AMILASI PANCREATICA,3.65,ticket_ssn,Wgeslaan
+90064.U,AMILASURIA,1.25,ticket_ssn,Wgeslaan
+90.52.4,ANA (Anticorpi anti nucleo),8.50,ticket_ssn,Wgeslaan
+90514.M,ANTI MICROSOMI,8.50,ticket_ssn,Wgeslaan
+90495.A,ANTI PEPTIDI DEAMIDATI DELLA GLIADINA IgA,8.90,ticket_ssn,Wgeslaan
+90495.G,ANTI PEPTIDI DEAMIDATI DELLA GLIADINA IgG,8.90,ticket_ssn,Wgeslaan
+90.54.4,ANTICORPI ANTI-TIREOGLOBULINA,7.80,ticket_ssn,Wgeslaan
+90514.T,ANTICORPI ANTITIREOPEROSSIDASI,8.50,ticket_ssn,Wgeslaan
+90441.S,AZOTEMIA,1.10,ticket_ssn,Wgeslaan
+90441.D,AZOTO URINARIO,1.10,ticket_ssn,Wgeslaan
+90101.S,BETA-2-MICROGLOBULINEMIA,4.35,ticket_ssn,Wgeslaan
+90.10.7,BILIRUBINA DIRETTA,1.15,ticket_ssn,Wgeslaan
+—,BILIRUBINA TOTALE E FRAZIONATA,1.05,ticket_ssn,Wgeslaan
+90602.B,C3,3.20,ticket_ssn,Wgeslaan
+90602.D,C4,3.20,ticket_ssn,Wgeslaan
+90.55.1,CA 125,13.00,ticket_ssn,Wgeslaan
+90.55.2,CA 15.3,6.80,ticket_ssn,Wgeslaan
+90.55.3,CA 19.9,6.90,ticket_ssn,Wgeslaan
+90114.S,CALCIO,1.10,ticket_ssn,Wgeslaan
+90114.U,CALCIO URINARIO,1.10,ticket_ssn,Wgeslaan
+90114.D,CALCIO URINARIO (urine 24 ore),1.10,ticket_ssn,Wgeslaan
+90.11.5,CALCITONINA,12.35,ticket_ssn,Wgeslaan
+90.12.3,Carbamazepina,7.00,ticket_ssn,Wgeslaan
+90.56.3,CEA,6.20,ticket_ssn,Wgeslaan
+90.16.4,CLEARANCE CREATININA,1.90,ticket_ssn,Wgeslaan
+90133.S,CLORO,1.10,ticket_ssn,Wgeslaan
+90133.D,CLORO URINARIO (urine 24h),1.10,ticket_ssn,Wgeslaan
+90.14.1,COLESTEROLO HDL,1.80,ticket_ssn,Wgeslaan
+90.13.B,COLESTEROLO LDL,1.75,ticket_ssn,Wgeslaan
+90.13.C,Colesterolo LDL diretto,1.75,ticket_ssn,Wgeslaan
+90.14.3,COLESTEROLO TOTALE,1.20,ticket_ssn,Wgeslaan
+90.74.5,CONTA RETICOLOCITI,5.00,ticket_ssn,Wgeslaan
+90153.S,CORTISOLO,10.35,ticket_ssn,Wgeslaan
+90153.S,CORTISOLO in clinostatismo,10.35,ticket_ssn,Wgeslaan
+90153.S,CORTISOLO in ortostatismo,10.35,ticket_ssn,Wgeslaan
+90.15.4,CPK o CK (creatinchinasi),1.75,ticket_ssn,Wgeslaan
+90163.U,Creatinina (urine notte),1.10,ticket_ssn,Wgeslaan
+90163.S,CREATININEMIA,1.10,ticket_ssn,Wgeslaan
+90163.D,CREATININURIA,1.10,ticket_ssn,Wgeslaan
+90.17.3,DELTA 4 ANDROSTENEDIONE,13.00,ticket_ssn,Wgeslaan
+90.17.2,DHEA-S,13.60,ticket_ssn,Wgeslaan
+90.38.4,ELETTROFORESI SIEROPROTEICA,5.10,ticket_ssn,Wgeslaan
+90.66.5,Emoglobina elettroforesi,7.75,ticket_ssn,Wgeslaan
+90.28.1,EMOGLOBINA GLICATA (HbA1c),4.70,ticket_ssn,Wgeslaan
+91.18.6,EPATITE B [HBV] REFLEX,26.20,ticket_ssn,Wgeslaan
+91211.C,Epstein Barr VCA IgG,13.10,ticket_ssn,Wgeslaan
+91211.C,Epstein Barr VCA IgM,13.10,ticket_ssn,Wgeslaan
+90.44.3,ESAME DELLE URINE,2.55,ticket_ssn,Wgeslaan
+90.62.2,Esame emocromocitometrico,3.15,ticket_ssn,Wgeslaan
+90.98.4,Esame micologico,15.70,ticket_ssn,Wgeslaan
+90192.S,ESTRADIOLO (E2),7.50,ticket_ssn,Wgeslaan
+90.22.3,FERRITINA,4.95,ticket_ssn,Wgeslaan
+90.64.6,FIBRINOGENO,1.75,ticket_ssn,Wgeslaan
+90.23.5,FOSFATASI ALCALINA,1.05,ticket_ssn,Wgeslaan
+90243.S,Fosfato inorganico,1.00,ticket_ssn,Wgeslaan
+90243.D,Fosfato inorganico (urine 24h),1.00,ticket_ssn,Wgeslaan
+90243.S,FOSFORO,1.00,ticket_ssn,Wgeslaan
+90243.D,FOSFORO URINARIO (urine 24h),1.00,ticket_ssn,Wgeslaan
+90243.U,FOSFORO URINARIO (urine del mattino),1.00,ticket_ssn,Wgeslaan
+90233.S,FSH,6.20,ticket_ssn,Wgeslaan
+—,FT3 (triiodotironina libera),4.80,ticket_ssn,Wgeslaan
+—,FT4 (tiroxina libera),4.80,ticket_ssn,Wgeslaan
+—,Glicemia post prandiale,1.00,ticket_ssn,Wgeslaan
+—,GLICOSURIA,1.00,ticket_ssn,Wgeslaan
+—,Hb A2 dosaggio,7.75,ticket_ssn,Wgeslaan
+—,Hb fetale dosaggio,7.75,ticket_ssn,Wgeslaan
+91.18.2,HBeAb,5.40,ticket_ssn,Wgeslaan
+91.18.4,HBeAg,5.35,ticket_ssn,Wgeslaan
+91.18.3,HBsAb,4.75,ticket_ssn,Wgeslaan
+91.18.5,HBsAg,4.10,ticket_ssn,Wgeslaan
+91.19.5,HCV,6.95,ticket_ssn,Wgeslaan
+90.94.C,HELICOBACTER PYLORI NELLE FECI,4.60,ticket_ssn,Wgeslaan
+91.23.F,HIV-TEST Combo,12.05,ticket_ssn,Wgeslaan
+90.68.3,IgE totali,6.60,ticket_ssn,Wgeslaan
+90.69.4,Immunoglobuline IgA,3.35,ticket_ssn,Wgeslaan
+90.69.4,Immunoglobuline IgG,3.35,ticket_ssn,Wgeslaan
+90.69.4,Immunoglobuline IgM,3.35,ticket_ssn,Wgeslaan
+90.28.4,Immunoglobuline kappa e lambda sieriche,10.65,ticket_ssn,Wgeslaan
+90.29.2,LDH,1.10,ticket_ssn,Wgeslaan
+90.30.2,LIPASI,2.60,ticket_ssn,Wgeslaan
+90.32.2,LITIO,9.90,ticket_ssn,Wgeslaan
+90.325.S,MAGNESIO,1.65,ticket_ssn,Wgeslaan
+90.325.D,MAGNESIO URINARIO (urine 24h),1.65,ticket_ssn,Wgeslaan
+90.33.4,MICROALBUMINURIA,3.40,ticket_ssn,Wgeslaan
+91.21.3,Monotest,13.10,ticket_ssn,Wgeslaan
+90.36.6,NT-ProBNP,16.55,ticket_ssn,Wgeslaan
+90.34.6,OMOCISTEINA,11.30,ticket_ssn,Wgeslaan
+90.17.G,Ormone antimulleriano (AMH),28.00,ticket_ssn,Wgeslaan
+90.35.5,PARATORMONE (PTH),8.80,ticket_ssn,Wgeslaan
+—,POTASSIO,1.25,ticket_ssn,Wgeslaan
+—,POTASSIO URINARIO (urine 24h),1.25,ticket_ssn,Wgeslaan
+—,Prelievo venoso,3.80,ticket_ssn,Wgeslaan
+—,PROGESTERONE,7.90,ticket_ssn,Wgeslaan
+—,PROLATTINA,7.10,ticket_ssn,Wgeslaan
+—,PROTEINA C REATTIVA (quantitativa),3.25,ticket_ssn,Wgeslaan
+—,PROTEINE TOTALI,0.90,ticket_ssn,Wgeslaan
+—,PROTEINURIA,0.90,ticket_ssn,Wgeslaan
+—,PROTEINURIA NOTTURNA,0.90,ticket_ssn,Wgeslaan
+—,PROTEINURIA DIURNA,0.90,ticket_ssn,Wgeslaan
+—,PTT,2.50,ticket_ssn,Wgeslaan
+—,REUMATEST,3.85,ticket_ssn,Wgeslaan
+90.21.4,Ricerca sangue occulto nelle feci,3.45,ticket_ssn,Wgeslaan
+91.26.E,RUBEO test-IgG,6.70,ticket_ssn,Wgeslaan
+90.22.5,SIDEREMIA (ferro),1.15,ticket_ssn,Wgeslaan
+90404.S,SODIO,0.85,ticket_ssn,Wgeslaan
+90404.D,SODIO URINARIO (urine 24h),0.85,ticket_ssn,Wgeslaan
+90.93.3,SPERMIOCOLTURA con eventuale ID e antibiogramma,21.95,ticket_ssn,Wgeslaan
+90.93.3,TAMPONE AURICOLARE con eventuale ID e ABG,21.95,ticket_ssn,Wgeslaan
+90.93.3,TAMPONE CONGIUNTIVALE con eventuale ID e ABG,21.95,ticket_ssn,Wgeslaan
+90.93.5,TAMPONE FARINGEO con eventuale ID e antibiogramma,21.20,ticket_ssn,Wgeslaan
+90.93.5,TAMPONE NASALE DX,21.20,ticket_ssn,Wgeslaan
+90.93.5,TAMPONE NASALE SX,21.20,ticket_ssn,Wgeslaan
+90.93.3,TAMPONE ULCERA CUTANEA con eventuale ID e ABC,21.95,ticket_ssn,Wgeslaan
+90.93.5,TAMPONE VAGINALE (ricerca streptococco B),21.20,ticket_ssn,Wgeslaan
+90.75.4,TEMPO DI PROTROMBINA,2.30,ticket_ssn,Wgeslaan
+90.49.3,TEST DI COOMBS INDIRETTO,8.35,ticket_ssn,Wgeslaan
+90.41.3,TESTOSTERONE,6.90,ticket_ssn,Wgeslaan
+90.41.4,Testosterone libero,13.90,ticket_ssn,Wgeslaan
+90.41.5,TIREOGLOBULINA (TG),13.35,ticket_ssn,Wgeslaan
+91.08.5,TITOLO ANTISTREPTOLISINICO (TAS),4.90,ticket_ssn,Wgeslaan
+91.10.4,TPHA (ricerca qualitativa),4.08,ticket_ssn,Wgeslaan
+91.10.5,TPHA (ricerca quantitativa),5.78,ticket_ssn,Wgeslaan
+90.53.5,TRAB - A.A. recettore del TSH,25.10,ticket_ssn,Wgeslaan
+90.04.5,TRANSAMINASI ALT/GPT,1.00,ticket_ssn,Wgeslaan
+90.09.2,TRANSAMINASI AST/GOT,1.05,ticket_ssn,Wgeslaan
+90.42.5,TRANSFERRINA,3.20,ticket_ssn,Wgeslaan
+90.525.A,TRANSGLUTAMINASI IgA,9.70,ticket_ssn,Wgeslaan
+90.525.G,TRANSGLUTAMINASI IgG,9.70,ticket_ssn,Wgeslaan
+90.43.2,TRIGLICERIDI,1.10,ticket_ssn,Wgeslaan
+90.82.3,TROPONINA,8.15,ticket_ssn,Wgeslaan
+90.42.1,TSH (tireotropina),4.75,ticket_ssn,Wgeslaan
+90.41.8,TSH REFLEX,6.80,ticket_ssn,Wgeslaan
+90435.S,URICEMIA,1.05,ticket_ssn,Wgeslaan
+90435.D,URICURIA,1.05,ticket_ssn,Wgeslaan
+90435.U,Uricuria (urine del mattino),1.05,ticket_ssn,Wgeslaan
+90.94.2,URINOCOLTURA con eventuale ID e antibiogramma,16.40,ticket_ssn,Wgeslaan
+90.82.5,V.E.S.,1.80,ticket_ssn,Wgeslaan
+91.11.1,VDRL,3.36,ticket_ssn,Wgeslaan
+91.21.3,Virus EBV anticorpi eterofili (test rapido),13.10,ticket_ssn,Wgeslaan
+90.13.5,VITAMINA B12,6.90,ticket_ssn,Wgeslaan
+90.44.6,Vitamina D totale (25-OH),11.15,ticket_ssn,Wgeslaan
+90.25.5,GGT (YGT),1.15,ticket_ssn,Wgeslaan

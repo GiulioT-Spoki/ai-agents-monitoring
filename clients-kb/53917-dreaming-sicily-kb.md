@@ -1,0 +1,155 @@
+# Dreaming Sicily — Knowledge Base
+
+Account Spoki: 53917.  
+Nome commerciale: Dreaming Sicily.  
+Sede legale: Via Villagrazia 465, Palermo (PA).  
+Titolare: Daniele Piazza (ditta individuale).
+
+---
+
+# Chi siamo
+
+Dreaming Sicily è un portale di promozione turistica e un Info Point digitale sulla Sicilia. Opera esclusivamente online.
+
+Dreaming Sicily non è un’agenzia di viaggi e non è un tour operator.
+
+Ruolo: promuove il territorio e seleziona opportunità (hotel, villaggi, resort, esperienze nautiche, tour, escursioni) in collaborazione con operatori e fornitori partner.
+
+Sinonimi / domande tipiche: “siete un’agenzia?”, “siete un tour operator?”, “chi siete?”, “agenzia di viaggi tradizionale?”, “info point”, “portale turistico”.
+
+---
+
+# Cosa promuove Dreaming Sicily
+
+Strutture: villaggi, hotel, resort, case / appartamenti / ville (in collaborazione con partner).
+
+Esperienze: nautica, gommone, barca, charter, moto d’acqua / jet ski, tour gastronomici, escursioni, minicrociere, Boat & Breakfast.
+
+Focus principale: Sicilia. Su richiesta possono essere gestite anche richieste di viaggio in Italia, estero o crociere tramite consulente e fornitori partner.
+
+---
+
+# Fornitori terzi, servizi e assicurazioni
+
+Tutte le attività, i servizi e le coperture assicurative sono organizzati e gestiti da fornitori terzi (hotel, tour operator, società di charter o altri partner).
+
+Dreaming Sicily non eroga direttamente il servizio finale né gestisce in autonomia le polizze.
+
+---
+
+# Come si richiede un preventivo e come si prenota
+
+Si può richiedere un preventivo gratuito dal sito o tramite assistenza WhatsApp.
+
+La disponibilità viene verificata in tempo reale con il fornitore del servizio. Il cliente viene guidato passo dopo passo nella prenotazione.
+
+I preventivi per villaggi e hotel sono gratuiti e senza impegno. Solitamente la risposta arriva entro 24 ore, o prima sui canali automatizzati.
+
+Sinonimi / domande tipiche: “posso avere un preventivo?”, “quanto costa?”, “come prenoto?”, “è gratis il preventivo?”, “in quanto tempo rispondete?”.
+
+Nota: in knowledge base non ci sono listini prezzi per strutture o esperienze; le tariffe le conferma il consulente con il fornitore.
+
+---
+
+# Appuntamenti presso agenzie partner
+
+In base alle soluzioni scelte, per definire i dettagli è possibile fissare un appuntamento di persona presso una delle agenzie partner sul territorio.
+
+In knowledge base non è pubblicato l’elenco nominativo delle agenzie partner.
+
+---
+
+# Tariffe bambini nei villaggi e hotel
+
+Le riduzioni per i bambini dipendono dal regolamento della singola struttura.
+
+Le fasce d’età indicate (esempio: “fino a 12 anni nc”) si riferiscono ad anni non compiuti all’inizio del viaggio. “nc” = non compiuti.
+
+Se il bambino ha già compiuto l’età indicata alla data di inizio soggiorno, si applica la tariffa della fascia successiva oppure la tariffa adulto.
+
+Sinonimi / domande tipiche: “tariffe bambini”, “sconto bambini”, “fino a 12 anni nc”, “anni non compiuti”, “mio figlio ha 12 anni”.
+
+---
+
+# Famiglie numerose, gruppi e camere multiple
+
+Sono disponibili camere quadruple, quintuple o soluzioni in villa e masseria, in base alla struttura.
+
+Nel calcolo dei preventivi per camere multiple, le quote scontate per bambini o letti aggiunti si applicano sempre dopo il calcolo delle prime due quote a tariffa intera (adulti).
+
+Sinonimi / domande tipiche: “famiglia numerosa”, “possiamo stare nella stessa camera?”, “camera quadrupla”, “camera quintupla”, “letto aggiunto”, “gruppo”.
+
+---
+
+# Boat & Breakfast
+
+Boat & Breakfast è una formula che permette di pernottare a bordo di un’imbarcazione selezionata (caicco, yacht o catamarano) ormeggiata in porto, con colazione tipica siciliana inclusa.
+
+Esempi di porti citati: Palermo, Trapani.
+
+È una soluzione romantica, originale e vicina ai centri storici.
+
+Sinonimi / domande tipiche: “boat and breakfast”, “dormire in barca”, “pernotto a bordo”, “colazione in barca”, “caicco”, “yacht”, “catamarano”.
+
+---
+
+# Skipper nelle escursioni e minicrociere
+
+La maggior parte delle esperienze e dei noleggi (esempi: Eolie, Egadi, Riserva dello Zingaro) prevede uno skipper qualificato e professionista.
+
+Per alcune imbarcazioni minori, ad esempio piccoli gommoni, è possibile il noleggio senza skipper e/o senza patente nautica. Questa opzione è sempre specificata nella scheda dell’esperienza.
+
+Sinonimi / domande tipiche: “c’è lo skipper?”, “serve la patente?”, “noleggio senza skipper”, “gommone senza patente”, “minicrociera”, “escursione in barca”.
+
+---
+
+# Pagamenti e prenotazione finale
+
+Prenotazioni, contratti e pagamenti vengono finalizzati e gestiti direttamente con i fornitori terzi organizzatori del servizio (hotel, tour operator o società di charter partner).
+
+Metodi di pagamento accettati presso i fornitori / canali previsti: bonifico, Postepay, PayPal, Satispay.
+
+Sinonimi / domande tipiche: “come si paga?”, “accettate PayPal?”, “bonifico”, “Postepay”, “Satispay”, “con chi pago?”, “contratto di prenotazione”.
+
+Nota: problemi su una pratica già aperta (saldo, voucher, errore pagamento) non sono risolti dalla sola FAQ; vanno gestiti dal consulente con i dati della prenotazione.
+
+---
+
+# Maltempo sulle escursioni in barca
+
+Se le condizioni meteo-marine non consentono l’uscita in sicurezza, l’escursione viene riprogrammata in un’altra data utile.
+
+Se non è possibile riprogrammare, si procede al rimborso secondo le politiche del fornitore.
+
+Sinonimi / domande tipiche: “c’è maltempo”, “mare mosso”, “cancellazione per meteo”, “rimborso escursione”, “si riprogramma?”.
+
+---
+
+# Moto d’acqua / jet ski — località con patente nautica
+
+Con patente nautica, le località disponibili in Sicilia per il noleggio moto d’acqua / jet ski sono:
+
+- Letojanni
+- Giardini Naxos
+- Marina di Ragusa
+- Cefalù
+
+Sinonimi / domande tipiche: “moto d’acqua con patente”, “jet ski patente”, “dove posso noleggiare con patente”, “Cefalù jet ski”, “Giardini Naxos moto d’acqua”.
+
+---
+
+# Moto d’acqua / jet ski — località senza patente nautica
+
+Senza patente nautica, le località disponibili in Sicilia per il noleggio moto d’acqua / jet ski sono:
+
+- Marina di Ragusa
+- San Vito Lo Capo
+- Letojanni
+
+Sinonimi / domande tipiche: “moto d’acqua senza patente”, “jet ski senza patente”, “San Vito Lo Capo moto d’acqua”, “noleggio senza patente”.
+
+---
+
+# Cosa non è presente in knowledge base
+
+Non sono pubblicati in questa knowledge base: listini prezzi delle strutture, cataloghi dettagliati, inclusioni tecniche camera/tour, elenco nominativo delle agenzie partner, orari ufficio feriali, email o telefono ufficiale diversi dal canale WhatsApp già in uso.

@@ -1,0 +1,256 @@
+CODICE_ORIG,DESCRIZIONE,NOMENCLATORE,TARIFFA,NOTE
+90.04.5,ALANINA AMINOTRANSFERASI (ALT) (GPT),90045,1.00,
+90.05.1,ALBUMINA,90051,1.42,
+90.05.3,ALDOSTERONE,90053,17.11,Non associabile a Ormoni dosaggi seriali (90.35.2)
+90.05.4,ALFA 1 ANTITRIPSINA,90054,5.30,
+90.05.5,ALFA 1 FETOPROTEINA,90055,7.40,
+90.06.1,ALFA 1 GLICOPROTEINA ACIDA,90061,5.31,
+90.06.3,ALFA 2 MACROGLOBULINA,90063,5.30,
+90.06.4,ALFA AMILASI TOTALE,90064,1.84,
+90.06.5,ALFA AMILASI ISOENZIMI (Frazione pancreatica),90065,3.65,
+90.07.5,AMMONIO,90075,6.36,
+90.08.4,APOLIPOPROTEINA -A1,90085,5.30,
+90.08.5,APOLIPOPROTEINA B,90085,5.30,
+90.09.2,ASPARTATO AMINOTRANSFERASI (AST) (GOT),90092,1.04,
+90.10.1,BETA2 MICROGLOBULINA,90101,5.30,
+90.10.2,BICARBONATI (Idrogenocarbonato),90102,0.50,
+90.10.5,BILIRUBINA REFLEX,90103,0.94, cut-off >1 mg/dL salvo definizione di cut-off più restrittivi a livello regionale. Incluso: Bilirubina Diretta ed Indiretta. Non associabile a 90.10.07
+90.11.1,C PEPTIDE,90111,12.15,
+90.11.4,CALCIO TOTALE,90114,1.13,
+90.11.5,CALCITONINA,90115,14.41,
+90.11.6,CALCIO IONIZZATO (calcolo indiretto),90384,4.23,Erogabile solo in associazione ai codici CALCIO TOTALE (90.11.4) e PROTEINE TOTALI (90.38.5)
+90.12.5,CERULOPLASMINA,90125,5.30,
+90.12.A,CALPROTECTINA FECALE,,,
+90.13.3,CLORURO,90133,1.13,
+90.13.5,COBALAMMINA (VIT. B12),90135,7.32,
+90.13.A,CISTATINA C,90164,1.60,Non associabile a Creatinina 90.16.3 e Creatinina clearance 90.16.4
+90.13.B,COLESTEROLO LDL Determinazione indiretta,90141,1.43,"Erogabile solo in associazione a Colesterolo HDL (90.14.1), Colesterolo totale (90.14.3) e Trigliceridi (90.43.2)"
+90.13.C,COLESTEROLO LDL Determinazione diretta,90142,0.67,
+90.14.1,COLESTEROLO HDL,90141,1.43,
+90.14.3,COLESTEROLO TOTALE,90143,1.04,
+90.15.2,CORTICOTROPINA (ACTH),90152,18.50,Non associabile a Ormoni dosaggi seriali (90.35.2)
+90.15.3,CORTISOLO,90153,7.79,Non associabile a Ormoni dosaggi seriali (90.35.2)
+90.15.4,CREATINA CHINASI (CPK o CK),,,
+90.16.3,CREATININA.,,,Non associabile a 90.16.4
+90.16.4,CREATININA CLEARANCE,90164,1.60,Non associabile a CREATININA (90.16.3)
+90.16.6,CROMOGRANINA A,,,
+90.16.8,DECARBOSSIPROTROMBINA,,,
+90.17.2,DEIDROEPIANDROSTERONE SOLFATO (DEA-S),90171,9.27,
+90.17.3,DELTA 4 ANDROSTENEDIONE,90173,12.97,
+90.17.C,FARMACI CON TECNICHE NON CROMATOGRAFICHE,90396,40.00,
+90.17.D,ELASTASI 1 PANCREATICA,91136,20.00,
+90.17.G,ORMONE ANTI-MULLERIANO (AMH) - DOSAGGIO,,,
+90.18.4,ENOLASI NEURONESPECIFICA (NSE),90184,16.60,
+90.19.2,ESTRADIOLO (E2),90192,9.11,
+90.21.4,FECI SANGUE OCCULTO,90214,3.52,
+90.22.3,FERRITINA,90223,6.36,
+90.22.5,FERRO,90224,4.79,
+90.23.2,FOLATO,90232,6.36,
+90.23.3,FOLLITROPINA (FSH),90233,6.21,Non associabile a Ormoni dosaggi seriali (90.35.2)
+90.23.5,FOSFATASI ALCALINA,90235,1.04,
+90.24.1,FOSFATASI ALCALINA ISOENZIMA OSSEO,90235,1.04,
+90.24.3,FOSFATO INORGANICO (FOSFORO),90243,1.46,
+90.25.5,GAMMA-GLUTAMILTRANSFERASI (gamma GT),90255,1.13,
+90.26.1,GASTRINA,90261,14.08,
+90.27.1,GLUCOSIO,90264,2.38,"Non associabile a Osmolalità (90.34.8), Glucosio dosaggio seriale dopo carico (90.26.5)"
+90.27.2,GLUCOSIO 6 FOSFATO DEIDROGENASI (G6PDH),90264,2.38,
+90.27.5,"GONADOTROPINA CORIONICA (Subunità beta, molecola intera)",90273,6.02,
+90.28.1,Hb - EMOGLOBINA GLICATA,90281,7.41,
+90.28.4,IMMUNOGLOBULINE: CATENE KAPPA E LAMBDA,90284,10.60,
+90.29.1,INSULINA,90285,27.82,
+90.29.2,LATTATO DEIDROGENASI (LDH),90292,1.13,
+90.30.2,LIPASI PANCREATICA,90302,2.58,
+90.32.2,LITIO,90322,3.47,
+90.32.5,MAGNESIO TOTALE,90325,1.55,
+90.33.4,ALBUMINURIA [MICROALBUMINURIA],90334,4.11,
+90.33.5,MIOGLOBINA,90335,6.92,
+90.34.6,OMOCISTEINA,,,
+90.35.1,ORMONE SOMATOTROPO (GH),90351,10.48,Non associabile a Ormoni dosaggi seriali (90.35.2)
+90.35.4,OSTEOCALCINA (BGP),90354,27.21,
+90.35.5,PARATORMONE (PTH). Molecola intatta,90355,18.92,
+90.35.6,SOMATOSTATINA,,,
+90.36.6,PEPTIDE NATRIURETICO tipo b (BNP o N-proBNP),90111,12.15,
+90.37.4,POTASSIO,,,Non associabile a 90.34.8
+90.37.6,PREALBUMINA,,,
+90.38.1,PROGESTERONE,90381,9.13,
+90.38.2,PROLATTINA (PRL),90382,7.13,Non associabile a Ormoni dosaggi seriali (90.35.2)
+90.38.4,PROTEINE EMATICHE (ELETTROFORESI DELLE),90384,4.23,Incluso: Dosaggio delle proteine totali 90.38.5
+90.38.5,PROTEINE TOTALI,90384,4.23,
+90.39.4,RAME,90394,4.69,
+90.40.2,RENINA,90402,23.24,Non associabile a Ormoni dosaggi seriali (90.35.2)
+90.40.4,SODIO,,,Non associabile a 90.34.8
+90.40.7,INSULIN GROWTH FACTOR [IGF-1 o SOMATOMEDINA C ],,,
+90.41.3,TESTOSTERONE,90413,9.78,
+90.41.5,TIREOGLOBULINA (Tg),90415,13.34,
+90.41.8,TIREOTROPINA [TSH] TEST REFLEX,90421,5.46,"Se TSH =  0.45 mU/L e = 3.5 mU/L: referto del solo TSH senza ulteriori indagini; Se TSH < 0.45 mU/L o > 3.5 mU/L: esecuzione automatica di FT4;  Se TSH < 0.45 mU/L e  FT4 =  limite superiore di riferimento, referto di TSH + FT4;  Se TSH < 0.45 mU/L e FT4 < limite superiore dell'intervallo di riferimento, esecuzione automatica di FT3 e referto di TSH + FT4 + FT3. Se TSH > 3.5 mU/L: esecuzione automatica di FT4 e referto di TSH + FT4. Salvo range o cut-off più restrittivi a livello regionale. Non associabile ai singoli codici 90.42.1 (TSH), 90.43.3 (FT3), 90.42.3 (FT4)"
+90.42.1,TIREOTROPINA (TSH),90421,5.46,"Non associabile a TSH Reflex (90.41.8), Ormoni dosaggi seriali (90.35.2)"
+90.42.3,TIROXINA LIBERA (FT4),90423,6.36,Non associabile a 90.41.8
+90.42.4,TRANSFERRINA (Capacità ferrolegante),90424,3.62,
+90.42.5,TRANSFERRINA,90424,3.62,
+90.42.6,TRANSFERRINA DESIALATA (CDT),90424,3.62,
+90.43.2,TRIGLICERIDI,90432,1.17,
+90.43.3,TRIODOTIRONINA LIBERA (FT3),90433,6.40,Non associabile a 90.41.8
+90.43.5,URATO,90435,1.13,
+90.43.8,URINE ESAME MORFOLOGICO a FRESCO,90444,0.50,
+90.44.1,UREA,,,Non associabile a 90.34.8
+90.44.3,URINE ESAME COMPLETO,90444,0.50,Incluso: sedimento urinario
+90.44.5,"VITAMINA D (1,25 OH)",90445,15.86,
+90.44.6,VITAMINA D (25 OH),90445,15.86,
+90.45.4,ZINCO,90454,5.63,
+90.47.3,ANTICORPI ANTI ANTIGENI NUCLEARI ESTRAIBILI (ENA). Test di screening,90473,13.19,
+90.47.7,ANTICORPI ANTI JO1. Determinazione singola,90472,4.18,
+90.47.8,ANTICORPI ANTI RNP. Determinazione singola,90472,4.18,
+90.47.9,ANTICORPI ANTI Scl-70. Determinazione singola,90472,4.18,
+90.47.A,ANTICORPI ANTI Sm. Determinazione singola,90472,4.18,
+90.47.B,ANTICORPI ANTI SSA. Determinazione singola,90472,4.18,
+90.47.C,ANTICORPI ANTI SSB. Determinazione singola,90472,4.18,
+90.47.D,ANTICORPI ANTI CITRULLINA (peptide),90472,4.18,
+90.47.E,ANTICORPI ANTI ENDOMISIO,91582,11.88,
+90.47.F,ANTICORPI ANTI CENTROMERO,90472,4.18,
+90.48.1,ANTICORPI ANTI CELLULE PARIETALI GASTRICHE (PCA),90481,8.29,
+90.48.2,"ANTICORPI ANTI CITOPLASMA DEI NEUTROFILI (ANCA: P-ANCA e C-ANCA). Per ciascuna
+determinazione",90482,10.27,
+90.48.3,ANTICORPI ANTI DNA NATIVO,90483,10.69,
+90.49.3,ANTICORPI ANTI ERITROCITI [Test di Coombs indiretto],90493,8.37,
+90.49.5,ANTICORPI ANTI GLIADINA DEAMIDATA (DPG-AGA) IgG,90495,10.27,
+90.51.4,ANTICORPI ANTI TIREOPEROSSIDASI (AbTPO),90514,11.30,
+90.51.5,ANTICORPI ANTI MICROSOMI EPATICI E RENALI (LKMA),90515,8.18,
+90.51.6,ANTICORPI ANTI MIELOPEROSSIDASI (MPO),90472,4.18,
+90.52.1,ANTICORPI ANTI MITOCONDRI (AMA),90521,9.36,
+90.52.2,ANTICORPI ANTI MUSCOLO LISCIO (ASMA),90522,7.37,
+90.52.4,ANTICORPI ANTI NUCLEO (ANA),90524,9.56,
+90.53.5,ANTICORPI ANTI RECETTORE DEL TSH,90535,25.06,
+90.53.8,ANTICORPI ANTI PROTEINASI 3 (PR3),90472,4.18,
+90.53.D,"ANTICORPI ANTI TRANSGLUTAMINASI (IgG, IgA). Per ciascuna determinazione",91583,11.40,
+90.54.4,ANTICORPI ANTI TIREOGLOBULINA (AbTg),90415,13.34,
+90.55.1,ANTIGENE CARBOIDRATICO 125 (CA 125),90551,12.98,
+90.55.2,ANTIGENE CARBOIDRATICO 15.3 (CA 15.3),90552,12.66,
+90.55.3,ANTIGENE CARBOIDRATICO 19.9 (CA 19.9),90553,11.49,
+90.56.3,ANTIGENE CARCINOEMBRIONARIO (CEA),90563,7.41,
+90.56.9,ANTIGENE PROSTATICO SPECIFICO [PSA] REFLEX ,90565,7.41,"(cut-off = 2,5 mU/L - = 10,0 mU/L). Incluso: esecuzione automatica di fPSA, referto di PSA + fPSA con calcolo del rapporto fPSA/PSA se PSA > 2,5 ug/L e < 10,0 mU/L"
+90.57.5,ANTITROMBINA FUNZIONALE (AT3),90575,5.02,
+90.58.2,ANTICORPI ANTI ERITROCITARI [Test di Coombs diretto],90484,1.76,
+90.60.2,"COMPLEMENTO: C3, C3 Naf, C4, CH50",90601,7.42,(Ciascuno)
+90.61.1,CRIOGLOBULINE RICERCA,90611,1.74,
+90.61.3,CYFRA 21-1,90613,19.05,
+90.61.4,D-DIMERO,90614,10.30,Dosaggio con metodo immunometrico
+90.62.2,EMOCROMO: ESAME EMOCROMOCITOMETRICO E CONTEGGIO LEUCOCITARIO DIFFERENZIALE,90622,3.17,"Hb, GR, GB, HCT, PLT, IND. DERIV. Compreso eventuale controllo microscopico"
+90.64.2,FATTORE REUMATOIDE,90642,4.73,
+90.64.6,FIBRINOGENO CLAUSS,90645,12.18,
+90.65.3,GRUPPO SANGUIGNO ABO (Agglutinogeni e Agglutinine) e Rh (D),90653,7.75,
+90.66.7,"Hb - EMOGLOBINE. Dosaggio frazioni (HbA2, HbF, Hb Anomale)",90665,14.36,
+90.68.1,IgE SPECIFICHE ALLERGOLOGICHE QUANTITATIVO. Per singolo allergene,90681,8.09,
+90.68.3,IgE TOTALI,90683,7.77,
+90.68.4,"IgG, IgA SOTTOCLASSI. Per ciascuna determinazione",89389,23.24,
+90.68.7,IgE SPECIFICHE PANNELLO PER ALIMENTI. Fino a 8 allergeni per pannello,,,
+90.68.8,IgE SPECIFICHE PANNELLO PER INALANTI. Fino a a 8 allergeni per pannello,,,
+90.69.2,IMMUNOFISSAZIONE,90692,20.88,
+90.69.4,"IMMUNOGLOBULINE IgA, IgD, IgG , IgM",90694,4.99,(Ciascuna)
+90.72.2,PROTEINA C ANTICOAGULANTE FUNZIONALE [P],90722,9.09,
+90.72.3,PROTEINA C REATTIVA (Quantitativa),90723,3.87,
+90.72.4,PROTEINA S LIBERA,90724,11.88,
+90.74.5,RETICOLOCITI. Conteggio,90745,3.50,
+90.75.4,TEMPO DI PROTROMBINA (PT),90754,2.85,
+90.76.1,TEMPO DI TROMBOPLASTINA PARZIALE ATTIVATA (APTT),90761,2.85,
+90.82.3,"TROPONINA I, T",90823,11.46,
+90.82.5,VELOCITA' DI SEDIMENTAZIONE DELLE EMAZIE (VES),90825,1.95,
+90.83.A,"ACIDI NUCLEICI DI MICRORGANISMI (BATTERI, VIRUS, MICETI, PROTOZOI) RICERCA IN MATERIALI",91115,63.52,"BIOLOGICI VARI MULTIPLEX. Almeno cinque microrganismi di uno o più gruppi di microganismi. Incluso: estrazione, amplificazione, rilevazione. NAS"
+90.88.E,CAMPYLOBACTER ESAME COLTURALE,90883,9.24,"In caso di coprocoltura positiva per Campylobacter. Se positivo, identificazione ed eventuale antibiogramma. Non associabile a 90.94.3"
+90.90.3,CHLAMYDIE RICERCA QUALITATIVA DNA,90901,9.41,"Incluso: estrazione, amplificazione, rilevazione. Non associabile a 90.93.C e 90.93.D"
+90.90.6,"CLOSTRIDIUM DIFFICILE TOSSINE NELLE FECI RICERCA DIRETTA (Metodi immunologici o molecolari).
+Incluso: estrazione, amplificazione, rilevazione",90911,6.45,"Incluso: estrazione, amplificazione, rilevazione"
+90.91.4,"ESCHERICHIA COLI ENTEROEMORRAGICO [EHEC] NELLE FECI ESAME COLTURALE. Incluso:
+identificazione",91275,2.53,Incluso: identificazione
+90.93.3,"ESAME COLTURALE CAMPIONI BIOLOGICI DIVERSI NAS. Ricerca completa batteri e lieviti patogeni. Se
+positivo, incluso: identificazione e antibiogramma sui patogeni",90933,7.46,"Ricerca completa batteri e lieviti patogeni. Se positivo, incluso: identificazione e antibiogramma sui patogeni"
+90.93.5,"ESAME COLTURALE ESSUDATO ORO-FARINGEO. Ricerca Streptococcus pyogenes [Streptococco beta
+emolitico gruppo A] ed altri Streptococchi beta emolitici. Se positivo, incluso: identificazione e eventuale antibiogramma",91092,6.35,"Ricerca Streptococcus pyogenes [Streptococco beta emolitico gruppo A] ed altri Streptococchi beta emolitici. Se positivo, incluso: identificazione e eventuale antibiogramma"
+90.93.6,"ESAME COLTURALE ESPETTORATO. Ricerca Streptococcus pneumoniae, Haemophilus influenzae, Moraxella catharralis e altri batteri e lieviti patogeni. incluso: esame microscopico di idoneità del campione. incluso: eventuale valutazione quantitativa/semiquantitativa della carica batterica. Se
+positivo, incluso: identificazione e antibiogramma",90844,6.35,"Ricerca Streptococcus pneumoniae, Haemophilus influenzae, Moraxella catharralis e altri batteri e lieviti patogeni. incluso: esame microscopico di idoneità del campione. incluso: eventuale valutazione quantitativa/semiquantitativa della carica batterica. Se positivo, incluso: identificazione e antibiogramma"
+90.93.7,"ESAME COLTURALE BRONCOLAVAGGIO [PRELIEVO PROTETTO DI SECREZIONI RESPIRATORIE]. Ricerca
+batteri e lieviti patogeni. Incluso: esame microscopico ed eventuale valutazione quantitativa/semiquantitativa della carica batterica. Se positivo, incluso identificazione e antibiogramma",90844,6.35,"Ricerca batteri e lieviti patogeni. Incluso: esame microscopico ed eventuale valutazione quantitativa/semiquantitativa della carica batterica. Se positivo, incluso identificazione e antibiogramma"
+90.93.C,"ESAME MICROBIOLOGICO DEL SECRETO ENDOCERVICALE. Ricerca Neisseria gonorrhoeae (esame colturale), Chlamydia trachomatis (esame molecolare incluso: estr. amplific. rilevaz), Micoplasmi urogenitali. Se positivo, incluso: identificazione e antibiogramma per Neisseria.Non associabile a:
+91.03.5 NEISSERIA GONORRHOEAE IN MATERIALI BIOLOGICI VARI ESAME COLTURALE, 91.02.A
+MYCOPLASMA/UREAPLASMA UROGENITALI ESAME COLTURALE NAS, 90.89.6 CHLAMYDIE RICERCA DIRETTA e 90.90.3 CHLAMYDIE RICERCA QUALITATIVA DNA",90895,25.20,"Ricerca Neisseria gonorrhoeae (esame colturale), Chlamydia trachomatis (esame molecolare incluso: estr. amplific. rilevaz), Micoplasmi urogenitali. Se positivo, incluso: identificazione e antibiogramma per Neisseria.Non associabile a: 91.03.5 NEISSERIA GONORRHOEAE IN MATERIALI BIOLOGICI VARI ESAME COLTURALE, 91.02.A MYCOPLASMA/UREAPLASMA UROGENITALI ESAME COLTURALE NAS, 90.89.6 CHLAMYDIE RICERCA DIRETTA e 90.90.3 CHLAMYDIE RICERCA QUALITATIVA DNA"
+90.93.D,"ESAME MICROBIOLOGICO DEL SECRETO URETRALE / URINE PRIMO MITTO. Ricerca Neisseria
+gonorrhoeae (esame colturale), Chlamydia trachomatis (esame molecolare incluso estr. amplific. rilevaz), Micoplasmi urogenitali. Incluso: esame microscopico (colorazione di Gram). Se positivo, incluso: identificazione e antibiogramma per Neisseria. Non associabile a: 91.03.5 NEISSERIA GONORRHOEAE IN MATERIALI BIOLOGICI VARI ESAME COLTURALE, 91.02.A MYCOPLASMA/UREAPLASMA UROGENITALI ESAME COLTURALE NAS, 90.89.6 CHLAMYDIE RICERCA DIRETTA e 90.90.3 CHLAMYDIE RICERCA QUALITATIVA DNA",90895,25.20,"Ricerca Neisseria gonorrhoeae (esame colturale), Chlamydia trachomatis (esame molecolare incluso estr. amplific. rilevaz), Micoplasmi urogenitali. Incluso: esame microscopico (colorazione di Gram). Se positivo, incluso: identificazione e antibiogramma per Neisseria. Non associabile a: 91.03.5 NEISSERIA GONORRHOEAE IN MATERIALI BIOLOGICI VARI ESAME COLTURALE, 91.02.A MYCOPLASMA/UREAPLASMA UROGENITALI ESAME COLTURALE NAS, 90.89.6 CHLAMYDIE RICERCA DIRETTA e 90.90.3 CHLAMYDIE RICERCA QUALITATIVA DNA"
+90.93.J,"ESAME COLTURALE ESSUDATI PURULENTI [PUS] DA LESIONI PROFONDE. Ricerca Ricerca batteri
+aerobi ed anaerobi e lieviti. Incluso: esame microscopico. Se positivo, incluso: identificazione e
+antibiogramma",90841,15.84,"Ricerca Ricerca batteri aerobi ed anaerobi e lieviti. Incluso: esame microscopico. Se positivo, incluso: identificazione e antibiogramma"
+90.93.K,"ESAME COLTURALE ESSUDATI PURULENTI [PUS] DA LESIONI SUPERFICIALI Ricerca batteri aerobi e
+lieviti. Incluso: esame microscopico. Se positivo, incluso identificazione e antibiogramma",90844,6.35,"Ricerca batteri aerobi e lieviti. Incluso: esame microscopico. Se positivo, incluso identificazione e antibiogramma"
+90.93.L,"ESAME COLTURALE ESSUDATI [pleurico, peritoneale, articolare, pericardico]. Ricerca batteri aerobi ed anaerobi e lieviti. Incluso: esame microscopico. Se positivo, Incluso: identificazione e
+antibiogramma",90841,15.84,"Ricerca batteri aerobi ed anaerobi e lieviti. Incluso: esame microscopico. Se positivo, Incluso: identificazione e antibiogramma"
+90.94.1,"ESAME COLTURALE DEL SANGUE [EMOCOLTURA]. Ricerca batteri aerobi, batteri anaerobi e lieviti.
+Per prelievo. Se positivo, incluso: identificazione e antibiogramma/antimicogramma",90941,26.44,"Ricerca batteri aerobi, batteri anaerobi e lieviti. Per prelievo. Se positivo, incluso: identificazione e antibiogramma/antimicogramma"
+90.94.2,"ESAME COLTURALE DELL' URINA [URINOCOLTURA]. Ricerca batteri e lieviti patogeni. Incluso: conta
+batterica. Se positivo, incluso identificazione e antibiogramma",90942,8.31,"Ricerca batteri e lieviti patogeni. Incluso: conta batterica. Se positivo, incluso identificazione e antibiogramma"
+90.94.3,"ESAME COLTURALE DELLE FECI [COPROCOLTURA]. Ricerca Salmonelle, Shigelle e Campylobacter. Se positivo, incluso identificazione ed eventuale antibiogramma. Escluso: Aeromonas, E. coli enteropatogeni, Yersinia, Vibrio. Non associabile a: 90.88.E Campylobacter esame colturale, 91.07.6
+Salmonella nelle feci esame colturale, 91.07.7 Shigella nelle feci esame colturale",90883,9.24,"Ricerca Salmonelle, Shigelle e Campylobacter. Se positivo, incluso identificazione ed eventuale antibiogramma. Escluso: Aeromonas, E. coli enteropatogeni, Yersinia, Vibrio. Non associabile a: 90.88.E Campylobacter esame colturale, 91.07.6 Salmonella nelle feci esame colturale, 91.07.7 Shigella nelle feci esame colturale"
+90.94.7,"GIARDIA ANTIGENI RICERCA DIRETTA NELLE FECI. Non associabile a 91.06.C PROTOZOI ENTERICI
+RICERCA RICERCA DIRETTA MULTIPLA ANTIGENI FECALI",90912,3.41,Non associabile a 91.06.C PROTOZOI ENTERICI RICERCA RICERCA DIRETTA MULTIPLA ANTIGENI FECALI
+90.94.C,HELICOBACTER PYLORI ANTIGENE NELLE FECI RICERCA DIRETTA,90944,9.14,
+90.98.4,"MICETI RICERCA IN MATERIALI BIOLOGICI DIVERSI. Incluso: esame microscopico ed esame colturale.
+Se positivo, incluso identificazione",91241,11.20,"Incluso: esame microscopico ed esame colturale. Se positivo, incluso identificazione"
+90.99.1,MICOBATTERI DIAGNOSI IMMUNOLOGICA DI INFEZIONE TUBERCOLARE LATENTE [IGRA],,,
+91.02.A,"MYCOPLASMA/UREAPLASMA UROGENITALI ESAME COLTURALE NAS. Se positivo, incluso:
+identificazione. Non associabile a 90.93.C e 90.93.D",90895,25.20,"Se positivo, incluso: identificazione. Non associabile a 90.93.C e 90.93.D"
+91.02.D,MYCOPLASMA PNEUMONIAE ANTICORPI IgG e IgM. Incluso: IgA se IgM negative,91025,12.31,Incluso: IgA se IgM negative
+91.03.5,"NEISSERIA GONORRHOEAE IN MATERIALI BIOLOGICI VARI ESAME COLTURALE. Se positivo, incluso:
+identificazione e antibiogramma. Non associabile a 90.93.C e 90.93.D",91035,3.85,"Se positivo, incluso: identificazione e antibiogramma. Non associabile a 90.93.C e 90.93.D"
+91.04.6,"PARASSITI INTESTINALI [ELMINTI, PROTOZOI] RICERCA MACROSCOPICA E MICROSCOPICA (Esame
+diretto e dopo concentrazione o arricchimento)",91052,5.72,(Esame diretto e dopo concentrazione o arricchimento)
+91.07.6,"SALMONELLA NELLE FECI ESAME COLTURALE. In caso di coprocoltura positiva per Salmonella. Se
+positivo incluso: identificazione e eventuale antibiogramma. Non associabile a 90.94.3",90943,12.01,In caso di coprocoltura positiva per Salmonella. Se positivo incluso: identificazione e eventuale antibiogramma. Non associabile a 90.94.3
+91.07.7,"SHIGELLA NELLE FECI ESAME COLTURALE. In caso di coprocoltura positiva per Shigella. Se positivo,
+incluso: identificazione e antibiogramma. Non associabile a 90.94.3",90943,12.01,"In caso di coprocoltura positiva per Shigella. Se positivo, incluso: identificazione e antibiogramma. Non associabile a 90.94.3"
+91.08.4,"STREPTOCOCCO AGALACTIAE NEL TAMPONE VAGINO-RETTALE ESAME COLTURALE. Incluso:
+Identificazione",91084,4.46,Incluso: Identificazione
+91.09.D,"TOXOPLASMA ANTICORPI IgG e IgM. Incluso: Test di Avidità delle IgG se IgG positive e IgM positive o
+dubbie. Incluso: eventuali IgA e Immunoblotting",91094,7.79,Incluso: Test di Avidità delle IgG se IgG positive e IgM positive o dubbie. Incluso: eventuali IgA e Immunoblotting
+91.10.B,"TREPONEMA PALLIDUM sierologia della sifilide. Anticorpi EIA/CLIA e/o TPHA [TPPA] più VDRL [RPR].
+Incluso: eventuale titolazione ed eventuale Immunoblotting",91102,8.03,Anticorpi EIA/CLIA e/o TPHA [TPPA] più VDRL [RPR]. Incluso: eventuale titolazione ed eventuale Immunoblotting
+91.12.5,VIRUS ADENOVIRUS IN MATERIALI BIOLOGICI ESAME COLTURALE. Incluso: eventuale identificazione,91125,27.99,Incluso: eventuale identificazione
+91.12.8,VIRUS ADENOVIRUS ANTIGENI RICERCA DIRETTA NELLE FECI,90912,3.41,
+91.12.B,"VIRUS ACIDI NUCLEICI IN MATERIALI BIOLOGICI. RICERCA QUALITATIVA/QUANTITATIVA. Incluso:
+estrazione, eventuale retrotrascrizione, amplificazione e rivelazione",91115,63.52,"Incluso: estrazione, eventuale retrotrascrizione, amplificazione e rivelazione"
+91.13.7,VIRUS ASTROVIRUS RICERCA ANTIGENE DIRETTA NELLE FECI,90912,3.41,
+91.15.B,"VIRUS CITOMEGALOVIRUS: ANALISI QUALITATIVA DEL DNA. Incluso: estrazione, amplificazione,
+rilevazione",91141,8.07,"Incluso: estrazione, amplificazione, rilevazione"
+91.15.C,"VIRUS CITOMEGALOVIRUS: ANALISI QUANTITATIVA DEL DNA. Incluso: estrazione, amplificazione,
+rilevazione",91141,8.07,"Incluso: estrazione, amplificazione, rilevazione"
+91.15.F,"VIRUS CITOMEGALOVIRUS ANTICORPI IgG e IgM. Incluso: Test di Avidità delle IgG se IgG positive e IgM positive o dubbie ed eventuale Immunoblotting. Non associabile a 91.13.2 Virus Anticorpi
+Immunoblotting (Saggio di conferma) NAS",91131,5.22,Incluso: Test di Avidità delle IgG se IgG positive e IgM positive o dubbie ed eventuale Immunoblotting. Non associabile a 91.13.2 Virus Anticorpi Immunoblotting (Saggio di conferma) NAS
+91.16.B,"VIRUS EPATITE B [HBV] ANALISI QUALITATIVA DI HBV DNA. Incluso: estrazione, amplificazione,
+rilevazione",91193,63.01,"Incluso: estrazione, amplificazione, rilevazione"
+91.17.6,VIRUS EPATITE A [HAV] ANTICORPI IgG e IgM per sospetta infezione acuta,91131,5.22,IgG e IgM per sospetta infezione acuta
+91.17.8,VIRUS EPATITE A [HAV] ANTICORPI IgG per controllo stato immunitario,91131,5.22,IgG per controllo stato immunitario
+91.18.2,VIRUS EPATITE B [HBV] ANTICORPI HBeAg. Non associabile a 91.18.6 VIRUS HBV [HBV] REFLEX,91131,5.22,Non associabile a 91.18.6 VIRUS HBV [HBV] REFLEX
+91.18.3,VIRUS EPATITE B [HBV] ANTICORPI HBsAg. Non associabile a 91.18.6 VIRUS HBV [HBV] REFLEX,91131,5.22,Non associabile a 91.18.6 VIRUS HBV [HBV] REFLEX
+91.18.4,VIRUS EPATITE B [HBV] ANTIGENE HBeAg. Non associabile a 91.18.6 VIRUS HBV [HBV] REFLEX,91184,10.01,Non associabile a 91.18.6 VIRUS HBV [HBV] REFLEX
+91.18.5,VIRUS EPATITE B [HBV] ANTIGENE HBsAg. Non associabile a 91.18.6 VIRUS HBV [HBV] REFLEX,91185,7.90,Non associabile a 91.18.6 VIRUS HBV [HBV] REFLEX
+91.18.6,"VIRUS EPATITE B [HBV] REFLEX. ANTIGENE HBsAg + ANTICORPI anti HBsAg + ANTICORPI anti HBcAg].
+Incluso: ANTICORPI anti HBcAg IgM se HBsAg e anti HBcAg positivi. Incluso: ANTIGENE HBeAg se HBsAg positivo. Incluso: ANTICORPI anti HBeAg se HBeAg negativo. Non associabile a 91.18.2, 91.18.3, 91.18.4 e 91.18.5",90472,4.18,"Incluso: ANTICORPI anti HBcAg IgM se HBsAg e anti HBcAg positivi. Incluso: ANTIGENE HBeAg se HBsAg positivo. Incluso: ANTICORPI anti HBeAg se HBeAg negativo. Non associabile a 91.18.2, 91.18.3, 91.18.4 e 91.18.5"
+91.19.3,"VIRUS EPATITE C [HCV] ANALISI QUALITATIVA DI HCV RNA. Incluso: estrazione, retrotrascrizione,
+amplificazione, rilevazione",91193,63.01,"Incluso: estrazione, retrotrascrizione, amplificazione, rilevazione"
+91.19.4,"VIRUS EPATITE C [HCV] ANALISI QUANTITATIVA DI HCV RNA . Incluso: estrazione, amplificazione,
+rilevazione",91194,77.47,"Incluso: estrazione, amplificazione, rilevazione"
+91.19.5,"VIRUS EPATITE C [HCV] ANTICORPI. Incluso: eventuale Immunoblotting. Non associabile a 91.13.2
+Virus Anticorpi Immunoblotting (Saggio di conferma) NAS",91131,5.22,Incluso: eventuale Immunoblotting. Non associabile a 91.13.2 Virus Anticorpi Immunoblotting (Saggio di conferma) NAS
+91.20.2,"VIRUS EPATITE C [HCV] TIPIZZAZIONE GENOMICA. Incluso:, estrazione, retrotrascrizione,
+amplificazione, ibridazione inversa o sequenziamento",91202,77.47,"Incluso: estrazione, retrotrascrizione, amplificazione, ibridazione inversa o sequenziamento"
+91.20.7,VIRUS EPATITE DELTA [HDV] ANTICORPI IgG e IgM.,91131,5.22,
+91.21.6,"VIRUS EPSTEIN BARR [EBV] ANTICORPI EBNA + VCA IgG + VCA IgM. Incluso: EA in caso di VCA IgM
+positivo o dubbio",91131,5.22,Incluso: EA in caso di VCA IgM positivo o dubbio
+91.21.B,VIRUS HERPES SIMPLEX (TIPO 1 e 2) ANTICORPI IgG,91131,5.22,
+91.23.F,"VIRUS IMMUNODEFICENZA ACQUISITA [HIV 1-2] .TEST COMBINATO ANTICORPI E ANTIGENE P24.
+Incluso: eventuale Immunoblotting. Non associabile a 91.13.2 Virus Anticorpi Immunoblotting (Saggio di conferma) NAS",91131,5.22,Incluso: eventuale Immunoblotting. Non associabile a 91.13.2 Virus Anticorpi Immunoblotting (Saggio di conferma) NAS
+91.24.F,VIRUS MORBILLO ANTICORPI IgG e IgM,91131,5.22,
+91.24.G,VIRUS PAROTITE ANTICORPI IgG e IgM,91131,5.22,
+91.25.8,VIRUS PARVOVIRUS B19 ANTICORPI IgG e IgM,91131,5.22,
+91.26.9,VIRUS ROTAVIRUS ANTIGENI RICERCA DIRETTA NELLE FECI,90912,3.41,
+91.26.C,VIRUS VARICELLA ZOSTER ANTICORPI IgG ed eventuali IgM,91131,5.22,
+91.26.E,VIRUS ROSOLIA ANTICORPI IgG per controllo stato immunitario,91131,5.22,IgG per controllo stato immunitario
+91.27.5,YERSINIA NELLE FECI ESAME COLTURALE. Incluso: eventuale identificazione e antibiogramma,91275,2.53,Incluso: eventuale identificazione e antibiogramma
+,,,,
+,,,,

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dimann — Come funzionano le automazioni (Spoki 47493)</title>
+  <style>
+    :root {
+      --ink: #1a1a1a;
+      --muted: #5c5c5c;
+      --line: #e0e0e0;
+      --accent: #0d5c4b;
+      --accent-light: #e8f4f1;
+      --warn-bg: #fdf6e8;
+      --warn-border: #8a5a00;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+      font-size: 11pt;
+      line-height: 1.55;
+      color: var(--ink);
+      max-width: 210mm;
+      margin: 0 auto;
+      padding: 18mm 16mm;
+      background: #fff;
+    }
+    @media print {
+      body { padding: 12mm; }
+      .page-break { page-break-before: always; }
+    }
+    header {
+      border-bottom: 3px solid var(--accent);
+      padding-bottom: 14px;
+      margin-bottom: 22px;
+    }
+    header h1 { font-size: 20pt; font-weight: 600; margin-bottom: 6px; }
+    header p { font-size: 10pt; color: var(--muted); }
+    h2 {
+      font-size: 13pt;
+      color: var(--accent);
+      margin: 26px 0 10px;
+      padding-bottom: 4px;
+      border-bottom: 1px solid var(--line);
+    }
+    h2:first-of-type { margin-top: 0; }
+    h3 { font-size: 11pt; margin: 16px 0 8px; }
+    p { margin-bottom: 10px; }
+    ul, ol { margin: 0 0 12px 22px; }
+    li { margin-bottom: 5px; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 10pt;
+      margin: 12px 0 16px;
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 8px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: #f5f5f5; font-weight: 600; }
+    .callout {
+      background: var(--accent-light);
+      border-left: 4px solid var(--accent);
+      padding: 12px 16px;
+      margin: 14px 0;
+      font-size: 10.5pt;
+    }
+    .callout-warn {
+      background: var(--warn-bg);
+      border-left-color: var(--warn-border);
+    }
+    .tag {
+      display: inline-block;
+      font-size: 8.5pt;
+      padding: 2px 6px;
+      background: #eee;
+      border-radius: 3px;
+      font-family: ui-monospace, monospace;
+    }
+    .flow-box {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin: 16px 0;
+    }
+    .flow-step {
+      border: 1px solid var(--line);
+      padding: 12px 14px;
+      background: #fafafa;
+    }
+    .flow-step strong { color: var(--accent); }
+    .arrow { text-align: center; color: var(--muted); font-size: 12pt; }
+    footer {
+      margin-top: 28px;
+      padding-top: 10px;
+      border-top: 1px solid var(--line);
+      font-size: 8.5pt;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Dimann — Come funzionano le automazioni</h1>
+  <p>Account Spoki 47493 · Guida operativa · Integrazione al documento di proposta executive</p>
+</header>
+
+<div class="callout callout-warn">
+  <strong>Spoki non distingue «pulsante» da «messaggio libero».</strong>
+  Quando un utente clicca un pulsante su un template WhatsApp, Spoki riceve un <strong>messaggio in entrata con il testo esatto del pulsante</strong> (es. «Richiedi supporto»). Se scrive a mano, arriva il testo digitato (es. «Ciao»). Non esiste un tipo messaggio speciale «pulsante»: esistono solo <strong>testi noti</strong> (etichette dei pulsanti) e <strong>testi non previsti</strong>.
+</div>
+
+<h2>Automazione 1 — Ingresso (da creare)</h2>
+
+<h3>Cosa fa (e cosa non fa)</h3>
+<table>
+  <thead>
+    <tr><th>Sì</th><th>No</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Mette i <strong>tag</strong> sul contatto (<span class="tag">hcp</span> o <span class="tag">utente_finale</span>)</td>
+      <td>Triage delle 10 domande</td>
+    </tr>
+    <tr>
+      <td>Al massimo <strong>una</strong> domanda fissa («È un professionista della salute?»)</td>
+      <td>Consigli su prodotti, sintomi, posologia</td>
+    </tr>
+    <tr>
+      <td>Si ferma e lascia parlare l’<strong>agente AI</strong></td>
+      <td>Conversazione lunga o AI generativa</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Cos’è il «pulsante campagna»</h3>
+<p>
+  È il bottone <strong>risposta rapida</strong> su un <strong>template WhatsApp</strong> che Dimann invia con una campagna o automazione outbound.
+</p>
+<p><strong>Esempio:</strong></p>
+<ul>
+  <li>Dimann invia template: «Ciao, come possiamo aiutarti?» con pulsanti <strong>«Richiedi supporto»</strong> e <strong>«Sono un professionista»</strong></li>
+  <li>L’utente clicca «Richiedi supporto»</li>
+  <li>In Spoki arriva un messaggio in entrata con testo esatto: <code>Richiedi supporto</code></li>
+</ul>
+<p>
+  Nel PDF Dimann questi testi sono i <strong>messaggi trigger</strong>. Vanno gestiti in <strong>automazione Spoki</strong> (se messaggio = X → tag Y), non chiedendo all’agente AI di riconoscerli dalla knowledge base.
+</p>
+
+<h3>Trigger — quando parte l’automazione 1</h3>
+<ul>
+  <li>Arriva un <strong>messaggio in entrata</strong></li>
+  <li><strong>E</strong> il contatto <strong>non ha già</strong> tag <span class="tag">hcp</span>, <span class="tag">utente_finale</span> o <span class="tag">triage_completato</span></li>
+</ul>
+<p><em>Se il contatto ha già <span class="tag">triage_completato</span> (ricontatto) o <span class="tag">hcp</span>, questa automazione non parte: risponde l’operatore AI con l’agente giusto.</em></p>
+
+<h3>Due rami logici (come implementarli in Spoki)</h3>
+<p>In Spoki si usa il <strong>testo del messaggio</strong>, con condizioni IF o automazioni separate per ogni testo noto.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ramo</th>
+      <th>Quando (testo messaggio)</th>
+      <th>Azioni automazione</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>A — Testo noto</strong></td>
+      <td>Uguale a una delle etichette pulsante definite da Dimann (lista da chiedere al cliente)</td>
+      <td>
+        Aggiungi tag (es. <span class="tag">intent_supporto</span> + <span class="tag">utente_finale</span>, oppure <span class="tag">hcp</span>)<br>
+        <strong>Fine automazione</strong> — nessun altro messaggio
+      </td>
+    </tr>
+    <tr>
+      <td><strong>B — Tutto il resto</strong></td>
+      <td>«Ciao», testo lungo, domanda spontanea — qualsiasi cosa non in lista</td>
+      <td>
+        1. Invia: «È un professionista della salute?» con pulsanti risposta rapida<br>
+        2. Attendi risposta<br>
+        3. Professionista → tag <span class="tag">hcp</span><br>
+        4. Utente finale → tag <span class="tag">utente_finale</span><br>
+        <strong>Fine automazione</strong>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="callout callout-warn">
+  <strong>Attenzione pulsanti Sì/No:</strong> Spoki sconsiglia etichette troppo generiche (es. «Sì» / «No») come trigger, perché se l’utente scrive «sì» a mano in un altro contesto può partire l’automazione sbagliata. Usare frasi distintive sui pulsanti (es. «Sì, sono professionista» / «No, sono un utente»).
+</div>
+
+<h3>Se Dimann non usa template con pulsanti</h3>
+<p>
+  Se gli utenti scrivono sempre per primi (widget sito, numero salvato, nessuna campagna outbound), <strong>esiste solo il ramo B</strong>. L’automazione ingresso è semplicemente: domanda HCP → tag → fine.
+</p>
+
+<h3>Dopo l’automazione 1 — operatore AI</h3>
+<div class="flow-box">
+  <div class="flow-step"><strong>Tag <span class="tag">hcp</span></strong> → Agente HCP (Lei, registra richiesta, inoltra)</div>
+  <div class="arrow">↓</div>
+  <div class="flow-step"><strong>Tag <span class="tag">utente_finale</span></strong> senza <span class="tag">triage_completato</span> → Agente Triage (10 domande)</div>
+  <div class="arrow">↓</div>
+  <div class="flow-step"><strong>Tag <span class="tag">triage_completato</span></strong> → Agente Presa in carico (ricontatto, no triage)</div>
+</div>
+<p>Questo smistamento è configurazione <strong>operatore AI + agenti Custom</strong>, non fa parte dell’automazione ingresso.</p>
+
+<div class="page-break"></div>
+
+<h2>Automazione 2 — Recap operatrici (537990, esistente)</h2>
+
+<h3>Cosa fa</h3>
+<p>Quando un flusso agente è <strong>completato</strong>, prepara il lavoro per le guide umane. <strong>Non manda messaggi all’utente.</strong></p>
+
+<ol>
+  <li>Compila il <strong>riepilogo</strong> dalla conversazione (campi dinamici / nodo AI)</li>
+  <li>Scrive <strong>nota interna</strong> in chat (visibile solo alle operatrici)</li>
+  <li>Segna la chat come <strong>«da leggere»</strong></li>
+</ol>
+
+<h3>Chi la attiva</h3>
+<ul>
+  <li><strong>Triage:</strong> solo dopo che l’utente ha confermato esplicitamente il riepilogo («Il riepilogo è corretto?» → sì)</li>
+  <li><strong>HCP / Presa in carico:</strong> dopo che la richiesta è stata registrata e inviato il messaggio di chiusura</li>
+</ul>
+
+<h3>Automazione 544284 (fine Concierge)</h3>
+<p>
+  Passi richiesti: <strong>1)</strong> chat «da leggere»; <strong>2)</strong> Operatore AI <strong>OFF</strong>.
+  Senza lo spegnimento AI, dopo la pausa su risposta umana il Router Ricontatto (544496) può <strong>riaccendere</strong> l’AI sul messaggio successivo.
+  <strong>537990</strong> resta il recap clinico (Triage/HCP); <strong>544284</strong> non è ridondante sul percorso Concierge.
+</p>
+
+<h3>Automazione 544496 (Router Ricontatto)</h3>
+<p>
+  Gate: ≥24h dall’ultimo messaggio/contatto (non solo «contatto creato un altro giorno»).
+  Sul ramo OK: toglie <code>PRIMO CONTATTO</code>, lista Ricontatto, AI Operator <strong>ON</strong>.
+  Entro le 24h dopo un intervento umano: <strong>non</strong> riabilitare l’AI.
+</p>
+
+<h2>Cosa fanno gli agenti AI (non le automazioni)</h2>
+<table>
+  <thead>
+    <tr><th>Attività</th><th>Chi</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Presentarsi, 10 domande triage una alla volta</td><td>Agente Triage</td></tr>
+    <tr><td>Riepilogo in chat e chiedere conferma</td><td>Agente Triage</td></tr>
+    <tr><td>Registrare richiesta HCP citandola nel messaggio</td><td>Agente HCP</td></tr>
+    <tr><td>Gestire ricontatto senza rifare triage</td><td>Agente Presa in carico</td></tr>
+    <tr><td>Red flags, caregiver, rifiuto AI</td><td>Agenti (nel prompt)</td></tr>
+    <tr><td>Messaggio chiusura neutro all’utente</td><td>Agenti</td></tr>
+  </tbody>
+</table>
+
+<h2>Domanda da fare a Dimann</h2>
+<div class="callout">
+  <strong>«Inviate template WhatsApp con pulsanti prima che l’utente scriva liberamente? Se sì, quali sono i testi esatti di ogni pulsante?»</strong><br><br>
+  Senza questa lista si progetta solo il ramo B (domanda HCP su messaggio libero).
+</div>
+
+<footer>
+  Dimann · Spoki 47493 · Guida automazioni · Export PDF: browser → Stampa → Salva come PDF
+</footer>
+
+</body>
+</html>

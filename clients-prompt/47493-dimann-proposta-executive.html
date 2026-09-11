@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dimann — Proposta agenti AI WhatsApp</title>
+  <style>
+    :root {
+      --ink: #1a1a1a;
+      --muted: #5c5c5c;
+      --line: #e0e0e0;
+      --accent: #0d5c4b;
+      --accent-light: #e8f4f1;
+      --warn: #8a5a00;
+      --warn-bg: #fdf6e8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+      font-size: 11pt;
+      line-height: 1.5;
+      color: var(--ink);
+      max-width: 210mm;
+      margin: 0 auto;
+      padding: 18mm 16mm;
+      background: #fff;
+    }
+    @media print {
+      body { padding: 12mm; }
+      .page-break { page-break-before: always; }
+      a { color: var(--ink); text-decoration: none; }
+    }
+    header.doc-header {
+      border-bottom: 3px solid var(--accent);
+      padding-bottom: 16px;
+      margin-bottom: 24px;
+    }
+    header.doc-header h1 {
+      font-size: 22pt;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin-bottom: 6px;
+    }
+    header.doc-header .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px 32px;
+      font-size: 9.5pt;
+      color: var(--muted);
+    }
+    header.doc-header .meta strong { color: var(--ink); }
+    h2 {
+      font-size: 13pt;
+      font-weight: 600;
+      color: var(--accent);
+      margin: 28px 0 12px;
+      padding-bottom: 4px;
+      border-bottom: 1px solid var(--line);
+    }
+    h2:first-of-type { margin-top: 0; }
+    h3 {
+      font-size: 10.5pt;
+      font-weight: 600;
+      margin: 16px 0 8px;
+    }
+    p { margin-bottom: 10px; }
+    .lead {
+      font-size: 12pt;
+      line-height: 1.55;
+      color: #333;
+      margin-bottom: 16px;
+    }
+    ul, ol { margin: 0 0 12px 20px; }
+    li { margin-bottom: 4px; }
+    .callout {
+      background: var(--accent-light);
+      border-left: 4px solid var(--accent);
+      padding: 12px 16px;
+      margin: 16px 0;
+      font-size: 10.5pt;
+    }
+    .callout-warn {
+      background: var(--warn-bg);
+      border-left-color: var(--warn);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 10pt;
+      margin: 12px 0 16px;
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 8px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: #f5f5f5;
+      font-weight: 600;
+    }
+    .flow {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+      margin: 20px 0;
+      font-size: 9.5pt;
+    }
+    .flow-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 4px 0;
+    }
+    .flow-box {
+      border: 1px solid var(--line);
+      padding: 8px 14px;
+      background: #fafafa;
+      text-align: center;
+      min-width: 120px;
+    }
+    .flow-box.accent {
+      background: var(--accent-light);
+      border-color: var(--accent);
+      font-weight: 600;
+    }
+    .flow-box.new {
+      border-style: dashed;
+      border-color: var(--accent);
+    }
+    .flow-diamond {
+      width: 100px;
+      padding: 8px;
+      text-align: center;
+      font-size: 9pt;
+      background: #fff;
+      border: 1px solid var(--muted);
+      transform: none;
+    }
+    .flow-arrow {
+      color: var(--muted);
+      font-size: 14pt;
+      line-height: 1;
+    }
+    .phase-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin: 16px 0;
+    }
+    @media (max-width: 700px) {
+      .phase-grid { grid-template-columns: 1fr 1fr; }
+    }
+    .phase-card {
+      border: 1px solid var(--line);
+      padding: 12px;
+      font-size: 9.5pt;
+    }
+    .phase-card .num {
+      font-size: 18pt;
+      font-weight: 700;
+      color: var(--accent);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .phase-card h4 {
+      font-size: 10pt;
+      margin-bottom: 6px;
+    }
+    .tag { display: inline-block; font-size: 8.5pt; padding: 2px 6px; background: #eee; border-radius: 3px; margin: 1px; }
+    footer {
+      margin-top: 32px;
+      padding-top: 12px;
+      border-top: 1px solid var(--line);
+      font-size: 8.5pt;
+      color: var(--muted);
+    }
+    .decisions li { margin-bottom: 8px; }
+    .step-list { list-style: none; margin: 12px 0 16px; padding: 0; }
+    .step-list li {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 10px;
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      background: #fafafa;
+      font-size: 10pt;
+    }
+    .step-list .n {
+      flex-shrink: 0;
+      width: 26px;
+      height: 26px;
+      background: var(--accent);
+      color: #fff;
+      font-weight: 700;
+      font-size: 11pt;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+    }
+    .not-box {
+      font-size: 9.5pt;
+      color: var(--muted);
+      margin-top: 8px;
+      padding-top: 8px;
+      border-top: 1px dashed var(--line);
+    }
+    .not-box strong { color: var(--ink); }
+  </style>
+</head>
+<body>
+
+<header class="doc-header">
+  <h1>Proposta agenti AI — Dimann</h1>
+  <div class="meta">
+    <span><strong>Cliente:</strong> Dimann (CFI / guide customer care)</span>
+    <span><strong>Piattaforma:</strong> Spoki · Account 47493</span>
+    <span><strong>Canale:</strong> WhatsApp</span>
+    <span><strong>Versione:</strong> 1.0 · Luglio 2026</span>
+    <span><strong>Stato:</strong> Proposta architetturale</span>
+  </div>
+</header>
+
+<h2>Executive summary</h2>
+<p class="lead">
+  Proponiamo un sistema di <strong>tre agenti AI Custom</strong> su WhatsApp che raccolgono le informazioni necessarie alle guide Dimann e le inoltrano al team umano — <strong>senza</strong> fornire consigli su prodotti, sintomi o posologia. Il flusso si appoggia a <strong>tag e automazioni</strong> per smistare correttamente professionisti sanitari, nuovi utenti e ricontatti, riducendo gli errori emersi nei test precedenti (triage su ricontatti, risposte cliniche non autorizzate, default reply su messaggi brevi).
+</p>
+<ul>
+  <li><strong>Cosa si costruisce:</strong> 1 automazione ingresso (nuova) + 3 agenti + riuso automazione recap esistente (537990).</li>
+  <li><strong>Cosa non si fa:</strong> un unico agente “tuttofare”; riconoscimento trigger tramite testo in knowledge base.</li>
+  <li><strong>Cosa serve da Dimann:</strong> flusso triage (10 domande), valori tag INTENT/FASE, testi operativi per casi critici (red flag, caregiver, ecc.).</li>
+  <li><strong>Go-live prompt:</strong> possibile solo dopo ricezione materiali cliente (fase 2).</li>
+</ul>
+
+<h2>Contesto e obiettivo</h2>
+<p>
+  Dimann riceve su WhatsApp richieste da <strong>professionisti sanitari (HCP)</strong> e da <strong>utenti finali</strong>. L’AI deve essere il primo filtro: accogliere, qualificare, raccogliere dati strutturati (nel caso utenti al primo contatto) e lasciare alle operatrici un riepilogo in chat già marcato come “da leggere”.
+</p>
+<div class="callout">
+  <strong>Perimetro dell’agente:</strong> raccogliere e registrare. Non spiegare prodotti, non indicare posologie, non suggerire medici, non inventare informazioni.
+</div>
+
+<h2>Soluzione proposta</h2>
+
+<h3>Architettura a tre livelli</h3>
+<div class="flow">
+  <div class="flow-row">
+    <div class="flow-box">Messaggio WhatsApp</div>
+    <span class="flow-arrow">→</span>
+    <div class="flow-box new">Automazione ingresso<br><small>da creare</small></div>
+    <span class="flow-arrow">→</span>
+    <div class="flow-box">Tag + smistamento</div>
+  </div>
+  <div class="flow-arrow">↓</div>
+  <div class="flow-row">
+    <div class="flow-box accent">Agente HCP</div>
+    <div class="flow-box accent">Agente Triage utente</div>
+    <div class="flow-box accent">Agente Presa in carico</div>
+  </div>
+  <div class="flow-arrow">↓</div>
+  <div class="flow-row">
+    <div class="flow-box">Automazione 537990<br><small>recap + da leggere</small></div>
+  </div>
+</div>
+
+<h3>I tre agenti</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Agente</th>
+      <th>Pubblico</th>
+      <th>Comportamento</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>HCP</strong></td>
+      <td>Professionisti sanitari</td>
+      <td>Tono formale (Lei). Registra la richiesta citandola nel messaggio di conferma. Inoltra alle guide. Nessun triage delle 10 domande.</td>
+    </tr>
+    <tr>
+      <td><strong>Triage utente</strong></td>
+      <td>Utente finale, primo contatto</td>
+      <td>Una domanda alla volta (10 informazioni chiave). Riepilogo in chat e conferma esplicita. Applica tag INTENT/FASE. Attiva recap operatrici.</td>
+    </tr>
+    <tr>
+      <td><strong>Presa in carico</strong></td>
+      <td>Utente finale, ricontatto</td>
+      <td>Registra la nuova richiesta e inoltra. <strong>Nessun</strong> nuovo triage (errore ricorrente nei test precedenti).</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Perché non un solo agente</h3>
+<p>
+  I requisiti Dimann combinano flussi molto diversi (HCP vs utente, primo contatto vs ricontatto, triage lungo vs handover rapido). Un agente unico ha mostrato in test: triage ripetuto ai ricontatti, confusione tra conferma riepilogo e risposta alle domande, messaggi clinici non autorizzati. La separazione + tag riduce il rischio operativo e semplifica manutenzione e audit.
+</p>
+
+<h3>Automazione ingresso (nuova)</h3>
+<p>
+  Al primo messaggio, <strong>prima</strong> che intervenga l’AI conversazionale:
+</p>
+<ol>
+  <li>Se l’utente arriva da <strong>pulsante campagna</strong> → si applicano tag <span class="tag">trigger_*</span> e <span class="tag">intent_*</span> in modo deterministico.</li>
+  <li>Se messaggio <strong>libero</strong> → si chiede “È un professionista della salute?” (Sì/No) → tag <span class="tag">hcp</span> o <span class="tag">utente_finale</span>.</li>
+  <li>Il supervisore AI instrada l’agente corretto in base ai tag, non al riconoscimento di frasi vaghe in knowledge base.</li>
+</ol>
+
+<div class="callout callout-warn">
+  <strong>Scelta di design:</strong> i messaggi trigger non vanno affidati al riconoscimento testuale in KB (approccio fragile). Pulsanti e automazioni garantiscono coerenza e tracciabilità per il business.
+</div>
+
+<div class="page-break"></div>
+
+<h2>Scheda tecnica — Cosa c’è dentro ogni automazione</h2>
+
+<p>
+  Ci sono <strong>due automazioni distinte</strong>. L’automazione <strong>non sostituisce gli agenti</strong>: fa solo compiti meccanici (messaggi fissi, tag, note interne). Il triage delle 10 domande e la conversazione le fa l’<strong>agente AI</strong>.
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Automazione</th>
+      <th>Quando parte</th>
+      <th>Cosa fa</th>
+      <th>Cosa NON fa</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Ingresso</strong><br><small>nuova, da creare</small></td>
+      <td>Primo contatto senza tag di classificazione</td>
+      <td>Chiede HCP sì/no oppure legge il pulsante campagna → applica tag</td>
+      <td>Niente triage, niente consigli, niente AI generativa</td>
+    </tr>
+    <tr>
+      <td><strong>537990</strong><br><small>già esistente</small></td>
+      <td>Fine flusso (dopo conferma riepilogo o handover HCP)</td>
+      <td>Scrive nota interna per operatrici + segna chat “da leggere”</td>
+      <td>Non parla con l’utente in chat</td>
+    </tr>
+    <tr>
+      <td><strong>544284</strong><br><small>già esistente</small></td>
+      <td>Da verificare</td>
+      <td>Solo “da leggere”</td>
+      <td>Probabilmente ridondante se 537990 già lo fa</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Come funziona davvero in Spoki (importante)</h3>
+<div class="callout callout-warn">
+  <strong>Spoki non distingue “pulsante” da “messaggio libero”.</strong> Quando un utente clicca un pulsante su un template WhatsApp, Spoki riceve un <strong>messaggio in entrata con il testo esatto del pulsante</strong> (es. «Voglio informazioni sui corsi»). Se l’utente scrive a mano, arriva il testo che ha digitato (es. «Ciao»).<br><br>
+  Quindi non esiste un tipo messaggio “pulsante campagna”. Esistono solo <strong>testi noti</strong> (le etichette dei pulsanti che Dimann ha messo sui template) vs <strong>testi non previsti</strong>. L’automazione smista con condizioni del tipo: «se il messaggio è uguale a X» oppure «se il messaggio non è nessuno dei testi dei pulsanti noti».
+</div>
+
+<p><strong>Cosa si intende per “pulsante campagna”:</strong> i bottoni <em>risposta rapida</em> su un <strong>template WhatsApp</strong> che Dimann invia con una campagna o automazione outbound. L’utente vede il messaggio con 1–3 pulsanti; se clicca, in chat compare quel testo fisso. È quello che nel PDF Dimann chiamava “messaggio trigger” — ma va gestito in <strong>automazione Spoki</strong> (testo = X → tag), non chiedendo all’agente AI di riconoscerlo dalla KB.</p>
+
+<p><strong>Se Dimann non invia template con pulsanti</strong> (l’utente scrive sempre per primo, es. da widget sito o numero salvato), l’automazione ingresso ha <strong>un solo ramo</strong>: domanda HCP sì/no. I rami “pulsante” non servono.</p>
+
+<h3>Automazione 1 — Ingresso (da creare)</h3>
+<p><strong>Scopo unico:</strong> mettere i <strong>tag giusti</strong> sul contatto prima che parli l’agente AI. Nient’altro.</p>
+
+<p><strong>Trigger (quando si avvia):</strong></p>
+<ul>
+  <li>Arriva un <strong>messaggio in entrata</strong></li>
+  <li><strong>E</strong> il contatto <strong>non ha già</strong> tag <span class="tag">hcp</span>, <span class="tag">utente_finale</span> o <span class="tag">triage_completato</span></li>
+</ul>
+
+<p><strong>Implementazione in Spoki — due modi equivalenti:</strong></p>
+<ul>
+  <li><strong>Opzione A:</strong> un’automazione con rami IF sul testo del messaggio</li>
+  <li><strong>Opzione B:</strong> un’automazione separata per ogni testo-pulsante noto (trigger = «messaggio ricevuto uguale a …») + un’automazione «default» per tutto il resto</li>
+</ul>
+
+<p><strong>Passi logici:</strong></p>
+
+<ol class="step-list">
+  <li>
+    <span class="n">A</span>
+    <div>
+      <strong>Se il messaggio è uno dei testi-pulsante già definiti da Dimann</strong> (lista da chiedere al cliente)<br>
+      Esempio: messaggio = «Richiedi supporto» → aggiungi tag <span class="tag">intent_supporto</span> + <span class="tag">utente_finale</span> → <strong>fine</strong><br>
+      Esempio: messaggio = «Sono un professionista sanitario» → aggiungi <span class="tag">hcp</span> → <strong>fine</strong><br>
+      <em>Non inviare altri messaggi: l’agente AI risponde subito dopo.</em>
+    </div>
+  </li>
+  <li>
+    <span class="n">B</span>
+    <div>
+      <strong>Se il messaggio è qualsiasi altra cosa</strong> («Ciao», paragrafo lungo, domanda spontanea)<br>
+      • Invia: «È un professionista della salute?» con pulsanti risposta rapida (testi <strong>non</strong> generici tipo Sì/No — Spoki consiglia frasi distintive per non confondere con risposte scritte a mano)<br>
+      • Attendi risposta<br>
+      • Risposta professionista → tag <span class="tag">hcp</span><br>
+      • Risposta utente finale → tag <span class="tag">utente_finale</span><br>
+      • <strong>Fine</strong>
+    </div>
+  </li>
+</ol>
+
+<div class="callout">
+  <strong>Dopo l’automazione</strong> entra l’<strong>operatore AI</strong> (supervisore Spoki), che legge i tag e attiva l’agente giusto. L’automazione ingresso <strong>non fa conversazione</strong>: al massimo una domanda fissa + tag.
+</div>
+
+<h3>Automazione 2 — Recap operatrici (537990, esistente)</h3>
+<p><strong>Già in produzione.</strong> Va collegata alla fine dei flussi agente. Non va ricreata da zero: va verificata e usata come unico recap.</p>
+
+<p><strong>Trigger (quando si avvia):</strong> una di queste (da confermare su come è configurata oggi):</p>
+<ul>
+  <li>L’agente chiama un <strong>webhook / tool</strong> a fine conversazione, oppure</li>
+  <li>Viene applicato il tag <span class="tag">triage_completato</span> dopo la conferma del riepilogo, oppure</li>
+  <li>Altro evento Spoki già usato nell’automazione attuale</li>
+</ul>
+
+<p><strong>Passi tipici (già presenti):</strong></p>
+<ol class="step-list">
+  <li>
+    <span class="n">1</span>
+    <div>
+      <strong>Compila il riepilogo</strong> — nodo AI o template che legge la conversazione e popola campi dinamici (nome, motivo, risposte triage, intent, fase, ecc.)
+    </div>
+  </li>
+  <li>
+    <span class="n">2</span>
+    <div>
+      <strong>Scrivi nota interna</strong> in chat — messaggio tipo <em>Note</em>, visibile solo alle operatrici, con il riepilogo formattato
+    </div>
+  </li>
+  <li>
+    <span class="n">3</span>
+    <div>
+      <strong>Segna chat “da leggere”</strong> — così le guide vedono subito la conversazione in coda
+    </div>
+  </li>
+</ol>
+
+<p><strong>Chi la attiva:</strong> l’agente AI, solo quando:</p>
+<ul>
+  <li>Triage utente: l’utente ha confermato esplicitamente il riepilogo (“Il riepilogo è corretto?” → Sì)</li>
+  <li>HCP o Presa in carico: la richiesta è stata registrata e il messaggio di chiusura è stato inviato</li>
+</ul>
+
+<h3>Tag INTENT / FASE durante il triage</h3>
+<p>
+  Non richiedono necessariamente un’automazione separata. Due opzioni (da scegliere in fase build):
+</p>
+<ul>
+  <li><strong>Opzione A:</strong> l’agente Triage, dopo ogni risposta rilevante, chiama un webhook che aggiunge il tag (automazioni piccole per valore)</li>
+  <li><strong>Opzione B:</strong> i tag INTENT/FASE vengono applicati tutti insieme dentro <strong>537990</strong> quando si genera il recap</li>
+</ul>
+<p><em>La scelta dipende da quanto Dimann ha bisogno di vedere i tag <strong>durante</strong> la conversazione vs solo a fine triage.</em></p>
+
+<h3>Cosa resta fuori dalle automazioni (fa l’agente AI)</h3>
+<table>
+  <thead>
+    <tr><th>Attività</th><th>Chi</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Presentarsi, fare le 10 domande di triage una alla volta</td><td>Agente Triage</td></tr>
+    <tr><td>Riepilogo in chat e chiedere conferma</td><td>Agente Triage</td></tr>
+    <tr><td>Registrare richiesta HCP e citarla nel messaggio</td><td>Agente HCP</td></tr>
+    <tr><td>Gestire ricontatto utente senza rifare triage</td><td>Agente Presa in carico</td></tr>
+    <tr><td>Red flags, caregiver, rifiuto AI (cosa dire)</td><td>Agenti (nel prompt)</td></tr>
+    <tr><td>Messaggio di chiusura neutro all’utente</td><td>Agenti</td></tr>
+  </tbody>
+</table>
+
+<div class="page-break"></div>
+
+<h2>Piano di implementazione</h2>
+
+<div class="phase-grid">
+  <div class="phase-card">
+    <div class="num">1</div>
+    <h4>Fondamenta Spoki</h4>
+    Creazione tag. Verifica automazione 537990. Valutazione ridondanza 544284. Setup 3 agenti Custom.
+  </div>
+  <div class="phase-card">
+    <div class="num">2</div>
+    <h4>Input Dimann</h4>
+    KB triage, valori INTENT/FASE, testi casi particolari (red flag, caregiver, uomo, rifiuto AI).
+  </div>
+  <div class="phase-card">
+    <div class="num">3</div>
+    <h4>Build</h4>
+    Automazione ingresso. Prompt dei 3 agenti. Collegamento recap 537990. Test playground (15+ scenari).
+  </div>
+  <div class="phase-card">
+    <div class="num">4</div>
+    <h4>Go-live</h4>
+    Test multi-agente. Affinamento con operatrici. Monitoraggio prime conversazioni reali.
+  </div>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Componente</th>
+      <th>Stato attuale</th>
+      <th>Azione</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Tag contatto</td>
+      <td>Non esistenti</td>
+      <td>Creare in Spoki (hcp, utente_finale, triage_completato, intent_*, fase_*, …)</td>
+    </tr>
+    <tr>
+      <td>Automazione ingresso</td>
+      <td>Non esiste</td>
+      <td>Progettare e pubblicare</td>
+    </tr>
+    <tr>
+      <td>Automazione 537990</td>
+      <td>Esistente</td>
+      <td>Confermare come recap unico (nota interna + da leggere)</td>
+    </tr>
+    <tr>
+      <td>Automazione 544284</td>
+      <td>Esistente</td>
+      <td>Verificare se ridondante rispetto a 537990</td>
+    </tr>
+    <tr>
+      <td>Agenti AI</td>
+      <td>Da sostituire/rivedere</td>
+      <td>3 agenti <strong>Custom</strong> (non Customer — evita default reply problematiche)</td>
+    </tr>
+    <tr>
+      <td>Prompt e KB</td>
+      <td>Non pronti</td>
+      <td>Blocco fino a ricezione materiali fase 2</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Dipendenze da Dimann</h2>
+<p>Per completare la fase 3 servono da parte cliente:</p>
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Deliverable atteso</th>
+      <th>Utilizzo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Flusso triage completo (10 informazioni, ordine domande, eventuali rami)</td>
+      <td>Agente Triage + KB</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Elenco valori tag INTENT e FASE</td>
+      <td>Automazioni e prompt</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Istruzioni operative per 4 casi critici: rifiuto AI, red flags clinici/psicologici, caregiver, richieste uomo</td>
+      <td>Sezioni guardrail prompt</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>(Opzionale) Template nota interna per operatrici</td>
+      <td>Automazione 537990</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Rischi e mitigazioni</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Rischio</th>
+      <th>Mitigazione</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Agente fornisce consigli clinici o posologia</td>
+      <td>Guardrail in cima a ogni prompt; temperatura bassa; test dedicati</td>
+    </tr>
+    <tr>
+      <td>Triage ripetuto su ricontatto</td>
+      <td>Tag <span class="tag">triage_completato</span> + agente Presa in carico dedicato</td>
+    </tr>
+    <tr>
+      <td>Trigger campagna non riconosciuti</td>
+      <td>Automazione ingresso con pulsanti, non matching testuale in KB</td>
+    </tr>
+    <tr>
+      <td>Conferma “sì” scambiata per fine triage</td>
+      <td>Domanda di conferma riepilogo esplicita e distinta dalle domande di triage</td>
+    </tr>
+    <tr>
+      <td>Messaggi fuori orario fuorvianti (“lunedì mattina” il venerdì pomeriggio)</td>
+      <td>Chiusura neutra fissa: “risponderanno il prima possibile”</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Decisioni richieste</h2>
+<ol class="decisions">
+  <li><strong>Approvazione architettura</strong> a 3 agenti + automazione ingresso (vs. agente unico).</li>
+  <li><strong>Conferma perimetro:</strong> l’AI non informa su prodotti/sintomi — solo raccoglie e inoltra.</li>
+  <li><strong>Commitment Dimann</strong> su consegna KB triage e casi particolari entro [data da definire].</li>
+  <li><strong>Validazione operatrici</strong> su formato recap (automazione 537990) prima del go-live.</li>
+</ol>
+
+<footer>
+  Documento preparato da Spoki · Proposta tecnico-funzionale Dimann · Account Spoki 47493 ·
+  Riferimento interno: AGENTI AI - SPOKI DIMANN (DOCX/PDF) ·
+  Per export PDF: Apri in browser → Stampa → Salva come PDF.
+</footer>
+
+</body>
+</html>

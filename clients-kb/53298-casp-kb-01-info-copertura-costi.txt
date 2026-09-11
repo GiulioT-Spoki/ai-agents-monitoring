@@ -1,0 +1,56 @@
+# Casp — Info, copertura, costi e pagamenti
+
+## Identità e contatti
+Denominazione: Centro Applicazioni per la Sanità Pubblica (Casp). Ente del Terzo Settore, Onlus, senza scopo di lucro (costituito 2017). Fondatori: Angelo Michele Petrosillo; Angelo Arvizzigno.
+Sede legale: Via Vico Giambattista 11, Monopoli (BA), presso sottopasso lato mare. Non liberamente accessibile: solo su appuntamento. Senza barriere architettoniche. Su appuntamento si può consegnare documentazione sanitaria.
+Orari amministrativi: lun–sab 09:00–12:00 (anche se festivo). Non sono gli orari dei prelievi domiciliari. Chiusure straordinarie sui canali ufficiali.
+Telefono/WhatsApp: +39 0804725539 (WhatsApp solo messaggi; niente chiamate vocali WA).
+Email: urp@sanitapubblica.org | PEC: urp@pec.sanitapubblica.org
+Emergenze: Casp non gestisce emergenze; contattare 112.
+Cinque per mille CF: 93481210727
+Ruoli: Presidente pro tempore dott.ssa Viviana Giannoccaro; Dirigente sanitario dott. Angelo Michele Petrosillo; Coordinatore infermieristico Bartolomeo Sardella; Referente prenotazioni Roberto Fracchiolla. Nominativi solo se pertinenti; altrimenti “personale Casp”.
+Sito: https://www.sanitapubblica.org
+Altri servizi associativi (non prelievo): Medicina Generale, Prevenzione, Medicina del Lavoro, Emodialisi, Trasporto equipe, Hospitality; progetti CTE Calliope, LIMeNar. Per il prelievo domiciliare valgono solo le regole di questa KB.
+Trasparenza/privacy/accessibilità: solo contenuti presenti in KB o sul sito ufficiale; non inventare.
+
+## Copertura territoriale
+Conta solo l’indirizzo effettivo del prelievo. Non contano: residenza, indirizzo sulla ricetta, comune del medico. OK anche domicilio temporaneo.
+Comuni ordinari: Monopoli, Polignano a Mare, Conversano, Castellana Grotte, Fasano. Copertura ≠ disponibilità date (date da Calendar CUP / get_available_slots).
+Contrade/campagne/rurali/case sparse nei comuni coperti: servizio OK; obbligatoria Posizione WhatsApp (funzione Posizione). Indirizzo scritto e Posizione devono coincidere.
+Posizione WhatsApp obbligatoria anche se: niente civico, strada privata, fondo, più accessi, solo nome contrada, o indirizzo insufficiente. Non sostitutivi: link Maps, coordinate scritte, foto, testi, punti di riferimento. Senza Posizione obbligatoria → non organizzare autonomamente; transfer personale Casp.
+Coordinate in Calendar CUP: solo da Posizione WhatsApp ricevuta; mai ricostruite da indirizzo/link/coordinate manuali.
+Info accesso utili (cancello, più ingressi, animali, difficoltà): solo se necessarie.
+Fuori comuni ordinari: non automatico; non basta vicinanza/CAP/provincia; transfer Casp.
+Indirizzo ambiguo/incompleto: non coperto automaticamente; transfer se dubbio.
+Strutture (RSA, comunità, cliniche, studi, luoghi di lavoro): non servizio domiciliare ordinario automatico; transfer Casp. Se utile: nome struttura, indirizzo, paziente, reparto/nucleo, referente.
+Prenotazione da terzi: copertura = domicilio del prelievo, non di chi prenota.
+Più Assistiti stesso domicilio: stessa copertura; ciascuno posizione/costo distinti. Gruppi numerosi → transfer Casp.
+
+## Costi servizio domiciliare (per Assistito)
+Conta domicilio effettivo, non residenza/ricetta/medico. Non inventare costi, sconti, agevolazioni, pagamenti non in KB. Non calcolare km/distanze/tempi.
+Monopoli: urbano 15 €; extraurbano 20 €.
+Polignano / Conversano / Castellana / Fasano: urbano 20 €; extraurbano 25 €.
+Altri comuni: non calcolare autonomamente; transfer Casp.
+Urbano tipico (toponimo): Via, Piazza, Viale, Vico, Piazzetta, Largo, Corso, Lungomare, Traversa, Rione, Borgo, Vicolo, Rotonda.
+Extraurbano tipico: Contrada, Strada comunale, Campagna, Strada Provinciale, Strada Statale, Strada rurale, Zona industriale, Zona artigianale, Complanare.
+Classificazione incerta → transfer Casp. Posizione WhatsApp individua domicilio, non tariffa chilometrica.
+Più ricette stesso Assistito stesso accesso: costo servizio Casp una sola volta. Più Assistiti stesso domicilio: costo per ciascuno.
+
+## Ticket SSN e solvenza
+Costo servizio Casp ≠ ticket/lab. Ticket ufficiale da CUP/PagoPA; stima in prenotazione non ufficiale; prevale CUP/PagoPA.
+Nomenclatore CSV: colonna TARIFFA per stima ticket e per solvenza (cambia solo regola di calcolo). Colonna NOTE obbligatoria: incompatibilità, associazioni, limiti; se nota non applicabile con certezza → non stimare quella voce; transfer Casp.
+Ticket SSN senza esenzione (per singola ricetta): somma TARIFFE determinabili + cap 36,15 € per ricetta. Più ricette: cap separato per ciascuna (non unico sul totale).
+Esenzione: riguarda solo ticket SSN, non gratis servizio Casp. Ticket 0 € solo se applicabilità inequivocabile da KB/strumento ufficiale. Solo codice su ricetta ≠ interpretare. Codice dubbio/illeggibile/non riconosciuto → non stimare ticket; transfer. Servizio Casp comunque dovuto.
+Solvenza/privato: somma integrale TARIFFE senza cap 36,15 e senza esenzioni SSN. Stessa regola per ricetta privata e per Assistito senza ricetta (dopo gestione Casp della ricetta).
+TARIFFA assente su esame chiaramente disponibile: non inventare; dire non stimabile; non bloccare da sola la nuova prenotazione. Se dubbio su disponibilità/identità/nota → transfer.
+Prestazione non in nomenclatore: non inventare corrispondenze. Costi aggiuntivi solo se in KB. Nessuna convenzione ordinaria attiva: no sconti/gratuità autonome.
+Gratuità ripetizione per errore Casp: solo se personale Casp riconosce l’errore; non su sola dichiarazione Assistito.
+
+## Pagamento
+Servizio Casp: contanti (giorno del servizio all’infermiere; preferibile importo esatto) o bonifico anticipato. Niente POS.
+Bonifico — Intestatario: CENTRO APPLICAZIONI PER LA SANITA’ PUBBLICA
+IBAN: IT97O0538725800000035322012
+Causale: Prelievo domiciliare a favore di [NOME E COGNOME ASSISTITO]
+Ticket PagoPA separato dal pagamento servizio Casp.
+Ricevuta servizio: di norma via WhatsApp. Problemi ricevuta/fattura/rimborso → staff (file reclami).
+Prima della conferma: comunicare distintamente costo servizio, ticket stimabile, solvenza stimabile, costi aggiuntivi previsti, modalità pagamento; se voce non stimabile, dirlo.

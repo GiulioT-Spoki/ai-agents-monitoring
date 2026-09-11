@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<title>Promemoria ricetta elettronica — Spoki Test</title>
+<style>
+  @page { size: 210mm 148mm; margin: 0; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    width: 210mm;
+    height: 148mm;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    color: #111;
+    background: #fff;
+    padding: 10mm 12mm;
+    font-size: 10.5pt;
+  }
+  .top { display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 2px solid #111; padding-bottom: 4mm; }
+  .top .sx { max-width: 120mm; }
+  .rep { font-size: 8.5pt; letter-spacing: .06em; text-transform: uppercase; color: #444; }
+  h1 { font-size: 13pt; margin: 2mm 0 1mm; letter-spacing: .02em; }
+  .sub { font-size: 9pt; color: #444; }
+  .barcode { text-align: right; }
+  .bars { font-family: "Libre Barcode 39", monospace; font-size: 8pt; letter-spacing: 0; }
+  .bars div { width: 52mm; height: 12mm; background: repeating-linear-gradient(90deg,#111 0 1px,#fff 1px 2px,#111 2px 4px,#fff 4px 6px,#111 6px 7px,#fff 7px 10px); }
+  .nre { font-family: "SF Mono", Menlo, monospace; font-size: 12pt; font-weight: 700; letter-spacing: .12em; margin-top: 2mm; }
+  .nre small { display: block; font-family: Arial, sans-serif; font-size: 7.5pt; font-weight: 400; letter-spacing: .06em; color: #444; text-transform: uppercase; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3mm 8mm; margin-top: 5mm; }
+  .f { border-bottom: 1px dotted #999; padding-bottom: 1.2mm; }
+  .f span { display: block; font-size: 7.5pt; text-transform: uppercase; letter-spacing: .06em; color: #555; }
+  .f b { font-weight: 600; font-size: 11pt; }
+  table { width: 100%; border-collapse: collapse; margin-top: 5mm; }
+  th { text-align: left; font-size: 7.5pt; text-transform: uppercase; letter-spacing: .06em; color: #555; border-bottom: 1px solid #111; padding: 1.5mm 0; }
+  td { padding: 1.8mm 0; border-bottom: 1px solid #ddd; font-size: 10.5pt; }
+  td.q { text-align: right; width: 18mm; }
+  td.c { width: 24mm; font-family: "SF Mono", Menlo, monospace; font-size: 9.5pt; }
+  .foot { display: flex; justify-content: space-between; align-items: flex-end; margin-top: 5mm; font-size: 9pt; }
+  .sig { text-align: right; }
+  .sig i { display: block; font-family: "Snell Roundhand", "Brush Script MT", cursive; font-size: 15pt; font-style: normal; margin-bottom: 1mm; }
+  .mock { margin-top: 4mm; padding-top: 2mm; border-top: 1px solid #eee; font-size: 7pt; color: #999; letter-spacing: .1em; text-align: center; }
+</style>
+</head>
+<body>
+  <div class="top">
+    <div class="sx">
+      <div class="rep">Servizio Sanitario Nazionale — Regione Puglia</div>
+      <h1>Promemoria della ricetta elettronica</h1>
+      <div class="sub">ASL BA — Distretto Socio Sanitario di Monopoli</div>
+    </div>
+    <div class="barcode">
+      <div class="bars"><div></div></div>
+      <div class="nre">160012345678901<small>Numero ricetta elettronica (NRE)</small></div>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="f"><span>Cognome e nome assistito</span><b>SPOKI TEST</b></div>
+    <div class="f"><span>Codice fiscale</span><b>TSTSPK80A01H501W</b></div>
+    <div class="f"><span>Data di nascita</span><b>01/01/1980</b></div>
+    <div class="f"><span>Residenza</span><b>Via Roma 1 — 70043 Monopoli (BA)</b></div>
+    <div class="f"><span>Data di emissione</span><b>02/09/2026</b></div>
+    <div class="f"><span>Esenzione</span><b>Nessuna — assistito non esente</b></div>
+    <div class="f"><span>Priorità</span><b>P — Programmabile</b></div>
+    <div class="f"><span>Tipo ricetta</span><b>SSN dematerializzata</b></div>
+  </div>
+
+  <table>
+    <thead>
+      <tr><th>Codice</th><th>Prestazione richiesta</th><th class="q">Quantità</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="c">90.62.2</td><td>EMOCROMO: esame emocromocitometrico e conteggio leucocitario differenziale</td><td class="q">1</td></tr>
+      <tr><td class="c">90.42.1</td><td>TIREOTROPINA (TSH)</td><td class="q">1</td></tr>
+      <tr><td class="c">90.27.1</td><td>GLUCOSIO</td><td class="q">1</td></tr>
+      <tr><td class="c">90.14.3</td><td>COLESTEROLO TOTALE</td><td class="q">1</td></tr>
+    </tbody>
+  </table>
+
+  <div class="foot">
+    <div>
+      <div><b>Medico prescrittore:</b> Dott. Giovanni Esposito</div>
+      <div>Codice regionale 160123 — Medicina Generale, Monopoli (BA)</div>
+    </div>
+    <div class="sig">
+      <i>G. Esposito</i>
+      <div>Firma del medico</div>
+    </div>
+  </div>
+
+  <div class="mock">Documento fittizio per test — non valido ai fini sanitari</div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+{
+  "event": "voice_outbound.completed",
+  "timestamp": "2026-07-02T14:30:00Z",
+  "vertical": "generic_b2b",
+  "contact": {
+    "phone": "+393331234567",
+    "first_name": "Mario",
+    "last_name": "Rossi",
+    "email": "mario.rossi@example.com",
+    "company_name": "Rossi Srl",
+    "role": "Responsabile commerciale",
+    "crm_contact_id": "12345",
+    "assigned_rep_id": "owner_11"
+  },
+  "qualification": {
+    "status": "qualified",
+    "interest_level": "hot",
+    "need": "Automatizzare il follow-up dei lead inbound",
+    "current_solution": "Excel e chiamate manuali",
+    "budget_range": "500-1000 euro/mese",
+    "timeline": "entro 2 mesi",
+    "decision_maker": "lui stesso",
+    "company_size": "15 dipendenti",
+    "industry": "servizi B2B",
+    "objections": ["vuole capire i costi prima"],
+    "competitor_mentioned": ""
+  },
+  "product_context": {},
+  "next_action": {
+    "type": "callback_requested",
+    "preferred_datetime": "2026-07-04T10:00:00+02:00",
+    "assigned_rep_id": "owner_11",
+    "consent_to_contact": true
+  },
+  "call": {
+    "conversation_id": "conv_abc123",
+    "call_direction": "outbound",
+    "duration_seconds": 187,
+    "outcome": "answered",
+    "attempt": 1
+  },
+  "summary": "Lead caldo, responsabile commerciale di Rossi Srl con 15 dipendenti. Vuole automatizzare il follow-up lead entro 2 mesi, budget indicativo 500-1000 euro al mese. Disponibile per ricontatto giovedì mattina.",
+  "key_quotes": [
+    "Ora perdiamo troppi lead perché non riusciamo a richiamare in tempo"
+  ],
+  "open_questions": [
+    "Numero esatto di lead mensili",
+    "Integrazione CRM attuale"
+  ]
+}

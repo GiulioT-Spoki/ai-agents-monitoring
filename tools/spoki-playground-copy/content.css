@@ -1,0 +1,85 @@
+.spk-copy-panel {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 2147483000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+  font: 13px/1.4 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.spk-copy-row {
+  display: flex;
+  gap: 6px;
+}
+
+.spk-copy-btn {
+  all: unset;
+  box-sizing: border-box;
+  cursor: pointer;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-weight: 600;
+  color: #fff;
+  background: #1f2937;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+/* `all: unset` above outranks the UA rule for [hidden], so restore it here. */
+.spk-copy-btn[hidden] {
+  display: none;
+}
+
+.spk-copy-btn:hover {
+  background: #111827;
+}
+
+.spk-copy-pick,
+.spk-copy-main,
+.spk-copy-reset {
+  background: #6b7280;
+  font-weight: 500;
+}
+
+.spk-copy-pick:hover,
+.spk-copy-main:hover,
+.spk-copy-reset:hover {
+  background: #4b5563;
+}
+
+.spk-copy-toast {
+  max-width: 380px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: #111827;
+  color: #f9fafb;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.15s, transform 0.15s;
+  pointer-events: none;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.spk-copy-toast-on {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.spk-copy-toast-error {
+  background: #991b1b;
+}
+
+.spk-copy-picking,
+.spk-copy-picking * {
+  cursor: crosshair !important;
+}
+
+.spk-copy-hl {
+  outline: 2px solid #2563eb !important;
+  outline-offset: 1px;
+  background: rgba(37, 99, 235, 0.08) !important;
+}

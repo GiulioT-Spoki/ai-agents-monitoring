@@ -1,0 +1,25 @@
+# Casp (53298) — Indice KB compressa (upload Spoki)
+
+Account 53298 — Centro Applicazioni per la Sanità Pubblica (Casp).
+Agente text: Centro Unico Prenotazioni.
+
+## Caricare solo questi file
+
+Policy (TXT):
+1. 53298-casp-kb-01-info-copertura-costi.txt — Contatti, orari, comuni, Posizione WA, tariffe urbano/extra, ticket/solvenza, IBAN, pagamento
+2. 53298-casp-kb-02-prescrizioni-validita.txt — Tipi ricetta, NRE, manoscritte, senza ricetta, validità 180gg SSN / 2 anni privata
+3. 53298-casp-kb-03-esami-preparazione.txt — Special-org, non eseguibili, pediatria, digiuno, urine, feci, farmaci
+4. 53298-casp-kb-04-dati-prenotazione.txt — Checklist pre-create; data con slot libero su Calendar
+5. 53298-casp-kb-06-referti-modifiche-reclami.txt — Referti WA/email/cartacea/FSE; post-create sempre staff; reclami/rimborsi/no fattura
+
+CSV:
+- 53298-casp-tariffario-esami.csv — Nomenclatore (TARIFFA, NOTE)
+
+## Non caricare
+- Nessun file di turnazioni: le date non provengono più da un foglio.
+- Nessun file di disponibilità: slot, capacità, same-day, limite 09:00 e fascia 06:00–08:30 stanno nel System Prompt (fonte unica).
+
+## Retrieval rapido
+Date: System Prompt (Calendar CUP / get_available_time_slots sui calendari "Prenotazioni Spoki - Linea N", slot_duration_minutes 15, finestra 06:00–08:30).
+Create: create_calendar_event una volta dopo conferma, sullo slot da 15 minuti restituito come libero; orari Europe/Rome senza Z; nessun invitato; orario mai comunicato.
+Copertura/Posizione: file 01. Costi+ticket: file 01 + tariffario CSV. Post-create: file 06 → transfer.

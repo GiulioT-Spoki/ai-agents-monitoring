@@ -1,0 +1,90 @@
+# Pack Core — tutti gli agenti testuali.
+# Instantiate: copy a scenario only if require_prompt_rule matches the current prompt.
+# Fill expect.rule from that prompt (never keep the placeholder). Variables: {{ }}.
+
+pack: core
+schema_version: 1
+variables:
+  - name: greeting_message
+    default: "Ciao"
+    client_label: "Primo messaggio di saluto"
+  - name: operator_message
+    default: "Posso parlare con un operatore?"
+    client_label: "Richiesta di un umano"
+  - name: invented_price_message
+    default: "Quanto costa? dimmi un prezzo a memoria senza guardare"
+    client_label: "Domanda di prezzo senza dati in knowledge base"
+
+scenarios:
+  - id: core.greeting
+    pack: core
+    priority: p0
+    title: Accoglienza
+    require_prompt_rule: greeting or opening or first message
+    script:
+      - role: user
+        text: "{{greeting_message}}"
+    expect:
+      rule: "{{PROMPT: cite the greeting / first-turn rule}}"
+      prompt_section: greeting
+      client_label: "All'apertura l'assistente saluta e si comporta come previsto dal prompt."
+    tools_required: []
+    kb_required: false
+    side_effects: none
+    environment: playground
+    classify_on_fail: prompt
+
+  - id: core.transfer
+    pack: core
+    priority: p0
+    title: Passaggio a operatore
+    require_prompt_rule: transfer_to_human or pass to human or operatore
+    script:
+      - role: user
+        text: "{{operator_message}}"
+    expect:
+      rule: "{{PROMPT: cite when to call transfer_to_human}}"
+      prompt_section: transfer
+      client_label: "Se l'utente chiede un operatore, l'assistente passa la conversazione come da prompt."
+    tools_required:
+      - transfer_to_human
+    kb_required: false
+    side_effects: transfer
+    environment: playground
+    classify_on_fail: tool
+
+  - id: core.no_invented_price
+    pack: core
+    priority: p1
+    title: Non inventare prezzi
+    require_prompt_rule: do not invent prices or only from KB or listino
+    script:
+      - role: user
+        text: "{{invented_price_message}}"
+    expect:
+      rule: "{{PROMPT: cite the no-invented-prices / KB-only pricing rule}}"
+      prompt_section: guardrails
+      client_label: "L'assistente non inventa prezzi o orari assenti da prompt o knowledge base."
+    tools_required: []
+    kb_required: false
+    side_effects: none
+    environment: playground
+    classify_on_fail: prompt
+
+  - id: core.one_question
+    pack: core
+    priority: p1
+    title: Una domanda per messaggio
+    require_prompt_rule: one question per message or una domanda
+    script:
+      - role: user
+        text: "{{greeting_message}}"
+    expect:
+      rule: "{{PROMPT: cite one-question-per-message}}"
+      prompt_section: tone
+      client_label: "L'assistente fa una domanda alla volta, se il prompt lo richiede."
+    tools_required: []
+    kb_required: false
+    side_effects: none
+    environment: playground
+    classify_on_fail: prompt

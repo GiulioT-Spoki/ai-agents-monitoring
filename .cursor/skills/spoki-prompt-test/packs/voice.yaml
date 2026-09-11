@@ -1,0 +1,155 @@
+# Pack Voice — overlay canale per agenti tipo Vocale.
+# Instantiate only if agent.tipo is Vocale AND require_prompt_rule matches.
+#
+# The voice playground has NO contact: every %%FIELD%% is empty there. These
+# scenarios are chosen precisely because they need no contact data, so they fit
+# in ONE Start Call. Everything that needs field values (login, save, create)
+# belongs to environment voice_outbound (Spoki Voice automation to the test
+# contact) or to the textual twin (twin_text). Do not re-run Core/Booking/
+# Support intent here when a twin already scored those P0s.
+#
+# Fill expect.rule from this prompt. Variables: {{ }}. Score with spoken
+# transcript + Langfuse voice-agent span + no leak in text.
+
+pack: voice
+schema_version: 1
+variables:
+  - name: greeting_message
+    default: "Ciao"
+    client_label: "Primo turno parlato (saluto)"
+  - name: spoken_plate
+    default: "A B uno due tre C D"
+    client_label: "Targa detta a voce (spazi / lettere isolate)"
+  - name: spoken_date
+    default: "il ventinove luglio duemilaventisei"
+    client_label: "Data evento detta in forma naturale"
+  - name: spoken_phone
+    default: "tre tre tre uno due tre quattro cinque sei sette"
+    client_label: "Cellulare detto cifra per cifra"
+
+scenarios:
+  - id: voice.short_turns
+    pack: voice
+    priority: p0
+    title: Frasi corte a voce
+    require_prompt_rule: max 2 frasi or one to three spoken sentences or concise spoken or frasi brevi
+    script:
+      - role: user
+        channel: spoken
+        text: "{{greeting_message}}"
+    expect:
+      rule: "{{PROMPT: cite max sentences / spoken concision}}"
+      prompt_section: tone
+      client_label: "A voce l'assistente resta breve, come previsto dal prompt."
+    tools_required: []
+    kb_required: false
+    side_effects: none
+    environment: voice_playground
+    requires_contact_fields: false
+    classify_on_fail: prompt
+
+  - id: voice.one_question
+    pack: voice
+    priority: p0
+    title: Una domanda per turno
+    require_prompt_rule: una domanda per volta or one question at a time
+    script:
+      - role: user
+        channel: spoken
+        text: "{{greeting_message}}"
+    expect:
+      rule: "{{PROMPT: cite one question per turn}}"
+      prompt_section: tone
+      client_label: "A voce l'assistente fa una domanda alla volta."
+    tools_required: []
+    kb_required: false
+    side_effects: none
+    environment: voice_playground
+    requires_contact_fields: false
+    classify_on_fail: prompt
+
+  - id: voice.no_tool_leak
+    pack: voice
+    priority: p0
+    title: Nessun leak di tool a voce
+    require_prompt_rule: do not read tool names or never echo or [call tool] or nomi di tool or silent webhook
+    script:
+      - role: user
+        channel: spoken
+        text: "{{greeting_message}}"
+    expect:
+      rule: "{{PROMPT: cite no spoken tool names / no [call tool] / silent side effects}}"
+      prompt_section: tools
+      client_label: "L'assistente non pronuncia nomi di tool, JSON di chiamata o [call tool]."
+    tools_required: []
+    kb_required: false
+    side_effects: none
+    environment: voice_playground
+    requires_contact_fields: false
+    classify_on_fail: prompt
+
+  - id: voice.no_secrets_spoken
+    pack: voice
+    priority: p0
+    title: Niente JWT / JSON / nomi campo a voce
+    require_prompt_rule: JWT or non leggere JSON or nomi di campo or variabile
+    script:
+      - role: user
+        channel: spoken
+        text: "{{greeting_message}}"
+    expect:
+      rule: "{{PROMPT: cite JWT / JSON / field names stay internal}}"
+      prompt_section: guardrails
+      client_label: "Token, JSON e nomi di campo restano interni; a voce solo le frasi previste."
+    tools_required: []
+    kb_required: false
+    side_effects: none
+    environment: voice_playground
+    requires_contact_fields: false
+    classify_on_fail: prompt
+
+  - id: voice.confirm_after_tool
+    pack: voice
+    priority: p0
+    title: Conferma solo dopo il tool
+    require_prompt_rule: conferma solo dopo or after this step succeeds or after the ticket webhook succeeded or silent
+    script:
+      - role: user
+        channel: spoken
+        text: "{{greeting_message}}"
+    expect:
+      rule: "{{PROMPT: cite confirm only after tool success; do not narrate the call first}}"
+      prompt_section: tools
+      client_label: "La conferma parlata arriva dopo l'esito del tool, non prima."
+    tools_required: []
+    kb_required: false
+    side_effects: none
+    environment: voice_playground
+    requires_contact_fields: false
+    classify_on_fail: prompt
+
+  - id: voice.asr_normalize
+    pack: voice
+    priority: p1
+    title: Normalizzazione da parlato
+    require_prompt_rule: targa or data evento or cellulare or YYYY-MM-DD or formato
+    script:
+      - role: user
+        channel: spoken
+        text: "{{spoken_plate}}"
+      - role: user
+        channel: spoken
+        text: "{{spoken_date}}"
+      - role: user
+        channel: spoken
+        text: "{{spoken_phone}}"
+    expect:
+      rule: "{{PROMPT: cite how spoken plate/date/phone are stored (variables, no technical format read back)}}"
+      prompt_section: normalization
+      client_label: "I dati detti a voce vengono normalizzati internamente; a voce restano in forma umana."
+    tools_required: []
+    kb_required: false
+    side_effects: none
+    environment: voice_outbound
+    requires_contact_fields: true
+    classify_on_fail: prompt

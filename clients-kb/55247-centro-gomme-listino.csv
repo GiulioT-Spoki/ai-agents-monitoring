@@ -1,0 +1,63 @@
+categoria,servizio,variante_o_fascia,prezzo_eur,unita,note,descrizione
+pneumatici,Presa e riconsegna,,,,senza prezzo su listino,Presa e riconsegna della vettura presso domicilio o luogo di lavoro a Osio Sopra e paesi limitrofi.
+pneumatici,Montaggio e riparazione,,,,catalogo servizi; prezzi dettagliati nelle righe listino sotto,Riparazione forature e cambio gomme stagionale con equilibratura elettronica.
+pneumatici,Equilibratura,,,,catalogo servizi; prezzi per pollici nelle righe listino sotto,Bilanciatura elettronica per rotolamento e consumo omogeneo.
+pneumatici,Convergenza,,,,catalogo servizi; prezzi per pollici nelle righe listino sotto,Regolazione convergenza anteriore; controllo campanatura e angolo d'incidenza computerizzati.
+pneumatici,Deposito stagionale,,,,catalogo servizi; prezzi per pollici nelle righe listino sotto,Deposito e stoccaggio pneumatici stagionali in magazzino interno.
+pneumatici,Riparazione cerchi in lega,,,,catalogo servizi; prezzi cerchi nelle righe listino sotto,Rettifica e verniciatura di cerchi in lega graffiati o danneggiati.
+pneumatici,Sensori TPMS,,,,senza prezzo su listino,Reset sensori pressione gomme (TPMS) con tester professionale.
+pneumatici,Gonfiaggio ad azoto,,,,catalogo servizi; prezzi per pollici nelle righe listino sotto,Gonfiaggio ad azoto; indicato nei mesi caldi e per pneumatici performanti.
+cura_auto,Lavaggio a mano esterni e interni,,55.00,fisso,listino: Pulizia completa vettura,Lavaggio a mano esterni e interni; circa 2 ore.
+cura_auto,Pulizia interni vettura,,35.00,fisso,,Pulizia interni vettura.
+cura_auto,Pulizia profonda moquette e sedili,,40.00,ora,listino: Lavaggio sedili e pulizia completa,Pulizia profonda e sterilizzazione moquette e sedili; circa 2-3 ore; trattamento in base alle macchie.
+cura_auto,Sanificazione auto ad ozono,,25.00,fisso,,Trattamento di sanificazione.
+cura_auto,Trattamento parabrezza ScudoPlus,fino a 20000 km,25.00-40.00,fisso,range sul sito; +60% visibilita pioggia dichiarato,Aumenta la visibilita in caso di pioggia fino a 20000 km.
+cura_auto,Trattamento igienizzazione Bacticyd Spray,,25.00,fisso,scontato 15.00 col cambio gomme,
+meccanica_leggera,Dischi e pastiglie,,,,senza prezzo su listino,Sostituzione pastiglie e dischi anteriori e posteriori.
+meccanica_leggera,Cambio filtri,,,,senza prezzo su listino,Sostituzione filtro aria e filtro abitacolo.
+meccanica_leggera,Cambio olio,,,,senza prezzo su listino,Sostituzione olio motore e filtro.
+meccanica_leggera,Tagliando,,,,senza prezzo su listino,Sostituzione olio motore e filtri; verifica livelli liquidi della vettura.
+mezzi,Moto e scooter,,,,catalogo servizi; prezzi montaggio/riparazione nelle righe listino sotto,Vendita e montaggio pneumatici per scooter e moto.
+mezzi,Trasporto leggero,,,,catalogo servizi; prezzi nelle righe listino vettura/TL,Vendita montaggio pneumatici e convergenza per furgoni e camper.
+mezzi,Autocarro,,,,catalogo servizi; prezzi + IVA nelle righe listino sotto,Vendita montaggio e riparazione pneumatici per autocarri mezzi d'opera e mezzi agricoli.
+mezzi,Carrelli elevatori,,,,senza prezzo su listino,Vendita e montaggio pneumatici per carrelli elevatori con pressa idraulica.
+vettura_tl,Cambio gomme stagionale,fino a 15 pollici,8.75,a_gomma,,
+vettura_tl,Cambio gomme stagionale,16-17 pollici,10.00,a_gomma,,
+vettura_tl,Cambio gomme stagionale,18-19 pollici,11.25,a_gomma,,
+vettura_tl,Cambio gomme stagionale,da 20 pollici in su e Trasporto Leggero,12.50,a_gomma,,
+vettura_tl,Montaggio pneumatici nuovi,fino a 15 pollici,12.50,a_gomma,,
+vettura_tl,Montaggio pneumatici nuovi,16-17 pollici,15.00,a_gomma,,
+vettura_tl,Montaggio pneumatici nuovi,18-19 pollici,20.00,a_gomma,,
+vettura_tl,Montaggio pneumatici nuovi,da 20 pollici in su e Trasporto Leggero,25.00,a_gomma,,
+vettura_tl,Cambio gomme stagionale già su cerchio,fino a 17 pollici,3.75,a_gomma,,
+vettura_tl,Cambio gomme stagionale già su cerchio,18-19 pollici,5.00,a_gomma,,
+vettura_tl,Cambio gomme stagionale già su cerchio,da 20 pollici in su e Trasporto Leggero,6.25,a_gomma,,
+vettura_tl,Deposito stagionale,fino a 17 pollici,3.00,a_gomma,,
+vettura_tl,Deposito stagionale,18-19 pollici,3.75,a_gomma,,
+vettura_tl,Deposito stagionale,da 20 pollici in su e Trasporto Leggero,5.00,a_gomma,,
+vettura_tl,Equilibratura,fino a 17 pollici,3.75,a_gomma,,
+vettura_tl,Equilibratura,18-19 pollici,5.00,a_gomma,,
+vettura_tl,Equilibratura,da 20 pollici in su e Trasporto Leggero,5.00,a_gomma,,
+vettura_tl,Gonfiaggio ad azoto,13-17 pollici,5.00,a_gomma,,
+vettura_tl,Gonfiaggio ad azoto,18-19 pollici,7.50,a_gomma,,
+vettura_tl,Gonfiaggio ad azoto,da 20 pollici e superiore,10.00,a_gomma,,
+vettura_tl,Riparazione foratura con tampone,,12.00,a_gomma,,
+vettura_tl,Riparazione foratura con rappezzo,,20.00,a_gomma,,
+vettura_tl,Girogomme con equilibratura,,25.00,fisso,,
+vettura_tl,Convergenza,fino a 17 pollici,30.00,fisso,,
+vettura_tl,Convergenza,18-19 pollici,35.00,fisso,,
+vettura_tl,Convergenza,da 20 pollici in su e Trasporto Leggero,40.00,fisso,,
+vettura_tl,Soccorso stradale,entro 10 km,20.00,fisso,+1.00 EUR per km aggiuntivo,
+vettura_tl,Ritiro e riconsegna auto,entro 10 km,20.00,fisso,+1.00 EUR per km aggiuntivo; allinea a Presa e riconsegna,
+moto_scooter,Montaggio pneumatici usati,su cerchio,10.00,a_gomma,,
+moto_scooter,Montaggio pneumatici,sul mezzo,25.00,a_gomma,,
+moto_scooter,Riparazione foratura semplice,senza smontaggio ruota,12.00,a_gomma,,
+moto_scooter,Riparazione foratura,con smontaggio ruota,20.00,a_gomma,,
+autocarro,Riparazione foratura,,40.00,cad,+ IVA,
+autocarro,Montaggio pneumatici,,20.00,cad,+ IVA,
+autocarro,Girogomma su cerchio,,20.00,cad,+ IVA,
+cerchi,Raddrizzatura cerchio,,40.00,cad,prezzo da (minimo indicato sul listino),
+cerchi,Saldatura cerchio,,60.00,cad,prezzo da (minimo indicato sul listino),
+cerchi,Rettifica e verniciatura diamantata,,120.00,cad,prezzo da (minimo indicato sul listino),
+cerchi,Solo verniciatura,,80.00,cad,prezzo da (minimo indicato sul listino),
+cerchi,Registrazione a libretto cerchi aftermarket NAD,,80.00,fisso,diametro diverso da carta di circolazione; da FAQ,

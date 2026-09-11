@@ -1,0 +1,114 @@
+# Pack Booking — CUP / calendario / disponibilità.
+# Source patterns: 53298 CASP, 34768 Calatafimi/Tuotempo, GHL appointment tools.
+# Instantiate only on a test-copy agent. calendar_create must run with mock/dry-run (product L2).
+
+pack: booking
+schema_version: 1
+variables:
+  - name: greeting_message
+    default: "Buongiorno"
+    client_label: "Saluto"
+  - name: booking_intent
+    default: "Vorrei prenotare un appuntamento"
+    client_label: "Richiesta di prenotazione"
+  - name: faq_hours
+    default: "Quali sono gli orari?"
+    client_label: "Domanda orari (in knowledge base)"
+  - name: fake_name
+    default: "Mario Rossi"
+    client_label: "Nominativo fittizio"
+  - name: same_day_message
+    default: "Posso prenotare per oggi?"
+    client_label: "Richiesta same-day"
+
+scenarios:
+  - id: booking.greeting
+    pack: booking
+    priority: p0
+    title: Accoglienza prenotazioni
+    require_prompt_rule: greeting or first turn
+    script:
+      - role: user
+        text: "{{greeting_message}}"
+    expect:
+      rule: "{{PROMPT: cite greeting + datetime if required}}"
+      prompt_section: greeting
+      client_label: "All'apertura l'assistente accoglie chi vuole prenotare come da prompt."
+    tools_required: []
+    kb_required: false
+    side_effects: none
+    environment: playground
+    classify_on_fail: prompt
+
+  - id: booking.intent_collect
+    pack: booking
+    priority: p0
+    title: Intent prenotazione e raccolta dati
+    require_prompt_rule: booking or prenotazione or collect
+    script:
+      - role: user
+        text: "{{booking_intent}}"
+    expect:
+      rule: "{{PROMPT: cite booking intake (one field at a time if required)}}"
+      prompt_section: booking
+      client_label: "Dopo la richiesta di prenotazione l'assistente raccoglie i dati previsti dal prompt."
+    tools_required: []
+    kb_required: false
+    side_effects: none
+    environment: playground
+    classify_on_fail: prompt
+
+  - id: booking.faq_hours
+    pack: booking
+    priority: p0
+    title: Orari da knowledge base
+    require_prompt_rule: search_knowledge_base or orari or FAQ
+    script:
+      - role: user
+        text: "{{faq_hours}}"
+    expect:
+      rule: "{{PROMPT: cite FAQ/orari from KB, do not invent hours}}"
+      prompt_section: faq
+      client_label: "Gli orari comunicati coincidono con la knowledge base, senza invenzioni."
+    tools_required:
+      - search_knowledge_base
+    kb_required: true
+    side_effects: none
+    environment: playground
+    classify_on_fail: kb
+
+  - id: booking.create
+    pack: booking
+    priority: p0
+    title: Creazione appuntamento
+    require_prompt_rule: create_event or add appointment or calendar
+    script:
+      - role: user
+        text: "{{booking_intent}} a nome {{fake_name}}"
+    expect:
+      rule: "{{PROMPT: cite create payload and which calendar tool is allowed}}"
+      prompt_section: calendar
+      client_label: "La prenotazione viene creata con i campi e il tool previsti dal prompt."
+    tools_required: []
+    kb_required: false
+    side_effects: calendar_create
+    environment: playground
+    classify_on_fail: tool
+
+  - id: booking.same_day_policy
+    pack: booking
+    priority: p1
+    title: Policy same-day
+    require_prompt_rule: same-day or oggi or transfer if today
+    script:
+      - role: user
+        text: "{{same_day_message}}"
+    expect:
+      rule: "{{PROMPT: cite same-day / oggi policy}}"
+      prompt_section: policy
+      client_label: "Le richieste per oggi seguono la policy del prompt (conferma, rifiuto o passaggio a operatore)."
+    tools_required: []
+    kb_required: false
+    side_effects: none
+    environment: playground
+    classify_on_fail: prompt

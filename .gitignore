@@ -1,0 +1,21 @@
+.DS_Store
+.env
+.env.*
+!.env.example
+venv/
+.venv/
+__pycache__/
+*.pyc
+.Python
+node_modules/
+*.log
+.cursor/mcp.json
+
+# secrets / local env
+*.env
+!**/.env.example
+
+# graphify caches (keep reports optionally; ignore heavy cache)
+graphify-out/cache/
+**/graphify-out/cache/
+clients-prompt/graphify-out/

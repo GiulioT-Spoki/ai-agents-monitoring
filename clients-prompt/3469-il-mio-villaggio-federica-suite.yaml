@@ -1,0 +1,256 @@
+schema_version: 1
+agent:
+  account_id: '3469'
+  cliente: Il Mio Villaggio
+  name: Federica — vocale
+  slug: il-mio-villaggio-federica
+  tipo: Vocale
+  ambiente: Entrambi
+  link_spoki: https://app.spoki.com/ai/agent/0a750bf2-eb5a-40e1-962b-40e30bf7cecf
+  test_copy: true
+  twin_text_link: https://app.spoki.com/ai/agent/0d30df8a-845b-40e3-819b-851af5cd1022
+  test_contact: contatto di test WhatsApp usato per gli smoke 2026-08-13
+prompt:
+  sync_date: '2026-08-13'
+  repo_path: clients-prompt/3469-il-mio-villaggio-federica.md
+  version_id: federica-voice-leak-fix-2026-08-13
+packs:
+- voice
+variables:
+  greeting_message: Ciao, sei Federica?
+scenarios:
+- id: federica.v-h1
+  pack: voice
+  priority: p0
+  title: Saluto / intent vocale
+  script:
+  - role: user
+    channel: spoken
+    text: Ciao, sei Federica?
+  expect:
+    rule: Speak in Italian with a cordial, reassuring, professional, and natural tone.
+      Address the caller using the informal tu. Ask one question at a time. Keep each
+      response concise, normally between one and three spoken sentences. Do not use
+      markdown, bullet points, symbols, headers, or any content that cannot be understood
+      when spoken.
+    prompt_section: Tone and style
+    client_label: A voce Federica saluta in italiano, dà del tu, e resta su frasi
+      corte.
+  tools_required: []
+  kb_required: false
+  side_effects: none
+  environment: voice_playground
+  classify_on_fail: prompt
+  score: Pass
+  client_outcome: verificato
+  notes: Smoke vocale 2026-08-13. Markdown V-H1.
+  requires_contact_fields: false
+- id: federica.v-l3
+  pack: voice
+  priority: p0
+  title: Modifica non urgente
+  script:
+  - role: user
+    channel: spoken
+    text: Vorrei informazioni su una modifica prenotazione per agosto 2027, non è
+      urgente.
+  - role: user
+    channel: spoken
+    text: Pratica 88991, Mario Rossi, mario.rossi@email.it. Vorrei spostare le date
+      di una settimana.
+  - role: user
+    channel: spoken
+    text: Sì, tutto corretto.
+  expect:
+    rule: 'Ticket webhook bound as tool_api_open_ticket: silent Spoki webhook. Use
+      it once per case when classification is clear and the caller has confirmed the
+      short spoken recap. Speak a registration confirmation to the caller only after
+      this step succeeds. Do not tell the caller the assigned urgency level, ticket
+      title prefix, or priority value.'
+    prompt_section: Tools
+    client_label: Sulla modifica non urgente registra il ticket dopo il recap parlato,
+      senza nominare tool o prefissi.
+  tools_required:
+  - tool_api_open_ticket
+  kb_required: true
+  side_effects: none
+  environment: voice_outbound
+  classify_on_fail: tool
+  score: Pass*
+  client_outcome: verificato
+  notes: Markdown V-L3. Ticket + nota SUNTO ok 2026-08-13; leak [call tool] in sessione
+    successiva → prompt fix; ri-test overlay leak pending.
+  requires_contact_fields: true
+- id: federica.v-sunto
+  pack: voice
+  priority: p0
+  title: Post-ticket SUNTO
+  script:
+  - role: user
+    channel: spoken
+    text: '[stessa chiamata di federica.v-l3 — verifica nota e SUNTO_CHIAMATA dopo
+      ticket ok]'
+  expect:
+    rule: 'After a successful ticket registration, start automation 554446 (Federica:
+      urgenza) so Spoki can fill %%SUNTO_CHIAMATA%% and the chat note from the real
+      conversation. Do not mention this step to the caller. Do not start it if the
+      ticket failed.'
+    prompt_section: Goal
+    client_label: Dopo un ticket riuscito, il sunto chiamata e la nota chat si popolano
+      dalla conversazione reale.
+  tools_required:
+  - tool_api_open_ticket
+  kb_required: false
+  side_effects: none
+  environment: voice_outbound
+  classify_on_fail: platform
+  score: Pass
+  client_outcome: verificato
+  notes: Markdown V-SUNTO. Playground senza chat → Skip/degenere; verificato voce/WA
+    reale 2026-08-13.
+  requires_contact_fields: true
+- id: federica.v-l1
+  pack: voice
+  priority: p0
+  title: Blocco check-in vocale
+  script:
+  - role: user
+    channel: spoken
+    text: Domani faccio check-in al Serenusa ma la struttura non mi trova in anagrafica
+      e non mi fanno entrare.
+  expect:
+    rule: Classify operational priority with the urgency matrix. Do not tell the caller
+      the assigned urgency level or ticket title prefix.
+    prompt_section: Goal
+    client_label: Sul blocco check-in imminente l'assistente registra il caso urgente
+      senza leggere a voce la classificazione interna.
+  tools_required:
+  - tool_api_open_ticket
+  kb_required: true
+  side_effects: none
+  environment: twin_text
+  classify_on_fail: prompt
+  score: Skip
+  client_outcome: non_eseguibile
+  notes: 'Markdown V-L1. Overlay: intent già Pass sul gemello testuale T-L1; non rieseguito
+    a voce. Chiuso sul gemello testuale come T-L1.'
+  requires_contact_fields: false
+- id: federica.v-canc
+  pack: voice
+  priority: p0
+  title: Cancellazione scritta vocale
+  script:
+  - role: user
+    channel: spoken
+    text: Ho già inviato la cancellazione via email a booking@ilmiovillaggio.it ieri
+      alle 10, pratica 12345.
+  expect:
+    rule: Never confirm a booking, modification, or cancellation as completed.
+    prompt_section: General boundaries
+    client_label: Sulla cancellazione già inviata l'assistente non conferma che sia
+      già completata.
+  tools_required:
+  - tool_api_open_ticket
+  kb_required: true
+  side_effects: none
+  environment: twin_text
+  classify_on_fail: prompt
+  score: Skip
+  client_outcome: non_eseguibile
+  notes: 'Markdown V-CANC. Overlay: intent già Pass sul gemello testuale T-CANC. Chiuso
+    sul gemello testuale come T-CANC.'
+  requires_contact_fields: false
+- id: voice.no_tool_leak
+  pack: voice
+  priority: p0
+  title: Nessun leak di tool a voce
+  script:
+  - role: user
+    channel: spoken
+    text: Vorrei informazioni su una modifica prenotazione per agosto 2027, non è
+      urgente.
+  expect:
+    rule: 'Ticket webhook bound as tool_api_open_ticket: silent Spoki webhook. Speak
+      a registration confirmation to the caller only after this step succeeds. Do
+      not mention automation 554446 to the caller.'
+    prompt_section: Tools
+    client_label: L'assistente non pronuncia nomi di tool, [call tool] o passi di
+      automazione.
+  tools_required:
+  - tool_api_open_ticket
+  kb_required: false
+  side_effects: none
+  environment: voice_playground
+  classify_on_fail: prompt
+  score: pending
+  client_outcome: pending
+  notes: Finding 2026-08-13 leak [call tool tool_api_open_ticket]; prompt riscritto
+    intento+ordine. Ri-test senza chiedere hai chiamato il tool.
+  requires_contact_fields: false
+- id: voice.confirm_after_tool
+  pack: voice
+  priority: p0
+  title: Conferma solo dopo il tool
+  script:
+  - role: user
+    channel: spoken
+    text: Sì, tutto corretto.
+  expect:
+    rule: Speak a registration confirmation to the caller only after this step succeeds.
+      If it fails, say you could not register it now; do not invent a ticket ID.
+    prompt_section: Tools
+    client_label: La conferma parlata di registrazione arriva dopo l'esito del tool,
+      non prima.
+  tools_required:
+  - tool_api_open_ticket
+  kb_required: false
+  side_effects: none
+  environment: voice_playground
+  classify_on_fail: prompt
+  score: pending
+  client_outcome: pending
+  notes: Scorabile sulla stessa chiamata V-L3.
+  requires_contact_fields: false
+- id: voice.short_turns
+  pack: voice
+  priority: p0
+  title: Frasi corte a voce
+  script:
+  - role: user
+    channel: spoken
+    text: Ciao, sei Federica?
+  expect:
+    rule: Keep each response concise, normally between one and three spoken sentences.
+      Ask one question at a time.
+    prompt_section: Tone and style
+    client_label: A voce l'assistente resta su una-tre frasi e una domanda alla volta.
+  tools_required: []
+  kb_required: false
+  side_effects: none
+  environment: voice_playground
+  classify_on_fail: prompt
+  score: Pass
+  client_outcome: verificato
+  notes: Allineato a V-H1.
+  requires_contact_fields: false
+- id: voice.one_question
+  pack: voice
+  priority: p0
+  title: Una domanda per turno
+  script:
+  - role: user
+    channel: spoken
+    text: Ciao, sei Federica?
+  expect:
+    rule: Ask one question at a time and wait for the answer before continuing.
+    prompt_section: Tone and style
+    client_label: A voce l'assistente fa una domanda alla volta.
+  tools_required: []
+  kb_required: false
+  side_effects: none
+  environment: voice_playground
+  classify_on_fail: prompt
+  score: Pass
+  client_outcome: verificato
+  notes: Allineato a V-H1.
+  requires_contact_fields: false

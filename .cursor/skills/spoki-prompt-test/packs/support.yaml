@@ -1,0 +1,113 @@
+# Pack Support — assistenza prodotto / FAQ / ticket.
+# Source patterns: 1384 Mario AI Operator, 35832 Ultra, 3469 Il Mio Villaggio ticket smoke.
+
+pack: support
+schema_version: 1
+variables:
+  - name: greeting_message
+    default: "Ciao"
+    client_label: "Saluto"
+  - name: faq_in_kb
+    default: "Come funziona?"
+    client_label: "Domanda coperta dalla knowledge base (personalizza)"
+  - name: faq_out_of_kb
+    default: "Mi fate uno sconto influencer?"
+    client_label: "Domanda non in knowledge base"
+  - name: ticket_message
+    default: "Voglio aprire un ticket"
+    client_label: "Richiesta ticket"
+  - name: operator_message
+    default: "Parla con un operatore"
+    client_label: "Richiesta operatore"
+
+scenarios:
+  - id: support.greeting
+    pack: support
+    priority: p0
+    title: Saluto senza tool FAQ
+    require_prompt_rule: greeting or first turn
+    script:
+      - role: user
+        text: "{{greeting_message}}"
+    expect:
+      rule: "{{PROMPT: cite first-turn: no KB search, no links unless required}}"
+      prompt_section: greeting
+      client_label: "Al saluto l'assistente accoglie senza inventare guide o link."
+    tools_required: []
+    kb_required: false
+    side_effects: none
+    environment: playground
+    classify_on_fail: prompt
+
+  - id: support.faq_in_kb
+    pack: support
+    priority: p0
+    title: FAQ coperta
+    require_prompt_rule: search_knowledge_base or search_spoki_manual or knowledge
+    script:
+      - role: user
+        text: "{{faq_in_kb}}"
+    expect:
+      rule: "{{PROMPT: cite how to answer from KB / manual tool}}"
+      prompt_section: tools
+      client_label: "Sulle domande in knowledge base l'assistente usa la fonte prevista e non inventa passi."
+    tools_required: []
+    kb_required: true
+    side_effects: none
+    environment: playground
+    classify_on_fail: kb
+
+  - id: support.faq_gap
+    pack: support
+    priority: p0
+    title: Fuori knowledge base
+    require_prompt_rule: do not invent or transfer if unknown or out of scope
+    script:
+      - role: user
+        text: "{{faq_out_of_kb}}"
+    expect:
+      rule: "{{PROMPT: cite gap behaviour (transfer, support URL, or refuse to invent)}}"
+      prompt_section: limits
+      client_label: "Se la risposta non è in knowledge base, l'assistente non inventa e segue il prompt (rifiuto o operatore)."
+    tools_required: []
+    kb_required: false
+    side_effects: none
+    environment: playground
+    classify_on_fail: prompt
+
+  - id: support.ticket
+    pack: support
+    priority: p0
+    title: Apertura ticket
+    require_prompt_rule: ticket or open ticket or assistenza
+    script:
+      - role: user
+        text: "{{ticket_message}}"
+    expect:
+      rule: "{{PROMPT: cite ticket vs human-support disambiguation and allowed URLs}}"
+      prompt_section: tickets
+      client_label: "Sulla richiesta di ticket l'assistente chiede o indirizza come previsto dal prompt, senza fingere aperture."
+    tools_required: []
+    kb_required: false
+    side_effects: none
+    environment: playground
+    classify_on_fail: prompt
+
+  - id: support.transfer
+    pack: support
+    priority: p0
+    title: Operatore
+    require_prompt_rule: transfer_to_human
+    script:
+      - role: user
+        text: "{{operator_message}}"
+    expect:
+      rule: "{{PROMPT: cite transfer_to_human vs support URL fallback}}"
+      prompt_section: transfer
+      client_label: "La richiesta di un operatore attiva il passaggio umano previsto dal prompt."
+    tools_required:
+      - transfer_to_human
+    kb_required: false
+    side_effects: transfer
+    environment: playground
+    classify_on_fail: tool
