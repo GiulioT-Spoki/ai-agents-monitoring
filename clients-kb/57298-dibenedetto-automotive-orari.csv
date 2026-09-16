@@ -1,0 +1,4 @@
+reparto,chiave_lookup,fascia_mattina,fascia_pomeriggio,note
+commerciale_noleggio,vendita|noleggio,09:00-13:00,16:00-20:00,Pausa pranzo non prenotabile; giorni/festivita non documentati
+accettazione_officina,officina,08:00-13:00,15:00-18:00,Pausa pranzo non prenotabile
+accettazione_carrozzeria,carrozzeria,08:00-13:00,15:00-18:00,Pausa pranzo non prenotabile

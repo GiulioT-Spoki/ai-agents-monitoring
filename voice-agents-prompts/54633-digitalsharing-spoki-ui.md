@@ -31,7 +31,7 @@ Se `%%FIRST_NAME%%` è vuoto: `Buongiorno, la chiamo da Canale 8 per Segreti di 
 
 ### Success Criteria (proposta)
 
-- Success: the user confirmed a slot and the calendar event was created successfully.
+- Success: the user heard confirmation of the appointment date and time.
 - Call me back: the user asked to be called later or said it was not a good time.
 - Neutral: conversation happened but no booking and no clear callback request.
 - No answer / rejected: call not completed.
@@ -65,7 +65,7 @@ Se il nome è vuoto: `Buongiorno, la richiamo da Canale 8 solo per fissare l'ora
 
 ### Success Criteria (proposta)
 
-- Success: the user confirmed a callback time and `set_callback_time` saved `CALLBACK_DATETIME`.
+- Success: the user heard confirmation of the callback time.
 - Neutral: conversation happened but no confirmed callback time.
 - Call me back / No answer: as needed; non far partire un terzo agente in loop.
 

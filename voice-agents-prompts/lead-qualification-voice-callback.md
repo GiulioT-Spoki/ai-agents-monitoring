@@ -115,6 +115,13 @@ On refusal or early exit (not interested, not a good time, refuses required data
 
 ---
 
+[Success criteria]
+
+La chiamata ha successo quando:
+- Il chiamante ha sentito conferma che verrà ricontattato da un consulente.
+
+---
+
 [Workflow — fuori dal prompt]
 
 Transfer e End Call si configurano nella scheda **Workflow** dell'agente, non tra i tool e non nel System prompt.
@@ -124,13 +131,3 @@ Transfer e End Call si configurano nella scheda **Workflow** dell'agente, non tr
 - **SIP Transfer** — passa a un numero esterno non collegato a Spoki. Stessa Intent o una dedicata.
 - **End Call** — Intent consigliata (inglese): *The user says goodbye or hangs up, the user asks to end the call, the user does not want the call to be recorded, the user says it is not a good time to talk or asks to be called later, the user is not interested or asks not to be contacted, the user clearly refuses to provide required personal data such as name or email, or the objective of the call is achieved.* Farewell Message neutro nel nodo. Il System prompt deve smettere di chiedere dati al rifiuto: Intent da sola non basta.
 - In genere **non** ripetere la stessa condizione Intent nel prompt; le regole di stop al rifiuto dati sì, in Limits/Closing.
-
----
-
-[Success criteria]
-
-La chiamata ha successo quando:
-- FIRST_NAME, LAST_NAME ed EMAIL sono popolati sul contatto (già presenti o salvati in chiamata con action).
-- Il tag di lead completo è stato applicato (action add_tags, ID account-specific).
-- L'automazione di notifica è stata avviata in chiamata (action trigger_automation, ID account-specific).
-- Il chiamante ha ricevuto conferma che verrà ricontattato da un consulente.

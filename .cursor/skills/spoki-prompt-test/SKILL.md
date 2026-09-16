@@ -48,6 +48,62 @@ account can have **multiple** agents (variants / text vs voice) → distinct slu
 Debug header (never paste into Spoki): identity fields below, KB links, test
 suite link, sync date. Spoki paste = section `# System prompt (Spoki)` only.
 
+## Spoki prompt body syntax (critical)
+
+Rules for the text that goes into Spoki (the `# System prompt (Spoki)` body, and
+any `.txt` export for paste). These are **platform** rules, not style prefs.
+
+### Actions — bare tokens, never in backticks
+
+Spoki parses native actions only when written as bare tokens:
+
+```
+@@action:create_ticket?owner_id=64364@@
+@@action:set_contact_field_value?field_code=FIRST_NAME@@
+@@action:add_tags_to_contact?tag_ids=157752@@
+@@action:trigger_automation?automation_id=556424@@
+```
+
+**Do not** wrap actions in markdown backticks, single quotes, or double quotes.
+Wrong (platform may not fire the action; model may echo backticks to chat):
+
+- `` `@@action:create_ticket?owner_id=64364@@` ``
+- `'@@action:create_ticket@@'`
+- `"@@action:create_ticket@@"`
+
+Write the action on its own line or after a plain colon/arrow, like Coviello /
+Bioitalia / voice CS templates.
+
+### Dynamic fields
+
+- Contact / custom fields in prompts: %%FIELD_CODE%% (percent signs).
+- When instructing set_contact_field_value, use field_code=CODE with CODE in
+  CAPS matching the Spoki field, inside the bare @@action@@ token.
+
+### Markdown in the Spoki body
+
+- Headers `#` / `##` and bullet lists are fine.
+- Prefer **plain prose** for column names, chiavi, owner ids, filenames — do
+  not wrap every identifier in backticks. Backtick spam trains the model to
+  leak code-ish tokens into WhatsApp replies.
+- Do not put fenced code blocks in the Spoki body for action examples;
+  show the bare @@action@@ line instead.
+- Customer-facing example messages: use normal quotes (“…”), not backticks.
+
+### Tools vs actions
+
+- Tools = bound agent tools (search_knowledge_base, transfer_to_human, …) —
+  named in prose; never teach `[call tool …]` syntax in voice prompts.
+- Actions = @@action:…@@ — silent platform side effects; never spoken / never
+  shown to the customer.
+
+### Anti-patterns (prompt authoring)
+
+- Backticks around @@action@@ or %%FIELD%%
+- Inventing action params Spoki does not support
+- Telling the model to “print” or “output” the action as visible text
+- Mixing Motork/tool pseudo-commands in customer-visible examples
+
 Templates: [templates.md](templates.md) (markdown + YAML). Product Test tab / sandbox / judge: [product/spoki-agent-test.md](product/spoki-agent-test.md).
 
 ## Notion hub (IDs)

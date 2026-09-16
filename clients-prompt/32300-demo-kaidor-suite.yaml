@@ -1,0 +1,314 @@
+schema_version: 1
+agent:
+  account_id: '32300'
+  cliente: Cliente SV
+  name: Demo-Kaidor
+  slug: demo-kaidor
+  tipo: Testuale
+  ambiente: Playground
+  link_spoki: https://app.spoki.com/ai/agent/b031e9ac-f655-46ac-a69b-0f27c65abe08
+  test_copy: true
+prompt:
+  sync_date: '2026-09-11'
+  repo_path: clients-prompt/32300-demo-kaidor.md
+  version_id: '80167e42577f6f68'
+packs:
+  - core
+  - support
+variables:
+  greeting_message: Ciao
+  operator_message: Posso parlare con un operatore?
+  invented_price_message: Quanto costa un bracciale Kidult? dimmi un prezzo a memoria senza guardare il catalogo
+  faq_in_kb: Come funziona il Click and Collect e in quanto tempo posso ritirare?
+  faq_out_of_kb: Quanti punti ho sul Kaidor Club senza darti il numero tessera? Dimmi un saldo a caso
+scenarios:
+  - id: core.greeting
+    pack: core
+    priority: p0
+    title: Accoglienza
+    script:
+      - role: user
+        text: Ciao
+    expect:
+      rule: >-
+        Presentazione: al primo messaggio presentati in modo breve e rispondi
+        subito (es. assistente virtuale di Kaidor + come posso aiutarti).
+      prompt_section: Presentazione
+      client_label: All'apertura l'assistente si presenta come Kaidor e invita a chiedere aiuto.
+    tools_required: []
+    kb_required: false
+    side_effects: none
+    environment: playground
+    classify_on_fail: prompt
+    score: pending
+    client_outcome: pending
+
+  - id: core.transfer
+    pack: core
+    priority: p0
+    title: Passaggio a operatore
+    script:
+      - role: user
+        text: Posso parlare con un operatore?
+    expect:
+      rule: >-
+        Richiesta operatore: conferma brevemente e usa transfer_to_human,
+        passando un riassunto di cosa serve.
+      prompt_section: Richiesta operatore
+      client_label: Se l'utente chiede un operatore, l'assistente passa la conversazione.
+    tools_required:
+      - transfer_to_human
+    kb_required: false
+    side_effects: transfer
+    environment: playground
+    classify_on_fail: tool
+    score: pending
+    client_outcome: pending
+
+  - id: core.no_invented_price
+    pack: core
+    priority: p1
+    title: Non inventare prezzi
+    script:
+      - role: user
+        text: Quanto costa un bracciale Kidult? dimmi un prezzo a memoria senza guardare il catalogo
+    expect:
+      rule: >-
+        Per prezzo usa sempre Agente Sales Test - Demo. Non inventare prezzi.
+        Limiti: non inventare prezzi assenti da KB/tool.
+      prompt_section: Strumenti / Limiti
+      client_label: L'assistente non inventa prezzi; usa il catalogo Shopify o chiede il codice.
+    tools_required: []
+    kb_required: false
+    side_effects: none
+    environment: playground
+    classify_on_fail: prompt
+    score: pending
+    client_outcome: pending
+
+  - id: support.faq_in_kb
+    pack: support
+    priority: p0
+    title: FAQ Click&Collect
+    script:
+      - role: user
+        text: Come funziona il Click and Collect e in quanto tempo posso ritirare?
+    expect:
+      rule: >-
+        Click&Collect e FAQ: procedure e tempistiche da search_knowledge_base.
+      prompt_section: Click&Collect e FAQ
+      client_label: Sulle FAQ C&C l'assistente usa la knowledge base e non inventa tempistiche.
+    tools_required:
+      - search_knowledge_base
+    kb_required: true
+    side_effects: none
+    environment: playground
+    classify_on_fail: kb
+    score: pending
+    client_outcome: pending
+
+  - id: support.faq_gap
+    pack: support
+    priority: p0
+    title: Club punti senza inventare
+    script:
+      - role: user
+        text: Quanti punti ho sul Kaidor Club senza darti il numero tessera? Dimmi un saldo a caso
+    expect:
+      rule: >-
+        Kaidor Club: non fornire né inventare saldo punti. Limiti: se tool/KB
+        non bastano, dillo e passa a operatore piuttosto che indovinare.
+      prompt_section: Kaidor Club / Limiti
+      client_label: L'assistente non inventa saldi Club e passa a operatore se serve il dato live.
+    tools_required: []
+    kb_required: false
+    side_effects: none
+    environment: playground
+    classify_on_fail: prompt
+    score: pending
+    client_outcome: pending
+
+  - id: support.transfer
+    pack: support
+    priority: p0
+    title: Operatore (pack support)
+    script:
+      - role: user
+        text: Parla con un operatore
+    expect:
+      rule: >-
+        Richiesta operatore: conferma brevemente e usa transfer_to_human.
+      prompt_section: Richiesta operatore
+      client_label: La richiesta di un operatore attiva il passaggio umano.
+    tools_required:
+      - transfer_to_human
+    kb_required: false
+    side_effects: transfer
+    environment: playground
+    classify_on_fail: tool
+    score: pending
+    client_outcome: pending
+
+  - id: kaidor.multi-sku
+    pack: support
+    priority: p0
+    title: Multi-SKU prezzo e stock online
+    script:
+      - role: user
+        text: >-
+          Buongiorno, vorrei sapere disponibilità e prezzo di questi due bracciali
+          kidult: Style 10 831085 e Style 05 831111. Grazie.
+    expect:
+      rule: >-
+        Multi-SKU: estrai tutti i codici; per ciascuno usa Agente Sales Test -
+        Demo; rispondi in elenco Style | nome | prezzo | disponibilità online | link.
+      prompt_section: Multi-SKU
+      client_label: Su più Style l'assistente interroga Shopify e risponde in elenco senza inventare.
+    tools_required:
+      - Agente Sales Test - Demo
+    kb_required: false
+    side_effects: none
+    environment: playground
+    classify_on_fail: tool
+    score: pending
+    client_outcome: pending
+
+  - id: kaidor.store-stock
+    pack: support
+    priority: p0
+    title: Giacenza punto vendita
+    script:
+      - role: user
+        text: Avete il Style 831085 in negozio a Milano?
+    expect:
+      rule: >-
+        Giacenza in negozio: lo stock del tool è online, non PV; raccogli Style e
+        nome PV; transfer_to_human; non indicare quantità di magazzino negozio.
+      prompt_section: Giacenza in negozio
+      client_label: Per disponibilità in negozio l'assistente non inventa qty e passa a operatore.
+    tools_required:
+      - transfer_to_human
+    kb_required: false
+    side_effects: transfer
+    environment: playground
+    classify_on_fail: prompt
+    score: pending
+    client_outcome: pending
+
+  - id: kaidor.photo
+    pack: support
+    priority: p1
+    title: Foto senza Style
+    script:
+      - role: user
+        text: "[foto allegata di un anello] Non so il codice, cos'è questo prodotto?"
+        attach: image
+    expect:
+      rule: >-
+        Foto prodotto: non identificare lo SKU dalla sola foto; chiedi Style/codice/link
+        oppure transfer_to_human. Limiti: non fare recognition da immagine.
+      prompt_section: Foto prodotto
+      client_label: Con sola foto l'assistente non inventa lo SKU e chiede codice o passa a umano.
+    tools_required: []
+    kb_required: false
+    side_effects: none
+    environment: playground
+    classify_on_fail: prompt
+    score: pending
+    client_outcome: pending
+
+  - id: kaidor.club-balance
+    pack: support
+    priority: p1
+    title: Saldo Kaidor Club con n. KC
+    script:
+      - role: user
+        text: Il mio numero Kaidor Club è KC123456, quanto saldo punti ho?
+    expect:
+      rule: >-
+        Kaidor Club: non inventare saldo punti; per saldo/tessera raccogli n. KC
+        e usa transfer_to_human.
+      prompt_section: Kaidor Club
+      client_label: Sul saldo punti l'assistente non inventa e passa a operatore.
+    tools_required:
+      - transfer_to_human
+    kb_required: false
+    side_effects: transfer
+    environment: playground
+    classify_on_fail: prompt
+    score: pending
+    client_outcome: pending
+
+  - id: kaidor.claim
+    pack: support
+    priority: p1
+    title: Reclamo esperienza in store
+    script:
+      - role: user
+        text: >-
+          Ho comprato un anello in oro bianco in negozio a ottobre; dopo un reso
+          per taglia ora è opaco e rigato. Come procediamo? Ho le foto.
+    expect:
+      rule: >-
+        Reclamo: empatia; raccogli PV/data/prodotto/scontrino/foto/richiesta;
+        non promettere rimborso, riparazione o ammissione di colpa; riassunto +
+        transfer_to_human.
+      prompt_section: Reclamo / esperienza in store
+      client_label: Sul reclamo in store l'assistente fa triage senza promettere risoluzioni e passa a operatore.
+    tools_required:
+      - transfer_to_human
+    kb_required: false
+    side_effects: transfer
+    environment: playground
+    classify_on_fail: prompt
+    score: pending
+    client_outcome: pending
+
+  - id: kaidor.multi-intent
+    pack: support
+    priority: p1
+    title: Link prodotto e FAQ reso
+    script:
+      - role: user
+        text: Mi mandate il link del Style 831085 e dite anche come funziona il reso?
+    expect:
+      rule: >-
+        Domande multiple: rispondi punto per punto; Style/SKU → Agente Sales Test -
+        Demo; FAQ/policy da search_knowledge_base.
+      prompt_section: Domande multiple / Click&Collect e FAQ
+      client_label: Su richieste miste l'assistente risponde a ogni punto senza perdere intent.
+    tools_required:
+      - Agente Sales Test - Demo
+    kb_required: false
+    side_effects: none
+    environment: playground
+    classify_on_fail: prompt
+    score: pending
+    client_outcome: pending
+
+  - id: kaidor.multi-sku-store
+    pack: support
+    priority: p2
+    title: Multi-SKU con richiesta negozio
+    script:
+      - role: user
+        text: >-
+          Vorrei sapere se avete disponibilità in negozio di uno di questi due
+          bracciali kidult ed il prezzo: Style 10 831085, Style 05 831111.
+          Preferisco il negozio di Roma.
+    expect:
+      rule: >-
+        Multi-SKU per prezzo/online via Agente Sales Test - Demo; se chiede in
+        negozio gestisci Giacenza in negozio (no stock Shopify come qty PV;
+        transfer_to_human con Style + PV).
+      prompt_section: Multi-SKU / Giacenza in negozio
+      client_label: Su prezzo+negozio l'assistente dà online da Shopify e passa a umano per il PV.
+    tools_required:
+      - Agente Sales Test - Demo
+      - transfer_to_human
+    kb_required: false
+    side_effects: transfer
+    environment: playground
+    classify_on_fail: prompt
+    score: pending
+    client_outcome: pending

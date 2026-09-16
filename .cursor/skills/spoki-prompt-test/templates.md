@@ -27,6 +27,18 @@
 {paste verbatim from Spoki / authoring}
 ```
 
+### Spoki body — actions and backticks
+
+Inside `# System prompt (Spoki)` only:
+
+- Write actions as bare tokens, e.g.
+  @@action:create_ticket?owner_id=64364@@
+  (never `` `@@action:…@@` ``, never quotes around the whole action).
+- Prefer plain names for CSV columns / chiavi / field codes; avoid wrapping
+  every identifier in backticks (leaks into WhatsApp).
+- Dynamic fields: %%FIELD_CODE%%.
+- Full rules: [SKILL.md](SKILL.md) § Spoki prompt body syntax.
+
 ## Suite file skeleton
 
 ```markdown

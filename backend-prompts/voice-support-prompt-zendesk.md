@@ -44,7 +44,4 @@ Chiama get_current_datetime e scegli in base all'ora locale Europe/Rome: "Buona 
 [Success criteria]
 
 La chiamata ha successo quando:
-- Sono stati raccolti nome e cognome, email in formato plausibile e una descrizione utile del problema.
-- Il recapito telefonico e stato confermato (%%PHONE%% o il numero alternativo indicato dal chiamante).
-- Il tool `tool-api-open-ticket` e stato chiamato con titolo, descrizione e priorita, e ha restituito conferma di apertura del ticket.
-- Il chiamante ha ricevuto conferma sintetica che la richiesta e stata registrata e la chiamata si e chiusa con il saluto in base all'ora.
+- Il chiamante ha sentito conferma che la richiesta è stata registrata.

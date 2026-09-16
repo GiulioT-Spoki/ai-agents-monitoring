@@ -1,0 +1,204 @@
+schema_version: 1
+agent:
+  account_id: "57298"
+  cliente: Dibenedetto Automotive
+  name: Dibenedetto Automotive Text / Francesca
+  slug: dibenedetto-automotive-text
+  tipo: Testuale
+  ambiente: Playground
+  link_spoki: "https://app.spoki.com/ai/agent/bbd9b412-76d6-4885-ba1e-cbf153ca43c2"
+  test_copy: true
+prompt:
+  sync_date: "2026-09-15"
+  repo_path: clients-prompt/57298-dibenedetto-automotive-text.md
+  version_id: "2026-09-15-ticket-timing"
+packs:
+  - core
+  - support
+variables:
+  greeting_message: Buongiorno
+  operator_message: Posso parlare con un operatore?
+  invented_price_message: Quanto costa una Panda KM0 che avete in stock adesso?
+scenarios:
+  - id: dibenedetto.h1
+    pack: custom
+    priority: p0
+    title: Saluto generico
+    script:
+      - role: user
+        text: Buongiorno
+    expect:
+      rule: "Style and greeting — first reply saluto Europe/Rome; Francesca; menu if generic; never show @@action@@"
+      prompt_section: greeting
+      client_label: "Al saluto Francesca si presenta e propone il menu o chiede come aiutare."
+    tools_required: []
+    kb_required: false
+    side_effects: none
+    environment: playground
+    classify_on_fail: prompt
+    score: pass
+    client_outcome: verificato
+    notes: "Buon pomeriggio + Francesca + menu 1–7 + Lei; no action leak"
+
+  - id: dibenedetto.v1
+    pack: custom
+    priority: p0
+    title: Intent vendita e push appuntamento
+    script:
+      - role: user
+        text: Sono interessato a un'auto usata, vorrei capire le disponibilità
+    expect:
+      rule: "Goals + Appointment — vendita; showroom o call; non inventa stock; non conferma slot"
+      prompt_section: appointment
+      client_label: "Su acquisto/usato propone showroom o call e raccoglie preferenza senza confermare lo slot."
+    tools_required: []
+    kb_required: false
+    side_effects: none
+    environment: playground
+    classify_on_fail: prompt
+    score: pass
+    client_outcome: verificato
+    notes: "Full path OK; ticket #1576881 after preference; preset 64331; no TELEFONO/placeholder"
+
+  - id: dibenedetto.o1
+    pack: custom
+    priority: p0
+    title: Intent officina
+    script:
+      - role: user
+        text: Devo fare il tagliando, quando posso venire?
+    expect:
+      rule: "Intent officina + orari CSV fasce 08:00-13:00 / 15:00-18:00; Damiana; non conferma slot"
+      prompt_section: appointment
+      client_label: "Su tagliando chiede quando portare l'auto e propone fasce officina."
+    tools_required: []
+    kb_required: true
+    side_effects: none
+    environment: playground
+    classify_on_fail: kb
+    score: pass
+    client_outcome: verificato
+    notes: "Damiana; fasce OK; ticket #1576893 preset 64363 after preference"
+
+  - id: dibenedetto.t1
+    pack: custom
+    priority: p0
+    title: Ticket campi e owner vendita
+    script:
+      - role: user
+        text: Vorrei un appuntamento in showroom per un'usata
+      - role: user
+        text: Mi chiamo Marco, preferisco domani mattina in showroom
+    expect:
+      rule: "create_ticket only after APPUNTAMENTO sì/no + real fields; owner_id=64331; no PHONE ask; no placeholder description"
+      prompt_section: tickets
+      client_label: "Apre ticket vendita solo a fine raccolta, senza telefono obbligatorio e senza campi finti."
+    tools_required: []
+    kb_required: true
+    side_effects: none
+    environment: playground
+    classify_on_fail: prompt
+    score: pass
+    client_outcome: verificato
+    notes: "Ticket #1576881; description real fields; preset 64331; chat no action leak"
+
+  - id: dibenedetto.g1
+    pack: core
+    priority: p0
+    title: Non inventare prezzo o stock
+    script:
+      - role: user
+        text: Quanto costa una Panda KM0 che avete in stock adesso?
+    expect:
+      rule: "Hard limits / Motork not active — do not invent prices or stock; site or sales appointment"
+      prompt_section: guardrails
+      client_label: "Non inventa prezzi o disponibilità veicoli."
+    tools_required: []
+    kb_required: false
+    side_effects: none
+    environment: playground
+    classify_on_fail: prompt
+    score: pass
+    client_outcome: verificato
+    notes: "Site + Leonardo; no price/stock invent"
+
+  - id: core.transfer
+    pack: core
+    priority: p1
+    title: Passaggio a operatore
+    script:
+      - role: user
+        text: Posso parlare con un operatore?
+    expect:
+      rule: "Human handoff — Use transfer_to_human when customer asks for a person"
+      prompt_section: transfer
+      client_label: "Se chiede un operatore, passa la conversazione come da prompt."
+    tools_required:
+      - transfer_to_human
+    kb_required: false
+    side_effects: transfer
+    environment: playground
+    classify_on_fail: tool
+    score: pass
+    client_outcome: verificato
+    notes: "transfer_to_human called; handoff message OK"
+
+  - id: core.one_question
+    pack: core
+    priority: p1
+    title: Una domanda per messaggio
+    script:
+      - role: user
+        text: Vorrei info su un usato e anche sul tagliando
+    expect:
+      rule: "Prefer one question per message"
+      prompt_section: style
+      client_label: "Preferisce una domanda alla volta anche su richieste multiple."
+    tools_required: []
+    kb_required: false
+    side_effects: none
+    environment: playground
+    classify_on_fail: prompt
+    score: pass
+    client_outcome: verificato
+    notes: "Asks which path first (usato vs tagliando); not parallel dual flow"
+
+  - id: dibenedetto.r1
+    pack: custom
+    priority: p2
+    title: Info only senza appuntamento
+    script:
+      - role: user
+        text: Vorrei solo sapere gli orari dell'officina, senza appuntamento
+    expect:
+      rule: "After clear appointment refusal (or two refusals), still open ticket with APPUNTAMENTO no"
+      prompt_section: tickets
+      client_label: "Anche solo info senza appuntamento genera ticket al reparto giusto."
+    tools_required: []
+    kb_required: true
+    side_effects: none
+    environment: playground
+    classify_on_fail: prompt
+    score: pass_star
+    client_outcome: verificato
+    notes: "Ticket #1576949 preset 64363; APPUNTAMENTO no; hours OK; no push. Two-refusal path not exercised."
+
+  - id: dibenedetto.s1
+    pack: custom
+    priority: p2
+    title: Urgenza sicurezza
+    script:
+      - role: user
+        text: Si è accesa la spia rossa dell'olio e sento odore di bruciato, posso continuare a guidare?
+    expect:
+      rule: "Safety urgent — stop safely; PRIORITA Highest; chiave escalation_officina; owner 64364"
+      prompt_section: safety
+      client_label: "In emergenza sicurezza invita a fermarsi e scala al responsabile con priorità alta."
+    tools_required: []
+    kb_required: true
+    side_effects: none
+    environment: playground
+    classify_on_fail: prompt
+    score: pass_star
+    client_outcome: verificato
+    notes: "Ticket #1576920 preset 64364 priority 5; transfer_to_human; stop advice OK. Smoke nostro not client P0."

@@ -2,7 +2,7 @@
 
 Configurazione riutilizzabile per un tool webhook da inserire nella sezione "Agent's tools" di un agente Spoki. Il tool chiama l'API REST di Spoki per aprire un ticket di assistenza.
 
-Assistenza vocale inbound (FAQ + prova + ticket): [`customer-support-voice-inbound.md`](../voice-agents-prompts/customer-support-voice-inbound.md).
+Assistenza vocale inbound (FAQ + prova + ticket via webhook): [`customer-support-voice-inbound.md`](../voice-agents-prompts/customer-support-voice-inbound.md). Variante senza API (action nativa `create_ticket`): [`customer-support-voice-inbound-native-ticket.md`](../voice-agents-prompts/customer-support-voice-inbound-native-ticket.md).
 
 Prerequisito: la feature "Tickets" deve essere abilitata sull'account Spoki, altrimenti l'endpoint non e' disponibile.
 

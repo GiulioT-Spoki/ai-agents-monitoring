@@ -137,7 +137,4 @@ If this conversation already has a successful book-meeting, do not call book-mee
 [Success criteria]
 
 La chiamata ha successo quando:
-- FIRST_NAME, LAST_NAME e EMAIL sono popolati (dal contatto o raccolti in chiamata).
-- `sales-rep-calendar-booking` ha creato l'evento (book-meeting OK).
-- APPUNTAMENTO_DATAORA è stato scritto in formato YYYY-MM-DD HH:mm, con l'ora locale italiana dell'appuntamento.
-- Il chiamante ha ricevuto conferma di data e ora dell'appuntamento.
+- Il chiamante ha sentito conferma di data e ora dell'appuntamento.

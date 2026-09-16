@@ -2,7 +2,7 @@
 
 > CS metadata — do not paste into Spoki. Design from Let’s Move text (account 56004): FAQ from KB, trial/enrollment = Spoki fields then staff ticket, ticket only when a human decision is needed, **no slots confirmed on the call**. **Do not** copy gallery prompts, tags, promos, staff, hours, or account IDs. This file is Voice, not the WhatsApp prompt.
 >
-> Ticket tool: [`open-ticket-webhook-tool.md`](../Libreria-prompt/open-ticket-webhook-tool.md). Optional staff tag after ticket success: account-specific Action ID in the platform only, never spoken. Do not reuse another client’s tag IDs.
+> Ticket tool: [`open-ticket-webhook-tool.md`](../Libreria-prompt/open-ticket-webhook-tool.md). Optional staff tag after ticket success: account-specific Action ID in the platform only, never spoken. Do not reuse another client’s tag IDs. For tickets **without** API/webhook, use [`customer-support-voice-inbound-native-ticket.md`](customer-support-voice-inbound-native-ticket.md) instead.
 >
 > Contact identity: `%%PHONE%%`, `%%FIRST_NAME%%`, `%%LAST_NAME%%`, `%%EMAIL%%` with silent `@@action:set_contact_field_value@@`. Extra trial details (site, tax code, etc.) go only in the ticket description, not as required custom fields in this template.
 >
@@ -151,6 +151,15 @@ If the FAQ is done without a ticket: ask if they need anything else; if not, say
 
 ---
 
+[Success criteria]
+
+La chiamata ha successo quando si verifica uno di questi esiti:
+- Il chiamante ha sentito la risposta alla FAQ, oppure
+- Il chiamante ha sentito che lo staff attiverà la prova o lo richiamerà, oppure
+- Il chiamante ha sentito che la richiesta è stata registrata.
+
+---
+
 [Workflow — fuori dal prompt]
 
 Transfer e End Call si configurano nella scheda **Workflow** dell'agente, non tra i tool e non nel System prompt.
@@ -160,12 +169,3 @@ Transfer e End Call si configurano nella scheda **Workflow** dell'agente, non tr
 - **SIP Transfer** — passa a un numero esterno. Stessa Intent o una dedicata.
 - **End Call** — di default già presente; allinea l'Intent ai Success Criteria oppure chiudi solo su saluto / fine chiamata.
 - In genere **non** ripetere la stessa condizione Intent nel prompt.
-
----
-
-[Success criteria]
-
-La chiamata ha successo quando si verifica uno di questi esiti, senza slot inventati:
-- FAQ risolta con fatti da knowledge base, oppure
-- Prova/iscrizione: FIRST_NAME, LAST_NAME ed EMAIL popolati sul contatto (già presenti o salvati con action), ticket aperto (o dati confermati allo staff se il ticket è fallito), oppure
-- Ticket operativo aperto con successo e conferma al chiamante.

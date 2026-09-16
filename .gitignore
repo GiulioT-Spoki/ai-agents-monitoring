@@ -19,3 +19,4 @@ node_modules/
 graphify-out/cache/
 **/graphify-out/cache/
 clients-prompt/graphify-out/
+.gstack/

@@ -107,7 +107,4 @@ Non ripetere la stessa frase di chiusura più di una volta. Se il chiamante è i
 [Success criteria]
 
 La chiamata ha successo quando:
-- Sono stati raccolti FIRST_NAME, MARCA, MODELLO e REGIONE (da %%...%% e/o da valori raccolti in chiamata).
-- `agent-tool-v2-voice` è stato chiamato e ha restituito successo.
-- Il chiamante ha ricevuto conferma che verrà ricontattato da un consulente.
-- La chiamata si è chiusa con saluto appropriato.
+- Il chiamante ha sentito conferma che verrà ricontattato da un consulente.

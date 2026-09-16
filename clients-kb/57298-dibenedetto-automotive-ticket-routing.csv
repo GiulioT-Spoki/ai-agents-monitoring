@@ -1,0 +1,9 @@
+chiave,intent_esempi,referente_cliente,utente_spoki,owner_id,priorita_default,telefono,whatsapp,email,note
+vendita,"acquisto KM0 usato prezzo test drive finanziamento permuta","Leonardo / Francesco",Leo Mennuni,64331,Medium,+390883531382,+393274712183,commerciale@dibenedettoautomotive.it,default vendita
+vendita_francesco,"chiede Francesco",Francesco,Francesco Inchingolo,64330,Medium,+390883531382,+393274712183,commerciale@dibenedettoautomotive.it,
+noleggio,"noleggio breve medio lungo refrigerati",Leonardo,Leo Mennuni,64331,Medium,+390883531382,+393274712183,commerciale@dibenedettoautomotive.it,
+officina,"tagliando revisione spie guasti GPL pneumatici",Damiana,Damiana Lacavalla,64363,Medium,+390883337332,+393274669259,service@dibenedettoautomotive.it,
+carrozzeria,"danni sinistri cristalli grandine sopralluogo",Antonio,Antonio Spera,64383,Medium,+393273125258,+393273125258,carrozzeria@dibenedettoautomotive.it,
+escalation_officina,"freni spie rosse perdite reclamo officina urgenza",Responsabile officina,Antonio Campana,64364,Highest,+390883346143,+393274669259,service@dibenedettoautomotive.it,owner Spoki Campana; Luigi solo naming cliente
+generale,"non classificabile dopo chiarimento",—,Antonio Campana,64364,Low,+390883346111,,info@dibenedettoautomotive.it,fallback
+esclusi,"non usare come owner ticket cliente",—,,,,,,,"Lucrezia Terreni 53702; Filippo Dibenedetto 64376; Mariagrazia Capuano 64317; marketing Dibenedetto Automotive 64310; Luigi Test 64329"

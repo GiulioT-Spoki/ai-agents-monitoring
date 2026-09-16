@@ -120,8 +120,7 @@ Salve, sono l'assistente vocale di Spoki. La chiamata è registrata. È un buon 
 [Success criteria]
 
 La chiamata ha successo quando:
-- FIRST_NAME, LAST_NAME ed EMAIL sono popolati sul contatto (già presenti o salvati in chiamata con action).
-- Il chiamante ha ricevuto conferma che verrà ricontattato da un consulente.
+- Il chiamante ha sentito conferma che verrà ricontattato da un consulente.
 
 ---
 
