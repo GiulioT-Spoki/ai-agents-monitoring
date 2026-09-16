@@ -550,8 +550,8 @@
     "semantic_hash": ""
   },
   "voice-agents-prompts/data-collection-voice-outbound.md": {
-    "mtime": 1789546143.63605,
-    "ast_hash": "54dd452b9edf576e2b8eae419faa008f",
+    "mtime": 1789468798.6633902,
+    "ast_hash": "5db290c71bbc40e10254b884eceb9c95",
     "semantic_hash": ""
   },
   "voice-agents-prompts/lead-qualification-voice-inbound.md": {
@@ -565,8 +565,8 @@
     "semantic_hash": ""
   },
   "voice-agents-prompts/sales-rep-voice-outbound.md": {
-    "mtime": 1789546143.63605,
-    "ast_hash": "4932fc9f319f765fcaabd221d3caa8fe",
+    "mtime": 1789487304.7141016,
+    "ast_hash": "c328651b4c2de41c3cb7b2b5d509ce32",
     "semantic_hash": ""
   },
   "voice-agents-prompts/sara_ai_voice.md": {
@@ -2740,13 +2740,13 @@
     "semantic_hash": ""
   },
   "text-agents-prompts/appointment-followup-text-inbound.md": {
-    "mtime": 1789542135.834472,
-    "ast_hash": "cdc19bc5c22962faeee7c8109123c9aa",
+    "mtime": 1789466517.103385,
+    "ast_hash": "d5adf1058241253c000926a7b7e1c6a4",
     "semantic_hash": ""
   },
   "text-agents-prompts/hospitality-booking-text-inbound.md": {
-    "mtime": 1789542134.973865,
-    "ast_hash": "90226c0a2f7c2d15ef13c288390bca15",
+    "mtime": 1789479675.1653974,
+    "ast_hash": "64a1a2ef50c53de2456e708027ea8600",
     "semantic_hash": ""
   },
   "text-agents-prompts/ivr-triage-text-inbound.md": {
@@ -2770,13 +2770,13 @@
     "semantic_hash": ""
   },
   "text-agents-prompts/survey-text-inbound.md": {
-    "mtime": 1789542130.7134526,
-    "ast_hash": "b3d8949c58f0b80da21c11e15984895c",
+    "mtime": 1789479675.3611934,
+    "ast_hash": "1aa881da6c249eef6b5f655ae6874398",
     "semantic_hash": ""
   },
   "text-agents-prompts/technical-support-text-inbound.md": {
-    "mtime": 1789542128.7150533,
-    "ast_hash": "96dad9b62e19fbb4ef8860f7573386b6",
+    "mtime": 1789479675.1654088,
+    "ast_hash": "56e383dd3fe9a276e2c5bee72f89f98f",
     "semantic_hash": ""
   },
   "text-agents-prompts/upselling-text-inbound.md": {
@@ -2817,26 +2817,6 @@
   "clients-prompt/_exports/DibenedettoAutomotive-scenari-test-agente-text.pdf": {
     "mtime": 1789485182.5662572,
     "ast_hash": "fdb63ceb182088ef9a46591ee16fc0aa",
-    "semantic_hash": ""
-  },
-  "voice-agents-prompts/ivr-triage-voice-inbound.md": {
-    "mtime": 1789543116.4982529,
-    "ast_hash": "66f4269113a5657a91bdf45ffcb5053c",
-    "semantic_hash": ""
-  },
-  "voice-agents-prompts/upselling-voice-inbound.md": {
-    "mtime": 1789543347.0539699,
-    "ast_hash": "8f9d4b427797712025b38e99e51d08dc",
-    "semantic_hash": ""
-  },
-  "clients-prompt/_exports/FarmaciaSimonelli-prenotazioni-whatsapp-spoki.md": {
-    "mtime": 1789544883.985997,
-    "ast_hash": "915c617dc5261eda8ed5ce2ebd9515e3",
-    "semantic_hash": ""
-  },
-  "clients-prompt/_exports/FarmaciaSimonelli-prenotazioni-whatsapp-spoki.pdf": {
-    "mtime": 1789544884.4831583,
-    "ast_hash": "3ddd6efb541361ff38f12511cf67e821",
     "semantic_hash": ""
   }
 }

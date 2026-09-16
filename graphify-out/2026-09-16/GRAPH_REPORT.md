@@ -1,11 +1,11 @@
-# Graph Report - spoki-ai-agents  (2026-09-11)
+# Graph Report - spoki-ai-agents  (2026-09-16)
 
 ## Corpus Check
-- 477 files · ~1,376,809 words
+- 497 files · ~1,399,080 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 7264 nodes · 7325 edges · 584 communities (540 shown, 44 thin omitted)
+- 7532 nodes · 7574 edges · 614 communities (569 shown, 45 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 9 edges (avg confidence: 0.5)
 - Token cost: 0 input · 0 output
 
@@ -20,13 +20,13 @@
 - 53298-casp-kb-03-costi-pagamenti.md
 - properties
 - 53298-prelievo-domicilio-prompt.md
-- Workflow
+- Spoki — Test agente (L1–L3)
 - properties
 - Script per ID
 - 8.1 Lauree triennali (catalogo generale) (43 corsi)
 - Deals – User Guide
 - System prompt (Spoki)
-- enum
+- System prompt (Spoki)
 - 25025-allyouneedexpressitsrls-prompt.md
 - Casp 53298 — Test suite playground Centro Unico Prenotazioni (test)
 - Cosa è stato rimosso dalla KB unificata (va nel prompt / non in KB)
@@ -130,7 +130,7 @@
 - Knowledge Base — Prime srl (Primerent)
 - AVS ELECTRONICS — Appendice NVR v1.9 (ULTRA)
 - 56004-letsmoveasd-kb-fitness.md
-- enum
+- $defs
 - properties
 - Add Operator &#8211; Automation Step
 - Remove from List &#8211; Automation Step
@@ -151,8 +151,8 @@
 - 53917-dreaming-sicily-kb.md
 - Copertura territoriale del servizio di prelievo domiciliare
 - 56004-letsmoveasd-kb-danza.md
-- Tool Webhook "Apri Ticket" (tool-api-open-ticket)
-- automotive
+- Script per ID
+- local_services
 - suite_run.py
 - enum
 - Conversation flow
@@ -166,9 +166,9 @@
 - 47493-dimann-spoki-verifica.md
 - 8. Master e Università
 - acv-concierge-prompt.md
-- 19077-giovanna.md
+- 54633 Digital Sharing — Istruzioni Spoki UI
 - 54633-digitalsharing-voice-outbound.md
-- product_context
+- 19077-giovanna.md
 - enum
 - enum
 - Restore Contact &#8211; Automation Step
@@ -180,8 +180,8 @@
 - 1384-mario-ai-operator.md
 - Prima di tutto: cerca sempre il prodotto nel catalogo
 - Cosa è stato verificato
-- properties
-- 10.1 FAQ
+- expect
+- 5.1 FAQ
 - 49878-centro-formazione-innovazione-kb.md
 - Emoteca Veterinaria Adriatica (EVA) — Donazione di sangue
 - guida-prompt-spoki.md
@@ -194,7 +194,7 @@
 - F — Fitness pacchetti
 - contact
 - qualification
-- next_action
+- marketing-text-inbound.md
 - F — Fitness pacchetti
 - 32281-fantamat-policarbonato-prompt-test.md
 - Gruppo Coviello — Test suite playground
@@ -243,13 +243,13 @@
 - Cosa è stato verificato
 - Cosa è stato verificato
 - 45828-accademia-oms-prompt-anestesia.md
-- 3.1 FAQ
+- 3.2 FAQ INFORMATICA
 - Hai il Buono Carta Docente? Ecco come acquistare su cfiscuola.it...
 - 11. Concorsi (macro-area, categorie e percorsi)
 - 5.2 Università e CFU (7 corsi)
 - 58726-sprint-prompt-aggiornato.md
 - 54633-digitalsharing-callback-writer.md
-- 54633 Digital Sharing — Istruzioni Spoki UI
+- enum
 - Procedura di attivazione
 - Whatsapp e Black Friday: ecco le automazioni che ti faranno vendere di più
 - Spoki 1384 — KB sample (search_knowledge_base)
@@ -285,9 +285,9 @@
 - Knowledge Base — Pennefichissime (All You Need Express It Srls)
 - System prompt (Spoki)
 - Scenari
-- enum
+- lead-qualification-voice-callback.md
 - Boutique Demo Spoki — Checklist setup agente operativo
-- data-collection-voice-outbound.md
+- Tool Webhook "Raccolta dati" (collect_data_webhook)
 - Indice Knowledge Base Spoki
 - Come fare
 - KB06 – Dati necessari per preventivi e assistenza
@@ -305,7 +305,7 @@
 - Mapping payload webhook → CRM / task / calendario venditore
 - URL dinamici nei webhook degli agenti AI Spoki
 - generic_b2b
-- lead-qualification-voice-outbound.md
+- data-collection-voice-outbound.md
 - customer-support-text-inbound-ticket.md
 - Guida allo step &#8220;Risposta del cliente&#8221;
 - Setting Up Your Spoki Voice Agent
@@ -320,7 +320,7 @@
 - scenarios
 - packs
 - agent-2-prompt.md
-- 54633-digitalsharing-spoki-ui.md
+- 54633-digitalsharing-kb-progetto.md
 - Regole di conversazione
 - 7.1 FAQ
 - 3.1 Didattica Lingue (L2 e CLIL) (8 corsi)
@@ -345,14 +345,14 @@
 - Tool Webhook "Prenota appuntamento Tuotempo" (tuotempo_add_appointment)
 - manifest.json
 - calendar-booking.md
-- voice-support-prompt-zendesk.md
+- 3.1 FAQ
 - 37312-tecno-clinic-knowledge-base.md
 - ACV Concierge — Knowledge Base
 - 6. Personalizzazione e file logo
 - 37312-tecno-clinic-text-prompt.md
 - Location mapping
-- $defs
-- 5.1 FAQ
+- 9.1 Webinar (5 corsi)
+- Qualification checklists (ask only what’s missing, one at a time)
 - 1.8 Altri corsi di Informatica (7 corsi qui · 4 corsi cross-listed)
 - 8.14 Master di II livello (7 corsi)
 - Gestione ricette
@@ -380,18 +380,18 @@
 - 43885-boldrin-group-prompt-v3-chiusura-estiva.md
 - Q / Y / R / P / U — Guardrail catalogo (P1)
 - Script per ID
-- enum
+- lead-qualification-voice-outbound.md
 - Tool Webhook "Cancella appuntamento Tuotempo" (tuotempo_cancel_appointment)
 - Tool Webhook "Trova appuntamenti Tuotempo" (tuotempo_get_appointments)
-- FAQ — CFIScuola (Centro Formazione Innovazione S.R.L.)
-- required
+- voice-support-prompt-zendesk.md
+- appointment-followup-text-inbound.md
 - voice-calendar-booking.md
 - contact
 - 9.1 FAQ
 - Normativa formazione sicurezza
 - 1.1 Certificazioni DigComp ACCREDIA (6 corsi)
 - 1.6 Office (6 corsi)
-- 9.1 Webinar (5 corsi)
+- Laboratorio — regole di listino e costi correlati
 - Ricerca antiparassitari
 - Gestione ordini
 - Tool "Trova ID contatto" (get_contact_id)
@@ -410,19 +410,19 @@
 - **11. Automation Avanzate: Lavorare in Modo Più Intelligente**
 - **3. L’Ultimo Giorno di Spedizione Garantita**
 - **L’Opportunità Che Non Puoi Permetterti di Perdere**
-- agent-test-suite.schema.json
-- 34768-calatafimi-med-kb-02-prestazioni-prezzi.md
+- enum
+- 3.4 Inglese
 - AVS ELECTRONICS — Installazione software Bios (myAVSAlarm)
 - AVS ELECTRONICS — Tastiera A1000 IST1117V1.1
 - Cerchi in lega
-- Pneumatici (generale)
+- Dibenedetto Automotive — Scenari di test dell’assistente WhatsApp
 - 55247 Centro Gomme — Indice KB
 - Letsmoveasd 56004 — Indice KB (uso interno, non caricare in Spoki)
 - 56004-letsmoveasd-kb-listino-ingressi-fitness.md
 - 56004-letsmoveasd-kb-orari-cassago-fitness.md
 - HOLTER (CARDIOLOGIA)
 - OPHTHALMOLOGY (OCULISTICA)
-- tipo
+- Workflow
 - RADIOLOGY
 - E — Edge (P2)
 - G — Guardrail (P1)
@@ -431,8 +431,8 @@
 - E — Edge (P2)
 - G — Guardrail (P1)
 - Let’s Move — Aggiornamenti Knowledge Base e Assistente Momo
-- turn
 - enum
+- required
 - agent-1-prompt.md
 - olly-prompt.md
 - Sedi
@@ -441,8 +441,8 @@
 - 4. Catalogo prodotti
 - 46604-albali-centros-formacion-prompt-outbound.md
 - System prompt (Spoki)
-- 1.5 FAQ
-- 8.1 FAQ
+- enum
+- enum
 - 1.6 Personale all'estero
 - 10.10 Tasse universitarie eCampus e iniziative cashback
 - Pagamenti
@@ -485,9 +485,9 @@
 - Step 5–6 — Automazioni demo (feedback reale al cliente)
 - Common Issues
 - Agent Types
-- Cardiologia
-- real_estate
-- Agente 2 — Callback writer
+- Dibenedetto Automotive 57298 — Test suite Playground Text / Francesca
+- hospitality-booking-text-inbound.md
+- agent-test-suite.schema.json
 - Proporzioni consigliate per le immagini nei messaggi Whatsapp
 - Integrare Calendly con Spoki
 - Guida alla migrazione del tuo numero con WhatsApp Business (coesistenza)
@@ -496,21 +496,21 @@
 - **10. Il Post-Vendita: Trasformare Clienti Natalizi in Clienti Annuali**
 - **4. Le Gift Card: Salvare le Vendite Quando il Tempo è Scaduto**
 - **5. Agenti AI: Scalare l’Assistenza Senza Perdere Qualità**
-- **6. Il Floating Button: Abbattere le Barriere Tra Dubbio e Acquisto**
+- 3.3 FAQ LINGUE
 - **7. Caroselli Multimediali: Lo Shopping Senza Sforzo**
 - **8. SMS Fallback: La Garanzia di Copertura Totale**
 - **9. Recupero Carrelli Abbandonati: Il ROI Più Alto del Tuo Stack**
 - Tools
-- id
-- Oculistica
-- kb_required
+- survey-text-inbound.md
+- Templates — Spoki prompt test
+- **6. Il Floating Button: Abbattere le Barriere Tra Dubbio e Acquisto**
 - T / N / E — Handover estivo
 - Ordine consigliato
 - Nautica
 - 55247 — Centro Gomme del Prato (agente vocale)
 - Soft cross-sell (nutrizione Ilaria / personal trainer Luca)
 - I — Informazioni corsi (KB)
-- Ordine consigliato
+- come-aggiornare-il-profilo-whatsapp-di-spoki.md
 - Tools
 - Tools
 - I — Informazioni corsi (KB)
@@ -518,7 +518,7 @@
 - I — Informazioni corsi (KB)
 - Ordine consigliato
 - requires_contact_fields
-- require_prompt_rule
+- ivr-triage-voice-inbound.md
 - Spoki AI agents
 - 7. Processo d'ordine
 - 47493 - Triage AI (Primo contatto - Trigger).md
@@ -526,32 +526,31 @@
 - Knowledge Base: What It Is
 - Tools
 - Tools
-- come-aggiornare-il-profilo-whatsapp-di-spoki.md
+- lead-generation-text-inbound.md
 - come-attivare-il-plugin-di-woocommerce-associato-a-spoki-pro.md
 - come-attivare-le-notifiche-su-spoki.md
 - come-attivare-un-messaggio-automatico-da-far-partire-nei-giorni-festivi.md
 - come-attivare-unautomazione-per-gli-orari-non-lavorativi.md
 - come-attribuire-il-tag-ai-contatti-di-una-lista.md
+- sales-inquiry-text-inbound.md
 - come-bloccare-sbloccare-i-contatti-in-automatico.md
-- come-creare-unautomazione-con-risposta-ai-bottoni-del-template.md
 - come-duplicare-le-automazioni-template.md
 - come-eliminare-contatti-multipli.md
-- come-gestire-automaticamente-chi-non-risponde.md
+- technical-support-text-inbound.md
 - come-gestire-le-risposte-libere-che-seguono-lautomazione.md
 - come-integrare-spoki-per-i-tuoi-clienti-nel-tuo-software.md
 - come-inviare-messaggi-multi-lingua.md
 - come-utilizzare-il-webhook-di-ritorno-da-spoki-a-zapier.md
 - filtrare-le-chat-non-lette.md
-- integra-whatsapp-con-zoho.md
-- integrare-spoki-con-i-moduli-di-facebook.md
+- come-creare-unautomazione-con-risposta-ai-bottoni-del-template.md
+- come-gestire-automaticamente-chi-non-risponde.md
 - integrare-spoki-con-i-webhook.md
 - integrare-spoki-con-qualsiasi-gestionale-attraverso-api.md
 - integrare-spoki-con-sendinblue.md
-- integrare-whatsapp-a-wpnotif.md
+- integra-whatsapp-con-zoho.md
 - integrare-whatsapp-con-activecampaign.md
 - integrare-whatsapp-con-google-fogli.md
-- integrare-whatsapp-con-hubspot.md
-- integrare-whatsapp-con-qapla.md
+- integrare-spoki-con-i-moduli-di-facebook.md
 - integrare-whatsapp-con-simplisio.md
 - integrare-whatsapp-con-zapier.md
 - integrazione-klaviyo-e-spoki.md
@@ -566,9 +565,9 @@
 - D — Policy date (P1)
 - H — Accoglienza e intent (P0)
 - Altro
-- Enrollment data collection
-- A / TR — App e prova
-- D — Flusso danza (MOMO)
+- upselling-voice-inbound.md
+- Script per ID
+- product_context
 - 53917-dreaming-sicily-agente-chat.20260810-141518.md
 - A / TR — App e prova
 - D — Flusso danza (MOMO)
@@ -580,6 +579,35 @@
 - 53298-casp-kb-zone-costi.md
 - T — Transfer (P0)
 - Dimann 47493 — Bozza follow-up email (20 luglio 2026)
+- turn
+- tipo
+- Branche e servizi eseguiti
+- Tool Webhook "Riprogramma appuntamento Tuotempo" (tuotempo_reschedule_appointment)
+- Tool Webhook "Cerca disponibilità Tuotempo" (tuotempo_search_availability)
+- Spoki prompt body syntax (critical)
+- SERVICES BY SPECIALTY (CATALOGO)
+- Ordine consigliato
+- ORTHOPEDICS
+- SPERMIOGRAMMA
+- BREATH TEST
+- integrare-whatsapp-con-ifttp.md
+- integrare-whatsapp-con-shopify.md
+- integrazioni.md
+- text-agents-prompts/README.md
+- 57298-dibenedetto-automotive-text.md
+- 34768 LucIA — PLACEHOLDER tool `tuotempo_add_appointment`
+- Spoki prompt test
+- id
+- FAQ — CFIScuola (Centro Formazione Innovazione S.R.L.)
+- Open ticket (owner)
+- L3 — Judge, regression, CS webhook
+- 8. Notion closeout — default on suite close
+- Enrollment data collection
+- A / TR — App e prova
+- Scenari
+- D — Flusso danza (MOMO)
+- kb_required
+- require_prompt_rule
 
 ## God Nodes (most connected - your core abstractions)
 1. `4.1 Insegnanti (62 corsi qui · 9 corsi cross-listed)` - 63 edges
@@ -602,13 +630,13 @@
   outbound-sales-agent/vertical-config.json → outbound-sales-agent/vertical-config.json  _Bridges community 31 → community 34_
 - `contact` --extends--> `EMAIL`  [EXTRACTED]
   outbound-sales-agent/vertical-config.json → outbound-sales-agent/vertical-config.json  _Bridges community 34 → community 19_
-- `product_context` --extends--> `budget_range`  [EXTRACTED]
-  outbound-sales-agent/vertical-config.json → outbound-sales-agent/vertical-config.json  _Bridges community 34 → community 153_
+- `qualification` --extends--> `need`  [EXTRACTED]
+  outbound-sales-agent/vertical-config.json → outbound-sales-agent/vertical-config.json  _Bridges community 372 → community 34_
 
 ## Import Cycles
 - None detected.
 
-## Communities (584 total, 44 thin omitted)
+## Communities (614 total, 45 thin omitted)
 
 ### Community 0 - "INDEX.md"
 Cohesion: 0.02
@@ -630,13 +658,13 @@ Nodes (22): pattern, type, properties, type, type, minLength, type, account_id (
 Cohesion: 0.04
 Nodes (47): After data confirmation, Booking error template, Booking retry rules, Booking success template, Calendar booking, Confirmation, Data collection flow, Deferred booking template (+39 more)
 
-### Community 5 - "Workflow"
-Cohesion: 0.04
-Nodes (44): Client copy (all levels), Constraints, CS webhook (Notion hub), HTTP (proposal), Judge, Knowledge base ingest (quality, not a cleaner), L1 — Tab Test (assisted), L2 — Sandbox API (+36 more)
+### Community 5 - "Spoki — Test agente (L1–L3)"
+Cohesion: 0.18
+Nodes (11): Client copy (all levels), Constraints, HTTP (proposal), Knowledge base ingest (quality, not a cleaner), L1 — Tab Test (assisted), L2 — Sandbox API, Mock registry, Persist (+3 more)
 
 ### Community 6 - "properties"
-Cohesion: 0.05
-Nodes (42): answered, busy, no_answer, voicemail, wrong_number, type, minimum, type (+34 more)
+Cohesion: 0.06
+Nodes (34): type, minimum, type, const, type, format, type, properties (+26 more)
 
 ### Community 7 - "Script per ID"
 Cohesion: 0.04
@@ -654,9 +682,9 @@ Nodes (40): Accesso a Deals, Automazioni, Azioni disponibili, Azioni rapide, Bes
 Cohesion: 0.05
 Nodes (39): 3469 — Il Mio Villaggio — Federica (test), Cancellations, Closing flow, Commercial lead classification, Existing bookings — data collection, Final objective, General boundaries, Goal (+31 more)
 
-### Community 11 - "enum"
-Cohesion: 0.29
-Nodes (7): km_zero, new, undecided, used, vehicle_condition, enum, type
+### Community 11 - "System prompt (Spoki)"
+Cohesion: 0.12
+Nodes (15): Anfiny — Agente Vendita (Shopify / Sales), Come chiudere il turno (final_answer), Contesto catalogo (solo orientamento), Esempi, Flusso conversazione, Handover, Lingua della conversazione, Lo strumento `afinity-shopify` (+7 more)
 
 ### Community 12 - "25025-allyouneedexpressitsrls-prompt.md"
 Cohesion: 0.05
@@ -719,8 +747,8 @@ Cohesion: 0.06
 Nodes (33): Acqua durante il digiuno, Alcol, Alimentazione, Anticoagulanti e antiaggreganti, Attività fisica, Caffè, tè, latte e altre bevande, Campione raccolto in modo non corretto, Conservazione (+25 more)
 
 ### Community 27 - "9968-lead-qualification-voice-callback.md"
-Cohesion: 0.05
-Nodes (36): 9968 — Lead qualification + callback (vocale), Appointments and site visits, Closing, Complete lead, Contact fields (actions), Conversation flow, Language, Limits (+28 more)
+Cohesion: 0.14
+Nodes (13): 9968 — Lead qualification + callback (vocale), Appointments and site visits, Closing, Complete lead, Contact fields (actions), Conversation flow, Language, Limits (+5 more)
 
 ### Community 28 - "1384-customer-support.md"
 Cohesion: 0.06
@@ -735,8 +763,8 @@ Cohesion: 0.06
 Nodes (31): Available tools, Conversation flow, Customer data, Disqualification rules, Guardrails, Language, OBJ-10: Dove avete preso il mio numero?, OBJ-11: Non mi interessa (+23 more)
 
 ### Community 31 - "pre_populated"
-Cohesion: 0.26
-Nodes (14): ASSIGNED_REP_ID, CRM_CONTACT_ID, FIRST_NAME, MARCA, MODELLO, REGIONE, collection_order, spoki_dynamic_fields (+6 more)
+Cohesion: 0.19
+Nodes (18): ASSIGNED_REP_ID, CRM_CONTACT_ID, FIRST_NAME, MARCA, MODELLO, REGIONE, collection_order, description (+10 more)
 
 ### Community 32 - "Calaserena Resort"
 Cohesion: 0.06
@@ -747,8 +775,8 @@ Cohesion: 0.06
 Nodes (30): 53917 — Agente Chat Dreaming Sicily (test), Anagrafica, Azioni interne, Camere, Chiusura, Conferma da terzi, Dati contatto, Escursione, tour in barca, minicrociera (+22 more)
 
 ### Community 34 - "collection_order"
-Cohesion: 0.18
-Nodes (16): area, budget_range, city, EMAIL, need, next_action_type, postal_code, preferred_datetime (+8 more)
+Cohesion: 0.25
+Nodes (11): area, budget_range, EMAIL, need, next_action_type, preferred_datetime, role_and_company, transaction_type (+3 more)
 
 ### Community 35 - "53917-dreaming-sicily-agente-chat.20260817-140751-v3.4.md"
 Cohesion: 0.07
@@ -803,8 +831,8 @@ Cohesion: 0.07
 Nodes (27): Accessibilità, All Inclusive, Animali, Animazione, Bar, Benessere, Biberoneria, Camere (+19 more)
 
 ### Community 48 - "Prezzi — Visite specialistiche e prestazioni"
-Cohesion: 0.10
-Nodes (21): Allergologia, Andrologia, Angiologia / Chirurgia vascolare, Certificati / rinnovi, Dermatologia, Diagnostica ossea e radiologia, Ecodoppler / Ecocolor doppler, Ecografie (+13 more)
+Cohesion: 0.07
+Nodes (28): Allergologia, Andrologia, Angiologia / Chirurgia vascolare, Cardiologia, Certificati / rinnovi, Dermatologia, Diagnostica ossea e radiologia, Ecodoppler / Ecocolor doppler (+20 more)
 
 ### Community 49 - "AVS ELECTRONICS — Manuale utente ULTRA (IST1106V1.2)"
 Cohesion: 0.07
@@ -839,8 +867,8 @@ Cohesion: 0.07
 Nodes (26): Accessibilità, Accesso animali, Animazione, Benessere, Biberoneria, Camere, Camere Classic, Camere Comfort (+18 more)
 
 ### Community 57 - "34768-calatafimi-med-kb-listino-privato-lab.md"
-Cohesion: 0.07
-Nodes (20): Ambito, Calatafimi Med — KB 03 Laboratorio, check-up e ticket, Convenzione SSN (laboratorio), Esami in service, Laboratorio — regole di listino e costi correlati, Listino ticket SSN (laboratorio Wgeslaan), Pagamenti laboratorio — bonifico, Prelievo (+12 more)
+Cohesion: 0.10
+Nodes (10): Listino privato lab (parte 1) — Calatafimi Med, Listino privato lab (parte 2) — Calatafimi Med, Listino privato lab (parte 3) — Calatafimi Med, Listino privato lab (parte 4) — Calatafimi Med, Listino privato lab (parte 5) — Calatafimi Med, Listino privato lab (parte 6) — Calatafimi Med, Listino privato lab (parte 7) — Calatafimi Med, Listino privato lab (parte 8) — Calatafimi Med (+2 more)
 
 ### Community 58 - "Informazioni generali e contatti Casp"
 Cohesion: 0.07
@@ -971,8 +999,8 @@ Cohesion: 0.11
 Nodes (17): Blocchi prompt (da incollare), Click&Collect / FAQ, Costi di attivazione, Foto prodotto, Gap espliciti (non quotati in F1), Giacenza punto vendita, Istruzione AI (passaggi), Kaidor Club (+9 more)
 
 ### Community 90 - "1. CONCORSI"
-Cohesion: 0.11
-Nodes (18): 1.1 Concorso Infanzia e Primaria, 1.2 Concorso Secondaria, 1.3 Dirigente Scolastico, 1.4 Dirigenti Tecnici, 1.7 TFA Sostegno, 1. CONCORSI, A CHE PROVE MI PREPRARA IL VOSTRO CORSO PER IL TFA SOSTEGNO?, CHE LIVELLO MI SERVE PER INSEGNARE INGLESE NELLE SCUOLE PRIMARIE? (+10 more)
+Cohesion: 0.09
+Nodes (23): 1.1 Concorso Infanzia e Primaria, 1.2 Concorso Secondaria, 1.3 Dirigente Scolastico, 1.4 Dirigenti Tecnici, 1.5 FAQ, 1.7 TFA Sostegno, 1. CONCORSI, A CHE PROVE MI PREPRARA IL VOSTRO CORSO PER IL TFA SOSTEGNO? (+15 more)
 
 ### Community 91 - "8.15 Corsi di Perfezionamento (22 corsi qui · 3 corsi cross-listed)"
 Cohesion: 0.09
@@ -983,8 +1011,8 @@ Cohesion: 0.42
 Nodes (10): appointment_booked, call_back_later, callback_requested, no_interest, send_brochure, send_quote, next_action_values, next_action_values (+2 more)
 
 ### Community 93 - "properties"
-Cohesion: 0.09
-Nodes (23): type, type, type, type, type, additionalProperties, description, properties (+15 more)
+Cohesion: 0.06
+Nodes (36): buy, km_zero, new, rent, sell, undecided, used, type (+28 more)
 
 ### Community 94 - "Send Webhook &#8211; Automation Step"
 Cohesion: 0.09
@@ -1027,8 +1055,8 @@ Cohesion: 0.09
 Nodes (21): 1. Greeting, 2. Identify the Question, 3. Retrieve from the Textbook, 4. Deliver the Answer, Conversation Flow, Conversational format, General style rules (apply to both formats), If the information is not in the textbook (+13 more)
 
 ### Community 104 - "properties"
-Cohesion: 0.10
-Nodes (21): appointment_booked, call_back_later, callback_requested, no_interest, send_brochure, send_quote, type, type (+13 more)
+Cohesion: 0.12
+Nodes (17): type, type, type, type, type, additionalProperties, properties, required (+9 more)
 
 ### Community 105 - "Remove Tag &#8211; Automation Step"
 Cohesion: 0.10
@@ -1070,9 +1098,9 @@ Nodes (19): 1. Dahua (serie 5xxxx, firmware custom AVS), 2. Provision (protocoll
 Cohesion: 0.10
 Nodes (18): Criteri di accesso ai corsi fitness tramite applicazione, Disdetta, Lista d’attesa, Note operative per l’assistente (fatti), Prenotazione, Requisiti di accesso, Bioimpedenziometria gratuita, Bonus FAMILY (+10 more)
 
-### Community 115 - "enum"
-Cohesion: 0.15
-Nodes (13): enum, type, client_outcome, internal_score, enum, type, da_correggere, Fail (+5 more)
+### Community 115 - "$defs"
+Cohesion: 0.13
+Nodes (16): type, enum, type, $defs, classify_on_fail, client_outcome, internal_score, enum (+8 more)
 
 ### Community 116 - "properties"
 Cohesion: 0.10
@@ -1154,13 +1182,13 @@ Nodes (17): Cliniche, studi e luoghi di lavoro, Comuni ordinariamente coperti, C
 Cohesion: 0.11
 Nodes (17): Certificato medico, Danza Moderna (Gradi), Danza Moderna Primary, Danza — percorsi, quote e regole iscrizione, Descrizione generale, Hip Hop, Laboratorio Artistico, Modalità di pagamento (+9 more)
 
-### Community 136 - "Tool Webhook "Apri Ticket" (tool-api-open-ticket)"
-Cohesion: 0.29
-Nodes (6): Configurazione tool (da incollare nel form Spoki), Note operative, Riga di istruzione-tipo per il prompt dell'agente, Schema parametri, Template body JSON, Tool Webhook "Apri Ticket" (tool-api-open-ticket)
+### Community 136 - "Script per ID"
+Cohesion: 0.05
+Nodes (41): 32300 — Demo-Kaidor (test), Chiusura utile, Click&Collect e FAQ, Domande multiple, link, carrello, Formato risposte catalogo, Foto prodotto, Giacenza in negozio, Kaidor Club (numero KC, punti) (+33 more)
 
-### Community 137 - "automotive"
+### Community 137 - "local_services"
 Cohesion: 0.27
-Nodes (11): not_qualified, nurture, qualified, description, label, lead_complete_when, qualification_status_values, qualification_status_values (+3 more)
+Nodes (11): not_qualified, nurture, qualified, qualification_status_values, qualification_status_values, description, label, lead_complete_when (+3 more)
 
 ### Community 138 - "suite_run.py"
 Cohesion: 0.26
@@ -1175,8 +1203,8 @@ Cohesion: 0.11
 Nodes (17): Competitor named, Conversation flow, Custom-deal lead, Discovery, First turn, Goal, Guardrails, Hard rules (+9 more)
 
 ### Community 141 - "customer-support-voice-inbound.md"
-Cohesion: 0.11
-Nodes (17): Closing, Contact fields (actions), Fallback, FAQ, Flow, Goal, Language, Limits (+9 more)
+Cohesion: 0.05
+Nodes (39): Configurazione tool (da incollare nel form Spoki), Note operative, Riga di istruzione-tipo per il prompt dell'agente, Schema parametri, Template body JSON, Tool Webhook "Apri Ticket" (tool-api-open-ticket), Closing, Contact fields (actions) (+31 more)
 
 ### Community 142 - "PayPal &#8211; Automation Step"
 Cohesion: 0.12
@@ -1195,8 +1223,8 @@ Cohesion: 0.12
 Nodes (16): App — prenotazione fitness, Cassago Brianza (LC), Cassago — esempi danza / extra (scrape; preferire doc danza Cassago), Cassago — Pilates / Fitness, Contatti / reputazione (contesto), Fitness e Pilates (adulti), Fitness e Pilates — pagina sito, Missione Trasparenza (regole) (+8 more)
 
 ### Community 146 - "34768-calatafimi-med-prompt.md"
-Cohesion: 0.07
-Nodes (26): 34768 — LucIA Calatafimi Med (test), After contacts, After they send day + contacts, Allowlist (Doc 18 + Doc 23), Always ask the seat first (lattosio), BREATH TEST, CalatafimiMed 3 (Via Di Blasi 8) — propose when booking, Do not dump (+18 more)
+Cohesion: 0.12
+Nodes (13): Calatafimi Med — KB 02 Prestazioni e prezzi, Calatafimi Med — KB 03 Laboratorio, check-up e ticket, Listino ticket SSN (laboratorio Wgeslaan), Calatafimi Med — Knowledge Base (indice file), Preferito in Spoki, 34768 — LucIA Calatafimi Med (test), End of conversation — promotions (mandatory), GREETING (+5 more)
 
 ### Community 147 - "properties"
 Cohesion: 0.12
@@ -1210,17 +1238,17 @@ Nodes (17): 8.10 Lauree magistrali — Lettere (0 corsi qui · 4 corsi cross-lis
 Cohesion: 0.12
 Nodes (16): Capabilities, Conversation flow, get_conventions, get_recommended_places, Goal, Guardrails, Hotel identification (multi-property), Language parameter (+8 more)
 
-### Community 151 - "19077-giovanna.md"
-Cohesion: 0.12
-Nodes (16): Appuntamenti e passaggio in sede, Auto usate, Autoalpina Easy, Chiusura chiamata, Dati del chiamante, Flusso conversazione, Lead completo, Limiti (+8 more)
+### Community 151 - "54633 Digital Sharing — Istruzioni Spoki UI"
+Cohesion: 0.11
+Nodes (18): 1) Branch Call me back → agente 2 (obbligatorio), 2) Condizione su Data → agente 1 (richiamo all'orario), 54633 Digital Sharing — Istruzioni Spoki UI, Agente 1 — Booking, Agente 2 — Callback writer, Agenti, Automazioni, Campo dinamico CALLBACK_DATETIME (+10 more)
 
 ### Community 152 - "54633-digitalsharing-voice-outbound.md"
-Cohesion: 0.12
-Nodes (16): 54633 — Digital Sharing / Canale 8 (voice outbound), AI Disclosure, Boundaries, Callback handling, Capabilities, Conversation flow, Customer data, Goal (+8 more)
+Cohesion: 0.11
+Nodes (17): Sede Canale 8, 54633 — Digital Sharing / Canale 8 (voice outbound), AI Disclosure, Boundaries, Callback handling, Capabilities, Conversation flow, Customer data (+9 more)
 
-### Community 153 - "product_context"
-Cohesion: 0.29
-Nodes (7): financing_interest, preferred_dealership, property_size, property_type, trade_in, vehicle_condition, product_context
+### Community 153 - "19077-giovanna.md"
+Cohesion: 0.12
+Nodes (16): Appuntamenti e passaggio in sede, Auto usate, Autoalpina Easy, Chiusura chiamata, Dati del chiamante, Flusso conversazione, Lead completo, Limiti (+8 more)
 
 ### Community 154 - "enum"
 Cohesion: 0.33
@@ -1266,13 +1294,13 @@ Nodes (16): Chiusura estiva aziendale (ATTIVA — questo agente), Codice articol
 Cohesion: 0.12
 Nodes (15): Accoglienza e conversazione, Assistenza, privacy e casi limite, Calatafimi Med — Scenari di test dell’assistente WhatsApp, Check-up e convenzioni, Contesto, Cosa è stato verificato, Esito, Interventi sul prompt legati ai test (+7 more)
 
-### Community 165 - "properties"
-Cohesion: 0.18
-Nodes (11): description, type, properties, description, type, client_label, prompt_section, rule (+3 more)
+### Community 165 - "expect"
+Cohesion: 0.12
+Nodes (16): description, type, expect, additionalProperties, properties, required, type, description (+8 more)
 
-### Community 166 - "10.1 FAQ"
-Cohesion: 0.33
-Nodes (6): 10.1 FAQ, 10. WEBINAR, COME CI SI ISCRIVE AD UN WEBINAR?, IN SEGUITO AI WEBINAR VENGONO INVIATE LE SLIDES E LA REGISTRAZIONE?, NON MI È ARRIVATO L'ATTESTATO DEL WEBINAR CHE HO SEGUITO?, NON SONO RIUSCITO/A A PARTECIPARE AL WEBINAR?
+### Community 166 - "5.1 FAQ"
+Cohesion: 0.25
+Nodes (8): 5.1 FAQ, 5. PROBLEMI TECNICI, COME POSSO CONTATTARVI?, HO BISOGNO DI ASSISTENZA?, IL SISTEMA SI BLOCCA DI CONTINUO, COME FARE?, POSSO FRUIRE DEL CORSO CON QUALSIASI DISPOSITIVO?, PROBLEMI LEZIONI?, PROBLEMI TECNICI - CORSO INGLESE?
 
 ### Community 167 - "49878-centro-formazione-innovazione-kb.md"
 Cohesion: 0.12
@@ -1322,9 +1350,9 @@ Nodes (5): phone, additionalProperties, required, type, contact
 Cohesion: 0.40
 Nodes (5): status, qualification, additionalProperties, required, type
 
-### Community 179 - "next_action"
-Cohesion: 0.40
-Nodes (5): type, additionalProperties, required, type, next_action
+### Community 179 - "marketing-text-inbound.md"
+Cohesion: 0.14
+Nodes (13): Boundaries, Conversation flow, Customer data, If the message is a reply to a specific campaign template, If they ask about a promotion or campaign, If they ask to buy or book, If they want to subscribe / receive commercial messages, If they want to unsubscribe / stop marketing (+5 more)
 
 ### Community 180 - "F — Fitness pacchetti"
 Cohesion: 0.13
@@ -1443,8 +1471,8 @@ Cohesion: 0.14
 Nodes (13): CONVERSATION FLOW, Domande sulla privacy, get_current_datetime, IDENTITÀ, Richiesta di appuntamento o fascia oraria specifica, Richiesta di prezzo, Richiesta di video esplicativo, SCENARI (+5 more)
 
 ### Community 209 - "2.2 FAQ"
-Cohesion: 0.20
-Nodes (10): 2.2 FAQ, CON I CORSI UNIVERSITARI OTTENGO PUNTI IN GRADUATORIA?, DIRITTO ALLO STUDIO - CORSI UNIVERSITARI?, DOVE E COME SI SVOLGONO GLI ESAMI FINALI/TESI DEI CORSI UNIVERSITARI?, IN COSA CONSISTONO GLI ESAMI FINALI UNIVERISTARI?, MASTER E CORSI DI PERFEZIONAMENTO?, MODALITÀ E TEMPISTICA CORSI ECAMPUS?, POSSO ISCRIVERMI AL PERCORSO TFA E 30 CFU? (+2 more)
+Cohesion: 0.14
+Nodes (14): 2.1 Corsi singoli, 2.2 FAQ, 2. UNIVERSITÀ, COME FUNZIONA L'ESAME DEI CORSI SINGOLI?, COME POSSO SCEGLIERE GLI ESAMI E I CFU CHE MI MANCANO?, CON I CORSI UNIVERSITARI OTTENGO PUNTI IN GRADUATORIA?, DIRITTO ALLO STUDIO - CORSI UNIVERSITARI?, DOVE E COME SI SVOLGONO GLI ESAMI FINALI/TESI DEI CORSI UNIVERSITARI? (+6 more)
 
 ### Community 210 - "6.1 FAQ"
 Cohesion: 0.14
@@ -1463,12 +1491,12 @@ Cohesion: 0.14
 Nodes (13): 1. Webhook GHL, 2. Step Spoki (subito dopo il trigger), Body webhook GHL (configurazione corretta), Checklist post-configurazione, Errore più comune, Fallback: Trasforma campo contatto, Formati data accettati, Payload produzione (+5 more)
 
 ### Community 214 - "lead-qualification-voice-inbound.md"
-Cohesion: 0.14
-Nodes (13): Boundaries, Conversation flow, Creating the event (book-meeting action), Creating the event (book-meeting action), Customer data, Getting available slots (availability action), Language, Qualification criteria (+5 more)
+Cohesion: 0.13
+Nodes (14): Boundaries, Contact fields (actions), Conversation flow, Creating the event (book-meeting action), Creating the event (book-meeting action), Customer data, Getting available slots (availability action), Language (+6 more)
 
 ### Community 215 - "sales-rep-voice-outbound.md"
-Cohesion: 0.14
-Nodes (13): Chiusura chiamata, Dati del chiamante, Flusso conversazione, Lead completo, Limiti, Lingua, Obiezioni, Prossima azione (+5 more)
+Cohesion: 0.13
+Nodes (14): Campi contatto (action), Chiusura chiamata, Dati del chiamante, Flusso conversazione, Lead completo, Limiti, Lingua, Obiezioni (+6 more)
 
 ### Community 216 - "Agent settings"
 Cohesion: 0.15
@@ -1518,9 +1546,9 @@ Nodes (12): Accoglienza e stile, App e prova gratuita, Assistenza, reclami e rim
 Cohesion: 0.15
 Nodes (12): CONSTRAINTS AND BOUNDARIES, ENGAGEMENT CTA POLICY (MANDATORY), ESCALATION POLICY, EXAMPLE OF IDEAL RESPONSE, FIRST MESSAGE POLICY (MANDATORY), FIXED CHOICE SET (GLOBAL), IDENTITY AND TONE, MANDATORY OUTPUT FORMAT (+4 more)
 
-### Community 228 - "3.1 FAQ"
-Cohesion: 0.05
-Nodes (42): 3.1 FAQ, 3.2 FAQ INFORMATICA, 3.3 FAQ LINGUE, 3.4 Inglese, 3.5 Spagnolo, 3. CATALOGO CORSI, AVETE LA CERTIFICAZIONE DI INGLESE ACCREDITATA MIM?, CFISCUOLA È ACCREDITATA DA ACCREDIA? (+34 more)
+### Community 228 - "3.2 FAQ INFORMATICA"
+Cohesion: 0.15
+Nodes (13): 3.2 FAQ INFORMATICA, 3.5 Spagnolo, 3. CATALOGO CORSI, CHE VALIDITÀ HANNO LE CERTIFICAZIONI ICDL?, COM'È STRUTTURATO L'ESAME DI LINGUA SPAGNOLA?, COME SI STRUTTURANO I CORSI DI LINGUA SPAGNOLA?, COS'È LA SKILLS CARD?, ENTRO QUANTO TEMPO OTTENGO L'ATTESTATO DIGCOMP? (+5 more)
 
 ### Community 229 - "Hai il Buono Carta Docente? Ecco come acquistare su cfiscuola.it..."
 Cohesion: 0.15
@@ -1539,12 +1567,12 @@ Cohesion: 0.15
 Nodes (12): Conversation flow, Eligibility criteria, Goal, Guardrails, Hard rules, Role, Scenario 1: User is eligible for the course, Scenario 2: User is not eligible for the course (+4 more)
 
 ### Community 233 - "54633-digitalsharing-callback-writer.md"
-Cohesion: 0.15
+Cohesion: 0.14
 Nodes (12): 54633 — Digital Sharing / Callback writer (voice outbound), AI Disclosure, Boundaries, Conversation flow, Customer data, Goal, Language, Output format (+4 more)
 
-### Community 234 - "54633 Digital Sharing — Istruzioni Spoki UI"
-Cohesion: 0.15
-Nodes (13): 1) Branch Call me back → agente 2 (obbligatorio), 2) Condizione su Data → agente 1 (richiamo all'orario), 54633 Digital Sharing — Istruzioni Spoki UI, Agente 1 — Booking, Agenti, Automazioni, Campo dinamico CALLBACK_DATETIME, Cosa dire al cliente (limiti) (+5 more)
+### Community 234 - "enum"
+Cohesion: 0.14
+Nodes (14): enum, type, environment, description, enum, type, ambiente, Entrambi (+6 more)
 
 ### Community 235 - "Procedura di attivazione"
 Cohesion: 0.17
@@ -1686,17 +1714,17 @@ Nodes (11): COSA NON FARE MAI, FLUSSO DI ACCOGLIENZA, IDENTITÀ E RUOLO, Messagg
 Cohesion: 0.11
 Nodes (17): Chiusura utile, Click&Collect e FAQ, Domande multiple, link, carrello, Formato risposte catalogo, Foto prodotto, Giacenza in negozio, Kaidor — Agente Customer Care (Shopify), Kaidor Club (numero KC, punti) (+9 more)
 
-### Community 270 - "enum"
-Cohesion: 0.14
-Nodes (14): enum, type, environment, description, enum, type, ambiente, Entrambi (+6 more)
+### Community 270 - "lead-qualification-voice-callback.md"
+Cohesion: 0.15
+Nodes (12): Appointments and site visits, Closing, Complete lead, Contact fields (actions), Conversation flow, Language, Limits, Role (+4 more)
 
 ### Community 271 - "Boutique Demo Spoki — Checklist setup agente operativo"
 Cohesion: 0.18
 Nodes (11): Appendice — Killer questions (playground), Boutique Demo Spoki — Checklist setup agente operativo, Cosa fare ora, Criteri di accettazione, ID da compilare, Se fallisce, Step 2 — Campi dinamici, Step 3 — Tag (+3 more)
 
-### Community 272 - "data-collection-voice-outbound.md"
-Cohesion: 0.18
-Nodes (10): Campi da raccogliere, Chiusura chiamata, Dati del chiamante, Flusso conversazione, Limiti, Lingua, Regole di raccolta, Ruolo (+2 more)
+### Community 272 - "Tool Webhook "Raccolta dati" (collect_data_webhook)"
+Cohesion: 0.17
+Nodes (11): Body JSON inviato a n8n, Configurazione tool (da incollare nel form Spoki), Esempio mapping Google Sheets, Esempio nota Spoki (opzionale), Flusso logico, Note operative, Riga di istruzione-tipo per il prompt dell'agente, Risposta attesa al tool (+3 more)
 
 ### Community 273 - "Indice Knowledge Base Spoki"
 Cohesion: 0.20
@@ -1766,13 +1794,13 @@ Nodes (10): 1. Postman Echo (simula URL risolto da Spoki), 2. Helevo produzione 
 Cohesion: 0.15
 Nodes (12): default_vertical, description, label, lead_complete_when, description, label, lead_complete_when, $schema (+4 more)
 
-### Community 290 - "lead-qualification-voice-outbound.md"
-Cohesion: 0.20
-Nodes (9): Boundaries, Conversation flow, Customer data, Language, Qualification criteria, Role, Timezone handling, Tone (+1 more)
+### Community 290 - "data-collection-voice-outbound.md"
+Cohesion: 0.17
+Nodes (11): Campi contatto (action), Campi da raccogliere, Chiusura chiamata, Dati del chiamante, Flusso conversazione, Limiti, Lingua, Regole di raccolta (+3 more)
 
 ### Community 291 - "customer-support-text-inbound-ticket.md"
-Cohesion: 0.20
-Nodes (9): Capacità, Dati del contatto, Flusso conversazione, Formato di output, Limiti, Obiettivo, Raccolta dati, Ruolo (+1 more)
+Cohesion: 0.18
+Nodes (10): Capabilities, Contact data, Conversation flow, Data collection, Goal, Limits, Output format, Overview (+2 more)
 
 ### Community 292 - "Guida allo step &#8220;Risposta del cliente&#8221;"
 Cohesion: 0.22
@@ -1803,8 +1831,8 @@ Cohesion: 0.22
 Nodes (8): AVS ELECTRONICS — XSAT 36 / PW / POWER IST0754V4.2, Contatti, Indirizzi DIP 1–4 (XTREAM / Logitel / Concorde — non ULTRA), POWER 3/5 — morsetti e analogico SAT03, POWER Q (IMQ) e contenitore, Ruoli, XSAT PW3 / PW5 — extra rispetto POWER, Zone, FIRE, OC
 
 ### Community 299 - "55247-centro-gomme-kb-faq.md"
-Cohesion: 0.22
-Nodes (8): Centro Gomme — FAQ (dal sito), Come le riconosco?, Cosa sono?, Pneumatici estivi, Pneumatici quattro stagioni, Posso circolare tutto l’anno con le quattro stagioni?, Quando montare e togliere gli estivi?, Spessore minimo battistrada estivi?
+Cohesion: 0.13
+Nodes (14): Centro Gomme — FAQ (dal sito), Che cos’è il codice di velocità?, Come le riconosco?, Cosa sono?, Dove trovo il codice di velocità?, Dove trovo la misura dei miei pneumatici?, Pneumatici estivi, Pneumatici (generale) (+6 more)
 
 ### Community 300 - "INTENT ROUTING (INFO & BOOKING)"
 Cohesion: 0.22
@@ -1826,9 +1854,9 @@ Nodes (9): type, description, items, type, packs, tools_required, description, i
 Cohesion: 0.22
 Nodes (8): Come parli, Cosa cerchiamo da te, Cosa non fai mai, Dati che potresti già avere sul contatto, I tuoi tool, Le tue action (silenziose), Lingua, Ruolo
 
-### Community 305 - "54633-digitalsharing-spoki-ui.md"
-Cohesion: 0.25
-Nodes (4): Canale 8 e Segreti di Stile, Contatti, Intervista gratuita Segreti di Stile, Sede Canale 8
+### Community 305 - "54633-digitalsharing-kb-progetto.md"
+Cohesion: 0.50
+Nodes (3): Canale 8 e Segreti di Stile, Contatti, Intervista gratuita Segreti di Stile
 
 ### Community 306 - "Regole di conversazione"
 Cohesion: 0.22
@@ -1915,8 +1943,8 @@ Cohesion: 0.36
 Nodes (8): enum, enum, type, pack, booking, core, support, voice
 
 ### Community 327 - "Tool Webhook "Prenota appuntamento Tuotempo" (tuotempo_add_appointment)"
-Cohesion: 0.12
-Nodes (15): Body JSON inviato a Tuotempo, Configurazione tool (da incollare nel form Spoki), Note operative, Placeholder nel body, Riga di istruzione-tipo per il prompt dell'agente, Risposta attesa, Schema parametri, Tool Webhook "Prenota appuntamento Tuotempo" (tuotempo_add_appointment) (+7 more)
+Cohesion: 0.25
+Nodes (8): Body JSON inviato a Tuotempo, Configurazione tool (da incollare nel form Spoki), Note operative, Placeholder nel body, Riga di istruzione-tipo per il prompt dell'agente, Risposta attesa, Schema parametri, Tool Webhook "Prenota appuntamento Tuotempo" (tuotempo_add_appointment)
 
 ### Community 328 - "manifest.json"
 Cohesion: 0.25
@@ -1926,9 +1954,9 @@ Nodes (7): storage, content_scripts, description, manifest_version, name, permis
 Cohesion: 0.25
 Nodes (7): Conversation flow, Customer data, Language, Role, Timezone handling, Tone, tools
 
-### Community 330 - "voice-support-prompt-zendesk.md"
-Cohesion: 0.25
-Nodes (7): Dati del chiamante, Flusso della chiamata, Limiti, Ruolo, Saluto finale, Stile vocale, Strumenti
+### Community 330 - "3.1 FAQ"
+Cohesion: 0.18
+Nodes (11): 3.1 FAQ, CFISCUOLA È ACCREDITATA DA ACCREDIA?, CHI PUO' ACCEDERE AI CORSI DI CFISCUOLA?, CI SONO SCONTI SE CI ISCRIVIAMO IN DUE PERSONE?, COME SI SVOLGONO I CORSI DI LINGUA?, CON QUALI CORSI OTTENGO PUNTEGGIO IN GRADUATORIA DOCENTI?, ENTRO QUANDO DEVO FINIRE IL CORSO CHE HO COMPRATO?, IN COSA CONSISTONO I CORSI DI AGGIORNAMENTO E FORMAZIONE? (+3 more)
 
 ### Community 331 - "37312-tecno-clinic-knowledge-base.md"
 Cohesion: 0.25
@@ -1950,13 +1978,13 @@ Nodes (7): Conversation flow: the following steps must be followed in order, one
 Cohesion: 0.25
 Nodes (8): Alias table, Case A — Unambiguous alias (proceed without extra confirmation), Case B — Ambiguous (ask before proceeding), Location first (operational requests), Location mapping, Prescription exception, Previous location, Typo tolerance
 
-### Community 336 - "$defs"
-Cohesion: 0.14
-Nodes (14): type, $defs, classify_on_fail, expect, priority, additionalProperties, required, type (+6 more)
+### Community 336 - "9.1 Webinar (5 corsi)"
+Cohesion: 0.29
+Nodes (7): 9.1 Webinar (5 corsi), 9. Webinar, Famiglie e scuola: accogliere tutte le storie contro ogni forma di razzismo e discriminazione, Indicazioni nazionali per la scuola dell'infanzia e del I ciclo, Intelligenza artificiale nelle scuole: come orientarsi con le linee guida ministeriali, Offerta formativa universitaria CFIScuola in collaborazione con eCampus, Sicurezza sul lavoro - Nuovo Accordo Stato Regioni 2025
 
-### Community 337 - "5.1 FAQ"
-Cohesion: 0.25
-Nodes (8): 5.1 FAQ, 5. PROBLEMI TECNICI, COME POSSO CONTATTARVI?, HO BISOGNO DI ASSISTENZA?, IL SISTEMA SI BLOCCA DI CONTINUO, COME FARE?, POSSO FRUIRE DEL CORSO CON QUALSIASI DISPOSITIVO?, PROBLEMI LEZIONI?, PROBLEMI TECNICI - CORSO INGLESE?
+### Community 337 - "Qualification checklists (ask only what’s missing, one at a time)"
+Cohesion: 0.18
+Nodes (11): Body shop / glass / claims, Complaints, Financing, Job / order status, Qualification checklists (ask only what’s missing, one at a time), Rental, Safety (urgent), Trade-in / evaluation (+3 more)
 
 ### Community 338 - "1.8 Altri corsi di Informatica (7 corsi qui · 4 corsi cross-listed)"
 Cohesion: 0.25
@@ -2066,33 +2094,33 @@ Nodes (7): P1 — script, Q1 — script, Q2 — script, Q / Y / R / P / U — Gu
 Cohesion: 0.29
 Nodes (7): ibd.book, ibd.email-required, ibd.no-invent, ibd.no-regreet / ibd.collect (stessa chat, contatto pieno), ibd.slot, Overlay vocale, Script per ID
 
-### Community 366 - "enum"
-Cohesion: 0.29
-Nodes (7): side_effects, enum, type, calendar_create, none, tag, transfer
+### Community 366 - "lead-qualification-voice-outbound.md"
+Cohesion: 0.18
+Nodes (10): Boundaries, Contact fields (actions), Conversation flow, Customer data, Language, Qualification criteria, Role, Timezone handling (+2 more)
 
 ### Community 367 - "Tool Webhook "Cancella appuntamento Tuotempo" (tuotempo_cancel_appointment)"
-Cohesion: 0.13
-Nodes (14): Body JSON inviato a Tuotempo, Configurazione tool (da incollare nel form Spoki), Note operative, Riga di istruzione-tipo per il prompt dell'agente, Risposta attesa, Schema parametri, Tool Webhook "Cancella appuntamento Tuotempo" (tuotempo_cancel_appointment), Body JSON inviato a Tuotempo (+6 more)
+Cohesion: 0.29
+Nodes (7): Body JSON inviato a Tuotempo, Configurazione tool (da incollare nel form Spoki), Note operative, Riga di istruzione-tipo per il prompt dell'agente, Risposta attesa, Schema parametri, Tool Webhook "Cancella appuntamento Tuotempo" (tuotempo_cancel_appointment)
 
 ### Community 368 - "Tool Webhook "Trova appuntamenti Tuotempo" (tuotempo_get_appointments)"
 Cohesion: 0.29
 Nodes (7): Configurazione tool (da incollare nel form Spoki), Note operative, Riga di istruzione-tipo per il prompt dell'agente, Risposta attesa, Schema parametri, Tool Webhook "Trova appuntamenti Tuotempo" (tuotempo_get_appointments), URL dinamici
 
-### Community 369 - "FAQ — CFIScuola (Centro Formazione Innovazione S.R.L.)"
-Cohesion: 0.22
-Nodes (8): 2.1 Corsi singoli, 2. UNIVERSITÀ, 4. ISCRIZIONE, PAGAMENTO E RIMBORSI, 6. SICUREZZA E PRIVACY, COME FUNZIONA L'ESAME DEI CORSI SINGOLI?, COME POSSO SCEGLIERE GLI ESAMI E I CFU CHE MI MANCANO?, FAQ — CFIScuola (Centro Formazione Innovazione S.R.L.), Indice
-
-### Community 370 - "required"
+### Community 369 - "voice-support-prompt-zendesk.md"
 Cohesion: 0.25
-Nodes (8): additionalProperties, required, type, agent, account_id, ambiente, name, tipo
+Nodes (7): Dati del chiamante, Flusso della chiamata, Limiti, Ruolo, Saluto finale, Stile vocale, Strumenti
+
+### Community 370 - "appointment-followup-text-inbound.md"
+Cohesion: 0.15
+Nodes (12): Boundaries, Cancel, Confirm, Conversation flow, Customer data, Language, Overview, Reschedule (+4 more)
 
 ### Community 371 - "voice-calendar-booking.md"
 Cohesion: 0.29
 Nodes (6): Conversation flow, Customer data, Language, Role, Tone, tools
 
 ### Community 372 - "contact"
-Cohesion: 0.36
-Nodes (8): PHONE, type, required, required, required, required, contact, next_action
+Cohesion: 0.22
+Nodes (13): PHONE, type, city, postal_code, timeline, required, required, required (+5 more)
 
 ### Community 373 - "9.1 FAQ"
 Cohesion: 0.29
@@ -2110,9 +2138,9 @@ Nodes (7): 1.1 Certificazioni DigComp ACCREDIA (6 corsi), DigComp 2.2 - ACCREDIA
 Cohesion: 0.29
 Nodes (7): 1.6 Office (6 corsi), Office 2016: Access, Office 2016: Excel, Office 2016: Outlook, Office 2016: Powerpoint, Office 2016: Word, Office 2016: Word, Excel, Powerpoint, Access e Outlook
 
-### Community 377 - "9.1 Webinar (5 corsi)"
-Cohesion: 0.29
-Nodes (7): 9.1 Webinar (5 corsi), 9. Webinar, Famiglie e scuola: accogliere tutte le storie contro ogni forma di razzismo e discriminazione, Indicazioni nazionali per la scuola dell'infanzia e del I ciclo, Intelligenza artificiale nelle scuole: come orientarsi con le linee guida ministeriali, Offerta formativa universitaria CFIScuola in collaborazione con eCampus, Sicurezza sul lavoro - Nuovo Accordo Stato Regioni 2025
+### Community 377 - "Laboratorio — regole di listino e costi correlati"
+Cohesion: 0.33
+Nodes (6): Ambito, Convenzione SSN (laboratorio), Esami in service, Laboratorio — regole di listino e costi correlati, Pagamenti laboratorio — bonifico, Prelievo
 
 ### Community 378 - "Ricerca antiparassitari"
 Cohesion: 0.29
@@ -2186,13 +2214,13 @@ Nodes (6): **3. L’Ultimo Giorno di Spedizione Garantita**, **Cosa attivare**, 
 Cohesion: 0.33
 Nodes (6): **I numeri che contano**, **Il divario competitivo**, **L’asset a lungo termine**, **L’Opportunità Che Non Puoi Permetterti di Perdere**, **Le opportunità concrete**, **Non è “un altro canale”**
 
-### Community 396 - "agent-test-suite.schema.json"
+### Community 396 - "enum"
 Cohesion: 0.29
-Nodes (6): additionalProperties, description, $id, $schema, title, type
+Nodes (7): side_effects, enum, type, calendar_create, none, tag, transfer
 
-### Community 397 - "34768-calatafimi-med-kb-02-prestazioni-prezzi.md"
-Cohesion: 0.33
-Nodes (5): Branche / ambiti clinici, Branche e servizi eseguiti, Calatafimi Med — KB 02 Prestazioni e prezzi, Preparazioni, Prestazioni diagnostiche / strumentali (in elenco)
+### Community 397 - "3.4 Inglese"
+Cohesion: 0.18
+Nodes (11): 3.4 Inglese, AVETE LA CERTIFICAZIONE DI INGLESE ACCREDITATA MIM?, COM'È STRUTTURATO L'ESAME DI CERTIFICAZIONE INGLESE?, COME CI SI ISCRIVE ALL'ESAME DI INGLESE?, COME SONO STRUTTURATI I CORSI DI LINGUA INGLESE?, DOPO QUANTO TEMPO POSSO FARE L'ESAME DI INGLESE?, ESITI E CERTIFICAZIONE DI INGLESE DOPO QUANTO TEMPO?, I MIEI CODICI DI PRENOTAZIONE PER SOSTENERE L'ESAME DI INGLESE SONO SCADUTI, COSA POSSO FARE? (+3 more)
 
 ### Community 398 - "AVS ELECTRONICS — Installazione software Bios (myAVSAlarm)"
 Cohesion: 0.33
@@ -2206,9 +2234,9 @@ Nodes (5): AVS ELECTRONICS — Tastiera A1000 IST1117V1.1, Contatti, Hardware, M
 Cohesion: 0.33
 Nodes (6): Cerchi in lega, Come capisco se un cerchio è omologato NAD?, Cos’è il Certificato di Conformità (COC)?, Cos’è l’omologazione NAD?, Posso montare cerchi di diametro diverso da quello attuale?, Posso montare cerchi di diametro non indicato sulla carta di circolazione?
 
-### Community 401 - "Pneumatici (generale)"
-Cohesion: 0.33
-Nodes (6): Che cos’è il codice di velocità?, Dove trovo il codice di velocità?, Dove trovo la misura dei miei pneumatici?, Pneumatici (generale), Posso montare uno pneumatico con codice di velocità più basso di quello in carta di circolazione?, Posso montare uno pneumatico di misura diversa da quella attuale?
+### Community 401 - "Dibenedetto Automotive — Scenari di test dell’assistente WhatsApp"
+Cohesion: 0.18
+Nodes (10): Accoglienza e stile, Contesto, Cosa è stato verificato, Dibenedetto Automotive — Scenari di test dell’assistente WhatsApp, Esito, Interventi sul prompt legati ai test / feedback, Note tecniche (KB / tool / piattaforma), Officina (+2 more)
 
 ### Community 402 - "55247 Centro Gomme — Indice KB"
 Cohesion: 0.33
@@ -2234,9 +2262,9 @@ Nodes (6): After contacts, HOLTER (CARDIOLOGIA), Installation time windows, Pric
 Cohesion: 0.33
 Nodes (6): After contacts, OCT, OPHTHALMOLOGY (OCULISTICA), Price, Seats and slots (KB), What the visit includes
 
-### Community 408 - "tipo"
-Cohesion: 0.40
-Nodes (5): tipo, enum, type, Testuale, Vocale
+### Community 408 - "Workflow"
+Cohesion: 0.20
+Nodes (10): 1. Orient, 1b. KB hygiene (unify and clean), 2. Pre-check (suite checklist), 3. Build suite from the prompt, 3b. Vocale — the voice playground is not the test bench, 4. Run turn-by-turn, 5. Fix loop, 6. Handoff (+2 more)
 
 ### Community 409 - "RADIOLOGY"
 Cohesion: 0.33
@@ -2270,13 +2298,13 @@ Nodes (6): G1 — script, G2 — script, G3 — script, G4 — script (osservazi
 Cohesion: 0.33
 Nodes (5): 1. Knowledge Base, 2. System prompt (Momo), 3. Verifiche playground, 4. Nota operativa (fuori da questo documento), Let’s Move — Aggiornamenti Knowledge Base e Assistente Momo
 
-### Community 417 - "turn"
-Cohesion: 0.33
-Nodes (6): turn, role, additionalProperties, required, type, text
+### Community 417 - "enum"
+Cohesion: 0.22
+Nodes (9): appointment_booked, call_back_later, callback_requested, no_interest, send_brochure, send_quote, type, enum (+1 more)
 
-### Community 418 - "enum"
-Cohesion: 0.33
-Nodes (6): buy, rent, sell, transaction_type, enum, type
+### Community 418 - "required"
+Cohesion: 0.25
+Nodes (8): additionalProperties, required, type, agent, account_id, ambiente, name, tipo
 
 ### Community 419 - "agent-1-prompt.md"
 Cohesion: 0.33
@@ -2310,13 +2338,13 @@ Nodes (5): CONVERSATION FLOW, CRITICAL RULES (NON-NEGOTIABLE), ROLE & IDENTITY, 
 Cohesion: 0.33
 Nodes (6): COMPORTAMENTO, COSA NON FARE MAI, IDENTITÀ E RUOLO, MESSAGGI SUCCESSIVI AL PRIMO, RED FLAG, System prompt (Spoki)
 
-### Community 427 - "1.5 FAQ"
-Cohesion: 0.40
-Nodes (5): 1.5 FAQ, FINO A QUANDO CI SI PUÒ ISCRIVERE AI CORSI IN PREPARAZIONE AI CONCORSI?, I CORSI IN PREPARAZIONE AI CONCORSI PREPARANO ANCHE ALLE PROVE DI INGLESE E INFORMATICA?, LA MIA CDC È IN INGLESE/SPAGNOLO/FRANCESE, IL CORSO IN PREPARAZIONE È IN LINGUA?, È PREVISTO SUPPORTO PER LA PROVA ORALE DEI CONCORSI?
+### Community 427 - "enum"
+Cohesion: 0.25
+Nodes (8): answered, busy, no_answer, voicemail, wrong_number, enum, type, outcome
 
-### Community 428 - "8.1 FAQ"
-Cohesion: 0.40
-Nodes (5): 8.1 FAQ, 8. ATA, CHE CARATTERISTICHE DEVE AVERE IL CORSO DI DATTILOGRAFIA PER CONFERIRE PUNTEGGIO?, QUALI CARATTERISTICHE HA IL CORSO DI DATTILOGRAFIA?, QUALI CORSI DANNO PUNTEGGIO PER IL PERSONALE ATA?
+### Community 428 - "enum"
+Cohesion: 0.33
+Nodes (6): priority, enum, type, p0, p1, p2
 
 ### Community 429 - "1.6 Personale all'estero"
 Cohesion: 0.33
@@ -2419,8 +2447,8 @@ Cohesion: 0.40
 Nodes (5): P0 — gemello testuale (`twin_text`), P0 — guardrail gemello, P0 — overlay vocale (`voice_playground`), P1 — smoke outbound, Scenari
 
 ### Community 454 - "34768 LucIA — PLACEHOLDER tool `tuotempo_search_availability`"
-Cohesion: 0.19
-Nodes (9): 34768 LucIA — PLACEHOLDER tool `tuotempo_add_appointment`, Checklist attivazione (quando arriva il cliente), Configurazione stub (form Spoki), Policy LucIA, 34768 LucIA — PLACEHOLDER tool `tuotempo_search_availability`, Checklist attivazione (quando arriva il cliente), Configurazione stub (form Spoki), Policy LucIA (+1 more)
+Cohesion: 0.40
+Nodes (5): 34768 LucIA — PLACEHOLDER tool `tuotempo_search_availability`, Checklist attivazione (quando arriva il cliente), Configurazione stub (form Spoki), Policy LucIA, Schema parametri (LLM)
 
 ### Community 455 - "Spoki Playground — Copia risposta agente"
 Cohesion: 0.40
@@ -2486,17 +2514,17 @@ Nodes (5): Agent delivers false/contradictory information from an integration, A
 Cohesion: 0.40
 Nodes (5): Agent Types, Custom Agent, Customer Agent, Key distinction, Sales Agent
 
-### Community 471 - "Cardiologia"
-Cohesion: 0.50
-Nodes (4): Cardiologia, Holter cardiaco — sedi e orari (operativi), Opzioni da proporre se la richiesta è generica (“Fate cardiologia?”), Regola ECG (visita)
+### Community 471 - "Dibenedetto Automotive 57298 — Test suite Playground Text / Francesca"
+Cohesion: 0.25
+Nodes (7): Come iniziare ora, Criteri pronto, Dibenedetto Automotive 57298 — Test suite Playground Text / Francesca, Esiti, Fix e re-test, Mismatch / platform findings, Pre-check Spoki
 
-### Community 472 - "real_estate"
-Cohesion: 0.50
-Nodes (4): description, label, lead_complete_when, real_estate
+### Community 472 - "hospitality-booking-text-inbound.md"
+Cohesion: 0.20
+Nodes (9): Boundaries, Conversation flow, Customer data, Knowledge base, Language, Overview, Role, Tone (+1 more)
 
-### Community 473 - "Agente 2 — Callback writer"
-Cohesion: 0.40
-Nodes (5): Agente 2 — Callback writer, First Message (proposta), Runtime, Success Criteria (proposta), Tools (agente 2)
+### Community 473 - "agent-test-suite.schema.json"
+Cohesion: 0.29
+Nodes (6): additionalProperties, description, $id, $schema, title, type
 
 ### Community 474 - "Proporzioni consigliate per le immagini nei messaggi Whatsapp"
 Cohesion: 0.50
@@ -2530,9 +2558,9 @@ Nodes (4): **4. Le Gift Card: Salvare le Vendite Quando il Tempo è Scaduto**, *
 Cohesion: 0.50
 Nodes (4): **5. Agenti AI: Scalare l’Assistenza Senza Perdere Qualità**, ** Agente AI per il Customer Care**, ** Agente AI per le Vendite**, ** Agenti AI Personalizzati**
 
-### Community 482 - "**6. Il Floating Button: Abbattere le Barriere Tra Dubbio e Acquisto**"
-Cohesion: 0.50
-Nodes (4): **6. Il Floating Button: Abbattere le Barriere Tra Dubbio e Acquisto**, **Come funziona**, **Come personalizzarlo**, **Perché è cruciale a Natale**
+### Community 482 - "3.3 FAQ LINGUE"
+Cohesion: 0.29
+Nodes (7): 3.3 FAQ LINGUE, CHE CERTIFICAZIONI LINGUISTICHE AVETE?, CHE LIVELLO DI LINGUA SERVE PER IL CLIL?, CI SONO RESTRIZIONI DI ETÀ PER SOSTENERE ESAMI DI CERTIFICAZIONE LINGUISTICA?, COSA COMPRENDE IL SOLO CORSO DI LINGUA?, L'ATTESTATO DI FREQUENZA DEI CORSI DI LINGUA RILASCIA PUNTEGGIO?, LE CERTIFICAZIONI LINGUISTICHE EMESSE SONO VALIDE?
 
 ### Community 483 - "**7. Caroselli Multimediali: Lo Shopping Senza Sforzo**"
 Cohesion: 0.50
@@ -2550,17 +2578,17 @@ Nodes (4): **9. Recupero Carrelli Abbandonati: Il ROI Più Alto del Tuo Stack**,
 Cohesion: 0.50
 Nodes (4): `get_current_datetime`, `search_spoki_manual`, Tools, `transfer_to_human`
 
-### Community 487 - "id"
+### Community 487 - "survey-text-inbound.md"
+Cohesion: 0.20
+Nodes (9): Boundaries, Conversation flow, Customer data, Language, Overview, Role, Survey definition, Tone (+1 more)
+
+### Community 488 - "Templates — Spoki prompt test"
+Cohesion: 0.25
+Nodes (8): Client report (IT → PDF), Executable suite YAML, Exports, Handoff blurb (IT), Prompt file skeleton, Spoki body — actions and backticks, Suite file skeleton, Templates — Spoki prompt test
+
+### Community 489 - "**6. Il Floating Button: Abbattere le Barriere Tra Dubbio e Acquisto**"
 Cohesion: 0.50
-Nodes (4): description, pattern, type, id
-
-### Community 488 - "Oculistica"
-Cohesion: 0.67
-Nodes (3): Oculistica, Visita oculistica — cosa include, Visita oculistica — sede e disponibilità (operativi)
-
-### Community 489 - "kb_required"
-Cohesion: 0.67
-Nodes (3): default, type, kb_required
+Nodes (4): **6. Il Floating Button: Abbattere le Barriere Tra Dubbio e Acquisto**, **Come funziona**, **Come personalizzarlo**, **Perché è cruciale a Natale**
 
 ### Community 490 - "T / N / E — Handover estivo"
 Cohesion: 0.50
@@ -2585,10 +2613,6 @@ Nodes (4): Rules, Soft cross-sell (nutrizione Ilaria / personal trainer Luca), W
 ### Community 495 - "I — Informazioni corsi (KB)"
 Cohesion: 0.50
 Nodes (4): DL1 — script (link danza da KB), I1 — script (P0), I2 — script (P0), I — Informazioni corsi (KB)
-
-### Community 496 - "Ordine consigliato"
-Cohesion: 0.50
-Nodes (4): Ordine consigliato, P0, P1, P2
 
 ### Community 497 - "Tools"
 Cohesion: 0.50
@@ -2618,9 +2642,9 @@ Nodes (4): Ordine consigliato, P0, P1, P2
 Cohesion: 0.50
 Nodes (4): requires_contact_fields, default, description, type
 
-### Community 504 - "require_prompt_rule"
-Cohesion: 0.67
-Nodes (3): require_prompt_rule, description, type
+### Community 504 - "ivr-triage-voice-inbound.md"
+Cohesion: 0.10
+Nodes (18): Boundaries, Conversation flow, Intents (map to your account), Language, Overview, Role, Tone, Tools (+10 more)
 
 ### Community 505 - "Spoki AI agents"
 Cohesion: 0.50
@@ -2650,6 +2674,18 @@ Nodes (4): Creating the event, Getting available slots, Success and retry, Tools
 Cohesion: 0.50
 Nodes (4): Creating the event (book-meeting action), Getting available slots (availability action), Success and retry rules, Tools
 
+### Community 512 - "lead-generation-text-inbound.md"
+Cohesion: 0.22
+Nodes (8): Boundaries, Conversation flow, Customer data, Language, Overview, Role, Tone, Tools
+
+### Community 518 - "sales-inquiry-text-inbound.md"
+Cohesion: 0.22
+Nodes (8): Boundaries, Conversation flow, Customer data, Language, Overview, Role, Tone, Tools
+
+### Community 522 - "technical-support-text-inbound.md"
+Cohesion: 0.22
+Nodes (8): Boundaries, Conversation flow, Customer data, Language, Overview, Role, Tone, Tools
+
 ### Community 549 - "D — Policy date (P1)"
 Cohesion: 0.67
 Nodes (3): D1 — script, D3 — script, D — Policy date (P1)
@@ -2662,17 +2698,17 @@ Nodes (3): H1 — script, H2 — script, H — Accoglienza e intent (P0)
 Cohesion: 0.67
 Nodes (3): Altro, Crociera, Estero
 
-### Community 552 - "Enrollment data collection"
-Cohesion: 0.67
-Nodes (3): Enrollment data collection, Other enrollment / package follow-up, Prova Avvio (fitness — 1 ingresso)
+### Community 552 - "upselling-voice-inbound.md"
+Cohesion: 0.10
+Nodes (18): Boundaries, Conversation flow, Language, Overview, Role, Tone, Tools, When to upsell (+10 more)
 
-### Community 553 - "A / TR — App e prova"
-Cohesion: 0.67
-Nodes (3): A1 — script (P0), A / TR — App e prova, TR1 — script (P0)
+### Community 553 - "Script per ID"
+Cohesion: 0.29
+Nodes (7): G1 — No invent, H1 — Saluto, O1 — Officina, Q1 / U1 / C1 / S1 / R1, Script per ID, T1 — Ticket path vendita (dopo preferenza appuntamento), V1 — Vendita
 
-### Community 554 - "D — Flusso danza (MOMO)"
-Cohesion: 0.67
-Nodes (3): D1 — script (P0), D2 — script (P0), D — Flusso danza (MOMO)
+### Community 554 - "product_context"
+Cohesion: 0.29
+Nodes (7): financing_interest, preferred_dealership, property_size, property_type, trade_in, vehicle_condition, product_context
 
 ### Community 556 - "A / TR — App e prova"
 Cohesion: 0.67
@@ -2694,18 +2730,120 @@ Nodes (3): D1 — script (P0), D2 — script (P0), D — Flusso danza (MOMO)
 Cohesion: 0.67
 Nodes (3): Base tools, MCP capabilities — exact names and parameters, Tools
 
+### Community 584 - "turn"
+Cohesion: 0.33
+Nodes (6): turn, role, additionalProperties, required, type, text
+
+### Community 585 - "tipo"
+Cohesion: 0.40
+Nodes (5): tipo, enum, type, Testuale, Vocale
+
+### Community 587 - "Branche e servizi eseguiti"
+Cohesion: 0.50
+Nodes (4): Branche / ambiti clinici, Branche e servizi eseguiti, Preparazioni, Prestazioni diagnostiche / strumentali (in elenco)
+
+### Community 588 - "Tool Webhook "Riprogramma appuntamento Tuotempo" (tuotempo_reschedule_appointment)"
+Cohesion: 0.29
+Nodes (7): Body JSON inviato a Tuotempo, Configurazione tool (da incollare nel form Spoki), Note operative, Riga di istruzione-tipo per il prompt dell'agente, Risposta attesa, Schema parametri, Tool Webhook "Riprogramma appuntamento Tuotempo" (tuotempo_reschedule_appointment)
+
+### Community 589 - "Tool Webhook "Cerca disponibilità Tuotempo" (tuotempo_search_availability)"
+Cohesion: 0.29
+Nodes (7): Configurazione tool (da incollare nel form Spoki), Note operative, Riga di istruzione-tipo per il prompt dell'agente, Risposta attesa, Schema parametri, Tool Webhook "Cerca disponibilità Tuotempo" (tuotempo_search_availability), URL dinamici
+
+### Community 590 - "Spoki prompt body syntax (critical)"
+Cohesion: 0.33
+Nodes (6): Actions — bare tokens, never in backticks, Anti-patterns (prompt authoring), Dynamic fields, Markdown in the Spoki body, Spoki prompt body syntax (critical), Tools vs actions
+
+### Community 591 - "SERVICES BY SPECIALTY (CATALOGO)"
+Cohesion: 0.33
+Nodes (6): Allowlist (Doc 18 + Doc 23), CalatafimiMed 3 (Via Di Blasi 8) — propose when booking, Do not dump, Hard constraints (also in KB), Out of allowlist, SERVICES BY SPECIALTY (CATALOGO)
+
+### Community 592 - "Ordine consigliato"
+Cohesion: 0.50
+Nodes (4): Ordine consigliato, P0, P1, P2
+
+### Community 593 - "ORTHOPEDICS"
+Cohesion: 0.50
+Nodes (4): After contacts, ORTHOPEDICS, Price, Scope note
+
+### Community 594 - "SPERMIOGRAMMA"
+Cohesion: 0.50
+Nodes (4): After they send day + contacts, Other delivery times, Price, SPERMIOGRAMMA
+
+### Community 595 - "BREATH TEST"
+Cohesion: 0.50
+Nodes (4): Always ask the seat first (lattosio), BREATH TEST, Helicobacter pylori (HP) breath test, Lactose breath test — main facts
+
+### Community 600 - "57298-dibenedetto-automotive-text.md"
+Cohesion: 0.12
+Nodes (15): Knowledge Base — Dibenedetto Automotive (57298), 57298 — Dibenedetto Automotive Text (test), Appointment flow, Closing templates, Final check before each reply, Flow, Goals, Hard limits (+7 more)
+
+### Community 601 - "34768 LucIA — PLACEHOLDER tool `tuotempo_add_appointment`"
+Cohesion: 0.50
+Nodes (4): 34768 LucIA — PLACEHOLDER tool `tuotempo_add_appointment`, Checklist attivazione (quando arriva il cliente), Configurazione stub (form Spoki), Policy LucIA
+
+### Community 602 - "Spoki prompt test"
+Cohesion: 0.33
+Nodes (6): Anti-patterns, Goal, Notion hub (IDs), Pass / Fail rules, Repo conventions, Spoki prompt test
+
+### Community 603 - "id"
+Cohesion: 0.50
+Nodes (4): description, pattern, type, id
+
+### Community 604 - "FAQ — CFIScuola (Centro Formazione Innovazione S.R.L.)"
+Cohesion: 0.12
+Nodes (15): 10.1 FAQ, 10. WEBINAR, 4. ISCRIZIONE, PAGAMENTO E RIMBORSI, 6. SICUREZZA E PRIVACY, 8.1 FAQ, 8. ATA, CHE CARATTERISTICHE DEVE AVERE IL CORSO DI DATTILOGRAFIA PER CONFERIRE PUNTEGGIO?, COME CI SI ISCRIVE AD UN WEBINAR? (+7 more)
+
+### Community 605 - "Open ticket (owner)"
+Cohesion: 0.40
+Nodes (5): Field write rules (when → action), Open ticket (owner), Ticket description (internal, not shown to customer), Ticket, dynamic fields, urgency, Urgency → priority
+
+### Community 606 - "L3 — Judge, regression, CS webhook"
+Cohesion: 0.40
+Nodes (5): CS webhook (Notion hub), Judge, L3 — Judge, regression, CS webhook, Regression triggers, Voice playground has no contact (blocking for voice testing)
+
+### Community 607 - "8. Notion closeout — default on suite close"
+Cohesion: 0.40
+Nodes (5): 8. Notion closeout — default on suite close, 8a. Upsert Agenti, 8b. Documenti Prompt + Suite + Report PDF, 8c. Changelog, 8d. Documenti KB (+ Listino)
+
+### Community 608 - "Enrollment data collection"
+Cohesion: 0.67
+Nodes (3): Enrollment data collection, Other enrollment / package follow-up, Prova Avvio (fitness — 1 ingresso)
+
+### Community 609 - "A / TR — App e prova"
+Cohesion: 0.67
+Nodes (3): A1 — script (P0), A / TR — App e prova, TR1 — script (P0)
+
+### Community 610 - "Scenari"
+Cohesion: 0.50
+Nodes (4): P0, P1, P2, Scenari
+
+### Community 611 - "D — Flusso danza (MOMO)"
+Cohesion: 0.67
+Nodes (3): D1 — script (P0), D2 — script (P0), D — Flusso danza (MOMO)
+
+### Community 613 - "kb_required"
+Cohesion: 0.67
+Nodes (3): default, type, kb_required
+
+### Community 614 - "require_prompt_rule"
+Cohesion: 0.67
+Nodes (3): require_prompt_rule, description, type
+
 ## Knowledge Gaps
-- **5585 isolated node(s):** `$schema`, `$id`, `title`, `description`, `type` (+5580 more)
+- **5814 isolated node(s):** `$schema`, `$id`, `title`, `description`, `type` (+5809 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **44 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **45 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Knowledge Base — CFIScuola (Centro Formazione Innovazione S.R.L.)` connect `Knowledge Base — CFIScuola (Centro Formazione Innovazione S.R.L.)` to `5.2 Università e CFU (7 corsi)`, `49878-centro-formazione-innovazione-kb.md`, `1. Catalogo Corsi — Informatica`, `8. Master e Università`, `2.5 Italiano per stranieri (12 corsi)`, `6.1 Sicurezza (26 corsi qui · 1 corsi cross-listed)`, `9.1 Webinar (5 corsi)`, `7. Personale ATA e DSGA`?**
+- **Why does `Knowledge Base — CFIScuola (Centro Formazione Innovazione S.R.L.)` connect `Knowledge Base — CFIScuola (Centro Formazione Innovazione S.R.L.)` to `5.2 Università e CFU (7 corsi)`, `49878-centro-formazione-innovazione-kb.md`, `1. Catalogo Corsi — Informatica`, `9.1 Webinar (5 corsi)`, `8. Master e Università`, `2.5 Italiano per stranieri (12 corsi)`, `6.1 Sicurezza (26 corsi qui · 1 corsi cross-listed)`, `7. Personale ATA e DSGA`?**
+  _High betweenness centrality (0.004) - this node is a cross-community bridge._
+- **Why does `Strategie WhatsApp per il Natale: La Guida Completa per Massimizzare Vendite e Soddisfazione Cliente` connect `Strategie WhatsApp per il Natale: La Guida Completa per Massimizzare Vendite e Soddisfazione Cliente` to `**4. Le Gift Card: Salvare le Vendite Quando il Tempo è Scaduto**`, `**1. Il Calendario dell’Avvento WhatsApp**`, `**5. Agenti AI: Scalare l’Assistenza Senza Perdere Qualità**`, `**7. Caroselli Multimediali: Lo Shopping Senza Sforzo**`, `**8. SMS Fallback: La Garanzia di Copertura Totale**`, `**9. Recupero Carrelli Abbandonati: Il ROI Più Alto del Tuo Stack**`, `**11. Automation Avanzate: Lavorare in Modo Più Intelligente**`, `**3. L’Ultimo Giorno di Spedizione Garantita**`, `**6. Il Floating Button: Abbattere le Barriere Tra Dubbio e Acquisto**`, `**L’Opportunità Che Non Puoi Permetterti di Perdere**`, `**10. Il Post-Vendita: Trasformare Clienti Natalizi in Clienti Annuali**`?**
   _High betweenness centrality (0.003) - this node is a cross-community bridge._
 - **What connects `$schema`, `$id`, `title` to the rest of the system?**
-  _5585 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _5814 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `INDEX.md` be split into smaller, more focused modules?**
   _Cohesion score 0.01694915254237288 - nodes in this community are weakly interconnected._
 - **Should `4.1 Insegnanti (62 corsi qui · 9 corsi cross-listed)` be split into smaller, more focused modules?**
@@ -2714,5 +2852,3 @@ _Questions this graph is uniquely positioned to answer:_
   _Cohesion score 0.04081632653061224 - nodes in this community are weakly interconnected._
 - **Should `properties` be split into smaller, more focused modules?**
   _Cohesion score 0.09090909090909091 - nodes in this community are weakly interconnected._
-- **Should `53298-prelievo-domicilio-prompt.md` be split into smaller, more focused modules?**
-  _Cohesion score 0.041666666666666664 - nodes in this community are weakly interconnected._

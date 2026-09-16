@@ -125,8 +125,8 @@
     "semantic_hash": ""
   },
   "backend-prompts/voice-support-prompt-zendesk.md": {
-    "mtime": 1789468846.3204384,
-    "ast_hash": "a5cb32ebcc1e2d111f4b18d457532eb7",
+    "mtime": 1782735004.925918,
+    "ast_hash": "377dfeef1b1e2e3919d719704a3ff8d2",
     "semantic_hash": ""
   },
   "clients-kb/37312-tecno-clinic-knowledge-base.md": {
@@ -525,8 +525,8 @@
     "semantic_hash": ""
   },
   "voice-agents-prompts/19077-giovanna.md": {
-    "mtime": 1789468845.9559264,
-    "ast_hash": "fc18f6960456fe6dfe5cd0764df010aa",
+    "mtime": 1782993689.301658,
+    "ast_hash": "6de3fcfe302c99551fe8d27690fc52b7",
     "semantic_hash": ""
   },
   "voice-agents-prompts/54633-digitalsharing-callback-writer.md": {
@@ -535,8 +535,8 @@
     "semantic_hash": ""
   },
   "voice-agents-prompts/54633-digitalsharing-spoki-ui.md": {
-    "mtime": 1789468847.310187,
-    "ast_hash": "264f2b70184f5143d9a94b19148535b5",
+    "mtime": 1784285447.5790093,
+    "ast_hash": "e2697cebfb6a5deec23705e79da95cd4",
     "semantic_hash": ""
   },
   "voice-agents-prompts/54633-digitalsharing-test-suite.md": {
@@ -550,23 +550,23 @@
     "semantic_hash": ""
   },
   "voice-agents-prompts/data-collection-voice-outbound.md": {
-    "mtime": 1789546143.63605,
-    "ast_hash": "54dd452b9edf576e2b8eae419faa008f",
+    "mtime": 1783494375.1236765,
+    "ast_hash": "9aa6ab193673d203fc635a3878e5e35c",
     "semantic_hash": ""
   },
   "voice-agents-prompts/lead-qualification-voice-inbound.md": {
-    "mtime": 1789479687.5925038,
-    "ast_hash": "d1328923b4c04071e6e09c755a15ac41",
+    "mtime": 1782976975.8726823,
+    "ast_hash": "1fc4b1527fb17ab292e7293c8dbfb3d2",
     "semantic_hash": ""
   },
   "voice-agents-prompts/lead-qualification-voice-outbound.md": {
-    "mtime": 1789479689.1349487,
-    "ast_hash": "bfa0da3bb10d08ba236cbd266a59eaf8",
+    "mtime": 1782976628.2368982,
+    "ast_hash": "e36c3f74f5ffb873312f8c83cdb337a5",
     "semantic_hash": ""
   },
   "voice-agents-prompts/sales-rep-voice-outbound.md": {
-    "mtime": 1789546143.63605,
-    "ast_hash": "4932fc9f319f765fcaabd221d3caa8fe",
+    "mtime": 1783494375.123659,
+    "ast_hash": "9c8387d6ecb6902161b218e7f068d459",
     "semantic_hash": ""
   },
   "voice-agents-prompts/sara_ai_voice.md": {
@@ -609,6 +609,11 @@
     "ast_hash": "634b94cb1900f932748af90a4682cc7a",
     "semantic_hash": ""
   },
+  "clients-prompt/_exports/.gstack/claude-available.json": {
+    "mtime": 1788859606.443118,
+    "ast_hash": "d767ace8877293ee9aba07bb20aca56f",
+    "semantic_hash": ""
+  },
   "clients-prompt/_exports/Spoki-prodotto-test-agente-handoff-langfuse-kb.json": {
     "mtime": 1788531052.4759912,
     "ast_hash": "4db34e5ece675039fb3cd8948e4381c5",
@@ -630,8 +635,8 @@
     "semantic_hash": ""
   },
   ".cursor/skills/spoki-prompt-test/SKILL.md": {
-    "mtime": 1789480442.2256463,
-    "ast_hash": "d5e0065ce3ddb16027f4d42b600633b6",
+    "mtime": 1789130079.6091578,
+    "ast_hash": "2ded4af5252b3d3baf0cc65ee1e0fe83",
     "semantic_hash": ""
   },
   ".cursor/skills/spoki-prompt-test/packs/booking.yaml": {
@@ -660,8 +665,8 @@
     "semantic_hash": ""
   },
   ".cursor/skills/spoki-prompt-test/templates.md": {
-    "mtime": 1789480423.9344044,
-    "ast_hash": "4a8a42780b85c247ef1a32dce9f69b6a",
+    "mtime": 1789130079.60594,
+    "ast_hash": "890389b1d044b90a98a44567d2360ec8",
     "semantic_hash": ""
   },
   "Libreria-prompt/3469-il-mio-villaggio-open-ticket-webhook-tool.md": {
@@ -2370,8 +2375,8 @@
     "semantic_hash": ""
   },
   "clients-prompt/9968-lead-qualification-voice-callback.md": {
-    "mtime": 1789468844.9079509,
-    "ast_hash": "058630d2a6dfcd036f797e134dbbed1f",
+    "mtime": 1789112536.5275686,
+    "ast_hash": "a249875a2e5853c6f62f1326913306a7",
     "semantic_hash": ""
   },
   "clients-prompt/99999-onboarding-actions-esempio-flow.md": {
@@ -2570,28 +2575,28 @@
     "semantic_hash": ""
   },
   "voice-agents-prompts/customer-support-text-inbound-ticket.md": {
-    "mtime": 1789466523.5831983,
-    "ast_hash": "0753ab22d3a2eb0db35dbaf59782d145",
+    "mtime": 1787923488.2429926,
+    "ast_hash": "7d176501213eba5ef49b28c6cf5df172",
     "semantic_hash": ""
   },
   "voice-agents-prompts/customer-support-voice-inbound.md": {
-    "mtime": 1789468797.2607734,
-    "ast_hash": "77aeea9758e9deff07bac4917b663db1",
+    "mtime": 1789140702.4157763,
+    "ast_hash": "16459fe12ec4e699e4231492d8d66138",
     "semantic_hash": ""
   },
   "voice-agents-prompts/inbound-appointment-booking-date.md": {
-    "mtime": 1789468794.3897877,
-    "ast_hash": "da3ff169b784d3f51017ff2ea34d7a24",
+    "mtime": 1788265059.6495228,
+    "ast_hash": "9320bb433b9cd8aa329008ae23187639",
     "semantic_hash": ""
   },
   "voice-agents-prompts/inbound-appointment-booking-datetime.md": {
-    "mtime": 1789468796.1391926,
-    "ast_hash": "60d586e1cd0497ffe61b371f213c1153",
+    "mtime": 1788772554.3638709,
+    "ast_hash": "f0c8ad3740d37b9889359c5a297a79c0",
     "semantic_hash": ""
   },
   "voice-agents-prompts/lead-qualification-voice-callback.md": {
-    "mtime": 1789468794.233709,
-    "ast_hash": "831770fef07f1aafaec0271be10fb6e5",
+    "mtime": 1789112536.5036323,
+    "ast_hash": "83a703866e18b31055f8fe5e6276def1",
     "semantic_hash": ""
   },
   "clients-kb/3469-il-mio-villaggio-kb-01-identita-ruolo-servizi.pdf": {
@@ -2725,118 +2730,8 @@
     "semantic_hash": ""
   },
   "voice-agents-prompts/customer-support-voice-inbound-native-ticket.md": {
-    "mtime": 1789468797.8114495,
-    "ast_hash": "06e3231f4e293166d73e741bd7fd1c2f",
-    "semantic_hash": ""
-  },
-  "clients-prompt/distretto-12-shopify-vendita-prompt.md": {
-    "mtime": 1789462824.5085022,
-    "ast_hash": "9a27121186dd68e285b21bb8ffa7c902",
-    "semantic_hash": ""
-  },
-  "text-agents-prompts/README.md": {
-    "mtime": 1789466523.7458344,
-    "ast_hash": "47b74161c2914d4161c6711252869dd2",
-    "semantic_hash": ""
-  },
-  "text-agents-prompts/appointment-followup-text-inbound.md": {
-    "mtime": 1789542135.834472,
-    "ast_hash": "cdc19bc5c22962faeee7c8109123c9aa",
-    "semantic_hash": ""
-  },
-  "text-agents-prompts/hospitality-booking-text-inbound.md": {
-    "mtime": 1789542134.973865,
-    "ast_hash": "90226c0a2f7c2d15ef13c288390bca15",
-    "semantic_hash": ""
-  },
-  "text-agents-prompts/ivr-triage-text-inbound.md": {
-    "mtime": 1789466517.1022737,
-    "ast_hash": "f399db8836d7b0db669ea544d6622ddb",
-    "semantic_hash": ""
-  },
-  "text-agents-prompts/lead-generation-text-inbound.md": {
-    "mtime": 1789466517.1017056,
-    "ast_hash": "d421afcf8a3d4c1e3bdb8851b166003c",
-    "semantic_hash": ""
-  },
-  "text-agents-prompts/marketing-text-inbound.md": {
-    "mtime": 1789466517.1026607,
-    "ast_hash": "dd701cc55fcf05e19e6fc4c5f2d522d6",
-    "semantic_hash": ""
-  },
-  "text-agents-prompts/sales-inquiry-text-inbound.md": {
-    "mtime": 1789479675.4665668,
-    "ast_hash": "f8a19575402af0c6c50f7274f557b4b0",
-    "semantic_hash": ""
-  },
-  "text-agents-prompts/survey-text-inbound.md": {
-    "mtime": 1789542130.7134526,
-    "ast_hash": "b3d8949c58f0b80da21c11e15984895c",
-    "semantic_hash": ""
-  },
-  "text-agents-prompts/technical-support-text-inbound.md": {
-    "mtime": 1789542128.7150533,
-    "ast_hash": "96dad9b62e19fbb4ef8860f7573386b6",
-    "semantic_hash": ""
-  },
-  "text-agents-prompts/upselling-text-inbound.md": {
-    "mtime": 1789466517.103559,
-    "ast_hash": "817bbcd532f6211ec4a50381577b75bd",
-    "semantic_hash": ""
-  },
-  "clients-prompt/57298-dibenedetto-automotive-knowledge-base.md": {
-    "mtime": 1789479865.4118826,
-    "ast_hash": "792370b723bd38f411b5e38417ab3ef9",
-    "semantic_hash": ""
-  },
-  "clients-prompt/57298-dibenedetto-automotive-text.md": {
-    "mtime": 1789485569.0264804,
-    "ast_hash": "daa3257ebdfca557b78ed61d3623ecf5",
-    "semantic_hash": ""
-  },
-  "clients-prompt/_backups/57298-dibenedetto-automotive-text.original.md": {
-    "mtime": 1789468294.7389452,
-    "ast_hash": "2551c3f1c9f91661c11a8707582d84d5",
-    "semantic_hash": ""
-  },
-  "clients-prompt/57298-dibenedetto-automotive-text-suite.yaml": {
-    "mtime": 1789485569.0269737,
-    "ast_hash": "caff4124f5e358848697d100625e1c5f",
-    "semantic_hash": ""
-  },
-  "clients-prompt/57298-dibenedetto-automotive-text-test-suite.md": {
-    "mtime": 1789485567.887071,
-    "ast_hash": "6ba7f37bf390f85cdb5ac2e002b790b3",
-    "semantic_hash": ""
-  },
-  "clients-prompt/_exports/DibenedettoAutomotive-scenari-test-agente-text.md": {
-    "mtime": 1789485172.8207495,
-    "ast_hash": "2d47e7b9a63bb2b0b95014f12333e110",
-    "semantic_hash": ""
-  },
-  "clients-prompt/_exports/DibenedettoAutomotive-scenari-test-agente-text.pdf": {
-    "mtime": 1789485182.5662572,
-    "ast_hash": "fdb63ceb182088ef9a46591ee16fc0aa",
-    "semantic_hash": ""
-  },
-  "voice-agents-prompts/ivr-triage-voice-inbound.md": {
-    "mtime": 1789543116.4982529,
-    "ast_hash": "66f4269113a5657a91bdf45ffcb5053c",
-    "semantic_hash": ""
-  },
-  "voice-agents-prompts/upselling-voice-inbound.md": {
-    "mtime": 1789543347.0539699,
-    "ast_hash": "8f9d4b427797712025b38e99e51d08dc",
-    "semantic_hash": ""
-  },
-  "clients-prompt/_exports/FarmaciaSimonelli-prenotazioni-whatsapp-spoki.md": {
-    "mtime": 1789544883.985997,
-    "ast_hash": "915c617dc5261eda8ed5ce2ebd9515e3",
-    "semantic_hash": ""
-  },
-  "clients-prompt/_exports/FarmaciaSimonelli-prenotazioni-whatsapp-spoki.pdf": {
-    "mtime": 1789544884.4831583,
-    "ast_hash": "3ddd6efb541361ff38f12511cf67e821",
+    "mtime": 1789380994.9073098,
+    "ast_hash": "b0a960372d91702bf673fb2a941f3067",
     "semantic_hash": ""
   }
 }

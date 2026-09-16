@@ -10,7 +10,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "cursor_skills_spoki_prompt_test_schema_agent_test_suite_schema",
-      "community": 127,
+      "community": 473,
       "community_name": "agent-test-suite.schema.json",
       "norm_label": "agent-test-suite.schema.json"
     },
@@ -21,7 +21,7 @@
       "source_location": "L2",
       "_origin": "ast",
       "id": "cursor_skills_spoki_prompt_test_schema_agent_test_suite_schema_schema",
-      "community": 127,
+      "community": 473,
       "community_name": "agent-test-suite.schema.json",
       "norm_label": "$schema"
     },
@@ -32,7 +32,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "cursor_skills_spoki_prompt_test_schema_agent_test_suite_schema_id",
-      "community": 127,
+      "community": 473,
       "community_name": "agent-test-suite.schema.json",
       "norm_label": "$id"
     },
@@ -43,7 +43,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "cursor_skills_spoki_prompt_test_schema_agent_test_suite_schema_title",
-      "community": 127,
+      "community": 473,
       "community_name": "agent-test-suite.schema.json",
       "norm_label": "title"
     },
@@ -54,7 +54,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "cursor_skills_spoki_prompt_test_schema_agent_test_suite_schema_description",
-      "community": 127,
+      "community": 473,
       "community_name": "agent-test-suite.schema.json",
       "norm_label": "description"
     },
@@ -65,7 +65,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "cursor_skills_spoki_prompt_test_schema_agent_test_suite_schema_type",
-      "community": 127,
+      "community": 473,
       "community_name": "agent-test-suite.schema.json",
       "norm_label": "type"
     },
@@ -76,7 +76,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "cursor_skills_spoki_prompt_test_schema_agent_test_suite_schema_additionalproperties",
-      "community": 127,
+      "community": 473,
       "community_name": "agent-test-suite.schema.json",
       "norm_label": "additionalproperties"
     },
@@ -143,7 +143,7 @@
       "_origin": "ast",
       "id": "cursor_skills_spoki_prompt_test_schema_agent_test_suite_schema_properties",
       "community": 127,
-      "community_name": "agent-test-suite.schema.json",
+      "community_name": "properties",
       "norm_label": "properties"
     },
     {
@@ -154,7 +154,7 @@
       "_origin": "ast",
       "id": "cursor_skills_spoki_prompt_test_schema_agent_test_suite_schema_properties_schema_version",
       "community": 127,
-      "community_name": "agent-test-suite.schema.json",
+      "community_name": "properties",
       "norm_label": "schema_version"
     },
     {
@@ -165,7 +165,7 @@
       "_origin": "ast",
       "id": "cursor_skills_spoki_prompt_test_schema_agent_test_suite_schema_schema_version_const",
       "community": 127,
-      "community_name": "agent-test-suite.schema.json",
+      "community_name": "properties",
       "norm_label": "const"
     },
     {
@@ -176,7 +176,7 @@
       "_origin": "ast",
       "id": "cursor_skills_spoki_prompt_test_schema_agent_test_suite_schema_properties_agent",
       "community": 127,
-      "community_name": "agent-test-suite.schema.json",
+      "community_name": "properties",
       "norm_label": "agent"
     },
     {
@@ -187,7 +187,7 @@
       "_origin": "ast",
       "id": "cursor_skills_spoki_prompt_test_schema_agent_test_suite_schema_agent_ref",
       "community": 127,
-      "community_name": "agent-test-suite.schema.json",
+      "community_name": "properties",
       "norm_label": "$ref"
     },
     {
@@ -198,7 +198,7 @@
       "_origin": "ast",
       "id": "cursor_skills_spoki_prompt_test_schema_agent_test_suite_schema_properties_prompt",
       "community": 127,
-      "community_name": "agent-test-suite.schema.json",
+      "community_name": "properties",
       "norm_label": "prompt"
     },
     {
@@ -209,7 +209,7 @@
       "_origin": "ast",
       "id": "cursor_skills_spoki_prompt_test_schema_agent_test_suite_schema_prompt_ref",
       "community": 127,
-      "community_name": "agent-test-suite.schema.json",
+      "community_name": "properties",
       "norm_label": "$ref"
     },
     {
@@ -330,7 +330,7 @@
       "_origin": "ast",
       "id": "cursor_skills_spoki_prompt_test_schema_agent_test_suite_schema_properties_variables",
       "community": 127,
-      "community_name": "agent-test-suite.schema.json",
+      "community_name": "properties",
       "norm_label": "variables"
     },
     {
@@ -341,7 +341,7 @@
       "_origin": "ast",
       "id": "cursor_skills_spoki_prompt_test_schema_agent_test_suite_schema_variables_type",
       "community": 127,
-      "community_name": "agent-test-suite.schema.json",
+      "community_name": "properties",
       "norm_label": "type"
     },
     {
@@ -352,7 +352,7 @@
       "_origin": "ast",
       "id": "cursor_skills_spoki_prompt_test_schema_agent_test_suite_schema_variables_additionalproperties",
       "community": 127,
-      "community_name": "agent-test-suite.schema.json",
+      "community_name": "properties",
       "norm_label": "additionalproperties"
     },
     {
@@ -363,7 +363,7 @@
       "_origin": "ast",
       "id": "cursor_skills_spoki_prompt_test_schema_agent_test_suite_schema_additionalproperties_type",
       "community": 127,
-      "community_name": "agent-test-suite.schema.json",
+      "community_name": "properties",
       "norm_label": "type"
     },
     {
@@ -374,7 +374,7 @@
       "_origin": "ast",
       "id": "cursor_skills_spoki_prompt_test_schema_agent_test_suite_schema_variables_description",
       "community": 127,
-      "community_name": "agent-test-suite.schema.json",
+      "community_name": "properties",
       "norm_label": "description"
     },
     {
@@ -450,8 +450,8 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "cursor_skills_spoki_prompt_test_schema_agent_test_suite_schema_defs_agent",
-      "community": 3,
-      "community_name": "properties",
+      "community": 418,
+      "community_name": "required",
       "norm_label": "agent"
     },
     {
@@ -461,8 +461,8 @@
       "source_location": "L31",
       "_origin": "ast",
       "id": "cursor_skills_spoki_prompt_test_schema_agent_test_suite_schema_agent_type",
-      "community": 3,
-      "community_name": "properties",
+      "community": 418,
+      "community_name": "required",
       "norm_label": "type"
     },
     {
@@ -472,8 +472,8 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "cursor_skills_spoki_prompt_test_schema_agent_test_suite_schema_agent_additionalproperties",
-      "community": 3,
-      "community_name": "properties",
+      "community": 418,
+      "community_name": "required",
       "norm_label": "additionalproperties"
     },
     {
@@ -483,8 +483,8 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "cursor_skills_spoki_prompt_test_schema_agent_test_suite_schema_agent_required",
-      "community": 3,
-      "community_name": "properties",
+      "community": 418,
+      "community_name": "required",
       "norm_label": "required"
     },
     {
@@ -494,8 +494,8 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "ref_account_id",
-      "community": 3,
-      "community_name": "properties",
+      "community": 418,
+      "community_name": "required",
       "norm_label": "account_id"
     },
     {
@@ -505,8 +505,8 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "ref_name",
-      "community": 3,
-      "community_name": "properties",
+      "community": 418,
+      "community_name": "required",
       "norm_label": "name"
     },
     {
@@ -516,8 +516,8 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "ref_tipo",
-      "community": 3,
-      "community_name": "properties",
+      "community": 418,
+      "community_name": "required",
       "norm_label": "tipo"
     },
     {
@@ -527,8 +527,8 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "ref_ambiente",
-      "community": 3,
-      "community_name": "properties",
+      "community": 418,
+      "community_name": "required",
       "norm_label": "ambiente"
     },
     {
@@ -659,8 +659,8 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "cursor_skills_spoki_prompt_test_schema_agent_test_suite_schema_properties_tipo",
-      "community": 3,
-      "community_name": "properties",
+      "community": 585,
+      "community_name": "tipo",
       "norm_label": "tipo"
     },
     {
@@ -670,8 +670,8 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "cursor_skills_spoki_prompt_test_schema_agent_test_suite_schema_tipo_type",
-      "community": 3,
-      "community_name": "properties",
+      "community": 585,
+      "community_name": "tipo",
       "norm_label": "type"
     },
     {
@@ -681,8 +681,8 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "cursor_skills_spoki_prompt_test_schema_agent_test_suite_schema_tipo_enum",
-      "community": 3,
-      "community_name": "properties",
+      "community": 585,
+      "community_name": "tipo",
       "norm_label": "enum"
     },
     {
@@ -692,8 +692,8 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "ref_testuale",
-      "community": 3,
-      "community_name": "properties",
+      "community": 585,
+      "community_name": "tipo",
       "norm_label": "testuale"
     },
     {
@@ -703,8 +703,8 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "ref_vocale",
-      "community": 3,
-      "community_name": "properties",
+      "community": 585,
+      "community_name": "tipo",
       "norm_label": "vocale"
     },
     {
@@ -714,8 +714,8 @@
       "source_location": "L40",
       "_origin": "ast",
       "id": "cursor_skills_spoki_prompt_test_schema_agent_test_suite_schema_properties_ambiente",
-      "community": 3,
-      "community_name": "properties",
+      "community": 234,
+      "community_name": "enum",
       "norm_label": "ambiente"
     },
     {
@@ -725,8 +725,8 @@
       "source_location": "L40",
       "_origin": "ast",
       "id": "cursor_skills_spoki_prompt_test_schema_agent_test_suite_schema_ambiente_type",
-      "community": 3,
-      "community_name": "properties",
+      "community": 234,
+      "community_name": "enum",
       "norm_label": "type"
     },
     {
@@ -736,8 +736,8 @@
       "source_location": "L40",
       "_origin": "ast",
       "id": "cursor_skills_spoki_prompt_test_schema_agent_test_suite_schema_ambiente_enum",
-      "community": 3,
-      "community_name": "properties",
+      "community": 234,
+      "community_name": "enum",
       "norm_label": "enum"
     },
     {
@@ -747,8 +747,8 @@
       "source_location": "L40",
       "_origin": "ast",
       "id": "ref_playground",
-      "community": 3,
-      "community_name": "properties",
+      "community": 234,
+      "community_name": "enum",
       "norm_label": "playground"
     },
     {
@@ -758,8 +758,8 @@
       "source_location": "L40",
       "_origin": "ast",
       "id": "ref_live",
-      "community": 3,
-      "community_name": "properties",
+      "community": 234,
+      "community_name": "enum",
       "norm_label": "live"
     },
     {
@@ -769,8 +769,8 @@
       "source_location": "L40",
       "_origin": "ast",
       "id": "ref_entrambi",
-      "community": 3,
-      "community_name": "properties",
+      "community": 234,
+      "community_name": "enum",
       "norm_label": "entrambi"
     },
     {
@@ -1198,8 +1198,8 @@
       "source_location": "L71",
       "_origin": "ast",
       "id": "cursor_skills_spoki_prompt_test_schema_agent_test_suite_schema_defs_environment",
-      "community": 3,
-      "community_name": "properties",
+      "community": 234,
+      "community_name": "enum",
       "norm_label": "environment"
     },
     {
@@ -1209,8 +1209,8 @@
       "source_location": "L72",
       "_origin": "ast",
       "id": "cursor_skills_spoki_prompt_test_schema_agent_test_suite_schema_environment_type",
-      "community": 3,
-      "community_name": "properties",
+      "community": 234,
+      "community_name": "enum",
       "norm_label": "type"
     },
     {
@@ -1220,8 +1220,8 @@
       "source_location": "L73",
       "_origin": "ast",
       "id": "cursor_skills_spoki_prompt_test_schema_agent_test_suite_schema_environment_enum",
-      "community": 3,
-      "community_name": "properties",
+      "community": 234,
+      "community_name": "enum",
       "norm_label": "enum"
     },
     {
@@ -1231,8 +1231,8 @@
       "source_location": "L73",
       "_origin": "ast",
       "id": "ref_live_ok",
-      "community": 3,
-      "community_name": "properties",
+      "community": 234,
+      "community_name": "enum",
       "norm_label": "live_ok"
     },
     {
@@ -1242,8 +1242,8 @@
       "source_location": "L73",
       "_origin": "ast",
       "id": "ref_twin_text",
-      "community": 3,
-      "community_name": "properties",
+      "community": 234,
+      "community_name": "enum",
       "norm_label": "twin_text"
     },
     {
@@ -1253,8 +1253,8 @@
       "source_location": "L73",
       "_origin": "ast",
       "id": "ref_voice_playground",
-      "community": 3,
-      "community_name": "properties",
+      "community": 234,
+      "community_name": "enum",
       "norm_label": "voice_playground"
     },
     {
@@ -1264,8 +1264,8 @@
       "source_location": "L73",
       "_origin": "ast",
       "id": "ref_voice_outbound",
-      "community": 3,
-      "community_name": "properties",
+      "community": 234,
+      "community_name": "enum",
       "norm_label": "voice_outbound"
     },
     {
@@ -1275,8 +1275,8 @@
       "source_location": "L74",
       "_origin": "ast",
       "id": "cursor_skills_spoki_prompt_test_schema_agent_test_suite_schema_environment_description",
-      "community": 3,
-      "community_name": "properties",
+      "community": 234,
+      "community_name": "enum",
       "norm_label": "description"
     },
     {
@@ -1286,8 +1286,8 @@
       "source_location": "L76",
       "_origin": "ast",
       "id": "cursor_skills_spoki_prompt_test_schema_agent_test_suite_schema_defs_classify_on_fail",
-      "community": 265,
-      "community_name": "enum",
+      "community": 115,
+      "community_name": "$defs",
       "norm_label": "classify_on_fail"
     },
     {
@@ -1297,8 +1297,8 @@
       "source_location": "L77",
       "_origin": "ast",
       "id": "cursor_skills_spoki_prompt_test_schema_agent_test_suite_schema_classify_on_fail_type",
-      "community": 265,
-      "community_name": "enum",
+      "community": 115,
+      "community_name": "$defs",
       "norm_label": "type"
     },
     {
@@ -2067,8 +2067,8 @@
       "source_location": "L140",
       "_origin": "ast",
       "id": "cursor_skills_spoki_prompt_test_schema_agent_test_suite_schema_properties_id",
-      "community": 41,
-      "community_name": "properties",
+      "community": 603,
+      "community_name": "id",
       "norm_label": "id"
     },
     {
@@ -2078,8 +2078,8 @@
       "source_location": "L141",
       "_origin": "ast",
       "id": "cursor_skills_spoki_prompt_test_schema_agent_test_suite_schema_id_type",
-      "community": 41,
-      "community_name": "properties",
+      "community": 603,
+      "community_name": "id",
       "norm_label": "type"
     },
     {
@@ -2089,8 +2089,8 @@
       "source_location": "L142",
       "_origin": "ast",
       "id": "cursor_skills_spoki_prompt_test_schema_agent_test_suite_schema_id_pattern",
-      "community": 41,
-      "community_name": "properties",
+      "community": 603,
+      "community_name": "id",
       "norm_label": "pattern"
     },
     {
@@ -2100,8 +2100,8 @@
       "source_location": "L143",
       "_origin": "ast",
       "id": "cursor_skills_spoki_prompt_test_schema_agent_test_suite_schema_id_description",
-      "community": 41,
-      "community_name": "properties",
+      "community": 603,
+      "community_name": "id",
       "norm_label": "description"
     },
     {
@@ -2254,8 +2254,8 @@
       "source_location": "L154",
       "_origin": "ast",
       "id": "cursor_skills_spoki_prompt_test_schema_agent_test_suite_schema_properties_require_prompt_rule",
-      "community": 41,
-      "community_name": "properties",
+      "community": 614,
+      "community_name": "require_prompt_rule",
       "norm_label": "require_prompt_rule"
     },
     {
@@ -2265,8 +2265,8 @@
       "source_location": "L155",
       "_origin": "ast",
       "id": "cursor_skills_spoki_prompt_test_schema_agent_test_suite_schema_require_prompt_rule_type",
-      "community": 41,
-      "community_name": "properties",
+      "community": 614,
+      "community_name": "require_prompt_rule",
       "norm_label": "type"
     },
     {
@@ -2276,8 +2276,8 @@
       "source_location": "L156",
       "_origin": "ast",
       "id": "cursor_skills_spoki_prompt_test_schema_agent_test_suite_schema_require_prompt_rule_description",
-      "community": 41,
-      "community_name": "properties",
+      "community": 614,
+      "community_name": "require_prompt_rule",
       "norm_label": "description"
     },
     {
@@ -2331,8 +2331,8 @@
       "source_location": "L163",
       "_origin": "ast",
       "id": "cursor_skills_spoki_prompt_test_schema_agent_test_suite_schema_properties_kb_required",
-      "community": 41,
-      "community_name": "properties",
+      "community": 613,
+      "community_name": "kb_required",
       "norm_label": "kb_required"
     },
     {
@@ -2342,8 +2342,8 @@
       "source_location": "L163",
       "_origin": "ast",
       "id": "cursor_skills_spoki_prompt_test_schema_agent_test_suite_schema_kb_required_type",
-      "community": 41,
-      "community_name": "properties",
+      "community": 613,
+      "community_name": "kb_required",
       "norm_label": "type"
     },
     {
@@ -2353,8 +2353,8 @@
       "source_location": "L163",
       "_origin": "ast",
       "id": "cursor_skills_spoki_prompt_test_schema_agent_test_suite_schema_kb_required_default",
-      "community": 41,
-      "community_name": "properties",
+      "community": 613,
+      "community_name": "kb_required",
       "norm_label": "default"
     },
     {
@@ -2771,8 +2771,8 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "ref_need",
-      "community": 372,
-      "community_name": "contact",
+      "community": 34,
+      "community_name": "collection_order",
       "norm_label": "need"
     },
     {
@@ -3113,7 +3113,7 @@
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_outbound_sales_agent_vertical_config_generic_b2b_qualification_status_values",
       "community": 137,
-      "community_name": "automotive",
+      "community_name": "local_services",
       "norm_label": "qualification_status_values"
     },
     {
@@ -3124,7 +3124,7 @@
       "_origin": "ast",
       "id": "outbound_sales_agent_vertical_config_json_ref_qualified",
       "community": 137,
-      "community_name": "automotive",
+      "community_name": "local_services",
       "norm_label": "qualified"
     },
     {
@@ -3135,7 +3135,7 @@
       "_origin": "ast",
       "id": "outbound_sales_agent_vertical_config_json_ref_not_qualified",
       "community": 137,
-      "community_name": "automotive",
+      "community_name": "local_services",
       "norm_label": "not_qualified"
     },
     {
@@ -3146,7 +3146,7 @@
       "_origin": "ast",
       "id": "outbound_sales_agent_vertical_config_json_ref_nurture",
       "community": 137,
-      "community_name": "automotive",
+      "community_name": "local_services",
       "norm_label": "nurture"
     },
     {
@@ -3233,8 +3233,8 @@
       "source_location": "L61",
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_outbound_sales_agent_vertical_config_verticals_automotive",
-      "community": 137,
-      "community_name": "automotive",
+      "community": 31,
+      "community_name": "pre_populated",
       "norm_label": "automotive"
     },
     {
@@ -3244,8 +3244,8 @@
       "source_location": "L62",
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_outbound_sales_agent_vertical_config_automotive_label",
-      "community": 137,
-      "community_name": "automotive",
+      "community": 31,
+      "community_name": "pre_populated",
       "norm_label": "label"
     },
     {
@@ -3255,8 +3255,8 @@
       "source_location": "L63",
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_outbound_sales_agent_vertical_config_automotive_description",
-      "community": 137,
-      "community_name": "automotive",
+      "community": 31,
+      "community_name": "pre_populated",
       "norm_label": "description"
     },
     {
@@ -3409,8 +3409,8 @@
       "source_location": "L90",
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_outbound_sales_agent_vertical_config_automotive_lead_complete_when",
-      "community": 137,
-      "community_name": "automotive",
+      "community": 31,
+      "community_name": "pre_populated",
       "norm_label": "lead_complete_when"
     },
     {
@@ -3421,7 +3421,7 @@
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_outbound_sales_agent_vertical_config_automotive_qualification_status_values",
       "community": 137,
-      "community_name": "automotive",
+      "community_name": "local_services",
       "norm_label": "qualification_status_values"
     },
     {
@@ -3442,8 +3442,8 @@
       "source_location": "L99",
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_outbound_sales_agent_vertical_config_verticals_local_services",
-      "community": 289,
-      "community_name": "generic_b2b",
+      "community": 137,
+      "community_name": "local_services",
       "norm_label": "local_services"
     },
     {
@@ -3453,8 +3453,8 @@
       "source_location": "L100",
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_outbound_sales_agent_vertical_config_local_services_label",
-      "community": 289,
-      "community_name": "generic_b2b",
+      "community": 137,
+      "community_name": "local_services",
       "norm_label": "label"
     },
     {
@@ -3464,8 +3464,8 @@
       "source_location": "L101",
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_outbound_sales_agent_vertical_config_local_services_description",
-      "community": 289,
-      "community_name": "generic_b2b",
+      "community": 137,
+      "community_name": "local_services",
       "norm_label": "description"
     },
     {
@@ -3497,8 +3497,8 @@
       "source_location": "L109",
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_outbound_sales_agent_vertical_config_required_location",
-      "community": 34,
-      "community_name": "collection_order",
+      "community": 372,
+      "community_name": "contact",
       "norm_label": "location"
     },
     {
@@ -3508,8 +3508,8 @@
       "source_location": "L109",
       "_origin": "ast",
       "id": "ref_city",
-      "community": 34,
-      "community_name": "collection_order",
+      "community": 372,
+      "community_name": "contact",
       "norm_label": "city"
     },
     {
@@ -3519,8 +3519,8 @@
       "source_location": "L109",
       "_origin": "ast",
       "id": "ref_postal_code",
-      "community": 34,
-      "community_name": "collection_order",
+      "community": 372,
+      "community_name": "contact",
       "norm_label": "postal_code"
     },
     {
@@ -3585,8 +3585,8 @@
       "source_location": "L128",
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_outbound_sales_agent_vertical_config_local_services_lead_complete_when",
-      "community": 289,
-      "community_name": "generic_b2b",
+      "community": 137,
+      "community_name": "local_services",
       "norm_label": "lead_complete_when"
     },
     {
@@ -3597,7 +3597,7 @@
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_outbound_sales_agent_vertical_config_local_services_qualification_status_values",
       "community": 137,
-      "community_name": "automotive",
+      "community_name": "local_services",
       "norm_label": "qualification_status_values"
     },
     {
@@ -3618,8 +3618,8 @@
       "source_location": "L137",
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_outbound_sales_agent_vertical_config_verticals_real_estate",
-      "community": 585,
-      "community_name": "real_estate",
+      "community": 289,
+      "community_name": "generic_b2b",
       "norm_label": "real_estate"
     },
     {
@@ -3629,8 +3629,8 @@
       "source_location": "L138",
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_outbound_sales_agent_vertical_config_real_estate_label",
-      "community": 585,
-      "community_name": "real_estate",
+      "community": 289,
+      "community_name": "generic_b2b",
       "norm_label": "label"
     },
     {
@@ -3640,8 +3640,8 @@
       "source_location": "L139",
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_outbound_sales_agent_vertical_config_real_estate_description",
-      "community": 585,
-      "community_name": "real_estate",
+      "community": 289,
+      "community_name": "generic_b2b",
       "norm_label": "description"
     },
     {
@@ -3739,8 +3739,8 @@
       "source_location": "L166",
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_outbound_sales_agent_vertical_config_real_estate_lead_complete_when",
-      "community": 585,
-      "community_name": "real_estate",
+      "community": 289,
+      "community_name": "generic_b2b",
       "norm_label": "lead_complete_when"
     },
     {
@@ -3751,7 +3751,7 @@
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_outbound_sales_agent_vertical_config_real_estate_qualification_status_values",
       "community": 137,
-      "community_name": "automotive",
+      "community_name": "local_services",
       "norm_label": "qualification_status_values"
     },
     {
@@ -4960,8 +4960,8 @@
       "source_location": "L79",
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_outbound_sales_agent_webhook_payload_schema_properties_vehicle_condition",
-      "community": 407,
-      "community_name": "enum",
+      "community": 93,
+      "community_name": "properties",
       "norm_label": "vehicle_condition"
     },
     {
@@ -4971,8 +4971,8 @@
       "source_location": "L80",
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_outbound_sales_agent_webhook_payload_schema_vehicle_condition_type",
-      "community": 407,
-      "community_name": "enum",
+      "community": 93,
+      "community_name": "properties",
       "norm_label": "type"
     },
     {
@@ -4982,8 +4982,8 @@
       "source_location": "L81",
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_outbound_sales_agent_webhook_payload_schema_vehicle_condition_enum",
-      "community": 407,
-      "community_name": "enum",
+      "community": 93,
+      "community_name": "properties",
       "norm_label": "enum"
     },
     {
@@ -4993,8 +4993,8 @@
       "source_location": "L81",
       "_origin": "ast",
       "id": "ref_new",
-      "community": 407,
-      "community_name": "enum",
+      "community": 93,
+      "community_name": "properties",
       "norm_label": "new"
     },
     {
@@ -5004,8 +5004,8 @@
       "source_location": "L81",
       "_origin": "ast",
       "id": "ref_used",
-      "community": 407,
-      "community_name": "enum",
+      "community": 93,
+      "community_name": "properties",
       "norm_label": "used"
     },
     {
@@ -5015,8 +5015,8 @@
       "source_location": "L81",
       "_origin": "ast",
       "id": "ref_km_zero",
-      "community": 407,
-      "community_name": "enum",
+      "community": 93,
+      "community_name": "properties",
       "norm_label": "km_zero"
     },
     {
@@ -5026,8 +5026,8 @@
       "source_location": "L81",
       "_origin": "ast",
       "id": "ref_undecided",
-      "community": 407,
-      "community_name": "enum",
+      "community": 93,
+      "community_name": "properties",
       "norm_label": "undecided"
     },
     {
@@ -5103,8 +5103,8 @@
       "source_location": "L86",
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_outbound_sales_agent_webhook_payload_schema_properties_transaction_type",
-      "community": 417,
-      "community_name": "enum",
+      "community": 93,
+      "community_name": "properties",
       "norm_label": "transaction_type"
     },
     {
@@ -5114,8 +5114,8 @@
       "source_location": "L87",
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_outbound_sales_agent_webhook_payload_schema_transaction_type_type",
-      "community": 417,
-      "community_name": "enum",
+      "community": 93,
+      "community_name": "properties",
       "norm_label": "type"
     },
     {
@@ -5125,8 +5125,8 @@
       "source_location": "L88",
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_outbound_sales_agent_webhook_payload_schema_transaction_type_enum",
-      "community": 417,
-      "community_name": "enum",
+      "community": 93,
+      "community_name": "properties",
       "norm_label": "enum"
     },
     {
@@ -5136,8 +5136,8 @@
       "source_location": "L88",
       "_origin": "ast",
       "id": "ref_buy",
-      "community": 417,
-      "community_name": "enum",
+      "community": 93,
+      "community_name": "properties",
       "norm_label": "buy"
     },
     {
@@ -5147,8 +5147,8 @@
       "source_location": "L88",
       "_origin": "ast",
       "id": "ref_rent",
-      "community": 417,
-      "community_name": "enum",
+      "community": 93,
+      "community_name": "properties",
       "norm_label": "rent"
     },
     {
@@ -5158,8 +5158,8 @@
       "source_location": "L88",
       "_origin": "ast",
       "id": "ref_sell",
-      "community": 417,
-      "community_name": "enum",
+      "community": 93,
+      "community_name": "properties",
       "norm_label": "sell"
     },
     {
@@ -5367,8 +5367,8 @@
       "source_location": "L105",
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_outbound_sales_agent_webhook_payload_schema_properties_next_action",
-      "community": 452,
-      "community_name": "next_action",
+      "community": 104,
+      "community_name": "properties",
       "norm_label": "next_action"
     },
     {
@@ -5378,8 +5378,8 @@
       "source_location": "L106",
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_outbound_sales_agent_webhook_payload_schema_next_action_type",
-      "community": 452,
-      "community_name": "next_action",
+      "community": 104,
+      "community_name": "properties",
       "norm_label": "type"
     },
     {
@@ -5389,8 +5389,8 @@
       "source_location": "L107",
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_outbound_sales_agent_webhook_payload_schema_next_action_required",
-      "community": 452,
-      "community_name": "next_action",
+      "community": 104,
+      "community_name": "properties",
       "norm_label": "required"
     },
     {
@@ -5400,8 +5400,8 @@
       "source_location": "L107",
       "_origin": "ast",
       "id": "outbound_sales_agent_webhook_payload_schema_json_ref_type",
-      "community": 452,
-      "community_name": "next_action",
+      "community": 104,
+      "community_name": "properties",
       "norm_label": "type"
     },
     {
@@ -5411,8 +5411,8 @@
       "source_location": "L108",
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_outbound_sales_agent_webhook_payload_schema_next_action_additionalproperties",
-      "community": 452,
-      "community_name": "next_action",
+      "community": 104,
+      "community_name": "properties",
       "norm_label": "additionalproperties"
     },
     {
@@ -5433,8 +5433,8 @@
       "source_location": "L110",
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_outbound_sales_agent_webhook_payload_schema_properties_type",
-      "community": 104,
-      "community_name": "properties",
+      "community": 417,
+      "community_name": "enum",
       "norm_label": "type"
     },
     {
@@ -5444,8 +5444,8 @@
       "source_location": "L111",
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_outbound_sales_agent_webhook_payload_schema_type_type",
-      "community": 104,
-      "community_name": "properties",
+      "community": 417,
+      "community_name": "enum",
       "norm_label": "type"
     },
     {
@@ -5455,8 +5455,8 @@
       "source_location": "L112",
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_outbound_sales_agent_webhook_payload_schema_type_enum",
-      "community": 104,
-      "community_name": "properties",
+      "community": 417,
+      "community_name": "enum",
       "norm_label": "enum"
     },
     {
@@ -5466,8 +5466,8 @@
       "source_location": "L112",
       "_origin": "ast",
       "id": "outbound_sales_agent_webhook_payload_schema_json_ref_callback_requested",
-      "community": 104,
-      "community_name": "properties",
+      "community": 417,
+      "community_name": "enum",
       "norm_label": "callback_requested"
     },
     {
@@ -5477,8 +5477,8 @@
       "source_location": "L112",
       "_origin": "ast",
       "id": "outbound_sales_agent_webhook_payload_schema_json_ref_appointment_booked",
-      "community": 104,
-      "community_name": "properties",
+      "community": 417,
+      "community_name": "enum",
       "norm_label": "appointment_booked"
     },
     {
@@ -5488,8 +5488,8 @@
       "source_location": "L112",
       "_origin": "ast",
       "id": "outbound_sales_agent_webhook_payload_schema_json_ref_send_quote",
-      "community": 104,
-      "community_name": "properties",
+      "community": 417,
+      "community_name": "enum",
       "norm_label": "send_quote"
     },
     {
@@ -5499,8 +5499,8 @@
       "source_location": "L112",
       "_origin": "ast",
       "id": "outbound_sales_agent_webhook_payload_schema_json_ref_send_brochure",
-      "community": 104,
-      "community_name": "properties",
+      "community": 417,
+      "community_name": "enum",
       "norm_label": "send_brochure"
     },
     {
@@ -5510,8 +5510,8 @@
       "source_location": "L112",
       "_origin": "ast",
       "id": "outbound_sales_agent_webhook_payload_schema_json_ref_call_back_later",
-      "community": 104,
-      "community_name": "properties",
+      "community": 417,
+      "community_name": "enum",
       "norm_label": "call_back_later"
     },
     {
@@ -5521,8 +5521,8 @@
       "source_location": "L112",
       "_origin": "ast",
       "id": "outbound_sales_agent_webhook_payload_schema_json_ref_no_interest",
-      "community": 104,
-      "community_name": "properties",
+      "community": 417,
+      "community_name": "enum",
       "norm_label": "no_interest"
     },
     {
@@ -5840,8 +5840,8 @@
       "source_location": "L144",
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_outbound_sales_agent_webhook_payload_schema_properties_outcome",
-      "community": 6,
-      "community_name": "properties",
+      "community": 427,
+      "community_name": "enum",
       "norm_label": "outcome"
     },
     {
@@ -5851,8 +5851,8 @@
       "source_location": "L145",
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_outbound_sales_agent_webhook_payload_schema_outcome_type",
-      "community": 6,
-      "community_name": "properties",
+      "community": 427,
+      "community_name": "enum",
       "norm_label": "type"
     },
     {
@@ -5862,8 +5862,8 @@
       "source_location": "L146",
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_outbound_sales_agent_webhook_payload_schema_outcome_enum",
-      "community": 6,
-      "community_name": "properties",
+      "community": 427,
+      "community_name": "enum",
       "norm_label": "enum"
     },
     {
@@ -5873,8 +5873,8 @@
       "source_location": "L146",
       "_origin": "ast",
       "id": "ref_answered",
-      "community": 6,
-      "community_name": "properties",
+      "community": 427,
+      "community_name": "enum",
       "norm_label": "answered"
     },
     {
@@ -5884,8 +5884,8 @@
       "source_location": "L146",
       "_origin": "ast",
       "id": "ref_no_answer",
-      "community": 6,
-      "community_name": "properties",
+      "community": 427,
+      "community_name": "enum",
       "norm_label": "no_answer"
     },
     {
@@ -5895,8 +5895,8 @@
       "source_location": "L146",
       "_origin": "ast",
       "id": "ref_busy",
-      "community": 6,
-      "community_name": "properties",
+      "community": 427,
+      "community_name": "enum",
       "norm_label": "busy"
     },
     {
@@ -5906,8 +5906,8 @@
       "source_location": "L146",
       "_origin": "ast",
       "id": "ref_voicemail",
-      "community": 6,
-      "community_name": "properties",
+      "community": 427,
+      "community_name": "enum",
       "norm_label": "voicemail"
     },
     {
@@ -5917,8 +5917,8 @@
       "source_location": "L146",
       "_origin": "ast",
       "id": "ref_wrong_number",
-      "community": 6,
-      "community_name": "properties",
+      "community": 427,
+      "community_name": "enum",
       "norm_label": "wrong_number"
     },
     {
@@ -7688,8 +7688,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "libreria_prompt_34768_tuotempo_add_appointment_placeholder_34768_lucia_placeholder_tool_tuotempo_add_appointment",
-      "community": 454,
-      "community_name": "34768 LucIA \u2014 PLACEHOLDER tool `tuotempo_search_availability`",
+      "community": 601,
+      "community_name": "34768 LucIA \u2014 PLACEHOLDER tool `tuotempo_add_appointment`",
       "norm_label": "34768 lucia \u2014 placeholder tool `tuotempo_add_appointment`"
     },
     {
@@ -7699,8 +7699,8 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "libreria_prompt_34768_tuotempo_add_appointment_placeholder_configurazione_stub_form_spoki",
-      "community": 454,
-      "community_name": "34768 LucIA \u2014 PLACEHOLDER tool `tuotempo_search_availability`",
+      "community": 601,
+      "community_name": "34768 LucIA \u2014 PLACEHOLDER tool `tuotempo_add_appointment`",
       "norm_label": "configurazione stub (form spoki)"
     },
     {
@@ -7710,8 +7710,8 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "libreria_prompt_34768_tuotempo_add_appointment_placeholder_checklist_attivazione_quando_arriva_il_cliente",
-      "community": 454,
-      "community_name": "34768 LucIA \u2014 PLACEHOLDER tool `tuotempo_search_availability`",
+      "community": 601,
+      "community_name": "34768 LucIA \u2014 PLACEHOLDER tool `tuotempo_add_appointment`",
       "norm_label": "checklist attivazione (quando arriva il cliente)"
     },
     {
@@ -7721,8 +7721,8 @@
       "source_location": "L37",
       "_origin": "ast",
       "id": "libreria_prompt_34768_tuotempo_add_appointment_placeholder_policy_lucia",
-      "community": 454,
-      "community_name": "34768 LucIA \u2014 PLACEHOLDER tool `tuotempo_search_availability`",
+      "community": 601,
+      "community_name": "34768 LucIA \u2014 PLACEHOLDER tool `tuotempo_add_appointment`",
       "norm_label": "policy lucia"
     },
     {
@@ -9173,8 +9173,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "libreria_prompt_tuotempo_search_availability_webhook_tool_tool_webhook_cerca_disponibilit\u00e0_tuotempo_tuotempo_search_availability",
-      "community": 327,
-      "community_name": "Tool Webhook \"Prenota appuntamento Tuotempo\" (tuotempo_add_appointment)",
+      "community": 589,
+      "community_name": "Tool Webhook \"Cerca disponibilit\u00e0 Tuotempo\" (tuotempo_search_availability)",
       "norm_label": "tool webhook \"cerca disponibilita tuotempo\" (tuotempo_search_availability)"
     },
     {
@@ -9184,8 +9184,8 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "libreria_prompt_tuotempo_search_availability_webhook_tool_url_dinamici",
-      "community": 327,
-      "community_name": "Tool Webhook \"Prenota appuntamento Tuotempo\" (tuotempo_add_appointment)",
+      "community": 589,
+      "community_name": "Tool Webhook \"Cerca disponibilit\u00e0 Tuotempo\" (tuotempo_search_availability)",
       "norm_label": "url dinamici"
     },
     {
@@ -9195,8 +9195,8 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "libreria_prompt_tuotempo_search_availability_webhook_tool_configurazione_tool_da_incollare_nel_form_spoki",
-      "community": 327,
-      "community_name": "Tool Webhook \"Prenota appuntamento Tuotempo\" (tuotempo_add_appointment)",
+      "community": 589,
+      "community_name": "Tool Webhook \"Cerca disponibilit\u00e0 Tuotempo\" (tuotempo_search_availability)",
       "norm_label": "configurazione tool (da incollare nel form spoki)"
     },
     {
@@ -9206,8 +9206,8 @@
       "source_location": "L38",
       "_origin": "ast",
       "id": "libreria_prompt_tuotempo_search_availability_webhook_tool_schema_parametri",
-      "community": 327,
-      "community_name": "Tool Webhook \"Prenota appuntamento Tuotempo\" (tuotempo_add_appointment)",
+      "community": 589,
+      "community_name": "Tool Webhook \"Cerca disponibilit\u00e0 Tuotempo\" (tuotempo_search_availability)",
       "norm_label": "schema parametri"
     },
     {
@@ -9217,8 +9217,8 @@
       "source_location": "L96",
       "_origin": "ast",
       "id": "libreria_prompt_tuotempo_search_availability_webhook_tool_risposta_attesa",
-      "community": 327,
-      "community_name": "Tool Webhook \"Prenota appuntamento Tuotempo\" (tuotempo_add_appointment)",
+      "community": 589,
+      "community_name": "Tool Webhook \"Cerca disponibilit\u00e0 Tuotempo\" (tuotempo_search_availability)",
       "norm_label": "risposta attesa"
     },
     {
@@ -9228,8 +9228,8 @@
       "source_location": "L124",
       "_origin": "ast",
       "id": "libreria_prompt_tuotempo_search_availability_webhook_tool_note_operative",
-      "community": 327,
-      "community_name": "Tool Webhook \"Prenota appuntamento Tuotempo\" (tuotempo_add_appointment)",
+      "community": 589,
+      "community_name": "Tool Webhook \"Cerca disponibilit\u00e0 Tuotempo\" (tuotempo_search_availability)",
       "norm_label": "note operative"
     },
     {
@@ -9239,8 +9239,8 @@
       "source_location": "L133",
       "_origin": "ast",
       "id": "libreria_prompt_tuotempo_search_availability_webhook_tool_riga_di_istruzione_tipo_per_il_prompt_dell_agente",
-      "community": 327,
-      "community_name": "Tool Webhook \"Prenota appuntamento Tuotempo\" (tuotempo_add_appointment)",
+      "community": 589,
+      "community_name": "Tool Webhook \"Cerca disponibilit\u00e0 Tuotempo\" (tuotempo_search_availability)",
       "norm_label": "riga di istruzione-tipo per il prompt dell'agente"
     },
     {
@@ -31195,8 +31195,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "clients_kb_34768_calatafimi_med_kb_02_prestazioni_prezzi",
-      "community": 96,
-      "community_name": "Medici e specializzazioni",
+      "community": 146,
+      "community_name": "34768-calatafimi-med-prompt.md",
       "norm_label": "34768-calatafimi-med-kb-02-prestazioni-prezzi.md"
     },
     {
@@ -31206,8 +31206,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "clients_kb_34768_calatafimi_med_kb_02_prestazioni_prezzi_calatafimi_med_kb_02_prestazioni_e_prezzi",
-      "community": 96,
-      "community_name": "Medici e specializzazioni",
+      "community": 146,
+      "community_name": "34768-calatafimi-med-prompt.md",
       "norm_label": "calatafimi med \u2014 kb 02 prestazioni e prezzi"
     },
     {
@@ -31525,8 +31525,8 @@
       "source_location": "L257",
       "_origin": "ast",
       "id": "clients_kb_34768_calatafimi_med_kb_02_prestazioni_prezzi_branche_e_servizi_eseguiti",
-      "community": 96,
-      "community_name": "Medici e specializzazioni",
+      "community": 587,
+      "community_name": "Branche e servizi eseguiti",
       "norm_label": "branche e servizi eseguiti"
     },
     {
@@ -31536,8 +31536,8 @@
       "source_location": "L261",
       "_origin": "ast",
       "id": "clients_kb_34768_calatafimi_med_kb_02_prestazioni_prezzi_branche_ambiti_clinici",
-      "community": 96,
-      "community_name": "Medici e specializzazioni",
+      "community": 587,
+      "community_name": "Branche e servizi eseguiti",
       "norm_label": "branche / ambiti clinici"
     },
     {
@@ -31547,8 +31547,8 @@
       "source_location": "L292",
       "_origin": "ast",
       "id": "clients_kb_34768_calatafimi_med_kb_02_prestazioni_prezzi_prestazioni_diagnostiche_strumentali_in_elenco",
-      "community": 96,
-      "community_name": "Medici e specializzazioni",
+      "community": 587,
+      "community_name": "Branche e servizi eseguiti",
       "norm_label": "prestazioni diagnostiche / strumentali (in elenco)"
     },
     {
@@ -31558,8 +31558,8 @@
       "source_location": "L307",
       "_origin": "ast",
       "id": "clients_kb_34768_calatafimi_med_kb_02_prestazioni_prezzi_preparazioni",
-      "community": 96,
-      "community_name": "Medici e specializzazioni",
+      "community": 587,
+      "community_name": "Branche e servizi eseguiti",
       "norm_label": "preparazioni"
     },
     {
@@ -32031,8 +32031,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "clients_kb_34768_calatafimi_med_kb_03_laboratorio_checkup_ticket",
-      "community": 57,
-      "community_name": "34768-calatafimi-med-kb-listino-privato-lab.md",
+      "community": 146,
+      "community_name": "34768-calatafimi-med-prompt.md",
       "norm_label": "34768-calatafimi-med-kb-03-laboratorio-checkup-ticket.md"
     },
     {
@@ -32042,8 +32042,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "clients_kb_34768_calatafimi_med_kb_03_laboratorio_checkup_ticket_calatafimi_med_kb_03_laboratorio_check_up_e_ticket",
-      "community": 57,
-      "community_name": "34768-calatafimi-med-kb-listino-privato-lab.md",
+      "community": 146,
+      "community_name": "34768-calatafimi-med-prompt.md",
       "norm_label": "calatafimi med \u2014 kb 03 laboratorio, check-up e ticket"
     },
     {
@@ -32053,8 +32053,8 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "clients_kb_34768_calatafimi_med_kb_03_laboratorio_checkup_ticket_laboratorio_regole_di_listino_e_costi_correlati",
-      "community": 57,
-      "community_name": "34768-calatafimi-med-kb-listino-privato-lab.md",
+      "community": 377,
+      "community_name": "Laboratorio \u2014 regole di listino e costi correlati",
       "norm_label": "laboratorio \u2014 regole di listino e costi correlati"
     },
     {
@@ -32064,8 +32064,8 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "clients_kb_34768_calatafimi_med_kb_03_laboratorio_checkup_ticket_ambito",
-      "community": 57,
-      "community_name": "34768-calatafimi-med-kb-listino-privato-lab.md",
+      "community": 377,
+      "community_name": "Laboratorio \u2014 regole di listino e costi correlati",
       "norm_label": "ambito"
     },
     {
@@ -32075,8 +32075,8 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "clients_kb_34768_calatafimi_med_kb_03_laboratorio_checkup_ticket_prelievo",
-      "community": 57,
-      "community_name": "34768-calatafimi-med-kb-listino-privato-lab.md",
+      "community": 377,
+      "community_name": "Laboratorio \u2014 regole di listino e costi correlati",
       "norm_label": "prelievo"
     },
     {
@@ -32086,8 +32086,8 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "clients_kb_34768_calatafimi_med_kb_03_laboratorio_checkup_ticket_esami_in_service",
-      "community": 57,
-      "community_name": "34768-calatafimi-med-kb-listino-privato-lab.md",
+      "community": 377,
+      "community_name": "Laboratorio \u2014 regole di listino e costi correlati",
       "norm_label": "esami in service"
     },
     {
@@ -32097,8 +32097,8 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "clients_kb_34768_calatafimi_med_kb_03_laboratorio_checkup_ticket_convenzione_ssn_laboratorio",
-      "community": 57,
-      "community_name": "34768-calatafimi-med-kb-listino-privato-lab.md",
+      "community": 377,
+      "community_name": "Laboratorio \u2014 regole di listino e costi correlati",
       "norm_label": "convenzione ssn (laboratorio)"
     },
     {
@@ -32108,8 +32108,8 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "clients_kb_34768_calatafimi_med_kb_03_laboratorio_checkup_ticket_pagamenti_laboratorio_bonifico",
-      "community": 57,
-      "community_name": "34768-calatafimi-med-kb-listino-privato-lab.md",
+      "community": 377,
+      "community_name": "Laboratorio \u2014 regole di listino e costi correlati",
       "norm_label": "pagamenti laboratorio \u2014 bonifico"
     },
     {
@@ -32207,8 +32207,8 @@
       "source_location": "L116",
       "_origin": "ast",
       "id": "clients_kb_34768_calatafimi_med_kb_03_laboratorio_checkup_ticket_listino_ticket_ssn_laboratorio_wgeslaan",
-      "community": 57,
-      "community_name": "34768-calatafimi-med-kb-listino-privato-lab.md",
+      "community": 146,
+      "community_name": "34768-calatafimi-med-prompt.md",
       "norm_label": "listino ticket ssn (laboratorio wgeslaan)"
     },
     {
@@ -32218,8 +32218,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "clients_kb_34768_calatafimi_med_kb_index",
-      "community": 57,
-      "community_name": "34768-calatafimi-med-kb-listino-privato-lab.md",
+      "community": 146,
+      "community_name": "34768-calatafimi-med-prompt.md",
       "norm_label": "34768-calatafimi-med-kb-index.md"
     },
     {
@@ -32889,8 +32889,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "clients_kb_34768_calatafimi_med_kb",
-      "community": 57,
-      "community_name": "34768-calatafimi-med-kb-listino-privato-lab.md",
+      "community": 146,
+      "community_name": "34768-calatafimi-med-prompt.md",
       "norm_label": "34768-calatafimi-med-kb.md"
     },
     {
@@ -32900,8 +32900,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "clients_kb_34768_calatafimi_med_kb_calatafimi_med_knowledge_base_indice_file",
-      "community": 57,
-      "community_name": "34768-calatafimi-med-kb-listino-privato-lab.md",
+      "community": 146,
+      "community_name": "34768-calatafimi-med-prompt.md",
       "norm_label": "calatafimi med \u2014 knowledge base (indice file)"
     },
     {
@@ -32911,8 +32911,8 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "clients_kb_34768_calatafimi_med_kb_preferito_in_spoki",
-      "community": 57,
-      "community_name": "34768-calatafimi-med-kb-listino-privato-lab.md",
+      "community": 146,
+      "community_name": "34768-calatafimi-med-prompt.md",
       "norm_label": "preferito in spoki"
     },
     {
@@ -34605,7 +34605,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_clients_kb_47493_dimann_kb_10_informazioni_core_md",
-      "community": 148,
+      "community": 507,
       "community_name": "47493 - Triage AI (Primo contatto - Trigger).md",
       "norm_label": "47493-dimann-kb-10-informazioni-core.md"
     },
@@ -34616,7 +34616,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_clients_kb_47493_dimann_kb_casi_speciali_md",
-      "community": 148,
+      "community": 507,
       "community_name": "47493 - Triage AI (Primo contatto - Trigger).md",
       "norm_label": "47493-dimann-kb-casi-speciali.md"
     },
@@ -34627,7 +34627,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_clients_kb_47493_dimann_kb_chiusura_md",
-      "community": 148,
+      "community": 507,
       "community_name": "47493 - Triage AI (Primo contatto - Trigger).md",
       "norm_label": "47493-dimann-kb-chiusura.md"
     },
@@ -34639,7 +34639,7 @@
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_clients_kb_47493_dimann_kb_concierge_red_flag_md",
       "community": 148,
-      "community_name": "47493 - Triage AI (Primo contatto - Trigger).md",
+      "community_name": "47493-dimann-spoki-verifica.md",
       "norm_label": "47493-dimann-kb-concierge-red-flag.md"
     },
     {
@@ -34649,7 +34649,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_clients_kb_47493_dimann_kb_flusso_caso_1_md",
-      "community": 148,
+      "community": 507,
       "community_name": "47493 - Triage AI (Primo contatto - Trigger).md",
       "norm_label": "47493-dimann-kb-flusso-caso-1.md"
     },
@@ -34660,7 +34660,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_clients_kb_47493_dimann_kb_red_flag_md",
-      "community": 148,
+      "community": 507,
       "community_name": "47493 - Triage AI (Primo contatto - Trigger).md",
       "norm_label": "47493-dimann-kb-red-flag.md"
     },
@@ -47574,8 +47574,8 @@
       "source_location": "L296",
       "_origin": "ast",
       "id": "clients_prompt_34768_calatafimi_med_prompt_breath_test",
-      "community": 146,
-      "community_name": "34768-calatafimi-med-prompt.md",
+      "community": 595,
+      "community_name": "BREATH TEST",
       "norm_label": "breath test"
     },
     {
@@ -47585,8 +47585,8 @@
       "source_location": "L298",
       "_origin": "ast",
       "id": "clients_prompt_34768_calatafimi_med_prompt_always_ask_the_seat_first_lattosio",
-      "community": 146,
-      "community_name": "34768-calatafimi-med-prompt.md",
+      "community": 595,
+      "community_name": "BREATH TEST",
       "norm_label": "always ask the seat first (lattosio)"
     },
     {
@@ -47596,8 +47596,8 @@
       "source_location": "L307",
       "_origin": "ast",
       "id": "clients_prompt_34768_calatafimi_med_prompt_lactose_breath_test_main_facts",
-      "community": 146,
-      "community_name": "34768-calatafimi-med-prompt.md",
+      "community": 595,
+      "community_name": "BREATH TEST",
       "norm_label": "lactose breath test \u2014 main facts"
     },
     {
@@ -47607,8 +47607,8 @@
       "source_location": "L316",
       "_origin": "ast",
       "id": "clients_prompt_34768_calatafimi_med_prompt_helicobacter_pylori_hp_breath_test",
-      "community": 146,
-      "community_name": "34768-calatafimi-med-prompt.md",
+      "community": 595,
+      "community_name": "BREATH TEST",
       "norm_label": "helicobacter pylori (hp) breath test"
     },
     {
@@ -47618,8 +47618,8 @@
       "source_location": "L324",
       "_origin": "ast",
       "id": "clients_prompt_34768_calatafimi_med_prompt_cardiology",
-      "community": 146,
-      "community_name": "34768-calatafimi-med-prompt.md",
+      "community": 452,
+      "community_name": "CARDIOLOGY",
       "norm_label": "cardiology"
     },
     {
@@ -47629,8 +47629,8 @@
       "source_location": "L335",
       "_origin": "ast",
       "id": "clients_prompt_34768_calatafimi_med_prompt_generic_question_e_g_fate_visita_cardiologica",
-      "community": 146,
-      "community_name": "34768-calatafimi-med-prompt.md",
+      "community": 452,
+      "community_name": "CARDIOLOGY",
       "norm_label": "generic question (e.g. \u201cfate visita cardiologica?\u201d)"
     },
     {
@@ -47640,8 +47640,8 @@
       "source_location": "L352",
       "_origin": "ast",
       "id": "clients_prompt_34768_calatafimi_med_prompt_ecg_rules_mandatory_with_first_visit",
-      "community": 146,
-      "community_name": "34768-calatafimi-med-prompt.md",
+      "community": 452,
+      "community_name": "CARDIOLOGY",
       "norm_label": "ecg rules (mandatory with first visit)"
     },
     {
@@ -47651,8 +47651,8 @@
       "source_location": "L358",
       "_origin": "ast",
       "id": "clients_prompt_34768_calatafimi_med_prompt_specific_requests",
-      "community": 146,
-      "community_name": "34768-calatafimi-med-prompt.md",
+      "community": 452,
+      "community_name": "CARDIOLOGY",
       "norm_label": "specific requests"
     },
     {
@@ -47662,8 +47662,8 @@
       "source_location": "L365",
       "_origin": "ast",
       "id": "clients_prompt_34768_calatafimi_med_prompt_holter_reminder",
-      "community": 146,
-      "community_name": "34768-calatafimi-med-prompt.md",
+      "community": 452,
+      "community_name": "CARDIOLOGY",
       "norm_label": "holter reminder"
     },
     {
@@ -47783,8 +47783,8 @@
       "source_location": "L443",
       "_origin": "ast",
       "id": "clients_prompt_34768_calatafimi_med_prompt_ophthalmology_oculistica",
-      "community": 146,
-      "community_name": "34768-calatafimi-med-prompt.md",
+      "community": 407,
+      "community_name": "OPHTHALMOLOGY (OCULISTICA)",
       "norm_label": "ophthalmology (oculistica)"
     },
     {
@@ -47794,8 +47794,8 @@
       "source_location": "L456",
       "_origin": "ast",
       "id": "clients_prompt_34768_calatafimi_med_prompt_seats_and_slots_kb",
-      "community": 146,
-      "community_name": "34768-calatafimi-med-prompt.md",
+      "community": 407,
+      "community_name": "OPHTHALMOLOGY (OCULISTICA)",
       "norm_label": "seats and slots (kb)"
     },
     {
@@ -47805,8 +47805,8 @@
       "source_location": "L464",
       "_origin": "ast",
       "id": "clients_prompt_34768_calatafimi_med_prompt_what_the_visit_includes",
-      "community": 146,
-      "community_name": "34768-calatafimi-med-prompt.md",
+      "community": 407,
+      "community_name": "OPHTHALMOLOGY (OCULISTICA)",
       "norm_label": "what the visit includes"
     },
     {
@@ -47816,8 +47816,8 @@
       "source_location": "L472",
       "_origin": "ast",
       "id": "clients_prompt_34768_calatafimi_med_prompt_oct",
-      "community": 146,
-      "community_name": "34768-calatafimi-med-prompt.md",
+      "community": 407,
+      "community_name": "OPHTHALMOLOGY (OCULISTICA)",
       "norm_label": "oct"
     },
     {
@@ -47827,8 +47827,8 @@
       "source_location": "L476",
       "_origin": "ast",
       "id": "clients_prompt_34768_calatafimi_med_prompt_after_contacts_476",
-      "community": 146,
-      "community_name": "34768-calatafimi-med-prompt.md",
+      "community": 407,
+      "community_name": "OPHTHALMOLOGY (OCULISTICA)",
       "norm_label": "after contacts"
     },
     {
@@ -47838,8 +47838,8 @@
       "source_location": "L480",
       "_origin": "ast",
       "id": "clients_prompt_34768_calatafimi_med_prompt_price_480",
-      "community": 146,
-      "community_name": "34768-calatafimi-med-prompt.md",
+      "community": 407,
+      "community_name": "OPHTHALMOLOGY (OCULISTICA)",
       "norm_label": "price"
     },
     {
@@ -52151,7 +52151,7 @@
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_clients_prompt_47493_agente_concierge_ricontatto_md",
       "community": 148,
-      "community_name": "47493 - Triage AI (Primo contatto - Trigger).md",
+      "community_name": "47493-dimann-spoki-verifica.md",
       "norm_label": "47493 - agente concierge (ricontatto).md"
     },
     {
@@ -52162,7 +52162,7 @@
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_clients_prompt_47493_agente_concierge_ricontatto_47493_agente_concierge_ricontatto",
       "community": 148,
-      "community_name": "47493 - Triage AI (Primo contatto - Trigger).md",
+      "community_name": "47493-dimann-spoki-verifica.md",
       "norm_label": "47493 \u2014 agente concierge (ricontatto)"
     },
     {
@@ -52239,7 +52239,7 @@
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_clients_prompt_47493_agente_hcp_md",
       "community": 148,
-      "community_name": "47493 - Triage AI (Primo contatto - Trigger).md",
+      "community_name": "47493-dimann-spoki-verifica.md",
       "norm_label": "47493 - agente hcp.md"
     },
     {
@@ -52250,7 +52250,7 @@
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_clients_prompt_47493_agente_hcp_47493_agente_hcp",
       "community": 148,
-      "community_name": "47493 - Triage AI (Primo contatto - Trigger).md",
+      "community_name": "47493-dimann-spoki-verifica.md",
       "norm_label": "47493 \u2014 agente hcp"
     },
     {
@@ -52381,7 +52381,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_clients_prompt_47493_triage_ai_primo_contatto_trigger_md",
-      "community": 148,
+      "community": 507,
       "community_name": "47493 - Triage AI (Primo contatto - Trigger).md",
       "norm_label": "47493 - triage ai (primo contatto - trigger).md"
     },
@@ -52392,7 +52392,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_clients_prompt_47493_triage_ai_primo_contatto_trigger_47493_triage_ai_primo_contatto_trigger",
-      "community": 148,
+      "community": 507,
       "community_name": "47493 - Triage AI (Primo contatto - Trigger).md",
       "norm_label": "47493 \u2014 triage ai (primo contatto - trigger)"
     },
@@ -52569,7 +52569,7 @@
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_clients_prompt_47493_triage_ai_primo_contatto_trigger_appendice_debug",
       "community": 507,
-      "community_name": "Appendice debug",
+      "community_name": "47493 - Triage AI (Primo contatto - Trigger).md",
       "norm_label": "appendice debug"
     },
     {
@@ -52580,7 +52580,7 @@
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_clients_prompt_47493_triage_ai_primo_contatto_trigger_azioni_spoki_nel_prompt",
       "community": 507,
-      "community_name": "Appendice debug",
+      "community_name": "47493 - Triage AI (Primo contatto - Trigger).md",
       "norm_label": "azioni spoki nel prompt"
     },
     {
@@ -52591,7 +52591,7 @@
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_clients_prompt_47493_triage_ai_primo_contatto_trigger_scenari_prioritari_per_playground",
       "community": 507,
-      "community_name": "Appendice debug",
+      "community_name": "47493 - Triage AI (Primo contatto - Trigger).md",
       "norm_label": "scenari prioritari per playground"
     },
     {
@@ -52602,7 +52602,7 @@
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_clients_prompt_47493_triage_ai_primo_contatto_trigger_aree_di_debug_note",
       "community": 507,
-      "community_name": "Appendice debug",
+      "community_name": "47493 - Triage AI (Primo contatto - Trigger).md",
       "norm_label": "aree di debug note"
     },
     {
@@ -52613,7 +52613,7 @@
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_clients_prompt_47493_dimann_concierge_test_suite_md",
       "community": 148,
-      "community_name": "47493 - Triage AI (Primo contatto - Trigger).md",
+      "community_name": "47493-dimann-spoki-verifica.md",
       "norm_label": "47493-dimann-concierge-test-suite.md"
     },
     {
@@ -52855,7 +52855,7 @@
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_clients_prompt_47493_dimann_hcp_test_suite_md",
       "community": 148,
-      "community_name": "47493 - Triage AI (Primo contatto - Trigger).md",
+      "community_name": "47493-dimann-spoki-verifica.md",
       "norm_label": "47493-dimann-hcp-test-suite.md"
     },
     {
@@ -53031,7 +53031,7 @@
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_clients_prompt_47493_dimann_spoki_verifica_md",
       "community": 148,
-      "community_name": "47493 - Triage AI (Primo contatto - Trigger).md",
+      "community_name": "47493-dimann-spoki-verifica.md",
       "norm_label": "47493-dimann-spoki-verifica.md"
     },
     {
@@ -53206,7 +53206,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_clients_prompt_47493_dimann_triage_test_suite_md",
-      "community": 148,
+      "community": 507,
       "community_name": "47493 - Triage AI (Primo contatto - Trigger).md",
       "norm_label": "47493-dimann-triage-test-suite.md"
     },
@@ -53228,8 +53228,8 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_clients_prompt_47493_dimann_triage_test_suite_esiti_test_branch_1_h1",
-      "community": 418,
-      "community_name": "Esiti test \u2014 Branch 1 (H1)",
+      "community": 186,
+      "community_name": "Dimann 47493 \u2014 Test suite playground Triage",
       "norm_label": "esiti test \u2014 branch 1 (h1)"
     },
     {
@@ -53239,8 +53239,8 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_clients_prompt_47493_dimann_triage_test_suite_percorso_testato",
-      "community": 418,
-      "community_name": "Esiti test \u2014 Branch 1 (H1)",
+      "community": 186,
+      "community_name": "Dimann 47493 \u2014 Test suite playground Triage",
       "norm_label": "percorso testato"
     },
     {
@@ -53250,8 +53250,8 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_clients_prompt_47493_dimann_triage_test_suite_verifiche_spoki_post_test",
-      "community": 418,
-      "community_name": "Esiti test \u2014 Branch 1 (H1)",
+      "community": 186,
+      "community_name": "Dimann 47493 \u2014 Test suite playground Triage",
       "norm_label": "verifiche spoki post-test"
     },
     {
@@ -53261,8 +53261,8 @@
       "source_location": "L31",
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_clients_prompt_47493_dimann_triage_test_suite_criteri_conversazione",
-      "community": 418,
-      "community_name": "Esiti test \u2014 Branch 1 (H1)",
+      "community": 186,
+      "community_name": "Dimann 47493 \u2014 Test suite playground Triage",
       "norm_label": "criteri conversazione"
     },
     {
@@ -53272,8 +53272,8 @@
       "source_location": "L42",
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_clients_prompt_47493_dimann_triage_test_suite_anomalie_minori_non_bloccanti",
-      "community": 418,
-      "community_name": "Esiti test \u2014 Branch 1 (H1)",
+      "community": 186,
+      "community_name": "Dimann 47493 \u2014 Test suite playground Triage",
       "norm_label": "anomalie minori (non bloccanti)"
     },
     {
@@ -53283,8 +53283,8 @@
       "source_location": "L47",
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_clients_prompt_47493_dimann_triage_test_suite_conclusione_branch_h1",
-      "community": 418,
-      "community_name": "Esiti test \u2014 Branch 1 (H1)",
+      "community": 186,
+      "community_name": "Dimann 47493 \u2014 Test suite playground Triage",
       "norm_label": "conclusione branch h1"
     },
     {
@@ -53294,8 +53294,8 @@
       "source_location": "L53",
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_clients_prompt_47493_dimann_triage_test_suite_esiti_test_branch_2_h2",
-      "community": 427,
-      "community_name": "Esiti test \u2014 Branch 2 (H2)",
+      "community": 186,
+      "community_name": "Dimann 47493 \u2014 Test suite playground Triage",
       "norm_label": "esiti test \u2014 branch 2 (h2)"
     },
     {
@@ -53305,8 +53305,8 @@
       "source_location": "L63",
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_clients_prompt_47493_dimann_triage_test_suite_percorso_testato_63",
-      "community": 427,
-      "community_name": "Esiti test \u2014 Branch 2 (H2)",
+      "community": 186,
+      "community_name": "Dimann 47493 \u2014 Test suite playground Triage",
       "norm_label": "percorso testato"
     },
     {
@@ -53316,8 +53316,8 @@
       "source_location": "L73",
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_clients_prompt_47493_dimann_triage_test_suite_verifiche_spoki_post_test_73",
-      "community": 427,
-      "community_name": "Esiti test \u2014 Branch 2 (H2)",
+      "community": 186,
+      "community_name": "Dimann 47493 \u2014 Test suite playground Triage",
       "norm_label": "verifiche spoki post-test"
     },
     {
@@ -53327,8 +53327,8 @@
       "source_location": "L83",
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_clients_prompt_47493_dimann_triage_test_suite_criteri_conversazione_83",
-      "community": 427,
-      "community_name": "Esiti test \u2014 Branch 2 (H2)",
+      "community": 186,
+      "community_name": "Dimann 47493 \u2014 Test suite playground Triage",
       "norm_label": "criteri conversazione"
     },
     {
@@ -53338,8 +53338,8 @@
       "source_location": "L96",
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_clients_prompt_47493_dimann_triage_test_suite_anomalie_minori_non_bloccanti_96",
-      "community": 427,
-      "community_name": "Esiti test \u2014 Branch 2 (H2)",
+      "community": 186,
+      "community_name": "Dimann 47493 \u2014 Test suite playground Triage",
       "norm_label": "anomalie minori (non bloccanti)"
     },
     {
@@ -53349,8 +53349,8 @@
       "source_location": "L104",
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_clients_prompt_47493_dimann_triage_test_suite_conclusione_branch_h2",
-      "community": 427,
-      "community_name": "Esiti test \u2014 Branch 2 (H2)",
+      "community": 186,
+      "community_name": "Dimann 47493 \u2014 Test suite playground Triage",
       "norm_label": "conclusione branch h2"
     },
     {
@@ -53360,8 +53360,8 @@
       "source_location": "L110",
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_clients_prompt_47493_dimann_triage_test_suite_esiti_test_branch_3_h3",
-      "community": 377,
-      "community_name": "Esiti test \u2014 Branch 3 (H3)",
+      "community": 186,
+      "community_name": "Dimann 47493 \u2014 Test suite playground Triage",
       "norm_label": "esiti test \u2014 branch 3 (h3)"
     },
     {
@@ -53371,8 +53371,8 @@
       "source_location": "L120",
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_clients_prompt_47493_dimann_triage_test_suite_percorso_testato_120",
-      "community": 377,
-      "community_name": "Esiti test \u2014 Branch 3 (H3)",
+      "community": 186,
+      "community_name": "Dimann 47493 \u2014 Test suite playground Triage",
       "norm_label": "percorso testato"
     },
     {
@@ -53382,8 +53382,8 @@
       "source_location": "L129",
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_clients_prompt_47493_dimann_triage_test_suite_verifiche_spoki_post_test_129",
-      "community": 377,
-      "community_name": "Esiti test \u2014 Branch 3 (H3)",
+      "community": 186,
+      "community_name": "Dimann 47493 \u2014 Test suite playground Triage",
       "norm_label": "verifiche spoki post-test"
     },
     {
@@ -53393,8 +53393,8 @@
       "source_location": "L139",
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_clients_prompt_47493_dimann_triage_test_suite_criteri_conversazione_139",
-      "community": 377,
-      "community_name": "Esiti test \u2014 Branch 3 (H3)",
+      "community": 186,
+      "community_name": "Dimann 47493 \u2014 Test suite playground Triage",
       "norm_label": "criteri conversazione"
     },
     {
@@ -53404,8 +53404,8 @@
       "source_location": "L152",
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_clients_prompt_47493_dimann_triage_test_suite_root_cause",
-      "community": 377,
-      "community_name": "Esiti test \u2014 Branch 3 (H3)",
+      "community": 186,
+      "community_name": "Dimann 47493 \u2014 Test suite playground Triage",
       "norm_label": "root cause"
     },
     {
@@ -53415,8 +53415,8 @@
       "source_location": "L156",
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_clients_prompt_47493_dimann_triage_test_suite_fix_suggerito_prompt",
-      "community": 377,
-      "community_name": "Esiti test \u2014 Branch 3 (H3)",
+      "community": 186,
+      "community_name": "Dimann 47493 \u2014 Test suite playground Triage",
       "norm_label": "fix suggerito (prompt)"
     },
     {
@@ -53426,8 +53426,8 @@
       "source_location": "L161",
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_clients_prompt_47493_dimann_triage_test_suite_anomalie_minori_non_bloccanti_161",
-      "community": 377,
-      "community_name": "Esiti test \u2014 Branch 3 (H3)",
+      "community": 186,
+      "community_name": "Dimann 47493 \u2014 Test suite playground Triage",
       "norm_label": "anomalie minori (non bloccanti)"
     },
     {
@@ -53437,8 +53437,8 @@
       "source_location": "L167",
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_clients_prompt_47493_dimann_triage_test_suite_conclusione_branch_h3",
-      "community": 377,
-      "community_name": "Esiti test \u2014 Branch 3 (H3)",
+      "community": 186,
+      "community_name": "Dimann 47493 \u2014 Test suite playground Triage",
       "norm_label": "conclusione branch h3"
     },
     {
@@ -53789,8 +53789,8 @@
       "source_location": "L95",
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_clients_prompt_49878_centro_formazione_innovazione_faqs_1_5_faq",
-      "community": 473,
-      "community_name": "1.5 FAQ",
+      "community": 90,
+      "community_name": "1. CONCORSI",
       "norm_label": "1.5 faq"
     },
     {
@@ -53800,8 +53800,8 @@
       "source_location": "L97",
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_clients_prompt_49878_centro_formazione_innovazione_faqs_la_mia_cdc_\u00e8_in_inglese_spagnolo_francese_il_corso_in_preparazione_\u00e8_in_lingua",
-      "community": 473,
-      "community_name": "1.5 FAQ",
+      "community": 90,
+      "community_name": "1. CONCORSI",
       "norm_label": "la mia cdc e in inglese/spagnolo/francese, il corso in preparazione e in lingua?"
     },
     {
@@ -53811,8 +53811,8 @@
       "source_location": "L100",
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_clients_prompt_49878_centro_formazione_innovazione_faqs_\u00e8_previsto_supporto_per_la_prova_orale_dei_concorsi",
-      "community": 473,
-      "community_name": "1.5 FAQ",
+      "community": 90,
+      "community_name": "1. CONCORSI",
       "norm_label": "e previsto supporto per la prova orale dei concorsi?"
     },
     {
@@ -53822,8 +53822,8 @@
       "source_location": "L107",
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_clients_prompt_49878_centro_formazione_innovazione_faqs_i_corsi_in_preparazione_ai_concorsi_preparano_anche_alle_prove_di_inglese_e_informatica",
-      "community": 473,
-      "community_name": "1.5 FAQ",
+      "community": 90,
+      "community_name": "1. CONCORSI",
       "norm_label": "i corsi in preparazione ai concorsi preparano anche alle prove di inglese e informatica?"
     },
     {
@@ -53833,8 +53833,8 @@
       "source_location": "L110",
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_clients_prompt_49878_centro_formazione_innovazione_faqs_fino_a_quando_ci_si_pu\u00f2_iscrivere_ai_corsi_in_preparazione_ai_concorsi",
-      "community": 473,
-      "community_name": "1.5 FAQ",
+      "community": 90,
+      "community_name": "1. CONCORSI",
       "norm_label": "fino a quando ci si puo iscrivere ai corsi in preparazione ai concorsi?"
     },
     {
@@ -73957,138 +73957,6 @@
       "norm_label": "esito"
     },
     {
-      "label": "FarmaciaSimonelli-prenotazioni-whatsapp-spoki.md",
-      "file_type": "document",
-      "source_file": "clients-prompt/_exports/FarmaciaSimonelli-prenotazioni-whatsapp-spoki.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "clients_prompt_exports_farmaciasimonelli_prenotazioni_whatsapp_spoki",
-      "community": 234,
-      "community_name": "4. Parte per il tecnico (da inoltrare)",
-      "norm_label": "farmaciasimonelli-prenotazioni-whatsapp-spoki.md"
-    },
-    {
-      "label": "Farmacia Simonelli \u2014 prenotazioni WhatsApp: cosa si pu\u00f2 fare e cosa serve dal tecnico",
-      "file_type": "document",
-      "source_file": "clients-prompt/_exports/FarmaciaSimonelli-prenotazioni-whatsapp-spoki.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "clients_prompt_exports_farmaciasimonelli_prenotazioni_whatsapp_spoki_farmacia_simonelli_prenotazioni_whatsapp_cosa_si_pu\u00f2_fare_e_cosa_serve_dal_tecnico",
-      "community": 234,
-      "community_name": "4. Parte per il tecnico (da inoltrare)",
-      "norm_label": "farmacia simonelli \u2014 prenotazioni whatsapp: cosa si puo fare e cosa serve dal tecnico"
-    },
-    {
-      "label": "1. Risposta in sintesi (per voi)",
-      "file_type": "document",
-      "source_file": "clients-prompt/_exports/FarmaciaSimonelli-prenotazioni-whatsapp-spoki.md",
-      "source_location": "L13",
-      "_origin": "ast",
-      "id": "clients_prompt_exports_farmaciasimonelli_prenotazioni_whatsapp_spoki_1_risposta_in_sintesi_per_voi",
-      "community": 234,
-      "community_name": "4. Parte per il tecnico (da inoltrare)",
-      "norm_label": "1. risposta in sintesi (per voi)"
-    },
-    {
-      "label": "2. Cosa abbiamo verificato sul vostro sito",
-      "file_type": "document",
-      "source_file": "clients-prompt/_exports/FarmaciaSimonelli-prenotazioni-whatsapp-spoki.md",
-      "source_location": "L31",
-      "_origin": "ast",
-      "id": "clients_prompt_exports_farmaciasimonelli_prenotazioni_whatsapp_spoki_2_cosa_abbiamo_verificato_sul_vostro_sito",
-      "community": 234,
-      "community_name": "4. Parte per il tecnico (da inoltrare)",
-      "norm_label": "2. cosa abbiamo verificato sul vostro sito"
-    },
-    {
-      "label": "3. Come proporremmo di farlo (schema operativo)",
-      "file_type": "document",
-      "source_file": "clients-prompt/_exports/FarmaciaSimonelli-prenotazioni-whatsapp-spoki.md",
-      "source_location": "L43",
-      "_origin": "ast",
-      "id": "clients_prompt_exports_farmaciasimonelli_prenotazioni_whatsapp_spoki_3_come_proporremmo_di_farlo_schema_operativo",
-      "community": 234,
-      "community_name": "4. Parte per il tecnico (da inoltrare)",
-      "norm_label": "3. come proporremmo di farlo (schema operativo)"
-    },
-    {
-      "label": "4. Parte per il tecnico (da inoltrare)",
-      "file_type": "document",
-      "source_file": "clients-prompt/_exports/FarmaciaSimonelli-prenotazioni-whatsapp-spoki.md",
-      "source_location": "L66",
-      "_origin": "ast",
-      "id": "clients_prompt_exports_farmaciasimonelli_prenotazioni_whatsapp_spoki_4_parte_per_il_tecnico_da_inoltrare",
-      "community": 234,
-      "community_name": "4. Parte per il tecnico (da inoltrare)",
-      "norm_label": "4. parte per il tecnico (da inoltrare)"
-    },
-    {
-      "label": "Contesto",
-      "file_type": "document",
-      "source_file": "clients-prompt/_exports/FarmaciaSimonelli-prenotazioni-whatsapp-spoki.md",
-      "source_location": "L68",
-      "_origin": "ast",
-      "id": "clients_prompt_exports_farmaciasimonelli_prenotazioni_whatsapp_spoki_contesto",
-      "community": 234,
-      "community_name": "4. Parte per il tecnico (da inoltrare)",
-      "norm_label": "contesto"
-    },
-    {
-      "label": "Endpoint rilevanti (gi\u00e0 usati dal form pubblico)",
-      "file_type": "document",
-      "source_file": "clients-prompt/_exports/FarmaciaSimonelli-prenotazioni-whatsapp-spoki.md",
-      "source_location": "L75",
-      "_origin": "ast",
-      "id": "clients_prompt_exports_farmaciasimonelli_prenotazioni_whatsapp_spoki_endpoint_rilevanti_gi\u00e0_usati_dal_form_pubblico",
-      "community": 234,
-      "community_name": "4. Parte per il tecnico (da inoltrare)",
-      "norm_label": "endpoint rilevanti (gia usati dal form pubblico)"
-    },
-    {
-      "label": "Vincolo Spoki (importante per il disegno)",
-      "file_type": "document",
-      "source_file": "clients-prompt/_exports/FarmaciaSimonelli-prenotazioni-whatsapp-spoki.md",
-      "source_location": "L87",
-      "_origin": "ast",
-      "id": "clients_prompt_exports_farmaciasimonelli_prenotazioni_whatsapp_spoki_vincolo_spoki_importante_per_il_disegno",
-      "community": 234,
-      "community_name": "4. Parte per il tecnico (da inoltrare)",
-      "norm_label": "vincolo spoki (importante per il disegno)"
-    },
-    {
-      "label": "Adapter da realizzare lato vostro (3 webhook \u2014 esempio)",
-      "file_type": "document",
-      "source_file": "clients-prompt/_exports/FarmaciaSimonelli-prenotazioni-whatsapp-spoki.md",
-      "source_location": "L98",
-      "_origin": "ast",
-      "id": "clients_prompt_exports_farmaciasimonelli_prenotazioni_whatsapp_spoki_adapter_da_realizzare_lato_vostro_3_webhook_esempio",
-      "community": 234,
-      "community_name": "4. Parte per il tecnico (da inoltrare)",
-      "norm_label": "adapter da realizzare lato vostro (3 webhook \u2014 esempio)"
-    },
-    {
-      "label": "Cosa ci serve da voi / da Farmacia Evoluta\u2013QoreSuite",
-      "file_type": "document",
-      "source_file": "clients-prompt/_exports/FarmaciaSimonelli-prenotazioni-whatsapp-spoki.md",
-      "source_location": "L123",
-      "_origin": "ast",
-      "id": "clients_prompt_exports_farmaciasimonelli_prenotazioni_whatsapp_spoki_cosa_ci_serve_da_voi_da_farmacia_evoluta_qoresuite",
-      "community": 234,
-      "community_name": "4. Parte per il tecnico (da inoltrare)",
-      "norm_label": "cosa ci serve da voi / da farmacia evoluta\u2013qoresuite"
-    },
-    {
-      "label": "5. Prossimi passi",
-      "file_type": "document",
-      "source_file": "clients-prompt/_exports/FarmaciaSimonelli-prenotazioni-whatsapp-spoki.md",
-      "source_location": "L135",
-      "_origin": "ast",
-      "id": "clients_prompt_exports_farmaciasimonelli_prenotazioni_whatsapp_spoki_5_prossimi_passi",
-      "community": 234,
-      "community_name": "4. Parte per il tecnico (da inoltrare)",
-      "norm_label": "5. prossimi passi"
-    },
-    {
       "label": "Feltrinelli-21554-final-v1-flusso.md",
       "file_type": "document",
       "source_file": "clients-prompt/_exports/Feltrinelli-21554-final-v1-flusso.md",
@@ -76043,7 +75911,7 @@
       "_origin": "ast",
       "id": "users_giulio_desktop_ai_churn_analysis_spoki_ai_agents_clients_prompt_dimann_brainstorming_md",
       "community": 148,
-      "community_name": "47493 - Triage AI (Primo contatto - Trigger).md",
+      "community_name": "47493-dimann-spoki-verifica.md",
       "norm_label": "dimann-brainstorming.md"
     },
     {
@@ -80909,125 +80777,125 @@
       "norm_label": "data-collection-voice-outbound.md"
     },
     {
-      "label": "Role",
+      "label": "Ruolo",
       "file_type": "document",
       "source_file": "voice-agents-prompts/data-collection-voice-outbound.md",
       "source_location": "L9",
       "_origin": "ast",
-      "id": "voice_agents_prompts_data_collection_voice_outbound_role",
+      "id": "voice_agents_prompts_data_collection_voice_outbound_ruolo",
       "community": 290,
       "community_name": "data-collection-voice-outbound.md",
-      "norm_label": "role"
+      "norm_label": "ruolo"
     },
     {
-      "label": "Language",
+      "label": "Lingua",
       "file_type": "document",
       "source_file": "voice-agents-prompts/data-collection-voice-outbound.md",
       "source_location": "L13",
       "_origin": "ast",
-      "id": "voice_agents_prompts_data_collection_voice_outbound_language",
+      "id": "voice_agents_prompts_data_collection_voice_outbound_lingua",
       "community": 290,
       "community_name": "data-collection-voice-outbound.md",
-      "norm_label": "language"
+      "norm_label": "lingua"
     },
     {
-      "label": "Tone",
+      "label": "Tono",
       "file_type": "document",
       "source_file": "voice-agents-prompts/data-collection-voice-outbound.md",
       "source_location": "L17",
       "_origin": "ast",
-      "id": "voice_agents_prompts_data_collection_voice_outbound_tone",
+      "id": "voice_agents_prompts_data_collection_voice_outbound_tono",
       "community": 290,
       "community_name": "data-collection-voice-outbound.md",
-      "norm_label": "tone"
+      "norm_label": "tono"
     },
     {
-      "label": "Customer data",
+      "label": "Dati del chiamante",
       "file_type": "document",
       "source_file": "voice-agents-prompts/data-collection-voice-outbound.md",
       "source_location": "L21",
       "_origin": "ast",
-      "id": "voice_agents_prompts_data_collection_voice_outbound_customer_data",
+      "id": "voice_agents_prompts_data_collection_voice_outbound_dati_del_chiamante",
       "community": 290,
       "community_name": "data-collection-voice-outbound.md",
-      "norm_label": "customer data"
+      "norm_label": "dati del chiamante"
     },
     {
-      "label": "Contact fields (actions)",
+      "label": "Campi contatto (action)",
       "file_type": "document",
       "source_file": "voice-agents-prompts/data-collection-voice-outbound.md",
       "source_location": "L32",
       "_origin": "ast",
-      "id": "voice_agents_prompts_data_collection_voice_outbound_contact_fields_actions",
+      "id": "voice_agents_prompts_data_collection_voice_outbound_campi_contatto_action",
       "community": 290,
       "community_name": "data-collection-voice-outbound.md",
-      "norm_label": "contact fields (actions)"
+      "norm_label": "campi contatto (action)"
     },
     {
-      "label": "Fields to collect",
+      "label": "Campi da raccogliere",
       "file_type": "document",
       "source_file": "voice-agents-prompts/data-collection-voice-outbound.md",
       "source_location": "L45",
       "_origin": "ast",
-      "id": "voice_agents_prompts_data_collection_voice_outbound_fields_to_collect",
+      "id": "voice_agents_prompts_data_collection_voice_outbound_campi_da_raccogliere",
       "community": 290,
       "community_name": "data-collection-voice-outbound.md",
-      "norm_label": "fields to collect"
+      "norm_label": "campi da raccogliere"
     },
     {
-      "label": "Collection rules",
+      "label": "Regole di raccolta",
       "file_type": "document",
       "source_file": "voice-agents-prompts/data-collection-voice-outbound.md",
       "source_location": "L58",
       "_origin": "ast",
-      "id": "voice_agents_prompts_data_collection_voice_outbound_collection_rules",
+      "id": "voice_agents_prompts_data_collection_voice_outbound_regole_di_raccolta",
       "community": 290,
       "community_name": "data-collection-voice-outbound.md",
-      "norm_label": "collection rules"
+      "norm_label": "regole di raccolta"
     },
     {
-      "label": "Conversation flow",
+      "label": "Flusso conversazione",
       "file_type": "document",
       "source_file": "voice-agents-prompts/data-collection-voice-outbound.md",
       "source_location": "L64",
       "_origin": "ast",
-      "id": "voice_agents_prompts_data_collection_voice_outbound_conversation_flow",
+      "id": "voice_agents_prompts_data_collection_voice_outbound_flusso_conversazione",
       "community": 290,
       "community_name": "data-collection-voice-outbound.md",
-      "norm_label": "conversation flow"
+      "norm_label": "flusso conversazione"
     },
     {
-      "label": "Tools",
+      "label": "Strumenti",
       "file_type": "document",
       "source_file": "voice-agents-prompts/data-collection-voice-outbound.md",
       "source_location": "L72",
       "_origin": "ast",
-      "id": "voice_agents_prompts_data_collection_voice_outbound_tools",
+      "id": "voice_agents_prompts_data_collection_voice_outbound_strumenti",
       "community": 290,
       "community_name": "data-collection-voice-outbound.md",
-      "norm_label": "tools"
+      "norm_label": "strumenti"
     },
     {
-      "label": "Boundaries",
+      "label": "Limiti",
       "file_type": "document",
       "source_file": "voice-agents-prompts/data-collection-voice-outbound.md",
       "source_location": "L78",
       "_origin": "ast",
-      "id": "voice_agents_prompts_data_collection_voice_outbound_boundaries",
+      "id": "voice_agents_prompts_data_collection_voice_outbound_limiti",
       "community": 290,
       "community_name": "data-collection-voice-outbound.md",
-      "norm_label": "boundaries"
+      "norm_label": "limiti"
     },
     {
-      "label": "Closing",
+      "label": "Chiusura chiamata",
       "file_type": "document",
       "source_file": "voice-agents-prompts/data-collection-voice-outbound.md",
       "source_location": "L82",
       "_origin": "ast",
-      "id": "voice_agents_prompts_data_collection_voice_outbound_closing",
+      "id": "voice_agents_prompts_data_collection_voice_outbound_chiusura_chiamata",
       "community": 290,
       "community_name": "data-collection-voice-outbound.md",
-      "norm_label": "closing"
+      "norm_label": "chiusura chiamata"
     },
     {
       "label": "inbound-appointment-booking-date.md",
@@ -81855,158 +81723,158 @@
       "norm_label": "sales-rep-voice-outbound.md"
     },
     {
-      "label": "Role",
+      "label": "Ruolo",
       "file_type": "document",
       "source_file": "voice-agents-prompts/sales-rep-voice-outbound.md",
-      "source_location": "L9",
+      "source_location": "L10",
       "_origin": "ast",
-      "id": "voice_agents_prompts_sales_rep_voice_outbound_role",
+      "id": "voice_agents_prompts_sales_rep_voice_outbound_ruolo",
       "community": 215,
       "community_name": "sales-rep-voice-outbound.md",
-      "norm_label": "role"
+      "norm_label": "ruolo"
     },
     {
-      "label": "Language",
+      "label": "Lingua",
       "file_type": "document",
       "source_file": "voice-agents-prompts/sales-rep-voice-outbound.md",
-      "source_location": "L13",
+      "source_location": "L14",
       "_origin": "ast",
-      "id": "voice_agents_prompts_sales_rep_voice_outbound_language",
+      "id": "voice_agents_prompts_sales_rep_voice_outbound_lingua",
       "community": 215,
       "community_name": "sales-rep-voice-outbound.md",
-      "norm_label": "language"
+      "norm_label": "lingua"
     },
     {
-      "label": "Tone",
+      "label": "Tono",
       "file_type": "document",
       "source_file": "voice-agents-prompts/sales-rep-voice-outbound.md",
-      "source_location": "L17",
+      "source_location": "L18",
       "_origin": "ast",
-      "id": "voice_agents_prompts_sales_rep_voice_outbound_tone",
+      "id": "voice_agents_prompts_sales_rep_voice_outbound_tono",
       "community": 215,
       "community_name": "sales-rep-voice-outbound.md",
-      "norm_label": "tone"
+      "norm_label": "tono"
     },
     {
-      "label": "Customer data",
+      "label": "Dati del chiamante",
       "file_type": "document",
       "source_file": "voice-agents-prompts/sales-rep-voice-outbound.md",
-      "source_location": "L21",
+      "source_location": "L22",
       "_origin": "ast",
-      "id": "voice_agents_prompts_sales_rep_voice_outbound_customer_data",
+      "id": "voice_agents_prompts_sales_rep_voice_outbound_dati_del_chiamante",
       "community": 215,
       "community_name": "sales-rep-voice-outbound.md",
-      "norm_label": "customer data"
+      "norm_label": "dati del chiamante"
     },
     {
-      "label": "Contact fields (actions)",
+      "label": "Campi contatto (action)",
       "file_type": "document",
       "source_file": "voice-agents-prompts/sales-rep-voice-outbound.md",
-      "source_location": "L37",
+      "source_location": "L38",
       "_origin": "ast",
-      "id": "voice_agents_prompts_sales_rep_voice_outbound_contact_fields_actions",
+      "id": "voice_agents_prompts_sales_rep_voice_outbound_campi_contatto_action",
       "community": 215,
       "community_name": "sales-rep-voice-outbound.md",
-      "norm_label": "contact fields (actions)"
+      "norm_label": "campi contatto (action)"
     },
     {
-      "label": "Conversation flow",
+      "label": "Flusso conversazione",
       "file_type": "document",
       "source_file": "voice-agents-prompts/sales-rep-voice-outbound.md",
-      "source_location": "L53",
+      "source_location": "L54",
       "_origin": "ast",
-      "id": "voice_agents_prompts_sales_rep_voice_outbound_conversation_flow",
+      "id": "voice_agents_prompts_sales_rep_voice_outbound_flusso_conversazione",
       "community": 215,
       "community_name": "sales-rep-voice-outbound.md",
-      "norm_label": "conversation flow"
+      "norm_label": "flusso conversazione"
     },
     {
-      "label": "Data collection",
+      "label": "Raccolta dati",
       "file_type": "document",
       "source_file": "voice-agents-prompts/sales-rep-voice-outbound.md",
-      "source_location": "L67",
+      "source_location": "L68",
       "_origin": "ast",
-      "id": "voice_agents_prompts_sales_rep_voice_outbound_data_collection",
+      "id": "voice_agents_prompts_sales_rep_voice_outbound_raccolta_dati",
       "community": 215,
       "community_name": "sales-rep-voice-outbound.md",
-      "norm_label": "data collection"
+      "norm_label": "raccolta dati"
     },
     {
-      "label": "Qualification",
+      "label": "Qualifica",
       "file_type": "document",
       "source_file": "voice-agents-prompts/sales-rep-voice-outbound.md",
-      "source_location": "L84",
+      "source_location": "L85",
       "_origin": "ast",
-      "id": "voice_agents_prompts_sales_rep_voice_outbound_qualification",
+      "id": "voice_agents_prompts_sales_rep_voice_outbound_qualifica",
       "community": 215,
       "community_name": "sales-rep-voice-outbound.md",
-      "norm_label": "qualification"
+      "norm_label": "qualifica"
     },
     {
-      "label": "Next action",
+      "label": "Prossima azione",
       "file_type": "document",
       "source_file": "voice-agents-prompts/sales-rep-voice-outbound.md",
-      "source_location": "L100",
+      "source_location": "L101",
       "_origin": "ast",
-      "id": "voice_agents_prompts_sales_rep_voice_outbound_next_action",
+      "id": "voice_agents_prompts_sales_rep_voice_outbound_prossima_azione",
       "community": 215,
       "community_name": "sales-rep-voice-outbound.md",
-      "norm_label": "next action"
+      "norm_label": "prossima azione"
     },
     {
-      "label": "Complete lead",
+      "label": "Lead completo",
       "file_type": "document",
       "source_file": "voice-agents-prompts/sales-rep-voice-outbound.md",
-      "source_location": "L112",
+      "source_location": "L113",
       "_origin": "ast",
-      "id": "voice_agents_prompts_sales_rep_voice_outbound_complete_lead",
+      "id": "voice_agents_prompts_sales_rep_voice_outbound_lead_completo",
       "community": 215,
       "community_name": "sales-rep-voice-outbound.md",
-      "norm_label": "complete lead"
+      "norm_label": "lead completo"
     },
     {
-      "label": "Objections",
+      "label": "Obiezioni",
       "file_type": "document",
       "source_file": "voice-agents-prompts/sales-rep-voice-outbound.md",
-      "source_location": "L122",
+      "source_location": "L123",
       "_origin": "ast",
-      "id": "voice_agents_prompts_sales_rep_voice_outbound_objections",
+      "id": "voice_agents_prompts_sales_rep_voice_outbound_obiezioni",
       "community": 215,
       "community_name": "sales-rep-voice-outbound.md",
-      "norm_label": "objections"
+      "norm_label": "obiezioni"
     },
     {
-      "label": "Boundaries",
+      "label": "Limiti",
       "file_type": "document",
       "source_file": "voice-agents-prompts/sales-rep-voice-outbound.md",
-      "source_location": "L126",
+      "source_location": "L127",
       "_origin": "ast",
-      "id": "voice_agents_prompts_sales_rep_voice_outbound_boundaries",
+      "id": "voice_agents_prompts_sales_rep_voice_outbound_limiti",
       "community": 215,
       "community_name": "sales-rep-voice-outbound.md",
-      "norm_label": "boundaries"
+      "norm_label": "limiti"
     },
     {
-      "label": "Tools",
+      "label": "Strumenti",
       "file_type": "document",
       "source_file": "voice-agents-prompts/sales-rep-voice-outbound.md",
-      "source_location": "L130",
+      "source_location": "L131",
       "_origin": "ast",
-      "id": "voice_agents_prompts_sales_rep_voice_outbound_tools",
+      "id": "voice_agents_prompts_sales_rep_voice_outbound_strumenti",
       "community": 215,
       "community_name": "sales-rep-voice-outbound.md",
-      "norm_label": "tools"
+      "norm_label": "strumenti"
     },
     {
-      "label": "Closing",
+      "label": "Chiusura chiamata",
       "file_type": "document",
       "source_file": "voice-agents-prompts/sales-rep-voice-outbound.md",
-      "source_location": "L142",
+      "source_location": "L143",
       "_origin": "ast",
-      "id": "voice_agents_prompts_sales_rep_voice_outbound_closing",
+      "id": "voice_agents_prompts_sales_rep_voice_outbound_chiusura_chiamata",
       "community": 215,
       "community_name": "sales-rep-voice-outbound.md",
-      "norm_label": "closing"
+      "norm_label": "chiusura chiamata"
     },
     {
       "label": "sara_ai_voice.md",
@@ -158176,127 +158044,6 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "clients-prompt/_exports/FarmaciaSimonelli-prenotazioni-whatsapp-spoki.md",
-      "source_location": "L1",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "clients_prompt_exports_farmaciasimonelli_prenotazioni_whatsapp_spoki",
-      "target": "clients_prompt_exports_farmaciasimonelli_prenotazioni_whatsapp_spoki_farmacia_simonelli_prenotazioni_whatsapp_cosa_si_pu\u00f2_fare_e_cosa_serve_dal_tecnico",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "clients-prompt/_exports/FarmaciaSimonelli-prenotazioni-whatsapp-spoki.md",
-      "source_location": "L13",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "clients_prompt_exports_farmaciasimonelli_prenotazioni_whatsapp_spoki_farmacia_simonelli_prenotazioni_whatsapp_cosa_si_pu\u00f2_fare_e_cosa_serve_dal_tecnico",
-      "target": "clients_prompt_exports_farmaciasimonelli_prenotazioni_whatsapp_spoki_1_risposta_in_sintesi_per_voi",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "clients-prompt/_exports/FarmaciaSimonelli-prenotazioni-whatsapp-spoki.md",
-      "source_location": "L31",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "clients_prompt_exports_farmaciasimonelli_prenotazioni_whatsapp_spoki_farmacia_simonelli_prenotazioni_whatsapp_cosa_si_pu\u00f2_fare_e_cosa_serve_dal_tecnico",
-      "target": "clients_prompt_exports_farmaciasimonelli_prenotazioni_whatsapp_spoki_2_cosa_abbiamo_verificato_sul_vostro_sito",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "clients-prompt/_exports/FarmaciaSimonelli-prenotazioni-whatsapp-spoki.md",
-      "source_location": "L43",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "clients_prompt_exports_farmaciasimonelli_prenotazioni_whatsapp_spoki_farmacia_simonelli_prenotazioni_whatsapp_cosa_si_pu\u00f2_fare_e_cosa_serve_dal_tecnico",
-      "target": "clients_prompt_exports_farmaciasimonelli_prenotazioni_whatsapp_spoki_3_come_proporremmo_di_farlo_schema_operativo",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "clients-prompt/_exports/FarmaciaSimonelli-prenotazioni-whatsapp-spoki.md",
-      "source_location": "L66",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "clients_prompt_exports_farmaciasimonelli_prenotazioni_whatsapp_spoki_farmacia_simonelli_prenotazioni_whatsapp_cosa_si_pu\u00f2_fare_e_cosa_serve_dal_tecnico",
-      "target": "clients_prompt_exports_farmaciasimonelli_prenotazioni_whatsapp_spoki_4_parte_per_il_tecnico_da_inoltrare",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "clients-prompt/_exports/FarmaciaSimonelli-prenotazioni-whatsapp-spoki.md",
-      "source_location": "L135",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "clients_prompt_exports_farmaciasimonelli_prenotazioni_whatsapp_spoki_farmacia_simonelli_prenotazioni_whatsapp_cosa_si_pu\u00f2_fare_e_cosa_serve_dal_tecnico",
-      "target": "clients_prompt_exports_farmaciasimonelli_prenotazioni_whatsapp_spoki_5_prossimi_passi",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "clients-prompt/_exports/FarmaciaSimonelli-prenotazioni-whatsapp-spoki.md",
-      "source_location": "L98",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "clients_prompt_exports_farmaciasimonelli_prenotazioni_whatsapp_spoki_4_parte_per_il_tecnico_da_inoltrare",
-      "target": "clients_prompt_exports_farmaciasimonelli_prenotazioni_whatsapp_spoki_adapter_da_realizzare_lato_vostro_3_webhook_esempio",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "clients-prompt/_exports/FarmaciaSimonelli-prenotazioni-whatsapp-spoki.md",
-      "source_location": "L68",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "clients_prompt_exports_farmaciasimonelli_prenotazioni_whatsapp_spoki_4_parte_per_il_tecnico_da_inoltrare",
-      "target": "clients_prompt_exports_farmaciasimonelli_prenotazioni_whatsapp_spoki_contesto",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "clients-prompt/_exports/FarmaciaSimonelli-prenotazioni-whatsapp-spoki.md",
-      "source_location": "L123",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "clients_prompt_exports_farmaciasimonelli_prenotazioni_whatsapp_spoki_4_parte_per_il_tecnico_da_inoltrare",
-      "target": "clients_prompt_exports_farmaciasimonelli_prenotazioni_whatsapp_spoki_cosa_ci_serve_da_voi_da_farmacia_evoluta_qoresuite",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "clients-prompt/_exports/FarmaciaSimonelli-prenotazioni-whatsapp-spoki.md",
-      "source_location": "L75",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "clients_prompt_exports_farmaciasimonelli_prenotazioni_whatsapp_spoki_4_parte_per_il_tecnico_da_inoltrare",
-      "target": "clients_prompt_exports_farmaciasimonelli_prenotazioni_whatsapp_spoki_endpoint_rilevanti_gi\u00e0_usati_dal_form_pubblico",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "clients-prompt/_exports/FarmaciaSimonelli-prenotazioni-whatsapp-spoki.md",
-      "source_location": "L87",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "clients_prompt_exports_farmaciasimonelli_prenotazioni_whatsapp_spoki_4_parte_per_il_tecnico_da_inoltrare",
-      "target": "clients_prompt_exports_farmaciasimonelli_prenotazioni_whatsapp_spoki_vincolo_spoki_importante_per_il_disegno",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
       "source_file": "clients-prompt/_exports/IlMioVillaggio-scenari-test-agente-Federica.md",
       "source_location": "L1",
       "weight": 1.0,
@@ -164777,66 +164524,11 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "voice-agents-prompts/data-collection-voice-outbound.md",
-      "source_location": "L78",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "voice_agents_prompts_data_collection_voice_outbound",
-      "target": "voice_agents_prompts_data_collection_voice_outbound_boundaries",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "voice-agents-prompts/data-collection-voice-outbound.md",
-      "source_location": "L82",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "voice_agents_prompts_data_collection_voice_outbound",
-      "target": "voice_agents_prompts_data_collection_voice_outbound_closing",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "voice-agents-prompts/data-collection-voice-outbound.md",
-      "source_location": "L58",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "voice_agents_prompts_data_collection_voice_outbound",
-      "target": "voice_agents_prompts_data_collection_voice_outbound_collection_rules",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "voice-agents-prompts/data-collection-voice-outbound.md",
       "source_location": "L32",
       "weight": 1.0,
       "_origin": "ast",
       "source": "voice_agents_prompts_data_collection_voice_outbound",
-      "target": "voice_agents_prompts_data_collection_voice_outbound_contact_fields_actions",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "voice-agents-prompts/data-collection-voice-outbound.md",
-      "source_location": "L64",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "voice_agents_prompts_data_collection_voice_outbound",
-      "target": "voice_agents_prompts_data_collection_voice_outbound_conversation_flow",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "voice-agents-prompts/data-collection-voice-outbound.md",
-      "source_location": "L21",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "voice_agents_prompts_data_collection_voice_outbound",
-      "target": "voice_agents_prompts_data_collection_voice_outbound_customer_data",
+      "target": "voice_agents_prompts_data_collection_voice_outbound_campi_contatto_action",
       "confidence_score": 1.0
     },
     {
@@ -164847,7 +164539,51 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "voice_agents_prompts_data_collection_voice_outbound",
-      "target": "voice_agents_prompts_data_collection_voice_outbound_fields_to_collect",
+      "target": "voice_agents_prompts_data_collection_voice_outbound_campi_da_raccogliere",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "voice-agents-prompts/data-collection-voice-outbound.md",
+      "source_location": "L82",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "voice_agents_prompts_data_collection_voice_outbound",
+      "target": "voice_agents_prompts_data_collection_voice_outbound_chiusura_chiamata",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "voice-agents-prompts/data-collection-voice-outbound.md",
+      "source_location": "L21",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "voice_agents_prompts_data_collection_voice_outbound",
+      "target": "voice_agents_prompts_data_collection_voice_outbound_dati_del_chiamante",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "voice-agents-prompts/data-collection-voice-outbound.md",
+      "source_location": "L64",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "voice_agents_prompts_data_collection_voice_outbound",
+      "target": "voice_agents_prompts_data_collection_voice_outbound_flusso_conversazione",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "voice-agents-prompts/data-collection-voice-outbound.md",
+      "source_location": "L78",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "voice_agents_prompts_data_collection_voice_outbound",
+      "target": "voice_agents_prompts_data_collection_voice_outbound_limiti",
       "confidence_score": 1.0
     },
     {
@@ -164858,7 +164594,18 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "voice_agents_prompts_data_collection_voice_outbound",
-      "target": "voice_agents_prompts_data_collection_voice_outbound_language",
+      "target": "voice_agents_prompts_data_collection_voice_outbound_lingua",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "voice-agents-prompts/data-collection-voice-outbound.md",
+      "source_location": "L58",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "voice_agents_prompts_data_collection_voice_outbound",
+      "target": "voice_agents_prompts_data_collection_voice_outbound_regole_di_raccolta",
       "confidence_score": 1.0
     },
     {
@@ -164869,18 +164616,7 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "voice_agents_prompts_data_collection_voice_outbound",
-      "target": "voice_agents_prompts_data_collection_voice_outbound_role",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "voice-agents-prompts/data-collection-voice-outbound.md",
-      "source_location": "L17",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "voice_agents_prompts_data_collection_voice_outbound",
-      "target": "voice_agents_prompts_data_collection_voice_outbound_tone",
+      "target": "voice_agents_prompts_data_collection_voice_outbound_ruolo",
       "confidence_score": 1.0
     },
     {
@@ -164891,7 +164627,18 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "voice_agents_prompts_data_collection_voice_outbound",
-      "target": "voice_agents_prompts_data_collection_voice_outbound_tools",
+      "target": "voice_agents_prompts_data_collection_voice_outbound_strumenti",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "voice-agents-prompts/data-collection-voice-outbound.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "voice_agents_prompts_data_collection_voice_outbound",
+      "target": "voice_agents_prompts_data_collection_voice_outbound_tono",
       "confidence_score": 1.0
     },
     {
@@ -165646,154 +165393,154 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "voice-agents-prompts/sales-rep-voice-outbound.md",
-      "source_location": "L126",
+      "source_location": "L38",
       "weight": 1.0,
       "_origin": "ast",
       "source": "voice_agents_prompts_sales_rep_voice_outbound",
-      "target": "voice_agents_prompts_sales_rep_voice_outbound_boundaries",
+      "target": "voice_agents_prompts_sales_rep_voice_outbound_campi_contatto_action",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "voice-agents-prompts/sales-rep-voice-outbound.md",
-      "source_location": "L142",
+      "source_location": "L143",
       "weight": 1.0,
       "_origin": "ast",
       "source": "voice_agents_prompts_sales_rep_voice_outbound",
-      "target": "voice_agents_prompts_sales_rep_voice_outbound_closing",
+      "target": "voice_agents_prompts_sales_rep_voice_outbound_chiusura_chiamata",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "voice-agents-prompts/sales-rep-voice-outbound.md",
-      "source_location": "L112",
+      "source_location": "L22",
       "weight": 1.0,
       "_origin": "ast",
       "source": "voice_agents_prompts_sales_rep_voice_outbound",
-      "target": "voice_agents_prompts_sales_rep_voice_outbound_complete_lead",
+      "target": "voice_agents_prompts_sales_rep_voice_outbound_dati_del_chiamante",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "voice-agents-prompts/sales-rep-voice-outbound.md",
-      "source_location": "L37",
+      "source_location": "L54",
       "weight": 1.0,
       "_origin": "ast",
       "source": "voice_agents_prompts_sales_rep_voice_outbound",
-      "target": "voice_agents_prompts_sales_rep_voice_outbound_contact_fields_actions",
+      "target": "voice_agents_prompts_sales_rep_voice_outbound_flusso_conversazione",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "voice-agents-prompts/sales-rep-voice-outbound.md",
-      "source_location": "L53",
+      "source_location": "L113",
       "weight": 1.0,
       "_origin": "ast",
       "source": "voice_agents_prompts_sales_rep_voice_outbound",
-      "target": "voice_agents_prompts_sales_rep_voice_outbound_conversation_flow",
+      "target": "voice_agents_prompts_sales_rep_voice_outbound_lead_completo",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "voice-agents-prompts/sales-rep-voice-outbound.md",
-      "source_location": "L21",
+      "source_location": "L127",
       "weight": 1.0,
       "_origin": "ast",
       "source": "voice_agents_prompts_sales_rep_voice_outbound",
-      "target": "voice_agents_prompts_sales_rep_voice_outbound_customer_data",
+      "target": "voice_agents_prompts_sales_rep_voice_outbound_limiti",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "voice-agents-prompts/sales-rep-voice-outbound.md",
-      "source_location": "L67",
+      "source_location": "L14",
       "weight": 1.0,
       "_origin": "ast",
       "source": "voice_agents_prompts_sales_rep_voice_outbound",
-      "target": "voice_agents_prompts_sales_rep_voice_outbound_data_collection",
+      "target": "voice_agents_prompts_sales_rep_voice_outbound_lingua",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "voice-agents-prompts/sales-rep-voice-outbound.md",
-      "source_location": "L13",
+      "source_location": "L123",
       "weight": 1.0,
       "_origin": "ast",
       "source": "voice_agents_prompts_sales_rep_voice_outbound",
-      "target": "voice_agents_prompts_sales_rep_voice_outbound_language",
+      "target": "voice_agents_prompts_sales_rep_voice_outbound_obiezioni",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "voice-agents-prompts/sales-rep-voice-outbound.md",
-      "source_location": "L100",
+      "source_location": "L101",
       "weight": 1.0,
       "_origin": "ast",
       "source": "voice_agents_prompts_sales_rep_voice_outbound",
-      "target": "voice_agents_prompts_sales_rep_voice_outbound_next_action",
+      "target": "voice_agents_prompts_sales_rep_voice_outbound_prossima_azione",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "voice-agents-prompts/sales-rep-voice-outbound.md",
-      "source_location": "L122",
+      "source_location": "L85",
       "weight": 1.0,
       "_origin": "ast",
       "source": "voice_agents_prompts_sales_rep_voice_outbound",
-      "target": "voice_agents_prompts_sales_rep_voice_outbound_objections",
+      "target": "voice_agents_prompts_sales_rep_voice_outbound_qualifica",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "voice-agents-prompts/sales-rep-voice-outbound.md",
-      "source_location": "L84",
+      "source_location": "L68",
       "weight": 1.0,
       "_origin": "ast",
       "source": "voice_agents_prompts_sales_rep_voice_outbound",
-      "target": "voice_agents_prompts_sales_rep_voice_outbound_qualification",
+      "target": "voice_agents_prompts_sales_rep_voice_outbound_raccolta_dati",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "voice-agents-prompts/sales-rep-voice-outbound.md",
-      "source_location": "L9",
+      "source_location": "L10",
       "weight": 1.0,
       "_origin": "ast",
       "source": "voice_agents_prompts_sales_rep_voice_outbound",
-      "target": "voice_agents_prompts_sales_rep_voice_outbound_role",
+      "target": "voice_agents_prompts_sales_rep_voice_outbound_ruolo",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "voice-agents-prompts/sales-rep-voice-outbound.md",
-      "source_location": "L17",
+      "source_location": "L131",
       "weight": 1.0,
       "_origin": "ast",
       "source": "voice_agents_prompts_sales_rep_voice_outbound",
-      "target": "voice_agents_prompts_sales_rep_voice_outbound_tone",
+      "target": "voice_agents_prompts_sales_rep_voice_outbound_strumenti",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "voice-agents-prompts/sales-rep-voice-outbound.md",
-      "source_location": "L130",
+      "source_location": "L18",
       "weight": 1.0,
       "_origin": "ast",
       "source": "voice_agents_prompts_sales_rep_voice_outbound",
-      "target": "voice_agents_prompts_sales_rep_voice_outbound_tools",
+      "target": "voice_agents_prompts_sales_rep_voice_outbound_tono",
       "confidence_score": 1.0
     },
     {
