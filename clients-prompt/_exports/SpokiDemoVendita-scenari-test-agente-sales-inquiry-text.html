@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.11" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>SpokiDemoVendita-scenari-test-agente-sales-inquiry-text</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+<h1
+id="spoki-demo-vendita-scenari-di-test-dellassistente-whatsapp">Spoki
+Demo Vendita — Scenari di test dell’assistente WhatsApp</h1>
+<p><strong>Agente:</strong> [Template] Text — Sales Inquiry<br />
+<strong>Account Spoki:</strong> 9968<br />
+<strong>Tipo:</strong> Testuale<br />
+<strong>Link agente:</strong>
+https://app.spoki.com/ai/agent/145d886d-e66c-4fe1-bae2-dfc69021f959<br />
+<strong>Data verifica:</strong> 17 settembre 2026<br />
+<strong>Ambiente:</strong> playground di test</p>
+<hr />
+<h2 id="contesto">Contesto</h2>
+<p>È stato configurato e verificato l’assistente inbound di pre-vendita
+(sales inquiry). Il lavoro ha incluso:</p>
+<ol type="1">
+<li><strong>Prompt operativo</strong> per ACME SRL: FAQ prodotto da KB,
+chiarimento bisogno, un next step (preventivo / demo / umano).</li>
+<li><strong>Handoff sales-ready:</strong> tag <code>160407</code> e poi
+automazione <code>567520</code> (notifica commerciale).</li>
+<li><strong>Knowledge base</strong> fattuale (piani Starter/Growth,
+Voice add-on, onboarding, limiti ERP/sconti).</li>
+<li><strong>Transfer</strong> a commerciale quando richiesto; niente
+ticket tecnici su questo agente.</li>
+</ol>
+<p>Esito complessivo: <strong>verificato</strong> (nota: su domanda
+multipla tende a rispondere a tutti i temi nello stesso turno).</p>
+<hr />
+<h2 id="cosa-è-stato-verificato">Cosa è stato verificato</h2>
+<h3 id="prodotto-e-prezzi">Prodotto e prezzi</h3>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Cosa è stato controllato</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Avvio / bisogno</td>
+<td>Disclosure ACME SRL; domanda di chiarimento (a volte con listino
+anticipato)</td>
+</tr>
+<tr>
+<td>Prezzo Starter</td>
+<td>KB + listino da €200/mese</td>
+</tr>
+<tr>
+<td>Richiesta sconto 40%</td>
+<td>Nessuno sconto inventato; rimanda a specialist</td>
+</tr>
+<tr>
+<td>Solo curiosità Voice</td>
+<td>Risponde da KB; non forza ricontatto/tag</td>
+</tr>
+</tbody>
+</table>
+<h3 id="handoff-commerciale">Handoff commerciale</h3>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Cosa è stato controllato</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Preventivo Growth</td>
+<td>Campi contatto + tag 160407 + automazione 567520</td>
+</tr>
+<tr>
+<td>“Parlare con un commerciale”</td>
+<td>transfer_to_human</td>
+</tr>
+</tbody>
+</table>
+<h3 id="fuori-scope-e-stile">Fuori scope e stile</h3>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Cosa è stato controllato</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bug / ticket tecnico</td>
+<td>Non apre ticket; indirizza a supporto tecnico</td>
+</tr>
+<tr>
+<td>Domanda multipla (prezzi + ERP + sconto)</td>
+<td>Ha risposto a tutti i temi nello stesso messaggio (fail
+one-question)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="note-tecniche">Note tecniche</h2>
+<ul>
+<li>Automazione follow-up:
+https://app.spoki.com/automations/567520<br />
+</li>
+<li>Tag sales-ready: <code>160407</code><br />
+</li>
+<li>Tool nativi <code>search_knowledge_base</code> /
+<code>transfer_to_human</code> usati anche se non sempre in
+<code>attached_services</code><br />
+</li>
+<li>Agente in bozza (DRAFT) al momento del test playground</li>
+</ul>
+<hr />
+<h2 id="prossimi-passi-operativi">Prossimi passi operativi</h2>
+<ol type="1">
+<li>Rafforzare “one question per message” su richieste multi-tema.<br />
+</li>
+<li>Sync modello Notion gallery (To-Do / prompt agnostico) allineato a
+tag+auto 567520.<br />
+</li>
+<li>Attivare in live dopo smoke su contatto di test.</li>
+</ol>
+</body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.11" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>SpokiDemoVendita-scenari-test-agente-survey-text</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="" />
+</head>
+<body>
+<h1
+id="spoki-demo-vendita-scenari-di-test-dellassistente-whatsapp">Spoki
+Demo Vendita — Scenari di test dell’assistente WhatsApp</h1>
+<p><strong>Agente:</strong> [Template] Text — Survey / CSAT<br />
+<strong>Account Spoki:</strong> 9968<br />
+<strong>Tipo:</strong> Testuale<br />
+<strong>Link agente:</strong>
+https://app.spoki.com/ai/agent/4b2dbb48-b860-4450-8a63-04d10d417adc<br />
+<strong>Data verifica:</strong> 17 settembre 2026<br />
+<strong>Ambiente:</strong> playground di test</p>
+<hr />
+<h2 id="contesto">Contesto</h2>
+<p>È stato configurato e verificato l’assistente inbound di sondaggio /
+CSAT. Il lavoro ha incluso:</p>
+<ol type="1">
+<li><strong>Prompt operativo</strong> allineato al modello Notion
+<em>Text — Survey / CSAT</em>, con brand ACME SRL, domande in sequenza
+(score 1–5, cosa è andato bene, cosa migliorare, consenso ricontatto),
+azioni campo/tag su righe separate.</li>
+<li><strong>Allineamento live</strong> rispetto a un draft con azioni
+concatenate (<code>tag_ids=160399@@6.</code>) e brand inconsistente —
+prompt re-incollato corretto.</li>
+<li><strong>Persistenza risposte</strong> via campi
+<code>CSAT_SCORE</code> / <code>CSAT_WENT_WELL</code> /
+<code>CSAT_IMPROVE</code> e tag <code>FEEDBACK_CALLBACK</code> (160399)
+/ <code>SURVEY_COMPLETED</code> (160400). Nessuna automazione richiesta
+per questo template.</li>
+<li><strong>Detrattori (score ≤2):</strong> offerta di passaggio a
+operatore umano; in playground il tool <code>transfer_to_human</code>
+non risultava ancora legato in UI (offerta verbale verificata).</li>
+</ol>
+<p>Gli scenari sotto sono stati eseguiti sul playground. Esito
+complessivo: <strong>verificato</strong> con note minori (transfer da
+bindare; una domanda per messaggio da rafforzare sul path
+detrattore).</p>
+<hr />
+<h2 id="cosa-è-stato-verificato">Cosa è stato verificato</h2>
+<h3 id="avvio-e-validazione-score">Avvio e validazione score</h3>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Cosa è stato controllato</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Avvio sondaggio</td>
+<td>Disclosure ACME SRL; chiede subito lo score 1–5</td>
+</tr>
+<tr>
+<td>Score valido</td>
+<td>Salva <code>CSAT_SCORE</code>; passa alla domanda successiva</td>
+</tr>
+<tr>
+<td>Score non numerico (“molto soddisfatto”)</td>
+<td>Chiede una volta un intero da 1 a 5</td>
+</tr>
+</tbody>
+</table>
+<h3 id="flusso-completo-e-rifiuto">Flusso completo e rifiuto</h3>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Cosa è stato controllato</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Happy path (score alto + sì al ricontatto)</td>
+<td>Campi + tag callback + tag survey completed; ringrazia e chiude</td>
+</tr>
+<tr>
+<td>Rifiuto sondaggio</td>
+<td>Ringrazia e chiude senza porre le domande</td>
+</tr>
+<tr>
+<td>Skip commenti</td>
+<td>Accetta “salta” su Q2/Q3 e prosegue</td>
+</tr>
+</tbody>
+</table>
+<h3 id="detrattore-e-chiusura">Detrattore e chiusura</h3>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Cosa è stato controllato</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Score basso (1)</td>
+<td>Propone contatto con operatore; nessun pitch commerciale</td>
+</tr>
+<tr>
+<td>Dopo chiusura / “ok grazie”</td>
+<td>Non riapre il questionario</td>
+</tr>
+<tr>
+<td>Una domanda per messaggio</td>
+<td>Fallito sul path score basso: offerta transfer + Q2 nello stesso
+messaggio</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="interventi-sul-prompt-legati-ai-test-feedback">Interventi sul
+prompt legati ai test / feedback</h2>
+<table>
+<thead>
+<tr>
+<th>Tema</th>
+<th>Intervento verificato</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Brand</td>
+<td>ACME SRL (non AcmeSRL / placeholder)</td>
+</tr>
+<tr>
+<td>Azioni</td>
+<td>Una <code>@@action</code> per riga; niente concatenazione
+tag+prosa</td>
+</tr>
+<tr>
+<td>Campi / tag</td>
+<td>Codici reali CSAT_* e ID 160399 / 160400</td>
+</tr>
+<tr>
+<td>Tools</td>
+<td>Field value + tag; transfer dichiarato ma da bindare in UI</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="note-tecniche-tool-piattaforma">Note tecniche (tool /
+piattaforma)</h2>
+<ul>
+<li><code>attached_services</code> in playground:
+<code>set_contact_field_value</code>, <code>add_tags_to_contact</code>.
+<code>transfer_to_human</code> assente al momento del test (detractor =
+Pass* su offerta verbale).</li>
+<li>I campi dinamici già popolati non vengono azzerati dall’agente tra
+run: in playground conviene clear chat / nuovo contatto quando il
+residuo confonde.</li>
+<li>Temperature live osservata a 0.8 (modello suggerisce low) —
+opzionale.</li>
+<li>Agente ancora in bozza (<code>DRAFT</code> /
+<code>is_active=false</code>) al momento del test playground.</li>
+</ul>
+<hr />
+<h2 id="prossimi-passi-operativi">Prossimi passi operativi</h2>
+<ol type="1">
+<li>Bindare <code>transfer_to_human</code> in UI e re-testare solo lo
+scenario detrattore.</li>
+<li>Rafforzare “one question per message” dopo score ≤2 (offer transfer
+<strong>oppure</strong> prossima domanda, non entrambi).</li>
+<li>Attivare l’agente in live solo dopo sync definitivo e smoke su
+contatto di test.</li>
+</ol>
+</body>
+</html>
