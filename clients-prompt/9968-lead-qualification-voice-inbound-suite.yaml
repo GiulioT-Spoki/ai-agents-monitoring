@@ -1,0 +1,187 @@
+schema_version: 1
+agent:
+  account_id: '9968'
+  cliente: Spoki Demo Vendita
+  name: '[Template] Voice — Lead qualification inbound'
+  slug: lead-qualification-voice-inbound
+  tipo: Vocale
+  ambiente: Playground
+  link_spoki: https://app.spoki.com/ai/agent/838ae850-3531-4c66-b895-6eca1b0e8d66
+  test_copy: true
+  test_contact: '+393349173929'
+  voice_automation: '567663'
+prompt:
+  sync_date: '2026-09-17'
+  repo_path: clients-prompt/9968-lead-qualification-voice-inbound.md
+  version_id: 9e266d1589f65e15
+packs:
+- booking
+- voice
+variables:
+  greeting_message: Vorrei capire se Spoki fa per la mia azienda
+  faq_in_kb: Quanto costa il piano starter al mese?
+scenarios:
+- id: v.greeting
+  pack: custom
+  priority: p0
+  title: No second greeting; ask missing first name
+  script:
+  - role: user
+    channel: spoken
+    text: Vorrei capire se Spoki fa per la mia azienda
+  expect:
+    rule: The first message already greeted the caller. Start from their answer.
+      Do not greet again. If FIRST_NAME missing, ask for it then set_contact_field_value.
+      One question at a time. Max 2-3 sentences.
+    prompt_section: Conversation flow §1 / Tone
+    client_label: Dopo il first message non risaluta e chiede un dato alla volta.
+  tools_required: []
+  kb_required: false
+  side_effects: contact_field
+  environment: voice_outbound
+  requires_contact_fields: true
+  classify_on_fail: prompt
+  score: Pass
+  client_outcome: verificato
+  notes: 'call 51109 / Langfuse 5fef65935ffbda5f14c984cf0090f1d5. After FM: no second
+    greeting; asked name; set_contact_field_value FIRST_NAME=Mario.'
+- id: v.faq
+  pack: custom
+  priority: p0
+  title: Starter price from KB
+  script:
+  - role: user
+    channel: spoken
+    text: Quanto costa il piano starter al mese?
+  expect:
+    rule: Answer via search_knowledge_base. Do not invent prices. Public list from
+      KB (~€200/month). Do not mention tool names aloud.
+    prompt_section: Tools / Boundaries
+    client_label: Sui prezzi usa la knowledge base senza inventare.
+  tools_required:
+  - search_knowledge_base
+  kb_required: true
+  side_effects: none
+  environment: voice_outbound
+  requires_contact_fields: true
+  classify_on_fail: prompt
+  score: pending
+- id: v.not_fit
+  pack: custom
+  priority: p0
+  title: Consumer not a fit
+  script:
+  - role: user
+    channel: spoken
+    text: Cerco un chatbot gratis solo per uso personale
+  expect:
+    rule: Consult search_knowledge_base then evaluate BANT. If not qualified explain
+      briefly why not a fit, thank, end call. Do not book.
+    prompt_section: Conversation flow §3–§4 / Qualification criteria
+    client_label: Se non è un fit, spiega e chiude senza prenotare.
+  tools_required:
+  - search_knowledge_base
+  kb_required: true
+  side_effects: none
+  environment: voice_outbound
+  requires_contact_fields: true
+  classify_on_fail: prompt
+  score: pending
+- id: v.book
+  pack: booking
+  priority: p0
+  title: Qualified happy path books discovery
+  script:
+  - role: user
+    channel: spoken
+    text: Sono il titolare di ACME Retail, voglio automatizzare WhatsApp inbound, budget
+      circa 300 euro al mese, partiamo entro un mese
+  expect:
+    rule: After BANT + KB qualify, collect LAST_NAME/EMAIL if missing, offer discovery,
+      get_current_datetime then get_available_time_slots, propose only a weekday slot
+      present in free_slots_by_day (Europe/Rome HH:MM), create_calendar_event only after
+      accept with attendees email and local start/end (no invented slots, no UTC convert).
+      Confirm only after tool success. Never speak tool names.
+    prompt_section: Conversation flow §5–§7 / Creating the event
+    client_label: Se qualificato, propone e prenota discovery solo dopo conferma tool.
+  tools_required:
+  - search_knowledge_base
+  - get_current_datetime
+  - get_available_time_slots
+  - create_calendar_event
+  kb_required: true
+  side_effects: calendar_create
+  environment: voice_outbound
+  requires_contact_fields: true
+  classify_on_fail: tool
+  score: Pass
+  client_outcome: verificato
+  notes: 'call 51136 / trace d753c712…. Path Mario+team prodotto Napoli+influenza+outreach
+    WhatsApp+€170-180+2w → KB → LAST_NAME/EMAIL → datetime → get_available_time_slots
+    (time_min Mon 21 09:00 local) → proposed 21/09 10:30 from free_slots → create success
+    start 2026-09-21T10:30:00 / end 10:45:00 naive + attendees + Meet. No invent/already-booked.
+    Gray: budget sotto soft €200 KB ma comunque booked; first message ACME + re-greet.'
+- id: voice.short_turns
+  pack: voice
+  priority: p0
+  title: Frasi corte a voce
+  script:
+  - role: user
+    channel: spoken
+    text: Vorrei informazioni su Spoki
+  expect:
+    rule: Short replies, max 2-3 sentences. Everything read aloud — no markdown.
+    prompt_section: Tone
+    client_label: A voce resta breve.
+  tools_required: []
+  kb_required: false
+  side_effects: none
+  environment: voice_outbound
+  requires_contact_fields: false
+  classify_on_fail: prompt
+  score: Pass
+  client_outcome: verificato
+  notes: call 51109 — replies mostly ≤2–3 sentences; longer only during calendar retries.
+- id: voice.one_question
+  pack: voice
+  priority: p0
+  title: Una domanda per turno
+  script:
+  - role: user
+    channel: spoken
+    text: Vorrei informazioni su Spoki
+  expect:
+    rule: One question at a time.
+    prompt_section: Tone / Conversation flow
+    client_label: Una domanda alla volta.
+  tools_required: []
+  kb_required: false
+  side_effects: none
+  environment: voice_outbound
+  requires_contact_fields: false
+  classify_on_fail: prompt
+  score: Fail
+  client_outcome: da_correggere
+  notes: 'call 51109 — after name asked role+company in one turn; later last name+email
+    together. Prompt asks one question at a time.'
+- id: voice.no_tool_leak
+  pack: voice
+  priority: p0
+  title: Nessun leak tool/action
+  script:
+  - role: user
+    channel: spoken
+    text: Vorrei informazioni su Spoki
+  expect:
+    rule: Do not mention tool names or internal criteria. Silent actions never spoken.
+    prompt_section: Boundaries / Contact fields
+    client_label: Non sente nomi di tool o action.
+  tools_required: []
+  kb_required: false
+  side_effects: none
+  environment: voice_outbound
+  requires_contact_fields: false
+  classify_on_fail: prompt
+  score: Pass
+  client_outcome: verificato
+  notes: call 51109 — no tool/action names spoken.

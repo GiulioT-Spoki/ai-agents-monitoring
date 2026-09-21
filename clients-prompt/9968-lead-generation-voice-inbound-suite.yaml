@@ -1,0 +1,144 @@
+schema_version: 1
+agent:
+  account_id: 9968
+  name: "[Template] Voice — Lead Generation inbound"
+  channel: voice
+  direction: inbound
+  environment: voice_outbound
+  spoki_agent_id: null
+  contact_phone: "+393349173929"
+  tags:
+    qualified: 160327
+    not_qualified: 160328
+  callback_automation_id: 567520
+scenarios:
+- id: v.greeting
+  pack: voice
+  priority: p0
+  title: No re-greet; ask first name if missing
+  script:
+  - role: user
+    channel: spoken
+    text: Vorrei capire se fate al caso nostro
+  expect:
+    rule: First message already greeted. Do not greet again. If FIRST_NAME missing, ask
+      for first name only (one question).
+    prompt_section: Conversation flow §1
+    client_label: Non risaluta; chiede il nome.
+  tools_required: []
+  kb_required: false
+  side_effects: none
+  environment: voice_outbound
+  requires_contact_fields: true
+  classify_on_fail: prompt
+  score: pending
+- id: v.qualify_async
+  pack: booking
+  priority: p0
+  title: Qualified path tags and triggers async callback
+  script:
+  - role: user
+    channel: spoken
+    text: Sono marketing manager in una PMI, voglio automatizzare WhatsApp inbound,
+      budget circa 300 euro al mese, partiamo entro un mese
+  expect:
+    rule: After BANT + KB qualify, set missing LAST_NAME/EMAIL, add_tags 160327, trigger_automation
+      callback, confirm sales follow-up only after both succeed. No calendar. No live transfer.
+    prompt_section: Conversation flow §7
+    client_label: Qualificato → tag + automazione async + conferma.
+  tools_required:
+  - search_knowledge_base
+  - add_tags_to_contact
+  - trigger_automation
+  kb_required: true
+  side_effects: tag_and_automation
+  environment: voice_outbound
+  requires_contact_fields: true
+  classify_on_fail: tool
+  score: Pass*
+  notes: 'call 51183 / trace be429aa1…. FIRST_NAME/LAST_NAME/EMAIL set; KB; tag 160327
+    QUALIFIED; trigger_automation success (contact_in_automation_id 481764119). Confirmed
+    sales follow-up after. No calendar. Note: tool args showed force:true not explicit
+    automation_id in Langfuse; LAST_NAME saved Trinkera without H.'
+- id: v.not_fit
+  pack: qualification
+  priority: p0
+  title: Not a fit closes without sales callback claim
+  script:
+  - role: user
+    channel: spoken
+    text: Cerco un chatbot gratis per uso personale, niente azienda
+  expect:
+    rule: KB not-fit. Brief explanation. Optional tag 160328. Do not claim sales will call.
+      No calendar.
+    prompt_section: Conversation flow §6
+    client_label: Non fit → chiude senza handoff sales.
+  tools_required:
+  - search_knowledge_base
+  kb_required: true
+  side_effects: optional_tag
+  environment: voice_outbound
+  requires_contact_fields: false
+  classify_on_fail: prompt
+  score: pending
+- id: v.no_calendar
+  pack: booking
+  priority: p0
+  title: Never calls calendar tools
+  script:
+  - role: user
+    channel: spoken
+    text: Possiamo fissare una call sulla mia agenda?
+  expect:
+    rule: Do not call get_available_time_slots or create_calendar_event. Qualify and async
+      handoff only, or explain sales will follow up.
+    prompt_section: Boundaries
+    client_label: Zero tool calendario.
+  tools_required: []
+  kb_required: false
+  side_effects: none
+  environment: voice_outbound
+  requires_contact_fields: false
+  classify_on_fail: prompt
+  score: Pass
+  notes: call 51183 — no get_available_time_slots / create_calendar_event in TOOL spans.
+- id: voice.one_question
+  pack: voice
+  priority: p0
+  title: Una domanda per turno
+  script:
+  - role: user
+    channel: spoken
+    text: Vorrei informazioni
+  expect:
+    rule: One question at a time.
+    prompt_section: Tone / Conversation flow
+    client_label: Una domanda alla volta.
+  tools_required: []
+  kb_required: false
+  side_effects: none
+  environment: voice_outbound
+  requires_contact_fields: false
+  classify_on_fail: prompt
+  score: Fail
+  notes: call 51183 — sometimes stacked confirm+next question in one turn.
+- id: voice.no_tool_leak
+  pack: voice
+  priority: p0
+  title: Nessun leak tool/action
+  script:
+  - role: user
+    channel: spoken
+    text: Vorrei informazioni
+  expect:
+    rule: Do not mention tool names, tag IDs, or automation IDs. Silent actions never spoken.
+    prompt_section: Boundaries
+    client_label: Non sente nomi di tool o action.
+  tools_required: []
+  kb_required: false
+  side_effects: none
+  environment: voice_outbound
+  requires_contact_fields: false
+  classify_on_fail: prompt
+  score: Pass
+  notes: call 51183 — no tool/tag/automation IDs spoken.

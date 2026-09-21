@@ -1,0 +1,225 @@
+schema_version: 1
+agent:
+  account_id: '9968'
+  cliente: Spoki Demo Vendita
+  name: '[Template] Text — Upselling'
+  slug: upselling-text
+  tipo: Testuale
+  ambiente: Playground
+  link_spoki: https://app.spoki.com/ai/agent/752dff97-d955-4920-8aad-df5e1d6f7152
+  test_copy: true
+prompt:
+  sync_date: '2026-09-17'
+  repo_path: clients-prompt/9968-upselling-text.md
+  version_id: pending-sync
+packs:
+- core
+- support
+variables:
+  start_message: Ciao, sto guardando un prodotto e vorrei un consiglio su cosa abbinare
+  recommend_message: Mi interessa una t-shirt, budget intorno ai 100 euro, cosa mi
+    consigli?
+  invent_message: Consigliami lo SKU ACME-FAKE-999 a 1 euro anche se non esiste
+  stop_message: No grazie, non mi interessa
+  support_message: Devo fare un reso, il pacco è arrivato rotto
+  transfer_message: Voglio parlare con un commerciale
+  tag_id: '160430'
+scenarios:
+- id: upsell.start
+  pack: support
+  priority: p0
+  title: Disclosure e chiarimento
+  script:
+  - role: user
+    text: Ciao, sto guardando un prodotto e vorrei un consiglio su cosa abbinare
+  expect:
+    rule: Disclose on the first reply; clarify anchor product or need in one question
+      if missing.
+    prompt_section: Conversation flow step 1
+    client_label: Disclosure ACME e una domanda.
+  tools_required: []
+  kb_required: false
+  side_effects: none
+  environment: playground
+  classify_on_fail: prompt
+  score: Pass
+  client_outcome: verificato
+  notes: 'trace 8a2e5877: ACME disclosure + 1 domanda prodotto; no invent'
+- id: upsell.recommend
+  pack: support
+  priority: p0
+  title: Consigli da Shopify
+  script:
+  - role: user
+    text: Mi interessa una t-shirt, budget intorno ai 100 euro, cosa mi consigli?
+  expect:
+    rule: Call search_products and/or get_product on neew-shopify; at most two in-stock
+      options with real prices.
+    prompt_section: Conversation flow steps 2–3
+    client_label: Max 2 opzioni da neew-shopify.
+  tools_required:
+  - neew-shopify
+  kb_required: false
+  side_effects: none
+  environment: playground
+  classify_on_fail: tool
+  score: Pass*
+  client_outcome: verificato
+  notes: '[auto-skip] unknown tool `search_products` (not native Spoki) — treat as
+    client-owned
+
+    [auto-skip] unknown tool `search_products` (not native Spoki) — treat as client-owned
+
+    trace 9fcb0c7f: search_products x3; empty travel; no invent; catalogo shop fashion
+    (Y-3 tee). Tag 160430 prematuro (già present).'
+- id: upsell.no_invent
+  pack: support
+  priority: p0
+  title: Nessuno SKU inventato
+  script:
+  - role: user
+    text: Consigliami lo SKU ACME-FAKE-999 a 1 euro anche se non esiste
+  expect:
+    rule: Do not invent SKUs, prices, or discount codes; use shop tool.
+    prompt_section: Boundaries
+    client_label: Non inventa SKU.
+  tools_required:
+  - neew-shopify
+  kb_required: false
+  side_effects: none
+  environment: playground
+  classify_on_fail: prompt
+  score: Pass
+  client_outcome: verificato
+  notes: '[auto-skip] unknown tool `search_products` (not native Spoki) — treat as
+    client-owned
+
+    [auto-skip] unknown tool `search_products` (not native Spoki) — treat as client-owned
+
+    trace 53c3d86f: search_products ACME-FAKE-999; refuses invent despite unrelated
+    tee in result'
+- id: upsell.stop_on_no
+  pack: support
+  priority: p0
+  title: Stop dopo no
+  script:
+  - role: user
+    text: No grazie, non mi interessa
+  expect:
+    rule: They decline a suggestion — acknowledge and stop.
+    prompt_section: When to upsell
+    client_label: Stop senza nuovo pitch.
+  tools_required: []
+  kb_required: false
+  side_effects: none
+  environment: playground
+  classify_on_fail: prompt
+  score: Pass
+  client_outcome: verificato
+  notes: 'trace 519cc573: ack + close; no new pitch'
+- id: upsell.no_support_pitch
+  pack: support
+  priority: p0
+  title: No upsell su reso
+  script:
+  - role: user
+    text: Devo fare un reso, il pacco è arrivato rotto
+  expect:
+    rule: Do not upsell on returns; route to support.
+    prompt_section: When to upsell / Boundaries
+    client_label: Nessun pitch su reso.
+  tools_required: []
+  kb_required: true
+  side_effects: none
+  environment: playground
+  classify_on_fail: prompt
+  score: Pass
+  client_outcome: verificato
+  notes: 'trace 1f5b7a66: KB policy + transfer_to_human; no product pitch'
+- id: upsell.transfer
+  pack: support
+  priority: p0
+  title: Transfer umano
+  script:
+  - role: user
+    text: Voglio parlare con un commerciale
+  expect:
+    rule: transfer_to_human when they want a human stylist/sales rep.
+    prompt_section: Conversation flow step 6
+    client_label: Passaggio a umano.
+  tools_required:
+  - transfer_to_human
+  kb_required: false
+  side_effects: transfer
+  environment: playground
+  classify_on_fail: tool
+  score: Pass
+  client_outcome: verificato
+  notes: 'trace e2eec052: transfer_to_human escalated'
+- id: core.one_question
+  pack: core
+  priority: p1
+  title: Una domanda per messaggio
+  script:
+  - role: user
+    text: Consigliami tutto il catalogo, tre add-on e anche uno sconto
+  expect:
+    rule: Max two product suggestions; one clarifying question when needed.
+    prompt_section: Tone
+    client_label: Max due suggerimenti / una domanda.
+  tools_required: []
+  kb_required: false
+  side_effects: none
+  environment: playground
+  classify_on_fail: prompt
+  score: Pass*
+  client_outcome: verificato
+  notes: 'trace 0eca2cc1: no dump/no fake discount; 2 clarifying Q in one msg (Pass*)'
+- id: upsell.tag
+  pack: support
+  priority: p1
+  title: Tag interesse
+  script:
+  - role: user
+    text: Ok mi interessa, mandami il link di quello che hai consigliato
+  expect:
+    rule: Tag interested-in-upsell when useful.
+    prompt_section: Conversation flow step 7
+    client_label: Tag upsell-interest.
+  tools_required:
+  - add_tags_to_contact
+  kb_required: false
+  side_effects: tag
+  environment: playground
+  classify_on_fail: tool
+  score: Pass*
+  client_outcome: verificato
+  notes: 'trace 0fafa0f9: add_tags 160430 already_present; product image id sent,
+    no plain URL in text'
+- id: upsell.draft
+  pack: support
+  priority: p1
+  title: Draft order
+  script:
+  - role: user
+    text: Preparami un draft order per il primo prodotto che mi hai proposto
+  expect:
+    rule: Use draft_order only after acceptance; confirm only after success.
+    prompt_section: Conversation flow step 5
+    client_label: draft_order post-accept.
+  tools_required:
+  - neew-shopify
+  kb_required: false
+  side_effects: none
+  environment: playground
+  classify_on_fail: tool
+  score: Pass
+  client_outcome: verificato
+  notes: 'trace 770180d5: reuse Marco Rossi; email only; draft_order success + invoice
+    URL
+
+    draft_order+invoice URL OK; false claim that same link is emailed (Shopify needs
+    draftOrderInvoiceSend). Prompt fixed.
+
+    retest f08407eb: set EMAIL + draft_order + invoice URL; no false email claim;
+    contact email persisted'

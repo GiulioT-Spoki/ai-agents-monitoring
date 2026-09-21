@@ -1,0 +1,189 @@
+schema_version: 1
+agent:
+  account_id: '9968'
+  cliente: Spoki Demo Vendita
+  name: '[Template] Text — IVR Triage'
+  slug: ivr-triage-text
+  tipo: Testuale
+  ambiente: Playground
+  link_spoki: https://app.spoki.com/ai/agent/170eade0-78ff-46e4-ae11-2b996a7d778a
+  test_copy: true
+prompt:
+  sync_date: '2026-09-16'
+  repo_path: clients-prompt/9968-ivr-triage-text.md
+  version_id: 7d080709f8f5f1e3
+packs:
+- core
+- support
+variables:
+  greeting_message: Ciao
+  sales_message: Vorrei un preventivo per WhatsApp AI per la mia azienda
+  unclear_message: Ho un problema
+  operator_message: Posso parlare con un operatore?
+  urgent_message: Ho un addebito non autorizzato sulla carta, voglio parlare subito
+    con qualcuno
+  faq_in_kb: A che ora siete aperti?
+scenarios:
+- id: core.greeting
+  pack: core
+  priority: p0
+  title: Accoglienza + disclosure
+  script:
+  - role: user
+    text: Ciao
+  expect:
+    rule: Disclose on the first reply that you are an automated assistant acting for
+      ACME SRL. If intent is unclear, ask one clarifying question. One question at
+      a time. Reply in the same language.
+    prompt_section: Role / Conversation flow §1–2 / Tone
+    client_label: All'apertura l'assistente si presenta come AI e chiede cosa serve.
+  tools_required: []
+  kb_required: false
+  side_effects: none
+  environment: playground
+  classify_on_fail: prompt
+  score: Pass*
+  client_outcome: verificato_con_nota
+  notes: 'Langfuse 3b55e47b861c9089f736eef6879da043 — disclosed as literal [COMPANY]; offered up to 4 options. Sync ACME SRL + split @@action lines before route P0.'
+- id: ivr.sales_route
+  pack: core
+  priority: p0
+  title: Route sales tag + automation
+  script:
+  - role: user
+    text: Vorrei un preventivo per WhatsApp AI per la mia azienda
+  expect:
+    rule: Confirm intent in one short line, then add tag 160344 then trigger automation
+      567259. Confirm routing only after both succeed. Do not list tag or automation
+      ids to the user.
+    prompt_section: Intents sales_inquiry / Conversation flow §1 §3
+    client_label: Su una richiesta commerciale instrada con tag sales e automazione
+      IVR.
+  tools_required: []
+  kb_required: false
+  side_effects: tag_automation
+  environment: playground
+  classify_on_fail: prompt
+  score: Pass*
+  client_outcome: verificato_con_nota
+  notes: 'Langfuse bfebde19ecd52347c5e3da2764200ad1 — add_tags 160344 success then trigger_automation success (args {}). Confirm after both. Literal [COMPANY] still in live prompt.'
+- id: ivr.clarify
+  pack: core
+  priority: p0
+  title: Intent unclear
+  script:
+  - role: user
+    text: Ho un problema
+  expect:
+    rule: If unclear, ask one clarifying question or offer up to four labeled options.
+      Do not loop more than twice.
+    prompt_section: Intents / Conversation flow §2
+    client_label: Se l'intent non è chiaro, chiede una sola domanda di chiarimento.
+  tools_required: []
+  kb_required: false
+  side_effects: none
+  environment: playground
+  classify_on_fail: prompt
+  score: Pass*
+  client_outcome: verificato_con_nota
+  notes: 'Langfuse f9bccf29743b36a4586b9043e7b604c5 — 4 labeled options, no tag/automation. Literal [COMPANY].'
+- id: core.transfer
+  pack: core
+  priority: p0
+  title: Passaggio a operatore
+  script:
+  - role: user
+    text: Posso parlare con un operatore?
+  expect:
+    rule: transfer_to_human when they ask for a person. Confirm only after success.
+      Do not mention tool names.
+    prompt_section: Intents other / Tools / Conversation flow
+    client_label: Se l'utente chiede un operatore, passa la conversazione.
+  tools_required:
+  - transfer_to_human
+  kb_required: false
+  side_effects: transfer
+  environment: playground
+  classify_on_fail: tool
+  score: Pass*
+  client_outcome: verificato_con_nota
+  notes: 'Langfuse 9f14ebe1653c9a6d302245461d20baa9 — transfer_to_human status escalated, confirm after. Literal [COMPANY].'
+- id: ivr.urgent
+  pack: core
+  priority: p0
+  title: Urgente payment dispute
+  script:
+  - role: user
+    text: Ho un addebito non autorizzato sulla carta, voglio parlare subito con qualcuno
+  expect:
+    rule: For urgent safety, legal, or payment disputes skip long triage and call
+      transfer_to_human immediately (no tag/automation).
+    prompt_section: Conversation flow §4
+    client_label: Su dispute di pagamento fa transfer immediato senza triage lungo.
+  tools_required:
+  - transfer_to_human
+  kb_required: false
+  side_effects: transfer
+  environment: playground
+  classify_on_fail: prompt
+  score: Pass*
+  client_outcome: verificato_con_nota
+  notes: 'Langfuse 4f4e1410767a5f245176aa497b365c2e — immediate transfer_to_human escalated; no tag/automation. Literal [COMPANY].'
+- id: support.faq_in_kb
+  pack: support
+  priority: p0
+  title: FAQ orari da KB
+  script:
+  - role: user
+    text: A che ora siete aperti?
+  expect:
+    rule: Answer single KB facts (hours, address) via search_knowledge_base, then ask
+      if they still need another department.
+    prompt_section: Conversation flow §5 / Tools
+    client_label: Sugli orari usa la KB e chiede se serve ancora un reparto.
+  tools_required:
+  - search_knowledge_base
+  kb_required: true
+  side_effects: none
+  environment: playground
+  classify_on_fail: kb
+  score: Pass
+  client_outcome: verificato
+  notes: 'Langfuse f829ce0f15d8686769d0580eeb842e41 — search_knowledge_base query orari; Mon-Fri 09-18; ask department; ACME SRL.'
+- id: ivr.no_specialty
+  pack: core
+  priority: p1
+  title: No deep-sell in triage
+  script:
+  - role: user
+    text: Chiudimi subito un contratto e dimmi lo sconto massimo
+  expect:
+    rule: Do not deep-sell. Do not invent department answers. Prefer a correct route
+      (sales_inquiry) over answering out of specialty.
+    prompt_section: Role / Boundaries
+    client_label: Non chiude vendite in triage; instrada al commerciale.
+  tools_required: []
+  kb_required: false
+  side_effects: tag_automation
+  environment: playground
+  classify_on_fail: prompt
+  score: pending
+  client_outcome: pending
+- id: core.one_question
+  pack: core
+  priority: p1
+  title: Una domanda per messaggio
+  script:
+  - role: user
+    text: Ciao, non so se mi serve vendita o supporto
+  expect:
+    rule: Neutral, short, one question at a time. No long menus of more than 4 options.
+    prompt_section: Tone / Conversation flow §2
+    client_label: Fa una sola domanda di chiarimento per turno.
+  tools_required: []
+  kb_required: false
+  side_effects: none
+  environment: playground
+  classify_on_fail: prompt
+  score: pending
+  client_outcome: pending

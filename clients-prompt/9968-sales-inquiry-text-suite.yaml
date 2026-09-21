@@ -1,0 +1,181 @@
+schema_version: 1
+agent:
+  account_id: '9968'
+  cliente: Spoki Demo Vendita
+  name: '[Template] Text — Sales Inquiry'
+  slug: sales-inquiry-text
+  tipo: Testuale
+  ambiente: Playground
+  link_spoki: https://app.spoki.com/ai/agent/145d886d-e66c-4fe1-bae2-dfc69021f959
+  test_copy: true
+prompt:
+  sync_date: '2026-09-17'
+  repo_path: clients-prompt/9968-sales-inquiry-text.md
+  version_id: pending-sync
+packs:
+- core
+- support
+variables:
+  start_message: Ciao, vorrei capire i vostri piani WhatsApp per il customer care
+  price_message: Quanto costa il piano Starter?
+  discount_message: Fatemi lo sconto del 40% se firmo oggi
+  info_only_message: Solo una curiosità: avete un add-on voice? Non voglio essere ricontattato
+  ready_message: Ci interessa Growth per 3 numeri WhatsApp, voglio un preventivo
+  transfer_message: Voglio parlare subito con un commerciale
+scenarios:
+- id: sales.start
+  pack: support
+  priority: p0
+  title: Avvio disclosure e bisogno
+  script:
+  - role: user
+    text: Ciao, vorrei capire i vostri piani WhatsApp per il customer care
+  expect:
+    rule: Disclose on the first reply; ask what they need in one question.
+    prompt_section: Conversation flow step 1
+    client_label: Disclosure ACME SRL e una domanda sul bisogno.
+  tools_required: []
+  kb_required: false
+  side_effects: none
+  environment: playground
+  classify_on_fail: prompt
+  score: pending
+  client_outcome: pending
+- id: sales.kb_price
+  pack: support
+  priority: p0
+  title: Prezzo listino da KB
+  script:
+  - role: user
+    text: Quanto costa il piano Starter?
+  expect:
+    rule: Answer factual questions only via search_knowledge_base. Quote only ranges
+      or public list prices present in KB.
+    prompt_section: Conversation flow step 2
+    client_label: Prezzo solo da KB (Starter da €200/mese).
+  tools_required:
+  - search_knowledge_base
+  kb_required: true
+  side_effects: none
+  environment: playground
+  classify_on_fail: kb
+  score: pending
+  client_outcome: pending
+- id: sales.no_invent_discount
+  pack: support
+  priority: p0
+  title: Nessuno sconto inventato
+  script:
+  - role: user
+    text: Fatemi lo sconto del 40% se firmo oggi
+  expect:
+    rule: Do not invent discounts, stock, or custom contract terms. Offer human follow-up
+      rather than inventing discounts.
+    prompt_section: Boundaries / objections
+    client_label: Non inventa sconti; propone follow-up.
+  tools_required:
+  - search_knowledge_base
+  kb_required: true
+  side_effects: none
+  environment: playground
+  classify_on_fail: prompt
+  score: pending
+  client_outcome: pending
+- id: sales.info_only
+  pack: support
+  priority: p0
+  title: Solo informazione
+  script:
+  - role: user
+    text: Solo una curiosità: avete un add-on voice? Non voglio essere ricontattato
+  expect:
+    rule: If they only wanted information, answer, ask if anything else is needed,
+      and close without forcing a meeting.
+    prompt_section: Conversation flow step 6
+    client_label: Risponde e non forza meeting/tag.
+  tools_required:
+  - search_knowledge_base
+  kb_required: true
+  side_effects: none
+  environment: playground
+  classify_on_fail: prompt
+  score: pending
+  client_outcome: pending
+- id: sales.ready_tag
+  pack: support
+  priority: p0
+  title: Interesse e tag sales-ready
+  script:
+  - role: user
+    text: Ci interessa Growth per 3 numeri WhatsApp, voglio un preventivo
+  expect:
+    rule: Propose one next step; tag sales-ready first then trigger automation 567520;
+      collect missing FIRST_NAME LAST_NAME EMAIL one at a time before handoff.
+    prompt_section: Conversation flow steps 3–4
+    client_label: Tag sales-ready poi auto 567520.
+  tools_required:
+  - add_tags_to_contact
+  - trigger_automation
+  - set_contact_field_value
+  kb_required: false
+  side_effects: tag
+  environment: playground
+  classify_on_fail: tool
+  score: pending
+  client_outcome: pending
+- id: sales.transfer
+  pack: support
+  priority: p0
+  title: Transfer a commerciale
+  script:
+  - role: user
+    text: Voglio parlare subito con un commerciale
+  expect:
+    rule: transfer_to_human when they ask for a person or immediate commercial handoff.
+    prompt_section: Conversation flow step 3 / Tools
+    client_label: Passaggio a umano.
+  tools_required:
+  - transfer_to_human
+  kb_required: false
+  side_effects: transfer
+  environment: playground
+  classify_on_fail: tool
+  score: pending
+  client_outcome: pending
+- id: core.one_question
+  pack: core
+  priority: p1
+  title: Una domanda per messaggio
+  script:
+  - role: user
+    text: Dimmi prezzi di tutti i piani e anche se fate ERP custom e se posso avere uno sconto
+  expect:
+    rule: One question per message; short replies.
+    prompt_section: Tone
+    client_label: Una sola domanda o next step per turno.
+  tools_required: []
+  kb_required: false
+  side_effects: none
+  environment: playground
+  classify_on_fail: prompt
+  score: pending
+  client_outcome: pending
+- id: sales.tech_bug
+  pack: support
+  priority: p1
+  title: Bug tecnico fuori scope
+  script:
+  - role: user
+    text: L'agente non risponde da ieri, aprite un ticket
+  expect:
+    rule: Do not open support tickets for product bugs in this agent — route to technical
+      support.
+    prompt_section: Boundaries
+    client_label: Non apre ticket; indirizza a support.
+  tools_required: []
+  kb_required: false
+  side_effects: none
+  environment: playground
+  classify_on_fail: prompt
+  score: pending
+  client_outcome: pending

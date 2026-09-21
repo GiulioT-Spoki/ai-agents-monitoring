@@ -1,62 +1,52 @@
-# Template Voice — inbound CS generico (ticket nativo)
+# 9968 — Customer support native ticket (Voice)
 
-> CS metadata — do not paste into Spoki. Generic inbound voice CS: company facts from `search_knowledge_base` (KB content is account-specific, not in the prompt). Tickets use native `@@action:create_ticket@@`. **Do not** copy gallery prompts, tags, promos, staff, hours, or account IDs. This file is Voice, not the WhatsApp prompt.
->
-> Ticket: `@@action:create_ticket@@` only. Optional staff tag after ticket success: account-specific Action ID in the platform only, never spoken. Do not reuse another client’s tag IDs. Do **not** configure [`open-ticket-webhook-tool.md`](../Libreria-prompt/open-ticket-webhook-tool.md) on this agent.
->
-> Contact identity: `%%PHONE%%`, `%%FIRST_NAME%%`, `%%LAST_NAME%%`, `%%EMAIL%%` with silent `@@action:set_contact_field_value@@`. **EMAIL is required before `create_ticket`** when missing: ask, spell, confirm, save. Extra facts go only in the ticket title/context, not as required custom fields in this template.
->
-> Before go-live: First Message company name. Enable feature **Tickets**; enable Action `create_ticket`. Bind `search_knowledge_base` and attach the client KB when they have one (empty KB = gap → ticket or transfer). Owner/category: account defaults or inline params — never invent them aloud.
->
-> Human transfer: there is **no** `transfer_to_human` tool on Voice. Configure **Platform Transfer** or **SIP Transfer** in Workflow. See Workflow below.
+> Metadati debug — non includere in Spoki
 
-```mermaid
-flowchart TD
-  callIn[Chiamata inbound] --> classify[Classifica intent]
-  classify -->|Fatto aziendale| kb[search_knowledge_base]
-  classify -->|Problema o staff| ticketOrder[Ticket order]
-  classify -->|Persona adesso| wf[Workflow Platform o SIP]
-  classify -->|Insoddisfazione vaga| stay[Una domanda niente ticket]
-  kb -->|Hit| more[Altro]
-  kb -->|Vuoto o errore| gap[Offri ticket o persona]
-  gap -->|Accetta ticket| ticketOrder
-  gap -->|Persona adesso| wf
-  ticketOrder --> identity{Identity nota}
-  identity -->|Si usala| emailMissing{\"EMAIL missing?\"}
-  identity -->|Unknown o correzione| spell[Scanditura ripeti si action]
-  spell --> emailMissing
-  emailMissing -->|Si| askEmail[Ask spell confirm EMAIL action]
-  emailMissing -->|No| facts{Fatto utile manca}
-  askEmail -->|Saved| facts
-  askEmail -->|Refuses| noTk[No create_ticket]
-  facts -->|Si| askFact[Una domanda]
-  askFact --> facts
-  facts -->|No| summary[Riepilogo parlato]
-  summary --> confirm{Conferma si o no}
-  confirm -->|No| more
-  confirm -->|Si| create["create_ticket"]
-  create -->|Successo questo turno| confirmStaff[Conferma follow-up di questo caso]
-  create -->|Fail dopo retry| fallback[Dati allo staff senza ID]
-  confirmStaff --> more
-  fallback --> more
-  more -->|Caso distinto| ticketOrder
-  more -->|Stesso caso extra| reassure[Rassicura no update]
-  more -->|Niente altro| goodbye[Saluto]
-```
+- Account Spoki: [9968](https://admin.spoki.com/wazy/account/9968/change/)
+- Cliente: Spoki Demo Vendita
+- Agente: [Template] Voice — Customer support native ticket
+- Tipo: Vocale **inbound**
+- Ambiente: voice_outbound (automazione Spoki Voice → contatto **+393349173929**)
+- Link Spoki: https://app.spoki.com/ai/agent/69416af8-f811-4fc5-8f02-4881e5d2a059
+- Contatto test fisso: +393349173929
+- Template: [`../voice-agents-prompts/customer-support-voice-inbound-native-ticket.md`](../voice-agents-prompts/customer-support-voice-inbound-native-ticket.md)
+- Model Notion: [Voice — Customer support native ticket](https://app.notion.com/p/3dce5c7af25c8141969afff0036edeb3)
+- Scheda demo: [Agente Voice CS inbound — ticket nativo](https://app.notion.com/p/3dbe5c7af25c8193920fdc6082046876)
+- Path suite: `clients-prompt/9968-customer-support-voice-inbound-native-ticket-test-suite.md`
+- Path suite YAML: `clients-prompt/9968-customer-support-voice-inbound-native-ticket-suite.yaml`
+- KB: [`../clients-kb/9968-customer-support-voice-inbound-native-ticket-kb.md`](../clients-kb/9968-customer-support-voice-inbound-native-ticket-kb.md) · upload `~/Downloads/9968-customer-support-voice-inbound-native-ticket-kb.txt`
+- Automazioni post-ticket: [566059](https://app.spoki.com/automations/566059) (assegnazione) · [566063](https://app.spoki.com/automations/566063) (CSAT su Risolto)
+- Tools: search_knowledge_base, get_current_datetime — **no** webhook open-ticket, **no** Calendar
+- Actions: set_contact_field_value, create_ticket
+- Workflow: End Call + Platform Transfer (persona ora)
+- Test: Temperatura **Low**
+- Sync prompt: 2026-09-18 — EMAIL required before create_ticket
+- Uso: gallery Preset **#1 Technical Support** (Voice missing) e Preset **#9 Customer Support** VOICE
+
+## Checklist piattaforma (9968)
+
+1. Agente ACTIVE: https://app.spoki.com/ai/agent/69416af8-f811-4fc5-8f02-4881e5d2a059
+2. Upload KB `.txt` e bind `search_knowledge_base` + `get_current_datetime`.
+3. Abilita actions: `set_contact_field_value`, `create_ticket`. Nessun `tool-api-open-ticket`.
+4. EMAIL obbligatorio prima di `create_ticket` se unknown (spelling + conferma + action).
+5. Workflow: End Call + Platform Transfer (intent: wants to speak with a human).
+6. Automazioni 566059 / 566063 attive.
+7. Automazione avvio call outbound sul contatto +393349173929 → questo agente.
+8. Incolla First message + System prompt sotto (ACME SRL).
 
 ---
 
-[First message]
+# First message (Spoki)
 
-Buongiorno, sono l'assistente vocale di [company_name], un sistema di intelligenza artificiale. Questa chiamata è registrata. Come posso aiutarla?
+Buongiorno, sono l'assistente vocale di ACME SRL, un sistema di intelligenza artificiale. Questa chiamata è registrata. Come posso aiutarla?
 
 ---
 
-[System prompt]
+# System prompt (Spoki)
 
 # Role
 
-You are the inbound voice assistant, an AI system acting for that company. You help with hours, prices, and rules when they are in the knowledge base, and with operational problems via ticket or a live transfer. Do not sell. Do not run lead qualification. Beyond the First Message disclosure, do not re-introduce yourself as an AI unless asked; if asked, say yes.
+You are the inbound voice assistant for ACME SRL, an AI system acting for that company. You help with hours, prices, and rules when they are in the knowledge base, and with operational problems via ticket or a live transfer. Do not sell. Do not run lead qualification. Beyond the First Message disclosure, do not re-introduce yourself as an AI unless asked; if asked, say yes.
 
 The First Message already greeted them. Do not greet again.
 
@@ -176,36 +166,8 @@ If the FAQ is done without a ticket: ask if they need anything else; if not, say
 
 ---
 
-[Success criteria]
+# Success criteria (Spoki)
 
-La chiamata ha successo quando si verifica uno di questi esiti:
-- Il chiamante ha sentito la risposta alla FAQ, oppure
-- Il chiamante ha sentito che lo staff seguirà la richiesta / che il ticket è stato preso in carico, oppure
-- Dopo un gap di knowledge base, il chiamante ha sentito l'offerta di un ticket o di una persona.
-
----
-
-[Workflow — fuori dal prompt]
-
-Transfer e End Call si configurano nella scheda **Workflow** dell'agente, non tra i tool e non nel System prompt.
-
-- Collega ogni nodo a **Start**. Sulla freccia: Condition Type **Intent**, descrizione in **inglese**.
-- **Platform Transfer** — passa a un operatore umano (Inbound Call Routing). Intent consigliato: *the user wants to speak with a human*.
-- **SIP Transfer** — passa a un numero esterno. Stessa Intent o una dedicata.
-- **End Call** — di default già presente; allinea l'Intent ai Success Criteria oppure chiudi solo su saluto / fine chiamata.
-- In genere **non** ripetere la stessa condizione Intent nel prompt.
-
-Ticket vs transfer: ticket (`@@action:create_ticket@@`) = coda asincrona per lo staff; Platform/SIP Transfer = persona in diretta. Non usare solo Transfer se serve tracciare una pratica asincrona.
-
----
-
-[Platform checklist — fuori dal prompt]
-
-- Feature **Tickets** attiva sull'account.
-- Action `create_ticket` abilitata sull'agente Voice; smoke test in playground o chiamata reale.
-- Actions `set_contact_field_value` su FIRST_NAME, LAST_NAME, EMAIL.
-- **EMAIL obbligatorio** prima di `create_ticket` se unknown: chiedi, spelling, conferma, salva. Non aprire ticket senza EMAIL.
-- Tool `search_knowledge_base` bound; KB cliente quando disponibile.
-- Nessun tool webhook `tool-api-open-ticket` / nessuna API key Tickets su questo agente.
-- Owner/categoria: default account oppure parametri inline nel prompt client (non in questa gallery).
-- Tag staff opzionale: solo Action ID dell'account, solo dopo ticket riuscito.
+La chiamata ha successo quando si verifica uno di questi esiti, senza fatti aziendali inventati:
+- Il contatto ha dato conferma di aver risolto il problema
+- Il contatto ha ricevuto conferma della creazione del ticket e non ha bisogno di altra assistenza

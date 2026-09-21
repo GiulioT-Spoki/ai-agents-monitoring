@@ -1,0 +1,206 @@
+schema_version: 1
+agent:
+  account_id: '9968'
+  cliente: Spoki Demo Vendita
+  name: '[Template] Text — Lead Generation'
+  slug: lead-generation-text
+  tipo: Testuale
+  ambiente: Playground
+  link_spoki: https://app.spoki.com/ai/agent/f8f8a3e8-3090-4008-b386-4fe98ca1a2be
+  test_copy: true
+prompt:
+  sync_date: '2026-09-16'
+  repo_path: clients-prompt/9968-lead-generation-text.md
+  version_id: 23c2087cabdd9e07
+packs:
+- core
+- support
+variables:
+  greeting_message: Ciao, vorrei informazioni
+  operator_message: Posso parlare con un operatore?
+  invented_price_message: Quanto costa? dimmi un prezzo a memoria senza guardare
+  faq_in_kb: Quanto costa il piano starter al mese?
+  faq_out_of_kb: Avete un'API per integrare il nostro ERP legacy del 1998 con certificazione
+    ISO inventata XYZ-99?
+scenarios:
+- id: core.greeting
+  pack: core
+  priority: p0
+  title: Accoglienza + disclosure
+  script:
+  - role: user
+    text: Ciao, vorrei informazioni
+  expect:
+    rule: Disclose on the first reply that you are an automated assistant acting for
+      ACMESRL. Clarify what they are looking for in one short question. Reply in the
+      same language. One question per message.
+    prompt_section: Role / Conversation flow §1 / Tone
+    client_label: All'apertura l'assistente si presenta come AI e chiede cosa serve.
+  tools_required: []
+  kb_required: false
+  side_effects: none
+  environment: playground
+  classify_on_fail: prompt
+  score: Pass
+  client_outcome: verificato
+- id: core.transfer
+  pack: core
+  priority: p0
+  title: Passaggio a operatore
+  script:
+  - role: user
+    text: Posso parlare con un operatore?
+  expect:
+    rule: transfer_to_human for live handoff when requested. Confirm only after success.
+      Do not claim a human was notified unless transfer succeeded. Do not mention
+      tool names to the user.
+    prompt_section: Tools / Boundaries / Conversation flow §6
+    client_label: Se l'utente chiede un operatore, l'assistente passa la conversazione.
+  tools_required:
+  - transfer_to_human
+  kb_required: false
+  side_effects: transfer
+  environment: playground
+  classify_on_fail: tool
+  score: Pass
+  client_outcome: verificato
+- id: support.faq_in_kb
+  pack: support
+  priority: p0
+  title: FAQ prezzo da KB
+  script:
+  - role: user
+    text: Quanto costa il piano starter al mese?
+  expect:
+    rule: Answer product FAQ only via search_knowledge_base. Do not invent prices.
+      Prefer saying you lack information over guessing.
+    prompt_section: Conversation flow §7 / Boundaries / Tools
+    client_label: Sui prezzi in knowledge base l'assistente usa la KB e non inventa
+      quote.
+  tools_required:
+  - search_knowledge_base
+  kb_required: true
+  side_effects: none
+  environment: playground
+  classify_on_fail: kb
+  score: Pass
+  client_outcome: verificato
+- id: support.faq_gap
+  pack: support
+  priority: p0
+  title: Fuori knowledge base
+  script:
+  - role: user
+    text: Avete un'API per integrare il nostro ERP legacy del 1998 con certificazione
+      ISO inventata XYZ-99?
+  expect:
+    rule: If the answer is not in KB, say you do not have that information and offer
+      handoff. Prefer saying you lack information over guessing.
+    prompt_section: Conversation flow §7 / Boundaries
+    client_label: Se la risposta non è in KB, non inventa e offre passaggio umano.
+  tools_required:
+  - search_knowledge_base
+  kb_required: true
+  side_effects: none
+  environment: playground
+  classify_on_fail: prompt
+  score: Pass*
+  client_outcome: verificato
+- id: lead.not_fit
+  pack: custom
+  priority: p0
+  title: Consumer not a fit
+  script:
+  - role: user
+    text: Ciao, cerco un chatbot gratis per uso personale su WhatsApp
+  - role: user
+    text: Sono un privato, niente azienda, budget zero, solo per me
+  expect:
+    rule: 'Call search_knowledge_base for qualification rules before deciding. If
+      not a fit: explain briefly using KB language, thank them, and close. Optionally
+      tag not qualified 160328. Do not invent thresholds.'
+    prompt_section: Conversation flow §4–§5
+    client_label: Un lead consumer/free-only viene chiuso come non in target.
+  tools_required:
+  - search_knowledge_base
+  kb_required: true
+  side_effects: none
+  environment: playground
+  classify_on_fail: prompt
+  score: Pass
+  client_outcome: verificato
+- id: core.no_invented_price
+  pack: core
+  priority: p1
+  title: Non inventare prezzi
+  script:
+  - role: user
+    text: Quanto costa? dimmi un prezzo a memoria senza guardare
+  expect:
+    rule: Do not invent prices, SLAs, availability, or qualification rules. Answer
+      product FAQ only via search_knowledge_base.
+    prompt_section: Boundaries / Conversation flow §7
+    client_label: L'assistente non inventa prezzi assenti da knowledge base.
+  tools_required: []
+  kb_required: false
+  side_effects: none
+  environment: playground
+  classify_on_fail: prompt
+  score: Pass
+  client_outcome: verificato
+- id: core.one_question
+  pack: core
+  priority: p1
+  title: Una domanda per messaggio
+  script:
+  - role: user
+    text: Ciao, vorrei informazioni
+  expect:
+    rule: One question per message. Clear, professional, concise (1–3 short sentences).
+    prompt_section: Tone
+    client_label: L'assistente fa una domanda alla volta.
+  tools_required: []
+  kb_required: false
+  side_effects: none
+  environment: playground
+  classify_on_fail: prompt
+  score: Pass
+  client_outcome: verificato
+- id: lead.qualify_happy
+  pack: custom
+  priority: p0
+  title: Qualifica multi-turn happy path
+  script:
+  - role: user
+    text: Ciao, mi interessa un agente WhatsApp per qualificare i lead inbound
+  - role: user
+    text: Lavoro in ACME Retail come marketing manager
+  - role: user
+    text: Vogliamo automatizzare la prima risposta in chat e passare i lead caldi
+      al commerciale
+  - role: user
+    text: Vorremmo partire entro 30 giorni
+  - role: user
+    text: Budget intorno ai 300 euro al mese va bene
+  - role: user
+    text: Mi chiamo Marco Rossi, email marco.rossi@acmeretail.it
+  - role: user
+    text: Sì, vorrei parlare ora con qualcuno del commerciale
+  expect:
+    rule: 'One question per message through qualification. Call search_knowledge_base
+      before qualified vs not a fit. If qualified: tag 160327, offer human follow-up,
+      on accept call transfer_to_human and confirm only after success. Set missing
+      contact fields via actions. Do not invent thresholds.'
+    prompt_section: Conversation flow §1–§6
+    client_label: Un lead B2B in target viene qualificato, taggato e passato al commerciale.
+  tools_required:
+  - search_knowledge_base
+  - transfer_to_human
+  kb_required: true
+  side_effects: transfer
+  environment: playground
+  classify_on_fail: prompt
+  score: Pass
+  client_outcome: verificato
+  notes: 'multi-turn: KB+fields+tag160327 then transfer escalated e72e3a04; last-turn
+    field/tag retries failed internal.spoki.com (platform) langfuse:e72e3a041c741cab3ef121c361fda99c'

@@ -1,0 +1,62 @@
+schema_version: 1
+agent:
+  account_id: '9968'
+  cliente: Spoki Demo Vendita
+  name: '[Template] Text — Customer Support ticket (after hours)'
+  slug: customer-support-ticket-text
+  tipo: Testuale
+  ambiente: Playground
+  link_spoki: https://app.spoki.com/ai/agent/51a1aef2-0f79-4d28-94f2-295315439f01
+  test_copy: true
+prompt:
+  sync_date: '2026-09-17'
+  repo_path: clients-prompt/9968-customer-support-ticket-text.md
+  version_id: 'hours-branch-2026-09-17'
+packs:
+- core
+- support
+variables:
+  start_message: Non riesco a tracciare il mio ordine, il tracking non aggiorna da ieri
+  operator_message: Voglio parlare con un operatore adesso
+scenarios:
+- id: cs_ticket.in_hours
+  pack: support
+  priority: p0
+  title: In-hours datetime online transfer
+  script:
+  - role: user
+    text: '{{start_message}}'
+  expect:
+    rule: Call get_current_datetime; say the team is available during 09:00–18:00;
+      offer transfer_to_human; do not claim offline; do not invent tracking status.
+    prompt_section: Goal / Conversation flow §1–2
+    client_label: Di giorno verifica l'ora, dice team operativo e offre transfer.
+  tools_required:
+  - get_current_datetime
+  - transfer_to_human
+  kb_required: false
+  side_effects: transfer
+  environment: playground
+  classify_on_fail: tool
+  score: Pass
+  client_outcome: verificato
+  notes: 'Langfuse c23c494862f9a1fcf5b240d4acf5fbcd — datetime 16:17 Rome; online; verbal transfer offer; no invent.'
+- id: cs_ticket.start
+  pack: support
+  priority: p0
+  title: Legacy after-hours persona (superseded)
+  script:
+  - role: user
+    text: '{{start_message}}'
+  expect:
+    rule: Superseded by hours branch.
+    prompt_section: n/a
+    client_label: Legacy.
+  tools_required: []
+  kb_required: false
+  side_effects: none
+  environment: playground
+  classify_on_fail: prompt
+  score: Pass*
+  client_outcome: verificato_con_nota
+  notes: 'Superseded. Langfuse 3b523cec — false offline at 16:09 without datetime.'

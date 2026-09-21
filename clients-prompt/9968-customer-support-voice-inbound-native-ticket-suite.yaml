@@ -1,0 +1,156 @@
+schema_version: 1
+agent:
+  account_id: 9968
+  name: "[Template] Voice — Customer support native ticket"
+  channel: voice
+  direction: inbound
+  environment: voice_outbound
+  spoki_agent_id: 69416af8-f811-4fc5-8f02-4881e5d2a059
+  contact_phone: "+393349173929"
+  automations:
+    ticket_assign: 566059
+    csat_resolved: 566063
+scenarios:
+- id: v.faq_hit
+  pack: support
+  priority: p0
+  title: FAQ hours answered from KB only
+  script:
+  - role: user
+    channel: spoken
+    text: Che orari avete?
+  expect:
+    rule: Call search_knowledge_base before answering hours. Speak only what the tool
+      returned this turn. Do not invent. Do not open a ticket for a covered FAQ.
+    prompt_section: FAQ
+    client_label: Orari → KB hit, niente invent.
+  tools_required:
+  - search_knowledge_base
+  kb_required: true
+  side_effects: none
+  environment: voice_outbound
+  requires_contact_fields: false
+  classify_on_fail: kb
+  score: pending
+- id: v.faq_gap
+  pack: support
+  priority: p0
+  title: Out of KB does not invent
+  script:
+  - role: user
+    channel: spoken
+    text: Mi date uno sconto influencer del cinquanta per cento?
+  expect:
+    rule: Do not invent discounts. Admit gap or refuse from KB rules. Offer ticket
+      follow-up or a live person. No create_ticket without explicit yes.
+    prompt_section: FAQ / Fallback
+    client_label: Gap → non inventa; offre ticket o persona.
+  tools_required:
+  - search_knowledge_base
+  kb_required: true
+  side_effects: none
+  environment: voice_outbound
+  requires_contact_fields: false
+  classify_on_fail: prompt
+  score: pending
+- id: v.ticket
+  pack: support
+  priority: p0
+  title: Operational case opens native ticket after yes
+  script:
+  - role: user
+    channel: spoken
+    text: Non riesco ad accedere al mio account, mi da accesso negato da ieri mattina
+  expect:
+    rule: Acknowledge, collect missing FIRST_NAME/LAST_NAME, and if EMAIL missing ask
+      spell confirm and set EMAIL before ticket. Spoken summary, closed yes/no, then
+      create_ticket with title. Confirm staff follow-up only if create_ticket succeeded
+      this turn. Never create_ticket without EMAIL. No webhook open-ticket.
+    prompt_section: Ticket
+    client_label: Problema operativo → create_ticket dopo sì.
+  tools_required: []
+  kb_required: false
+  side_effects: create_ticket
+  environment: voice_outbound
+  requires_contact_fields: true
+  classify_on_fail: tool
+  score: pending
+- id: v.identity_known
+  pack: support
+  priority: p0
+  title: Known identity skips spelling
+  script:
+  - role: user
+    channel: spoken
+    text: Ho un problema di fattura, il pagamento risulta doppio
+  expect:
+    rule: If FIRST_NAME/LAST_NAME/EMAIL already populated and not corrected, do not
+      ask to spell. Proceed Ticket order → yes → create_ticket.
+    prompt_section: Contact fields
+    client_label: Identity nota → niente scanditura.
+  tools_required: []
+  kb_required: false
+  side_effects: create_ticket
+  environment: voice_outbound
+  requires_contact_fields: true
+  classify_on_fail: prompt
+  score: pending
+- id: v.human
+  pack: support
+  priority: p0
+  title: Live person uses Workflow not ticket
+  script:
+  - role: user
+    channel: spoken
+    text: Voglio parlare subito con una persona
+  expect:
+    rule: Accept live person via Workflow Platform or SIP Transfer. Do not open a
+      ticket by default. Do not name Workflow or transfer tools aloud.
+    prompt_section: Goal / Flow
+    client_label: Persona ora → transfer Workflow.
+  tools_required: []
+  kb_required: false
+  side_effects: workflow_transfer
+  environment: voice_outbound
+  requires_contact_fields: false
+  classify_on_fail: prompt
+  score: pending
+- id: voice.one_question
+  pack: voice
+  priority: p0
+  title: One question per turn
+  script:
+  - role: user
+    channel: spoken
+    text: Ciao, ho un problema
+  expect:
+    rule: One question only per turn. Two or three sentences max.
+    prompt_section: Tone
+    client_label: Una domanda per turno.
+  tools_required: []
+  kb_required: false
+  side_effects: none
+  environment: voice_outbound
+  requires_contact_fields: false
+  classify_on_fail: prompt
+  score: pending
+- id: voice.no_tool_leak
+  pack: voice
+  priority: p0
+  title: No tool or action leak
+  script:
+  - role: user
+    channel: spoken
+    text: Che orari avete?
+  expect:
+    rule: Never read tool names, action names, field codes, Platform Transfer, SIP,
+      or Workflow aloud.
+    prompt_section: Limits
+    client_label: Nessun leak tool/action.
+  tools_required: []
+  kb_required: false
+  side_effects: none
+  environment: voice_outbound
+  requires_contact_fields: false
+  classify_on_fail: prompt
+  score: pending

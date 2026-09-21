@@ -1,0 +1,161 @@
+schema_version: 1
+agent:
+  account_id: 9968
+  name: "[Template] Voice — Sales Inquiry"
+  channel: voice
+  direction: inbound
+  environment: voice_outbound
+  spoki_agent_id: "5e552738-0ba6-42c6-8c0c-8b7ce7ad8a8d"
+  contact_phone: "+393349173929"
+  tags:
+    sales_ready: 160407
+  followup_automation_id: 567520
+scenarios:
+- id: sales.start
+  pack: sales
+  priority: p0
+  title: No re-greet; clarify need
+  script:
+  - role: user
+    channel: spoken
+    text: Vorrei capire i vostri piani
+  expect:
+    rule: First message already greeted. Do not greet again. Ask what they need in one
+      question.
+    prompt_section: Conversation flow §1
+    client_label: Non risaluta; chiede il bisogno.
+  tools_required: []
+  kb_required: false
+  side_effects: none
+  environment: voice_outbound
+  score: pending
+- id: sales.kb_price
+  pack: sales
+  priority: p0
+  title: Quote list price from KB only
+  script:
+  - role: user
+    channel: spoken
+    text: Quanto costa lo Starter?
+  expect:
+    rule: search_knowledge_base; speak from €200/month list; no invented discount.
+    prompt_section: Conversation flow §2
+    client_label: Prezzo Starter da KB.
+  tools_required:
+  - search_knowledge_base
+  kb_required: true
+  side_effects: none
+  environment: voice_outbound
+  score: pending
+- id: sales.no_invent_discount
+  pack: sales
+  priority: p0
+  title: Refuse invented discount
+  script:
+  - role: user
+    channel: spoken
+    text: Mi fate il quaranta percento di sconto?
+  expect:
+    rule: Do not invent discount; stay in KB; offer specialist follow-up.
+    prompt_section: Boundaries
+    client_label: Niente sconto inventato.
+  tools_required:
+  - search_knowledge_base
+  kb_required: true
+  side_effects: none
+  environment: voice_outbound
+  score: pending
+- id: sales.info_only
+  pack: sales
+  priority: p0
+  title: Info only closes without forced tag
+  script:
+  - role: user
+    channel: spoken
+    text: Solo curiosità sul Voice add-on, non mi serve un commerciale
+  expect:
+    rule: Answer from KB; ask if anything else; close without forcing tag or meeting.
+    prompt_section: Conversation flow §6
+    client_label: Solo info → chiude senza tag.
+  tools_required:
+  - search_knowledge_base
+  kb_required: true
+  side_effects: none
+  environment: voice_outbound
+  score: pending
+- id: sales.ready_tag
+  pack: sales
+  priority: p0
+  title: Sales-ready tag then automation
+  script:
+  - role: user
+    channel: spoken
+    text: Mi interessa Growth per il team sales, voglio un preventivo. Mi chiamo Marco
+      Rossi, email marco.rossi chiocciola example punto com
+  expect:
+    rule: Collect/write missing fields; tag 160407 then trigger_automation 567520; confirm
+      only after both succeed. No Shopify. No calendar.
+    prompt_section: Conversation flow §3
+    client_label: Tag 160407 + auto 567520.
+  tools_required:
+  - search_knowledge_base
+  - set_contact_field_value
+  - add_tags_to_contact
+  - trigger_automation
+  kb_required: true
+  side_effects: tag_and_automation
+  environment: voice_outbound
+  requires_contact_fields: true
+  score: pending
+- id: sales.person
+  pack: sales
+  priority: p0
+  title: Person now uses Workflow not tool transfer
+  script:
+  - role: user
+    channel: spoken
+    text: Voglio parlare subito con un commerciale
+  expect:
+    rule: Accept person request; do not call transfer_to_human; Workflow SIP handles
+      handoff. Optional fields if missing before handoff.
+    prompt_section: Conversation flow §3
+    client_label: Persona → Workflow SIP.
+  tools_required: []
+  kb_required: false
+  side_effects: none
+  environment: voice_outbound
+  score: pending
+- id: voice.one_question
+  pack: voice
+  priority: p0
+  title: One question per turn
+  script:
+  - role: user
+    channel: spoken
+    text: Vorrei prezzi, integrazioni e anche un demo
+  expect:
+    rule: One topic or one question per turn; do not dump all answers.
+    prompt_section: Tone
+    client_label: Una domanda per turno.
+  tools_required: []
+  kb_required: false
+  side_effects: none
+  environment: voice_outbound
+  score: pending
+- id: voice.no_tool_leak
+  pack: voice
+  priority: p0
+  title: No tool or ID leak
+  script:
+  - role: user
+    channel: spoken
+    text: Ok grazie
+  expect:
+    rule: Never speak tool names, field codes, tag IDs, or automation IDs.
+    prompt_section: Boundaries
+    client_label: Niente leak tool/id.
+  tools_required: []
+  kb_required: false
+  side_effects: none
+  environment: voice_outbound
+  score: pending

@@ -1,0 +1,150 @@
+schema_version: 1
+agent:
+  account_id: 9968
+  name: "[Template] Voice — Survey / CSAT"
+  channel: voice
+  direction: inbound
+  environment: voice_outbound
+  spoki_agent_id: null
+  contact_phone: "+393349173929"
+  tags:
+    feedback_callback: 160399
+    survey_completed: 160400
+  fields:
+    score: CSAT_SCORE
+    went_well: CSAT_WENT_WELL
+    improve: CSAT_IMPROVE
+scenarios:
+- id: survey.happy
+  pack: survey
+  priority: p0
+  title: Happy path score then complete tags
+  script:
+  - role: user
+    channel: spoken
+    text: Quattro
+  - role: user
+    channel: spoken
+    text: Il supporto è stato chiaro
+  - role: user
+    channel: spoken
+    text: Skip
+  - role: user
+    channel: spoken
+    text: Sì potete ricontattarmi
+  expect:
+    rule: Persist CSAT_SCORE 4; Q2/Q3; on yes tag 160399 then at end tag 160400; thank
+      and stop. No Shopify. No ticket.
+    prompt_section: Conversation flow
+    client_label: Happy path → campi + tag completed.
+  tools_required:
+  - set_contact_field_value
+  - add_tags_to_contact
+  kb_required: false
+  side_effects: fields_and_tags
+  environment: voice_outbound
+  requires_contact_fields: true
+  score: pending
+- id: survey.detractor
+  pack: survey
+  priority: p0
+  title: Low score offers person only then Workflow
+  script:
+  - role: user
+    channel: spoken
+    text: Uno
+  - role: user
+    channel: spoken
+    text: Sì voglio parlare con qualcuno
+  expect:
+    rule: Persist CSAT_SCORE 1; offer person in that turn only (no Q2 same turn); on
+      accept platform_transfer / Workflow; no transfer_to_human; no ticket.
+    prompt_section: Conversation flow §2
+    client_label: Detractor → platform_transfer.
+  tools_required:
+  - set_contact_field_value
+  kb_required: false
+  side_effects: field_and_transfer
+  environment: voice_outbound
+  score: pass
+- id: survey.decline
+  pack: survey
+  priority: p0
+  title: Decline survey closes without forced tags
+  script:
+  - role: user
+    channel: spoken
+    text: No grazie non voglio fare il sondaggio
+  expect:
+    rule: Thank and end; do not force CSAT fields or completion tag.
+    prompt_section: Conversation flow
+    client_label: Decline → chiude senza tag.
+  tools_required: []
+  kb_required: false
+  side_effects: none
+  environment: voice_outbound
+  score: pass
+- id: survey.skip_comments
+  pack: survey
+  priority: p0
+  title: Skip free-text then complete
+  script:
+  - role: user
+    channel: spoken
+    text: Cinque
+  - role: user
+    channel: spoken
+    text: Passo
+  - role: user
+    channel: spoken
+    text: Anche questo salto
+  - role: user
+    channel: spoken
+    text: No non ricontattatemi
+  expect:
+    rule: Score 5 saved; skip Q2/Q3 without inventing answers; no callback tag; tag
+      160400 at end.
+    prompt_section: Conversation flow §3-6
+    client_label: Skip commenti → completed.
+  tools_required:
+  - set_contact_field_value
+  - add_tags_to_contact
+  kb_required: false
+  side_effects: fields_and_tags
+  environment: voice_outbound
+  score: pending
+- id: voice.one_question
+  pack: voice
+  priority: p0
+  title: One question per turn including detractor offer
+  script:
+  - role: user
+    channel: spoken
+    text: Due
+  expect:
+    rule: After low score, offer person only; do not ask Q2 in the same turn.
+    prompt_section: Tone / Conversation flow §2
+    client_label: Una domanda per turno.
+  tools_required:
+  - set_contact_field_value
+  kb_required: false
+  side_effects: field
+  environment: voice_outbound
+  score: pass
+- id: voice.no_tool_leak
+  pack: voice
+  priority: p0
+  title: No tool or ID leak
+  script:
+  - role: user
+    channel: spoken
+    text: Ok grazie
+  expect:
+    rule: Never speak tool names, field codes, or tag IDs.
+    prompt_section: Boundaries
+    client_label: Niente leak tool/id.
+  tools_required: []
+  kb_required: false
+  side_effects: none
+  environment: voice_outbound
+  score: pass

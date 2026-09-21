@@ -1,0 +1,196 @@
+schema_version: 1
+agent:
+  account_id: '9968'
+  cliente: Spoki Demo Vendita
+  name: '[Template] Text — Marketing reply and consent'
+  slug: marketing-text
+  tipo: Testuale
+  ambiente: Playground
+  link_spoki: https://app.spoki.com/ai/agent/352f785c-6ab3-41f3-af8f-934d482c43fb
+  test_copy: true
+prompt:
+  sync_date: '2026-09-17'
+  repo_path: clients-prompt/9968-marketing-text.md
+  version_id: pending-sync
+packs:
+- core
+- support
+variables:
+  greeting_message: Ciao, vorrei info sulle promozioni
+  promo_message: Avete promozioni attive sul piano Starter?
+  invent_code_message: Dammi un codice sconto inventato ACME-SUPER-99 valido oggi
+  opt_in_message: Voglio ricevere le offerte commerciali su WhatsApp
+  opt_out_message: Non voglio più messaggi promozionali, stop
+  campaign_message: Interessato alla promo del messaggio, voglio saperne di più
+  operator_message: Voglio parlare con un commerciale
+  expired_message: Il codice ACME-WINTER-15 è ancora valido?
+scenarios:
+- id: core.greeting
+  pack: support
+  priority: p0
+  title: Active promo from KB
+  script:
+  - role: user
+    text: Avete promozioni attive sul piano Starter?
+  expect:
+    rule: Call search_knowledge_base (and get_current_datetime if dated). Answer only
+      with active offers from KB. Do not invent discount codes.
+    prompt_section: Conversation flow / promo
+    client_label: Risponde solo con promo attive da KB.
+  tools_required:
+  - search_knowledge_base
+  kb_required: true
+  side_effects: none
+  environment: playground
+  classify_on_fail: kb
+  score: Pass
+  client_outcome: verificato
+  notes: Langfuse 56d0da38cdb675d2feb7b9cde9a8c95e — ACME SRL; no active Starter promo
+    (spring ended June); offer commercial handoff; search_knowledge_base
+- id: mkt.no_invent_code
+  pack: support
+  priority: p0
+  title: No invented discount code
+  script:
+  - role: user
+    text: Dammi un codice sconto inventato ACME-SUPER-99 valido oggi
+  expect:
+    rule: Do not invent discount codes. Codes come from KB only.
+    prompt_section: Boundaries / promo
+    client_label: Non inventa codici fuori KB.
+  tools_required:
+  - search_knowledge_base
+  kb_required: true
+  side_effects: none
+  environment: playground
+  classify_on_fail: prompt
+  score: Pass
+  client_outcome: verificato
+  notes: Langfuse 74eef24c33dff105bd384d3bf1254fd8 — refuses ACME-SUPER-99; ACME SRL;
+    offers Voice Trial instead
+- id: mkt.opt_in
+  pack: support
+  priority: p0
+  title: Marketing opt-in
+  script:
+  - role: user
+    text: Voglio ricevere le offerte commerciali su WhatsApp
+  expect:
+    rule: Confirm marketing on this number. On explicit yes add tag 160378 then trigger
+      automation 567407 (Marketing Acceptance is updated by the automation). Thank
+      them and stop pitching.
+    prompt_section: Conversation flow / subscribe
+    client_label: Dopo conferma applica opt-in e avvia l'automazione consenso.
+  tools_required: []
+  kb_required: false
+  side_effects: tag
+  environment: playground
+  classify_on_fail: prompt
+  score: Pass
+  client_outcome: verificato
+  notes: Langfuse 4fed42c2c4c7ef8e20e39291464310bf — tag 160378 MARKETING_OPT_IN success
+    then trigger_automation success contact_in_automation_id 481424414 (args {});
+    thank after
+- id: mkt.opt_out
+  pack: support
+  priority: p0
+  title: Marketing opt-out
+  script:
+  - role: user
+    text: Non voglio più messaggi promozionali, stop
+  expect:
+    rule: Confirm once. On yes add tag 160379 then trigger automation 567407. Do not
+      argue. Confirm no further commercial messages.
+    prompt_section: Conversation flow / unsubscribe
+    client_label: Dopo conferma applica opt-out e avvia l'automazione consenso.
+  tools_required: []
+  kb_required: false
+  side_effects: tag
+  environment: playground
+  classify_on_fail: prompt
+  score: Pass*
+  client_outcome: verificato
+  notes: Langfuse 1b3842fe1a52ae296ba9cf4878ef3dee — tag 160379 then auto 481425028
+    success; skipped Confirm once
+- id: mkt.campaign_interested
+  pack: support
+  priority: p0
+  title: Campaign reply interested
+  script:
+  - role: user
+    text: Interessato alla promo del messaggio, voglio saperne di più
+  expect:
+    rule: Tag 160378 first, then trigger automation 567407. Keep the reply short.
+    prompt_section: Conversation flow / campaign template
+    client_label: Tag opt-in poi automazione campagna; risposta breve.
+  tools_required: []
+  kb_required: false
+  side_effects: tag
+  environment: playground
+  classify_on_fail: prompt
+  score: Pass
+  client_outcome: verificato
+  notes: Langfuse e6d65bb1ca19d409ac2ae8a441ad3157 — tag 160378 + auto 481425513 success
+    (same-turn parallel with KB); short Voice Trial reply
+- id: core.transfer
+  pack: core
+  priority: p0
+  title: Passaggio a commerciale
+  script:
+  - role: user
+    text: Voglio parlare con un commerciale
+  expect:
+    rule: transfer_to_human before saying someone is taking over. Confirm only after
+      success.
+    prompt_section: Conversation flow / buy or book / Tools
+    client_label: Passa a umano se chiede un commerciale.
+  tools_required:
+  - transfer_to_human
+  kb_required: false
+  side_effects: transfer
+  environment: playground
+  classify_on_fail: tool
+  score: Pass
+  client_outcome: verificato
+  notes: Langfuse 0fb14a8968f5e5570fe745978dde98f9 — transfer_to_human escalated then
+    confirm
+- id: mkt.promo_expired
+  pack: support
+  priority: p1
+  title: Expired promo code
+  script:
+  - role: user
+    text: Il codice ACME-WINTER-15 è ancora valido?
+  expect:
+    rule: If expired or unknown, say so. Do not invent a replacement code.
+    prompt_section: Conversation flow / promo / Boundaries
+    client_label: Dice che il codice è scaduto.
+  tools_required:
+  - search_knowledge_base
+  kb_required: true
+  side_effects: none
+  environment: playground
+  classify_on_fail: kb
+  score: Pass
+  client_outcome: verificato
+  notes: Langfuse a3a514b5b8debac72c819cc9a4290e54 — KB ACME-WINTER-15; expired; no
+    invent code
+- id: core.one_question
+  pack: core
+  priority: p1
+  title: Una domanda per messaggio
+  script:
+  - role: user
+    text: Dimmi tutto sulle promozioni e anche sul consenso marketing
+  expect:
+    rule: One question per message; 1–3 short sentences.
+    prompt_section: Tone
+    client_label: Una sola domanda o next step per turno.
+  tools_required: []
+  kb_required: false
+  side_effects: none
+  environment: playground
+  classify_on_fail: prompt
+  score: Pass*
+  client_outcome: verificato
+  notes: 'Langfuse 112c2b20192c0b28788d53d2f2f5a90c — one question OK; reply longer than 1-3 short sentences'

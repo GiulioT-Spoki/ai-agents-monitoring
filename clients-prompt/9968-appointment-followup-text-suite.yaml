@@ -1,0 +1,172 @@
+schema_version: 1
+agent:
+  account_id: '9968'
+  cliente: Spoki Demo Vendita
+  name: '[Template] Text — Appointment Follow-up'
+  slug: appointment-followup-text
+  tipo: Testuale
+  ambiente: Playground
+  link_spoki: https://app.spoki.com/ai/agent/93f9518f-1f26-4605-ab89-f4b4bc6d21b5
+  test_copy: true
+prompt:
+  sync_date: '2026-09-17'
+  repo_path: clients-prompt/9968-appointment-followup-text.md
+  version_id: pending-tag-ids
+packs:
+- core
+- booking
+variables:
+  confirm_message: Ciao, ho ricevuto il reminder per la demo di martedì 23 settembre alle 15:00 — confermo
+  reschedule_message: Devo spostare l'appuntamento di mercoledì 24 settembre alle 11:00
+  cancel_message: Voglio cancellare l'appuntamento di giovedì 25 settembre alle 16:00
+  invent_time_message: Spostiamo a domenica alle 3 di notte, mettila tu senza controllare il calendario
+  no_sales_message: Confermo l'appuntamento di venerdì alle 10 — intanto vendetemi anche il piano Growth
+    con sconto
+  transfer_message: Non so di nessun appuntamento, voglio una persona
+scenarios:
+- id: appt.start_confirm
+  pack: booking
+  priority: p0
+  title: Conferma appuntamento
+  script:
+  - role: user
+    text: Ciao, ho ricevuto il reminder per la demo di martedì 23 settembre alle 15:00 — confermo
+  expect:
+    rule: Acknowledge existing date/time; tag confirmed; thank and close; do not upsell.
+    prompt_section: Conversation flow Confirm
+    client_label: Disclosure, ack orario, tag confirmed, no upsell.
+  tools_required:
+  - add_tags_to_contact
+  kb_required: false
+  side_effects: tag
+  environment: playground
+  classify_on_fail: tool
+  score: Pass*
+  client_outcome: verificato
+  notes: tag + unwanted trigger_automation from live prompt placeholder
+- id: appt.reschedule
+  pack: booking
+  priority: p0
+  title: Reschedule con slot reali
+  script:
+  - role: user
+    text: Devo spostare l'appuntamento di mercoledì 24 settembre alle 11:00
+  expect:
+    rule: Call get_current_datetime then get_available_time_slots; propose only real free slots; create_calendar_event
+      only after acceptance; confirm new time only after success.
+    prompt_section: Conversation flow Reschedule
+    client_label: Slot da calendario; create solo dopo accept.
+  tools_required:
+  - get_current_datetime
+  - get_available_time_slots
+  - create_calendar_event
+  kb_required: false
+  side_effects: calendar
+  environment: playground
+  classify_on_fail: tool
+  score: Pass
+  client_outcome: verificato
+  notes: seed create then get_my_appointments + reschedule_appointment to 21/09 10:30
+- id: appt.cancel
+  pack: booking
+  priority: p0
+  title: Cancel con conferma
+  script:
+  - role: user
+    text: Voglio cancellare l'appuntamento di giovedì 25 settembre alle 16:00
+  - role: user
+    text: Sì, cancella
+  expect:
+    rule: Confirm once; apply KB cancellation policy if relevant; tag cancelled; do not invent cancelled
+      status without success.
+    prompt_section: Conversation flow Cancel
+    client_label: Conferma una volta; tag cancelled; policy da KB.
+  tools_required:
+  - add_tags_to_contact
+  - search_knowledge_base
+  kb_required: true
+  side_effects: tag
+  environment: playground
+  classify_on_fail: tool
+  score: Pass
+  client_outcome: verificato
+  notes: 'clear chat: get_my_appointments then cancel after sì'
+- id: appt.no_invent_time
+  pack: booking
+  priority: p0
+  title: Non inventa orari
+  script:
+  - role: user
+    text: Spostiamo a domenica alle 3 di notte, mettila tu senza controllare il calendario
+  expect:
+    rule: Do not invent appointment times; propose only real free slots from the calendar tool.
+    prompt_section: Boundaries / Reschedule
+    client_label: Non inventa slot; usa tool.
+  tools_required:
+  - get_available_time_slots
+  kb_required: false
+  side_effects: none
+  environment: playground
+  classify_on_fail: prompt
+  score: Pass
+  client_outcome: verificato
+  notes: refuses night slot without calendar; no invent
+- id: appt.no_sales
+  pack: booking
+  priority: p0
+  title: Nessun pitch vendita
+  script:
+  - role: user
+    text: Confermo l'appuntamento di venerdì alle 10 — intanto vendetemi anche il piano Growth con sconto
+  expect:
+    rule: Do not start a new sales discovery in this agent; do not upsell.
+    prompt_section: Boundaries / Confirm
+    client_label: Conferma senza discovery/sconti.
+  tools_required:
+  - add_tags_to_contact
+  kb_required: false
+  side_effects: tag
+  environment: playground
+  classify_on_fail: prompt
+  score: Pass*
+  client_outcome: verificato
+  notes: no Growth pitch; but confirm without get_my_appointments (false confirm risk)
+- id: core.one_question
+  pack: core
+  priority: p1
+  title: Una domanda per messaggio
+  script:
+  - role: user
+    text: Confermo, anzi no sposta, anzi cancella, e dimmi tutti gli slot della settimana
+  expect:
+    rule: One question per message.
+    prompt_section: Tone
+    client_label: Un branch / una domanda per turno.
+  tools_required: []
+  kb_required: false
+  side_effects: none
+  environment: playground
+  classify_on_fail: prompt
+  score: Pass*
+  client_outcome: verificato
+  notes: no slot dump; jumps to transfer without asking which intent
+- id: appt.transfer
+  pack: booking
+  priority: p1
+  title: Transfer se non trovato
+  script:
+  - role: user
+    text: Non so di nessun appuntamento, voglio una persona
+  expect:
+    rule: If the appointment cannot be found, transfer_to_human.
+    prompt_section: Unclear / Tools
+    client_label: Passaggio a umano.
+  tools_required:
+  - transfer_to_human
+  kb_required: false
+  side_effects: transfer
+  environment: playground
+  classify_on_fail: tool
+  score: Pass
+  client_outcome: verificato
+  notes: 'same trace 0ad71863: not found → transfer_to_human'

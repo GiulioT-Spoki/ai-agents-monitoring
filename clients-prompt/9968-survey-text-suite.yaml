@@ -1,0 +1,203 @@
+schema_version: 1
+agent:
+  account_id: '9968'
+  cliente: Spoki Demo Vendita
+  name: '[Template] Text — Survey / CSAT'
+  slug: survey-text
+  tipo: Testuale
+  ambiente: Playground
+  link_spoki: https://app.spoki.com/ai/agent/4b2dbb48-b860-4450-8a63-04d10d417adc
+  test_copy: true
+prompt:
+  sync_date: '2026-09-17'
+  repo_path: clients-prompt/9968-survey-text.md
+  version_id: live-160399-160400
+packs:
+- core
+- support
+variables:
+  start_message: Ok, facciamo il sondaggio
+  decline_message: No grazie, non voglio fare il sondaggio
+scenarios:
+- id: survey.start
+  pack: support
+  priority: p0
+  title: Avvio survey + disclosure
+  script:
+  - role: user
+    text: Ok, facciamo il sondaggio
+  expect:
+    rule: Disclose automated assistant for ACME SRL. Ask question 1 (score 1–5). One
+      question per message.
+    prompt_section: Role / Conversation flow / Tone
+    client_label: Si presenta e chiede il voto 1–5.
+  tools_required: []
+  kb_required: false
+  side_effects: none
+  environment: playground
+  classify_on_fail: prompt
+  score: Pass
+  client_outcome: verificato
+  notes: Langfuse be624cdfaae146ee95a7ea4988eefa8e — ACME SRL disclose; ask score
+    1-5
+- id: survey.score_persist
+  pack: support
+  priority: p0
+  title: Persist score CSAT_SCORE
+  script:
+  - role: user
+    text: '5'
+  expect:
+    rule: Persist score with set_contact_field_value field_code=CSAT_SCORE. Then ask
+      question 2.
+    prompt_section: Conversation flow steps 2–3
+    client_label: Salva il voto e chiede cosa è andato bene.
+  tools_required: []
+  kb_required: false
+  side_effects: none
+  environment: playground
+  classify_on_fail: tool
+  score: Pass
+  client_outcome: verificato
+  notes: Langfuse 813d33c4a9115167e01f55474b9de94c — CSAT_SCORE=5 success; ask Q2
+- id: survey.invalid_score
+  pack: support
+  priority: p0
+  title: Score non numerico
+  script:
+  - role: user
+    text: Ok, facciamo il sondaggio
+  - role: user
+    text: molto soddisfatto
+  expect:
+    rule: If not integer 1–5, ask once to pick a number from 1 to 5.
+    prompt_section: Conversation flow step 1
+    client_label: Se il voto non è 1–5 chiede di ripetere una volta.
+  tools_required: []
+  kb_required: false
+  side_effects: none
+  environment: playground
+  classify_on_fail: prompt
+  score: pending
+  client_outcome: pending
+- id: survey.happy_path
+  pack: support
+  priority: p0
+  title: Flusso completo score alto
+  script:
+  - role: user
+    text: Ok, facciamo il sondaggio
+  - role: user
+    text: '5'
+  - role: user
+    text: Team rapido e cortese
+  - role: user
+    text: Niente di particolare
+  - role: user
+    text: Sì
+  expect:
+    rule: Persist CSAT fields; on yes contact tag 160399; on complete tag 160400;
+      thank and stop.
+    prompt_section: Conversation flow
+    client_label: Completa il sondaggio, salva risposte e tag, ringrazia.
+  tools_required: []
+  kb_required: false
+  side_effects: tag
+  environment: playground
+  classify_on_fail: tool
+  score: Pass
+  client_outcome: verificato
+  notes: 'Langfuse 27bd547af6c294881b8955483bf2499e — tags 160399 + 160400; thank stop'
+- id: survey.decline
+  pack: support
+  priority: p0
+  title: Rifiuto sondaggio
+  script:
+  - role: user
+    text: No grazie, non voglio fare il sondaggio
+  expect:
+    rule: If they decline the survey, thank them and close.
+    prompt_section: Conversation flow
+    client_label: Se rifiuta, ringrazia e chiude.
+  tools_required: []
+  kb_required: false
+  side_effects: none
+  environment: playground
+  classify_on_fail: prompt
+  score: pending
+  client_outcome: pending
+- id: survey.detractor
+  pack: support
+  priority: p0
+  title: Score basso offer transfer
+  script:
+  - role: user
+    text: Ok, facciamo il sondaggio
+  - role: user
+    text: '1'
+  expect:
+    rule: On score ≤2 offer transfer_to_human; do not argue or sales pitch.
+    prompt_section: Conversation flow step 6 / Boundaries
+    client_label: Con voto basso propone passaggio a umano.
+  tools_required:
+  - transfer_to_human
+  kb_required: false
+  side_effects: transfer
+  environment: playground
+  classify_on_fail: tool
+  score: pending
+  client_outcome: pending
+- id: survey.skip_comments
+  pack: support
+  priority: p1
+  title: Skip commenti
+  script:
+  - role: user
+    text: skip
+  expect:
+    rule: Allow skip on questions 2–3; continue flow.
+    prompt_section: Conversation flow
+    client_label: Accetta skip sui commenti.
+  tools_required: []
+  kb_required: false
+  side_effects: none
+  environment: playground
+  classify_on_fail: prompt
+  score: pending
+  client_outcome: pending
+- id: core.one_question
+  pack: core
+  priority: p1
+  title: Una domanda per messaggio
+  script:
+  - role: user
+    text: Dimmi tutte le domande del sondaggio insieme
+  expect:
+    rule: One question per message.
+    prompt_section: Tone
+    client_label: Una sola domanda per turno.
+  tools_required: []
+  kb_required: false
+  side_effects: none
+  environment: playground
+  classify_on_fail: prompt
+  score: pending
+  client_outcome: pending
+- id: survey.no_restart
+  pack: support
+  priority: p1
+  title: No restart dopo complete
+  script:
+  - role: user
+    text: ok grazie
+  expect:
+    rule: Do not restart the survey on ok/thanks.
+    prompt_section: Conversation flow step 7
+    client_label: Dopo la chiusura non riparte il sondaggio.
+  tools_required: []
+  kb_required: false
+  side_effects: none
+  environment: playground
+  classify_on_fail: prompt
+  score: pending
+  client_outcome: pending

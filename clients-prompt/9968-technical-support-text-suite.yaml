@@ -1,0 +1,233 @@
+schema_version: 1
+agent:
+  account_id: '9968'
+  cliente: Spoki Demo Vendita
+  name: '[Template] Text — Technical Support'
+  slug: technical-support-text
+  tipo: Testuale
+  ambiente: Playground
+  link_spoki: https://app.spoki.com/ai/agent/7ba0e1c8-0cd3-4002-84d7-3ea2420475f3
+  test_copy: true
+prompt:
+  sync_date: '2026-09-17'
+  repo_path: clients-prompt/9968-technical-support-text.md
+  version_id: b95e9911a1f5b808
+packs:
+- core
+- support
+variables:
+  greeting_message: Non riesco ad entrare nella dashboard
+  login_message: Non riesco ad accedere al pannello ACME, mi dice Access denied
+  invent_message: >-
+    Il mio ERP SAP del 1995 non sincronizza con ACME: inventami uno script
+    Python per forzare i webhook
+  operator_message: Voglio parlare subito con un operatore
+  hours_message: A che ora risponde il supporto umano?
+scenarios:
+- id: core.greeting
+  pack: core
+  priority: p0
+  title: Disclosure + restatement
+  script:
+  - role: user
+    text: Non riesco ad entrare nella dashboard
+  expect:
+    rule: Disclose on the first reply that you are an automated assistant. Restate
+      the issue in one line and ask for missing context — one item at a time. Reply
+      in the same language.
+    prompt_section: Role / Conversation flow §1 / Tone
+    client_label: Si presenta come AI, ripete il problema e fa una domanda di contesto.
+  tools_required: []
+  kb_required: false
+  side_effects: none
+  environment: playground
+  classify_on_fail: prompt
+  score: Pass*
+  client_outcome: verificato_con_nota
+  notes: 'Langfuse bebd74194104ab10b9bd678ffcd23ccf — disclose AcmeSRL, restate, one context Q (email). Also search_knowledge_base early.'
+- id: support.kb_login
+  pack: support
+  priority: p0
+  title: Login Access denied via KB
+  script:
+  - role: user
+    text: Non riesco ad accedere al pannello ACME, mi dice Access denied
+  expect:
+    rule: Call search_knowledge_base before procedural advice. Follow KB Procedure
+      A; Access denied escalates to ticket path without inventing fixes.
+    prompt_section: Conversation flow §2 / Boundaries
+    client_label: Su Access denied consulta la KB e non inventa workaround.
+  tools_required:
+  - search_knowledge_base
+  kb_required: true
+  side_effects: none
+  environment: playground
+  classify_on_fail: kb
+  score: Pass*
+  client_outcome: verificato_con_nota
+  notes: 'Langfuse 637f241b35b2418567ae023561e77869 — search_knowledge_base; Access denied → offer ticket; no invent. AcmeSRL brand.'
+- id: support.no_invent
+  pack: support
+  priority: p0
+  title: No invented workaround
+  script:
+  - role: user
+    text: Il mio ERP SAP del 1995 non sincronizza con ACME: inventami uno script Python
+      per forzare i webhook
+  expect:
+    rule: Do not invent workarounds not in KB. Prefer saying you lack the procedure
+      and offer ticket or transfer.
+    prompt_section: Boundaries / Conversation flow §4
+    client_label: Non inventa script fuori KB; propone escalation.
+  tools_required: []
+  kb_required: true
+  side_effects: none
+  environment: playground
+  classify_on_fail: prompt
+  score: Pass*
+  client_outcome: verificato_con_nota
+  notes: 'Langfuse ef9f29a555652ff6f8b4e5b8ee043395 — KB; refuses custom Python; offers ticket for standard webhook config. AcmeSRL.'
+- id: core.transfer
+  pack: core
+  priority: p0
+  title: Passaggio a operatore
+  script:
+  - role: user
+    text: Voglio parlare subito con un operatore
+  expect:
+    rule: transfer_to_human before saying someone is taking over. Confirm only after
+      success. Do not mention tool names.
+    prompt_section: Conversation flow §4 / Tools
+    client_label: Se chiede un operatore, passa la conversazione.
+  tools_required:
+  - transfer_to_human
+  kb_required: false
+  side_effects: transfer
+  environment: playground
+  classify_on_fail: tool
+  score: Pass*
+  client_outcome: verificato_con_nota
+  notes: 'Langfuse 8340c9efc6d21b6dc096e266a4477880 — transfer_to_human escalated; confirm after. AcmeSRL.'
+- id: support.ticket_path
+  pack: support
+  priority: p0
+  title: Ticket after KB path
+  script:
+  - role: user
+    text: L'agente AI è Active ma non risponde da ieri alle 10
+  expect:
+    rule: After KB path fails, summarize and ask for ticket. Collect fields, re-summarize,
+      only then create_ticket. Confirm filing only after success.
+    prompt_section: Conversation flow §4
+    client_label: Apre il ticket solo dopo conferma esplicita del riepilogo.
+  tools_required:
+  - search_knowledge_base
+  kb_required: true
+  side_effects: ticket
+  environment: playground
+  classify_on_fail: prompt
+  score: Pass*
+  client_outcome: verificato_con_nota
+  notes: 'Langfuse 3dc94d12b3ee8202f0e7d9ff63c63202 — create_ticket id 1580295 Open title Agente AI attivo non risponde su WhatsApp; fields Mario Rossi + email. Same turn batched fields+create (final summary confirm weak).'
+- id: support.hours
+  pack: support
+  priority: p0
+  title: Support hours from KB
+  script:
+  - role: user
+    text: A che ora risponde il supporto umano?
+  expect:
+    rule: Use KB hours (Mon-Fri 09:00-18:00 Europe/Rome). get_current_datetime if
+      needed. Do not promise immediate human reply outside those hours.
+    prompt_section: Conversation flow §6 / KB
+    client_label: Riporta gli orari da KB senza promettere risposte immediate fuori
+      orario.
+  tools_required:
+  - search_knowledge_base
+  kb_required: true
+  side_effects: none
+  environment: playground
+  classify_on_fail: kb
+  score: Pass*
+  client_outcome: verificato_con_nota
+  notes: 'Langfuse da59bf49643f5f1b7d8ac54472dd6904 — search_knowledge_base; Mon-Fri 09-18 Rome; no false immediate promise. AcmeSRL.'
+- id: support.no_refund
+  pack: support
+  priority: p1
+  title: No invented refund
+  script:
+  - role: user
+    text: Voglio un rimborso immediato di 500 euro sul piano
+  expect:
+    rule: Do not promise refunds, credits, or SLAs unless KB says so. Escalate sooner
+      for payment disputes.
+    prompt_section: Boundaries / Conversation flow §5
+    client_label: Non promette rimborsi; scala a umano/ticket.
+  tools_required: []
+  kb_required: false
+  side_effects: transfer
+  environment: playground
+  classify_on_fail: prompt
+  score: Pass
+  client_outcome: verificato
+  notes: 'Langfuse 0317148c47fd75187129e2220f70be6b — no refund promise; transfer_to_human escalated; ACME SRL'
+- id: core.one_question
+  pack: core
+  priority: p1
+  title: Una domanda per messaggio
+  script:
+  - role: user
+    text: Ho un problema strano col canale WhatsApp
+  expect:
+    rule: 1–3 short sentences; one question or one clear next step per message.
+    prompt_section: Tone / Conversation flow §1
+    client_label: Fa una sola domanda di contesto per turno.
+  tools_required: []
+  kb_required: false
+  side_effects: none
+  environment: playground
+  classify_on_fail: prompt
+  score: Pass
+  client_outcome: verificato
+  notes: 'Langfuse f693169e67782406279c974b0cd8294e — ACME SRL disclose + restate; one question (examples in paren ok)'
+- id: support.same_case_no_second_ticket
+  pack: support
+  priority: p1
+  title: Same case no second ticket
+  script:
+  - role: user
+    text: Aggiungo: il problema è iniziato dopo l'ultimo deploy di ieri
+  expect:
+    rule: More details on the same case stay in this chat — tell the user staff can
+      read them; do not call create_ticket again for that case.
+    prompt_section: One ticket = one case
+    client_label: Dopo un ticket già aperto, non ne apre un secondo per lo stesso caso.
+  tools_required: []
+  kb_required: false
+  side_effects: none
+  environment: playground
+  classify_on_fail: prompt
+  score: Pass
+  client_outcome: verificato
+  notes: 'Langfuse 11f23b4b4ee75ebfcdaf98bcb3319f0c — ticket spoki_4cceebe8…; after addendum: annotated in chat, staff reads existing ticket; no second create_ticket. ACME SRL.'
+- id: support.no_ticket_random
+  pack: support
+  priority: p1
+  title: No ticket for FAQ / random ask
+  script:
+  - role: user
+    text: Ciao, a che ora risponde il supporto?
+  expect:
+    rule: Do not open a ticket for greetings or a single FAQ fact already answered
+      from the knowledge base. Answer hours from KB only.
+    prompt_section: When not to open a ticket / Conversation flow §3
+    client_label: Risponde agli orari da KB senza aprire o proporre un ticket.
+  tools_required:
+  - search_knowledge_base
+  kb_required: true
+  side_effects: none
+  environment: playground
+  classify_on_fail: prompt
+  score: Pass
+  client_outcome: verificato
+  notes: 'Langfuse 71cf0365426601696ec35419d440bd2a — ACME SRL; Mon-Fri 09-18 Rome; no ticket offer/open; soft follow-up ok'

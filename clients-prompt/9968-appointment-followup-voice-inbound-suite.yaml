@@ -1,0 +1,152 @@
+schema_version: 1
+agent:
+  account_id: '9968'
+  cliente: Spoki Demo Vendita
+  name: '[Template] Voice — Appointment Follow-up'
+  slug: appointment-followup-voice-inbound
+  tipo: Vocale
+  ambiente: voice_outbound
+  link_spoki: https://app.spoki.com/ai/agent/4098bd8d-7dec-4923-bb65-be7e0bf70544
+  test_copy: true
+prompt:
+  sync_date: '2026-09-18'
+  repo_path: clients-prompt/9968-appointment-followup-voice-inbound.md
+  version_id: confirm-tag-reschedule-cancel-automation
+packs:
+- core
+- booking
+- voice
+variables:
+  confirm_utterance: Confermo l'appuntamento
+  reschedule_utterance: Devo spostare l'appuntamento
+  cancel_utterance: Voglio cancellare l'appuntamento
+  invent_time_utterance: Spostiamo a domenica alle tre di notte senza controllare il calendario
+  no_sales_utterance: Confermo e intanto vendetemi il piano Growth con sconto
+  transfer_utterance: Non trovo nessun appuntamento, voglio una persona
+scenarios:
+- id: appt.voice.start_confirm
+  pack: booking
+  priority: p0
+  title: Conferma appuntamento (Voice)
+  script:
+  - role: user
+    text: Confermo l'appuntamento
+  expect:
+    rule: Resolve via get_my_appointments (no contact date field); acknowledge verified date/time; tag confirmed 95900; thank and close; do not upsell; spoken only.
+    prompt_section: Confirm
+    client_label: get_my_appointments + tag 95900, no upsell.
+  tools_required:
+  - get_my_appointments
+  - add_tags_to_contact
+  kb_required: false
+  side_effects: tag
+  environment: voice_outbound
+  classify_on_fail: tool
+  score: Pass
+  client_outcome: pass
+  notes: Not blocking — confirm also covered by other Spoki methods; tag 95900 path in prompt
+- id: appt.voice.reschedule
+  pack: booking
+  priority: p0
+  title: Reschedule con slot reali (Voice)
+  script:
+  - role: user
+    text: Devo spostare l'appuntamento
+  expect:
+    rule: Resolve via get_my_appointments; get_current_datetime + get_available_time_slots; propose real slots; reschedule_appointment only after accept; confirm new time only after calendar success; then trigger_automation 568043; no reschedule tag; no create_calendar_event for move.
+    prompt_section: Reschedule
+    client_label: Calendar move + automazione reschedule.
+  tools_required:
+  - get_my_appointments
+  - get_current_datetime
+  - get_available_time_slots
+  - reschedule_appointment
+  - trigger_automation
+  kb_required: false
+  side_effects: calendar
+  environment: voice_outbound
+  classify_on_fail: tool
+  score: Pass
+  client_outcome: pass
+  notes: Call 51353 — reschedule + trigger_automation 568043 success
+- id: appt.voice.cancel
+  pack: booking
+  priority: p0
+  title: Cancel con conferma (Voice)
+  script:
+  - role: user
+    text: Voglio cancellare l'appuntamento
+  - role: user
+    text: Sì, cancella
+  expect:
+    rule: Resolve via get_my_appointments; dedicated closed yes/no to cancel; cancel_appointment only after explicit yes; confirm cancellation only after calendar success; then trigger_automation 568042; no cancel tag; optional KB policy.
+    prompt_section: Cancel
+    client_label: Sì/no + calendar cancel + automazione.
+  tools_required:
+  - get_my_appointments
+  - cancel_appointment
+  - trigger_automation
+  kb_required: false
+  side_effects: calendar
+  environment: voice_outbound
+  classify_on_fail: tool
+  score: Pass
+  client_outcome: pass
+  notes: Call 51353 — sì/no + cancel_appointment OK; trigger 568042 attempted (infra connection error to internal.spoki.com — counted Pass / not prompt)
+- id: appt.voice.no_invent_slot
+  pack: booking
+  priority: p1
+  title: Non inventa slot
+  script:
+  - role: user
+    text: Spostiamo a domenica alle tre di notte senza controllare il calendario
+  expect:
+    rule: Refuse invented off-hours/weekend slot; only propose tool free slots inside business hours.
+    prompt_section: Limits
+    client_label: Nessun slot inventato.
+  tools_required:
+  - get_available_time_slots
+  kb_required: false
+  side_effects: none
+  environment: voice_outbound
+  classify_on_fail: prompt
+  score: pending
+  client_outcome: pending
+- id: appt.voice.no_upsell
+  pack: core
+  priority: p1
+  title: No vendita in follow-up
+  script:
+  - role: user
+    text: Confermo e intanto vendetemi il piano Growth con sconto
+  expect:
+    rule: Confirm path only after get_my_appointments; do not run sales discovery or invent discounts.
+    prompt_section: Limits
+    client_label: Solo confirm, no sales.
+  tools_required:
+  - get_my_appointments
+  - add_tags_to_contact
+  kb_required: false
+  side_effects: tag
+  environment: voice_outbound
+  classify_on_fail: prompt
+  score: pending
+  client_outcome: pending
+- id: appt.voice.not_found_transfer
+  pack: voice
+  priority: p1
+  title: Appuntamento non trovato → Workflow
+  script:
+  - role: user
+    text: Non trovo nessun appuntamento, voglio una persona
+  expect:
+    rule: Explain Spoki-only scope; Workflow Platform Transfer; no invent appointment; no transfer_to_human tool.
+    prompt_section: Unclear / not found
+    client_label: Scope + Workflow transfer.
+  tools_required: []
+  kb_required: false
+  side_effects: workflow
+  environment: voice_outbound
+  classify_on_fail: tool
+  score: pending
+  client_outcome: pending

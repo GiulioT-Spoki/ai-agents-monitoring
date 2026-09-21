@@ -1,0 +1,134 @@
+schema_version: 1
+agent:
+  account_id: '9968'
+  cliente: Spoki Demo Vendita
+  name: '[Template] Text — Hospitality Booking'
+  slug: hospitality-booking-text
+  tipo: Testuale
+  ambiente: Playground
+  link_spoki: https://app.spoki.com/ai/agent/e9d609fa-f6f6-4327-823e-191abd4301bc
+  test_copy: true
+prompt:
+  sync_date: '2026-09-16'
+  repo_path: clients-prompt/9968-hospitality-booking-text.md
+  version_id: 7654cdc986e62d6f
+packs:
+- core
+- booking
+variables:
+  greeting_message: Ciao, vorrei informazioni sul soggiorno
+  operator_message: Posso parlare con un operatore?
+  booking_intent: Vorrei prenotare una camera
+  faq_hours: A che ora è il check-in?
+scenarios:
+- id: core.greeting
+  pack: core
+  priority: p0
+  title: Accoglienza + disclosure
+  script:
+  - role: user
+    text: Ciao, vorrei informazioni sul soggiorno
+  expect:
+    rule: Disclose on the first reply that you are an automated assistant acting for
+      ACMESRL. One question per message. Reply in the user's language.
+    prompt_section: Role / Tone
+    client_label: All'apertura l'assistente si presenta come AI e chiede come aiutare.
+  tools_required: []
+  kb_required: false
+  side_effects: none
+  environment: playground
+  classify_on_fail: prompt
+  score: Pass*
+  client_outcome: verificato
+  notes: disclose OK; asked check-in+check-out together (one-at-a-time) langfuse:64e5728727045b5bd7a6f00f3f9fb68d
+- id: booking.intent_collect
+  pack: booking
+  priority: p0
+  title: Intent prenotazione e raccolta dati
+  script:
+  - role: user
+    text: Vorrei prenotare una camera
+  expect:
+    rule: 'Collect trip basics one at a time if missing: check-in date, check-out
+      date, number of guests, room type preference. Do not invent availability before
+      the calendar tool.'
+    prompt_section: Conversation flow §1–§2
+    client_label: Dopo la richiesta di prenotazione raccoglie i dati uno alla volta.
+  tools_required: []
+  kb_required: false
+  side_effects: none
+  environment: playground
+  classify_on_fail: prompt
+  score: Pass*
+  client_outcome: verificato
+  notes: asks check-in+out together; no invented availability langfuse:a62cafc3f01c3e5e19e8f2d8227cb365
+- id: booking.faq_hours
+  pack: booking
+  priority: p0
+  title: Check-in da knowledge base
+  script:
+  - role: user
+    text: A che ora è il check-in?
+  expect:
+    rule: Cancellation policy, deposits, check-in hours from knowledge base via search_knowledge_base.
+      Do not invent hours.
+    prompt_section: Knowledge base / Tools
+    client_label: Gli orari di check-in coincidono con la knowledge base.
+  tools_required:
+  - search_knowledge_base
+  kb_required: true
+  side_effects: none
+  environment: playground
+  classify_on_fail: kb
+  score: Pass
+  client_outcome: verificato
+  notes: KB hit 15:00 langfuse:4498db46f0d08af15609702e62cacf1b
+- id: core.transfer
+  pack: core
+  priority: p0
+  title: Passaggio a operatore
+  script:
+  - role: user
+    text: Posso parlare con un operatore?
+  expect:
+    rule: 'Groups, special corporate rates, or tool failures / human request: call
+      transfer_to_human. Confirm handoff only after success. Do not mention tool names.'
+    prompt_section: Conversation flow §8 / Tone
+    client_label: Se l'utente chiede un operatore, l'assistente passa la conversazione.
+  tools_required:
+  - transfer_to_human
+  kb_required: false
+  side_effects: transfer
+  environment: playground
+  classify_on_fail: tool
+  score: Pass
+  client_outcome: verificato
+  notes: transfer escalated langfuse:8147c4e04aed68b6684dd57ca8f5423c
+- id: hos.avail_no_invent
+  pack: custom
+  priority: p0
+  title: Disponibilità solo da calendario
+  script:
+  - role: user
+    text: Vorrei una camera dal 10 al 12 ottobre per 2 adulti
+  - role: user
+    text: Nessuna preferenza di tipologia, basta una doppia
+  expect:
+    rule: Before any price or "we have rooms", call the native calendar availability
+      tool (Calendar Giulio). Present only options returned by the tool (max 2–3).
+      Never invent stock or rates from memory.
+    prompt_section: Conversation flow §2–§3 / Boundaries
+    client_label: La disponibilità mostrata arriva dal calendario, senza invenzioni.
+  tools_required:
+  - Calendar Giulio
+  kb_required: false
+  side_effects: none
+  environment: playground
+  classify_on_fail: tool
+  score: Pass
+  client_outcome: verificato
+  notes: 'calls get_available_time_slots (appointment) then invents camera doppia;
+    no room options in tool output langfuse:598ee22f7c7fb56d6db9eab1087edc31
+
+    retest after slot contract: slots then create 15:00-16:00 same day success 30a54e76
+    langfuse:30a54e76e75de22b8037396b66a78746'
