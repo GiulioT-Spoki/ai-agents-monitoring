@@ -147,6 +147,13 @@ Verify that external sources tools connect to are not blocking automated request
 2. `get_current_datetime` -- get current date and time; accepts optional timezone parameter (e.g., 'Europe/Rome')
 3. `transfer_to_human` -- transfer conversation to a human operator when the user requests it or the agent cannot help
 
+### Platform Actions (`agents.attached_services`)
+
+Separate from bound tools. Enabled per agent in the UI; stored as `attached_services` on the agent row. In text prompts they are written as bare `@@action:NAME?params@@` (see Desktop `spoki-prompt-authoring.md` / skill `spoki-prompt-author`). Do not invent action names that are not attachable.
+
+### Bound tools (`tools` table)
+
+Account tools are `INTEGRATION` (Shopify / Prestashop / Google Calendar only), `WEBHOOK`, or `MCP`. Linked via `tools_agent_association`.
 ---
 
 ## Dynamic Fields (Variables)
@@ -169,9 +176,10 @@ Verify that external sources tools connect to are not blocking automated request
 
 ## Default Reply
 
-A toggleable fallback message for when the agent has problems following its pipeline (can't follow instructions, can't retrieve tool data, etc.).
+A toggleable fallback message in the **agent UI** (not inside the system prompt text) for when the agent has problems following its pipeline (can't follow instructions, can't retrieve tool data, etc.).
 
-- It is recommended to always set a default reply
+- It is recommended to always set a default reply in the UI
+- Do not paste the default reply into the system prompt body
 - Without it, the agent may simply not respond when it encounters problems
 - Best practice: include instructions on how to contact a human operator
 
@@ -230,6 +238,7 @@ Front-end is limited to 16,000 characters. Longer prompts increase the risk of s
 
 ## Sources
 
+- Claude / authoring skill (prompt segments, `@@action`, tools): Desktop `spoki-prompt-author/` (+ `spoki-prompt-author.zip` for Claude.ai upload)
 - Public docs: https://support.spoki.com/docs/uncategorized/come-costruire-il-tuo-agente-ai/
 - Shopify integration: https://support.spoki.com/docs/integrazioni/connect-shopify-to-spoki-ai-sales-agent/
 - Internal training sessions (December 2025, Giacomo)

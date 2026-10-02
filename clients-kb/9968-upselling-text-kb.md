@@ -19,9 +19,9 @@ Use this KB only for policy / when-not-to-upsell rules. Do not invent SKUs or di
 
 ## Soft close (demo)
 
-- Prefer product links returned by `neew-shopify`
-- Create Draft Order only if that method is enabled on the tool and the customer asks for it
-- Otherwise offer the product URL or a human stylist/sales (`transfer_to_human`)
+- Sales-layer product cards already carry title, price, and link in the caption — do not paste a second product URL into the WhatsApp text when a card is sent
+- Create Draft Order only if that method is enabled on the tool and the customer asks for it; after success, share only the checkout/invoice URL from the tool
+- If draft is unavailable, let them use the card already shown or offer a human stylist/sales (`transfer_to_human`)
 
 ## Hours
 

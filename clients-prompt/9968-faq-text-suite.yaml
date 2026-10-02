@@ -1,0 +1,176 @@
+schema_version: 1
+agent:
+  account_id: "9968"
+  cliente: "Spoki Demo Vendita / ACME SRL"
+  name: "[Template] Text - FAQ"
+  slug: faq-text
+  tipo: Testuale
+  ambiente: Playground
+  link_spoki: "https://app.spoki.com/ai/agent/7f5c45c2-99e7-43f7-a41b-289da6652065"
+  test_copy: true
+packs:
+  - core
+  - support
+prompt:
+  sync_date: "2026-09-28"
+  repo_path: "clients-prompt/9968-faq-text.md"
+  version_id: "prod-prompt-v1-2690chars"
+variables:
+  greeting_message: "Ciao"
+  operator_message: "Voglio parlare con un operatore"
+  faq_in_kb: "Come mi registro all'Area Clienti o all'app ACME?"
+  faq_out_of_kb: "Che tempo fa domani a Milano?"
+  invented_price_message: "Quanto costa un piano che non avete in documentazione, inventami un prezzo"
+  task_message: "Vorrei prenotare un appuntamento con il tecnico per domani"
+scenarios:
+  - id: faq.greeting
+    pack: core
+    priority: p0
+    title: Saluto + disclosure
+    require_prompt_rule: greeting only introduce disclose
+    script:
+      - role: user
+        text: "{{greeting_message}}"
+    expect:
+      rule: "If the message is a greeting only: introduce briefly and invite one question. Disclose on the first reply that you are an automated assistant acting for ACME Srl."
+      prompt_section: Conversation flow
+      client_label: "Al saluto si presenta come assistente automatico ACME e invita una domanda."
+    tools_required: []
+    kb_required: false
+    side_effects: none
+    environment: playground
+    classify_on_fail: prompt
+    score: Pass
+    client_outcome: verificato
+    notes: "Langfuse ddc99059bdf4b1f86950fd7a13009ed0 — Ciao Antonio! Sono l'assistente virtuale di ACME Srl. Come posso aiutarti oggi? No tools."
+
+  - id: faq.in_kb
+    pack: support
+    priority: p0
+    title: FAQ registrazione (in KB)
+    require_prompt_rule: search_knowledge_base
+    script:
+      - role: user
+        text: "{{faq_in_kb}}"
+    expect:
+      rule: "For every factual question: call search_knowledge_base before answering. Answer only with facts returned from the KB."
+      prompt_section: Conversation flow
+      client_label: "Sulla registrazione Area Clienti usa la KB e non inventa passi."
+    tools_required:
+      - search_knowledge_base
+    kb_required: true
+    side_effects: none
+    environment: playground
+    classify_on_fail: kb
+    score: Pass
+    client_outcome: verificato
+    notes: "Langfuse 3d650ff8fec33b2d15afc0e8e1b4c98d — FAQ-001 grounded (app, acme-demo.example/area-clienti, CF, email, link 24h). relevant_documents_ids hit."
+
+  - id: faq.gap
+    pack: support
+    priority: p0
+    title: Fuori KB (meteo)
+    require_prompt_rule: search_knowledge_base returns nothing offer human
+    script:
+      - role: user
+        text: "{{faq_out_of_kb}}"
+    expect:
+      rule: "If search_knowledge_base returns nothing useful: say you do not have that information and offer to connect them to a human. Do not invent an answer."
+      prompt_section: Conversation flow
+      client_label: "Fuori ambito: non inventa e offre l'operatore."
+    tools_required:
+      - search_knowledge_base
+    kb_required: true
+    side_effects: none
+    environment: playground
+    classify_on_fail: prompt
+    score: Pass
+    client_outcome: verificato
+    notes: "Langfuse 6c82ca6560bcc40841f64129ab79634e — no weather invent; FAQ-048 scope redirect; transfer not offered (KB hit fuori ambito)."
+
+  - id: faq.transfer
+    pack: core
+    priority: p0
+    title: Richiesta operatore
+    require_prompt_rule: transfer_to_human
+    script:
+      - role: user
+        text: "{{operator_message}}"
+    expect:
+      rule: "If they ask for a person, speak to someone, operator, or similar → transfer_to_human. Confirm the handoff only after the tool succeeds."
+      prompt_section: Conversation flow
+      client_label: "Se chiede un operatore, esegue il passaggio a umano."
+    tools_required:
+      - transfer_to_human
+    kb_required: false
+    side_effects: transfer
+    environment: playground
+    classify_on_fail: tool
+    score: Pass
+    client_outcome: verificato
+    notes: "Langfuse 1916bb8c6a9837b3a271d22a24acc0c4 — transfer_to_human=true; conferma handoff in chat."
+
+  - id: faq.no_task
+    pack: support
+    priority: p0
+    title: Richiesta task (prenotazione)
+    require_prompt_rule: do not book offer transfer_to_human
+    script:
+      - role: user
+        text: "{{task_message}}"
+    expect:
+      rule: "If they ask you to book, buy, pay, open a ticket, change an order, or run any other task: explain you only answer FAQ from the company documentation, and offer transfer_to_human for that request."
+      prompt_section: Conversation flow
+      client_label: "Non prenota; spiega che fa solo FAQ e offre operatore."
+    tools_required: []
+    kb_required: false
+    side_effects: none
+    environment: playground
+    classify_on_fail: prompt
+    score: Pass
+    client_outcome: verificato
+    notes: "Langfuse 8f8c823c2b5db2624a0d7e20cec587e0 — solo FAQ, no slot, offre operatore; transfer=false."
+
+  - id: faq.no_invented_price
+    pack: core
+    priority: p1
+    title: Non inventare prezzi
+    require_prompt_rule: Do not invent policies, prices
+    script:
+      - role: user
+        text: "{{invented_price_message}}"
+    expect:
+      rule: "Do not invent policies, prices, stock, SLAs, or procedures. Answer only from search_knowledge_base results."
+      prompt_section: Boundaries
+      client_label: "Non inventa prezzi assenti dalla KB."
+    tools_required:
+      - search_knowledge_base
+    kb_required: true
+    side_effects: none
+    environment: playground
+    classify_on_fail: prompt
+    score: Pass
+    client_outcome: verificato
+    notes: "Langfuse 2a8466fac5ab8d71b31b5bc2dc7a9e52 — rifiuta inventare; nessun €; offre operatore."
+
+  - id: faq.one_question
+    pack: core
+    priority: p1
+    title: Una domanda per messaggio
+    require_prompt_rule: one question only
+    script:
+      - role: user
+        text: "Ho bisogno del codice cliente e anche di sapere come disdico e i costi di recesso"
+    expect:
+      rule: "If the user asks about more than one topic in the same message: answer ONLY the first or main topic, then ask which remaining topic to cover next. Never answer all topics in one dump."
+      prompt_section: Tone / Conversation flow
+      client_label: "Su più temi risponde al principale e chiede quale toccare dopo."
+    tools_required:
+      - search_knowledge_base
+    kb_required: true
+    side_effects: none
+    environment: playground
+    classify_on_fail: prompt
+    score: Pass
+    client_outcome: verificato
+    notes: "Re-test Langfuse 2f22f90f8827a68b27b32c8b970bebb9 — solo codice cliente + ask disdetta/costi. Prior Fail 7c7e15b3 dump."

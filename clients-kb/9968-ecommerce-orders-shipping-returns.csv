@@ -1,0 +1,12 @@
+topic,rule,spoken_summary
+shipping_standard,Business-day orders ship in 1-2 business days from warehouse confirmation,Spedizione standard in uno o due giorni lavorativi dopo la conferma magazzino
+shipping_express,Express option when available on the order: usually next business day after warehouse confirmation,Express se presente sull'ordine: di solito il giorno lavorativo successivo
+free_shipping_threshold,Free standard shipping from 49 euro cart subtotal before discounts,Spedizione standard gratuita da quarantanove euro di carrello
+carrier_default,Default carrier for Italy is BRT or GLS as shown on the Shopify fulfillment; never invent another carrier,Corriere quello indicato da Shopify sulla fulfillment
+tracking_email,Tracking email goes out when the parcel is marked fulfilled in Shopify,Email di tracking alla fulfillment Shopify
+return_window,14 calendar days from delivery date for unused items in original packaging,Reso entro quattordici giorni dalla consegna se articolo non usato
+return_shipping_cost,Customer pays return shipping unless the item is defective or wrong; staff confirms exception,Costo reso a carico del cliente salvo difetto o articolo sbagliato
+return_process,Open return request via support; staff sends RMA label instructions by email,Reso: staff invia istruzioni RMA via email
+exchange_policy,Exchanges only for size or colour when stock exists; otherwise refund path via staff,Cambio solo taglia o colore se c'è stock; altrimenti rimborso via staff
+cancellation_unfulfilled,Unfulfilled orders can be cancelled by staff the same business day if not yet picked,Annullamento possibile prima del picking via staff
+cancellation_fulfilled,Fulfilled or shipped orders cannot be cancelled; use return flow,Dopo la spedizione non si annulla; si usa il reso

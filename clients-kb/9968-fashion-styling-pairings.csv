@@ -1,0 +1,7 @@
+pairing_code,lane,title,piece_skus,budget_total_eur,style_tags,when_to_use
+A,womenswear,Formal dinner / evening classic,DUOMO-DRS|GALLERIA-PMP|TEATRO-CLT,520,"classic evening",Cena formale o sera classica
+B,womenswear,Contemporary evening bold,TORTONA-DRS|GALLERIA-PMP|TEATRO-CLT,550,"contemporary evening bold",Sera contemporanea / look deciso
+C,menswear,Business / day tailored classic,BRERA-BLZ|NAVIGLI-TRS|ISOLA-SHT|SCALA-LFR,990,"classic contemporaneo day business","Completo ufficio; default se silhouette ambigua in contesto office (opzionale NAVIGLI-BLT)"
+D,unisex,Smart casual city contemporary,PORTANUOVA-BMB|NAVIGLI-TRS|ISOLA-SHT|CINQUEVIE-SNK,680,"contemporary bold day",City / smart casual
+E,womenswear,Outerwear polish classic,SEMPIONE-COT|DUOMO-DRS|SCALA-LFR,920,"classic day evening transition",Giorno-sera con cappotto + abito
+F,unisex,Minimal accessory refresh,NAVIGLI-BLT|SCALA-LFR_or_CINQUEVIE-SNK,310,"classic contemporaneo","Budget basso o refresh: cintura + loafer o sneaker su guardaroba esistente"

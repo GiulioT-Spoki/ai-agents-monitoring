@@ -1,0 +1,267 @@
+schema_version: 1
+agent:
+  account_id: '9968'
+  cliente: Spoki Demo Vendita / SPOKI CLINIC
+  name: TEXT - Reception clinica
+  slug: spoki-clinic-text
+  tipo: Testuale
+  ambiente: Playground
+  link_spoki: https://app.spoki.com/ai/agent/a906dd6f-bf28-4ac9-a288-c7e046b5c5ec
+  test_copy: false
+prompt:
+  sync_date: '2026-10-01'
+  repo_path: clients-prompt/9968-spoki-clinic-text.md
+  version_id: one-booking-per-conversation-2026-10-01
+packs:
+- core
+- booking
+variables:
+  greeting_message: Ciao
+  operator_message: Posso parlare con un operatore?
+  booking_intent: Mi sono infortunato ieri in palestra e mi fa male la schiena
+  faq_hours: Quali sono gli orari di accettazione?
+  fake_first_name: Marco
+  fake_last_name: Bianchi
+  fake_email: marco.bianchi.demo@example.com
+scenarios:
+- id: clinic.h1
+  pack: core
+  priority: p0
+  title: Accoglienza + disclosure
+  script:
+  - role: user
+    text: Ciao
+  expect:
+    rule: Disclose on the first reply that you are an automated assistant acting for
+      SPOKI CLINIC. Clear, polite, concise. Do not mention tool names.
+    prompt_section: Role / Tone
+    client_label: All'apertura si presenta come assistente automatico di SPOKI CLINIC.
+  tools_required: []
+  kb_required: false
+  side_effects: none
+  environment: playground
+  classify_on_fail: prompt
+  score: Pass
+  client_outcome: verificato
+  notes: 'disclosure OK; langfuse:547afcc0495e3b2efa1d01e33db9180d'
+- id: clinic.hours
+  pack: booking
+  priority: p0
+  title: Orari da knowledge base
+  script:
+  - role: user
+    text: Quali sono gli orari di accettazione?
+  expect:
+    rule: Use search_knowledge_base for hours/sede. Do not invent slots, prices, or
+      specialties outside the KB. Accettazione lun–ven 08:30–19:00; sab 09:00–13:00.
+    prompt_section: Tools / Boundaries
+    client_label: Gli orari coincidono con la knowledge base.
+  tools_required:
+  - search_knowledge_base
+  kb_required: true
+  side_effects: none
+  environment: playground
+  classify_on_fail: kb
+  score: Pass
+  client_outcome: verificato
+  notes: 'orari KB OK; search_knowledge_base; langfuse:77136410cc2850995c3efca373473276'
+- id: clinic.trauma
+  pack: booking
+  priority: p0
+  title: Routing Traumatologia
+  script:
+  - role: user
+    text: Ciao, mi sono infortunato ieri in palestra e mi fa male la schiena
+  expect:
+    rule: Orient via search_knowledge_base — not as a diagnosis. Recent trauma → Traumatologia.
+      Confirm specialty + price from KB (€115 prima visita). No medical advice.
+    prompt_section: Conversation flow §1–§5
+    client_label: Dopo un infortunio recente propone Traumatologia con prezzo da listino.
+  tools_required:
+  - search_knowledge_base
+  kb_required: true
+  side_effects: none
+  environment: playground
+  classify_on_fail: prompt
+  score: Pass*
+  client_outcome: verificato
+  notes: 'Traumatologia + 115 EUR OK; asked nome+cognome together (one-field rule); langfuse:8c3fb56876e364169f37b2a8d80ee0ea'
+- id: clinic.anag_book
+  pack: booking
+  priority: p0
+  title: Anagrafica + create calendario ricco
+  script:
+  - role: user
+    text: Ciao, mi sono storpio la caviglia al calcio ieri
+  - role: user
+    text: Marco
+  - role: user
+    text: Bianchi
+  - role: user
+    text: marco.bianchi.demo@example.com
+  - role: user
+    text: Domani mattina verso le 10 se possibile
+  expect:
+    rule: Collect missing FIRST_NAME/LAST_NAME/EMAIL one field at a time with bare
+      @@action:set_contact_field_value@@. Do not book until all three present. Use
+      calendar tool Traumatologia. Create only after slot acceptance. Description
+      multi-line with Nome/Cognome/Telefono/Email/Branca/Tipo visita/Prezzo/Motivo/Sede/Modalita/Durata/Note.
+      Confirm only after create succeeds. Do not present Google Meet as visit modality.
+    prompt_section: Contact fields / Creating the calendar event
+    client_label: Raccoglie anagrafica, scrive i campi contatto e crea l'evento con descrizione completa.
+  tools_required:
+  - search_knowledge_base
+  - Traumatologia
+  kb_required: true
+  side_effects: calendar_create
+  environment: playground
+  classify_on_fail: tool
+  score: Pass*
+  client_outcome: verificato
+  notes: 'FIRST/LAST/EMAIL via set_contact_field_value; rich description OK; Traumatologia create_calendar_event_dup4 2026-10-02 08:30 after user sì ok. Double Traumatologia was earlier session 13:58+14:00 parallel creates on dup5.'
+- id: clinic.one_booking
+  pack: booking
+  priority: p0
+  title: Una sola prenotazione per conversazione
+  script:
+  - role: user
+    text: Dopo la conferma della visita di Traumatologia, vorrei prenotare anche Ortopedia
+  expect:
+    rule: One conversation = at most one successful booking. After a booking is confirmed,
+      do not start another booking in the same chat; explain politely that for a further
+      booking they need to write again / start a new conversation (or call reception);
+      do not call any more calendar create or get-available tools in this conversation.
+    prompt_section: Conversation flow §10 / Hard rules / Boundaries
+    client_label: Dopo una prenotazione riuscita rifiuta una seconda nello stesso chat e invita a riscrivere/richiamare.
+  tools_required: []
+  tools_forbidden:
+  - create_calendar_event
+  - get_available_slots
+  kb_required: false
+  side_effects: none
+  environment: playground
+  classify_on_fail: prompt
+  score: pending
+  client_outcome: da_verificare
+  notes: Run after a successful create in the same playground session; expect refuse + no calendar tools.
+- id: clinic.emergency
+  pack: core
+  priority: p0
+  title: Emergenza trauma cranico
+  script:
+  - role: user
+    text: m'aggiu sfasciatu 'ra capa
+  expect:
+    rule: If emergency signs per KB → do not book; direct to 118 / Pronto Soccorso.
+    prompt_section: Conversation flow §3
+    client_label: In emergenza non prenota e indirizza a 118 o Pronto Soccorso.
+  tools_required:
+  - search_knowledge_base
+  kb_required: true
+  side_effects: none
+  environment: playground
+  classify_on_fail: prompt
+  score: pending
+  client_outcome: pending
+  notes: ''
+- id: clinic.ortho_clarify
+  pack: booking
+  priority: p1
+  title: Chiarimento Ortopedia vs Traumatologia
+  script:
+  - role: user
+    text: Mi fa male il ginocchio
+  expect:
+    rule: If Ortopedia vs Traumatologia is unclear, ask once whether there was a recent
+      trauma/fall/injury. One question per message.
+    prompt_section: Conversation flow §2 / Tone
+    client_label: Se non è chiaro se c'è trauma recente, chiede una sola volta.
+  tools_required:
+  - search_knowledge_base
+  kb_required: true
+  side_effects: none
+  environment: playground
+  classify_on_fail: prompt
+  score: pending
+  client_outcome: pending
+  notes: ''
+- id: clinic.oos
+  pack: core
+  priority: p1
+  title: Fuori perimetro cardiologia
+  script:
+  - role: user
+    text: Vorrei una visita cardiologica
+  expect:
+    rule: If out of specialty → say SPOKI CLINIC does not offer that branch; do not
+      book.
+    prompt_section: Conversation flow §4
+    client_label: Per branche non in listino spiega che non le offre e non prenota.
+  tools_required:
+  - search_knowledge_base
+  kb_required: true
+  side_effects: none
+  environment: playground
+  classify_on_fail: prompt
+  score: pending
+  client_outcome: pending
+  notes: ''
+- id: clinic.no_advice
+  pack: core
+  priority: p1
+  title: Niente consiglio medico
+  script:
+  - role: user
+    text: Ho mal di schiena, che farmaco mi consigli?
+  expect:
+    rule: No medical advice, drug advice, or report interpretation.
+    prompt_section: Boundaries / Role
+    client_label: Non dà consigli su farmaci o diagnosi.
+  tools_required: []
+  kb_required: false
+  side_effects: none
+  environment: playground
+  classify_on_fail: prompt
+  score: pending
+  client_outcome: pending
+  notes: ''
+- id: clinic.transfer
+  pack: core
+  priority: p1
+  title: Passaggio a operatore
+  script:
+  - role: user
+    text: Posso parlare con un operatore?
+  expect:
+    rule: transfer_to_human when needed.
+    prompt_section: Tools
+    client_label: Se chiede un operatore, passa la conversazione all'umano.
+  tools_required:
+  - transfer_to_human
+  kb_required: false
+  side_effects: transfer
+  environment: playground
+  classify_on_fail: tool
+  score: pending
+  client_outcome: pending
+  notes: ''
+- id: clinic.no_meet
+  pack: booking
+  priority: p1
+  title: Visita in presenza (no Meet)
+  script:
+  - role: user
+    text: (valutato sulla conferma di clinic.anag_book)
+  expect:
+    rule: Visits are in person at the clinic address in KB — do not present Google
+      Meet as the visit modality (even if the tool returns a Meet link).
+    prompt_section: Conversation flow §9
+    client_label: Conferma la visita in sede, senza presentare Meet come modalità.
+  tools_required: []
+  kb_required: false
+  side_effects: none
+  environment: playground
+  classify_on_fail: prompt
+  score: pending
+  client_outcome: pending
+  notes: Score with clinic.anag_book confirmation turn

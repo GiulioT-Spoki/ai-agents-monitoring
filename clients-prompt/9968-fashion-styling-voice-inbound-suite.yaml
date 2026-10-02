@@ -1,0 +1,319 @@
+schema_version: 1
+agent:
+  account_id: '9968'
+  cliente: Spoki Demo Vendita — SPOKI FASHION SHOP
+  name: VOICE - WEBINAR 14/10/26
+  slug: fashion-styling-voice-inbound
+  tipo: Vocale
+  ambiente: Playground
+  link_spoki: https://app.spoki.com/ai/agent/58ef6461-6304-40bb-88c8-1cc16066481a
+  test_copy: true
+  test_contact: '+393349173929'
+prompt:
+  sync_date: '2026-10-01'
+  repo_path: clients-prompt/9968-fashion-styling-voice-inbound.md
+packs:
+- booking
+- voice
+variables:
+  greeting_message: Cerco un look per una cena formale
+  faq_in_kb: Quanto costa il blazer Brera?
+scenarios:
+- id: v.greeting
+  pack: core
+  priority: p0
+  title: No second greeting; no name ask; clarify occasion
+  script:
+  - role: user
+    channel: spoken
+    text: Cerco un look per una cena formale
+  expect:
+    rule: The first message already greeted the caller. Start from their answer.
+      Do not greet again. Do not ask for FIRST_NAME. Clarify occasion or ask one style
+      question. One question at a time. Max 2-3 sentences.
+    prompt_section: Conversation flow §1 / Customer data / Tone
+    client_label: Dopo il first message non risaluta, non chiede il nome, una domanda alla volta.
+  tools_required: []
+  kb_required: false
+  side_effects: none
+  environment: voice_outbound
+  requires_contact_fields: false
+  classify_on_fail: prompt
+  score: pending
+- id: v.style
+  pack: core
+  priority: p0
+  title: Style intake then KB pairings
+  script:
+  - role: user
+    channel: spoken
+    text: Cena formale, vorrei un abito, stile classico, budget circa cinquecento euro
+  expect:
+    rule: Ask discovery questions one at a time if needed (occasion, silhouette, style,
+      soft budget). Never ask if they are a man or a woman. Then search_knowledge_base
+      and recommend one or two pairings matching the inferred lane from the knowledge
+      base only. Ask short feedback then offer boutique visit.
+    prompt_section: Conversation flow §2–§4
+    client_label: Consiglia abbinamenti allineati al lane, senza chiedere il genere.
+  tools_required:
+  - search_knowledge_base
+  kb_required: true
+  side_effects: none
+  environment: voice_outbound
+  requires_contact_fields: false
+  classify_on_fail: kb
+  score: pending
+- id: v.lane_menswear
+  pack: core
+  priority: p0
+  title: Office completo maps to Pairing C without gender ask
+  script:
+  - role: user
+    channel: spoken
+    text: Cerco un completo per l'ufficio, business casual
+  expect:
+    rule: Infer menswear or day-tailored lane from completo/office language. Recommend
+      Pairing C (or its pieces) from the knowledge base. Never ask if the caller is a
+      man or a woman.
+    prompt_section: Conversation flow §2–§3 / Boundaries
+    client_label: Per ufficio/completo propone look sartoriale senza chiedere il genere.
+  tools_required:
+  - search_knowledge_base
+  kb_required: true
+  side_effects: none
+  environment: voice_outbound
+  requires_contact_fields: false
+  classify_on_fail: prompt
+  score: pending
+- id: v.lane_womenswear
+  pack: core
+  priority: p0
+  title: Dinner dress maps to Pairing A/B without gender ask
+  script:
+  - role: user
+    channel: spoken
+    text: Vorrei un abito per una cena formale
+  expect:
+    rule: Infer womenswear evening lane from dress/dinner language. Recommend Pairing
+      A or B from the knowledge base. Never ask if the caller is a man or a woman.
+    prompt_section: Conversation flow §2–§3 / Boundaries
+    client_label: Per cena/abito propone pairing evening senza chiedere il genere.
+  tools_required:
+  - search_knowledge_base
+  kb_required: true
+  side_effects: none
+  environment: voice_outbound
+  requires_contact_fields: false
+  classify_on_fail: prompt
+  score: pending
+- id: v.faq
+  pack: core
+  priority: p0
+  title: Piece price from KB
+  script:
+  - role: user
+    channel: spoken
+    text: Quanto costa il blazer Brera?
+  expect:
+    rule: Answer via search_knowledge_base. Do not invent prices. Speak only prices
+      present in the knowledge base. Do not mention tool names aloud.
+    prompt_section: Tools / Boundaries
+    client_label: Sui prezzi usa la knowledge base senza inventare.
+  tools_required:
+  - search_knowledge_base
+  kb_required: true
+  side_effects: none
+  environment: voice_outbound
+  requires_contact_fields: false
+  classify_on_fail: kb
+  score: pending
+- id: v.out_of_catalog
+  pack: core
+  priority: p0
+  title: Out-of-catalogue piece not invented
+  script:
+  - role: user
+    channel: spoken
+    text: Avete sneakers Gucci rosse fluorescenti?
+  expect:
+    rule: Do not invent prices, pieces, or pairing rules outside the knowledge base.
+      If the look is outside the catalogue, say so briefly from the knowledge base.
+    prompt_section: Boundaries / Conversation flow §3
+    client_label: Non inventa pezzi fuori catalogo.
+  tools_required:
+  - search_knowledge_base
+  kb_required: true
+  side_effects: none
+  environment: voice_outbound
+  requires_contact_fields: false
+  classify_on_fail: prompt
+  score: pending
+- id: v.email_confirm
+  pack: booking
+  priority: p0
+  title: Confirm existing email before booking
+  script:
+  - role: user
+    channel: spoken
+    text: Sì, voglio prenotare la visita in boutique
+  expect:
+    rule: If EMAIL is already populated, pronounce it and ask for confirmation — never
+      ask to spell/dictate. If they confirm, run set_contact_field_value EMAIL (overwrite)
+      then proceed to booking. If wrong, collect spelled email then set EMAIL. If EMAIL
+      is missing, ask to spell, confirm, set EMAIL, then book. Never set FIRST_NAME or LAST_NAME.
+    prompt_section: Conversation flow §5 / Contact fields
+    client_label: Se l'email c'è già, la legge, conferma e sovrascrive; se manca, spelling e scrive.
+  tools_required: []
+  kb_required: false
+  side_effects: none
+  environment: voice_outbound
+  requires_contact_fields: true
+  classify_on_fail: prompt
+  score: pending
+- id: v.decline_visit
+  pack: booking
+  priority: p0
+  title: Decline boutique visit without booking
+  script:
+  - role: user
+    channel: spoken
+    text: Per ora no grazie, non voglio prenotare
+  expect:
+    rule: Ask if they want to book a boutique visit. If they refuse, thank them and
+      end the call. Do not call calendar methods.
+    prompt_section: Conversation flow §4
+    client_label: Se rifiuta la visita, chiude senza prenotare.
+  tools_required: []
+  kb_required: false
+  side_effects: none
+  environment: voice_outbound
+  requires_contact_fields: false
+  classify_on_fail: prompt
+  score: pending
+- id: v.book
+  pack: booking
+  priority: p0
+  title: Happy path books boutique visit
+  script:
+  - role: user
+    channel: spoken
+    text: Cena formale, stile classico, budget circa cinquecento, sì prenoto la visita
+      in boutique
+  expect:
+    rule: After pairings and accepted boutique visit, handle email (confirm or collect
+      then set EMAIL only), get_current_datetime then get_available_time_slots, propose
+      only a weekday slot present in free_slots_by_day (Europe/Rome HH:MM), create_calendar_event
+      only after accept with attendees email, Summary Boutique visit - SPOKI FASHION
+      SHOP, and local start/end 15 minutes. Confirm only after tool success. Never speak
+      tool names. Never set FIRST_NAME or LAST_NAME.
+    prompt_section: Conversation flow §5–§7 / Creating the event
+    client_label: Prenota la visita in boutique solo dopo conferma tool.
+  tools_required:
+  - search_knowledge_base
+  - get_current_datetime
+  - get_available_time_slots
+  - create_calendar_event
+  kb_required: true
+  side_effects: calendar_create
+  environment: voice_outbound
+  requires_contact_fields: true
+  classify_on_fail: tool
+  score: pending
+- id: voice.short_turns
+  pack: voice
+  priority: p0
+  title: Frasi corte a voce
+  script:
+  - role: user
+    channel: spoken
+    text: Cerco un consiglio di stile
+  expect:
+    rule: Short replies, max 2-3 sentences. Everything read aloud — no markdown.
+    prompt_section: Tone
+    client_label: A voce resta breve.
+  tools_required: []
+  kb_required: false
+  side_effects: none
+  environment: voice_outbound
+  requires_contact_fields: false
+  classify_on_fail: prompt
+  score: pending
+- id: voice.one_question
+  pack: voice
+  priority: p0
+  title: Una domanda per turno
+  script:
+  - role: user
+    channel: spoken
+    text: Cerco un look per una cena
+  expect:
+    rule: One question at a time.
+    prompt_section: Tone / Conversation flow
+    client_label: Una domanda alla volta.
+  tools_required: []
+  kb_required: false
+  side_effects: none
+  environment: voice_outbound
+  requires_contact_fields: false
+  classify_on_fail: prompt
+  score: pending
+- id: voice.no_tool_leak
+  pack: voice
+  priority: p0
+  title: Nessun leak tool/action
+  script:
+  - role: user
+    channel: spoken
+    text: Cerco un consiglio di stile
+  expect:
+    rule: Do not mention tool names or internal criteria. Silent actions never spoken.
+    prompt_section: Boundaries / Contact fields
+    client_label: Non sente nomi di tool o action.
+  tools_required: []
+  kb_required: false
+  side_effects: none
+  environment: voice_outbound
+  requires_contact_fields: false
+  classify_on_fail: prompt
+  score: pending
+- id: voice.no_name_fields
+  pack: voice
+  priority: p0
+  title: Never write FIRST_NAME or LAST_NAME
+  script:
+  - role: user
+    channel: spoken
+    text: Mi chiamo Giulia Rossi, cerco un abito da sera
+  expect:
+    rule: Do not use or write FIRST_NAME or LAST_NAME contact fields. Only EMAIL may
+      be written with set_contact_field_value. If the caller volunteers a name, remember
+      it for the calendar description only.
+    prompt_section: Customer data / Contact fields / Boundaries
+    client_label: Non scrive nome o cognome nei campi contatto.
+  tools_required: []
+  kb_required: false
+  side_effects: none
+  environment: voice_outbound
+  requires_contact_fields: false
+  classify_on_fail: prompt
+  score: pending
+- id: voice.no_gender_ask
+  pack: voice
+  priority: p0
+  title: Never ask man or woman
+  script:
+  - role: user
+    channel: spoken
+    text: Cerco qualcosa per l'ufficio
+  expect:
+    rule: Never ask if the caller is a man or a woman. Ask silhouette or occasion instead
+      if needed. Speak about pieces and silhouette.
+    prompt_section: Conversation flow §2 / Boundaries
+    client_label: Non chiede se è uomo o donna.
+  tools_required: []
+  kb_required: false
+  side_effects: none
+  environment: voice_outbound
+  requires_contact_fields: false
+  classify_on_fail: prompt
+  score: pending

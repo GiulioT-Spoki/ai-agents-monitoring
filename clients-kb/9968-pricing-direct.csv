@@ -1,0 +1,39 @@
+# Spoki Demo Vendita 9968 — listino clienti diretti (pubblico)
+# INTERNAL / TEAM REFERENCE ONLY — do NOT upload to the Voice demo agent KB.
+# Voice demo rule: any price question → defer to Spoki referente after the call; no live transfer; no euro quotes.
+# Source of truth: https://spoki.com/it/prezzi
+# Checked: 2026-09-23. Currency EUR, VAT excluded.
+# Billing: quarterly ≈ −10%, annual ≈ −20% vs monthly (page billingToggle).
+#
+segment,row_type,plan,conversations_included,billing,price_eur_per_month,unit,notes,speakable_it,agent_may_quote
+direct,plan,Free,900,monthly,0,subscription,"Basic WhatsApp live chat only; not full AI Voice","Il piano Free è a zero euro al mese, live chat WhatsApp base, non include l'offerta AI Voice completa",no
+direct,plan,Service,900,monthly,49,subscription,"Customer support and automations; unlimited operators and contacts","Service, a novecento conversazioni al mese, parte da quarantanove euro al mese IVA esclusa",no
+direct,plan,Service,900,quarterly,44,subscription,"Trimestrale: -10% vs mensile (floor 49×0.9); fatturato ogni 3 mesi","Service trimestrale a novecento conversazioni: quarantaquattro euro al mese IVA esclusa, fatturato ogni tre mesi",no
+direct,plan,Service,900,annual,39,subscription,"Annual: -20% vs monthly","Service annuale a novecento conversazioni: trentanove euro al mese IVA esclusa",no
+direct,plan,Marketing,900,monthly,99,subscription,"Broadcasts and campaigns","Marketing, a novecento conversazioni al mese, parte da novantanove euro al mese IVA esclusa",no
+direct,plan,Marketing,900,quarterly,89,subscription,"Trimestrale: -10% vs mensile (floor 99×0.9)","Marketing trimestrale a novecento conversazioni: ottantanove euro al mese IVA esclusa, fatturato ogni tre mesi",no
+direct,plan,Marketing,900,annual,79,subscription,"Annual billing","Marketing annuale a novecento conversazioni: settantanove euro al mese IVA esclusa",no
+direct,plan,Sales,900,monthly,149,subscription,"Selling on WhatsApp; Voice/usage discussed with plan","Sales, a novecento conversazioni al mese, parte da centoquarantanove euro al mese IVA esclusa",no
+direct,plan,Sales,900,quarterly,134,subscription,"Trimestrale: -10% vs mensile (floor 149×0.9)","Sales trimestrale a novecento conversazioni: centotrentaquattro euro al mese IVA esclusa, fatturato ogni tre mesi",no
+direct,plan,Sales,900,annual,119,subscription,"Annual billing","Sales annuale a novecento conversazioni: centodiciannove euro al mese IVA esclusa",no
+direct,plan,Marketing,2400,monthly,189,subscription,"From public overage example base 189€ / 2400","Marketing a duemilaquattrocento conversazioni, listino mensile orientativo centottantanove euro al mese IVA esclusa",no
+direct,plan,Marketing,2400,quarterly,170,subscription,"Trimestrale: -10% vs mensile (floor 189×0.9)","Marketing trimestrale a duemilaquattrocento conversazioni: centosettanta euro al mese IVA esclusa, fatturato ogni tre mesi",no
+direct,plan,Marketing,2400,annual,151,subscription,"From page profile Marketing and campaigns","Marketing annuale a duemilaquattrocento conversazioni: centocinquantuno euro al mese IVA esclusa",no
+direct,plan,Sales,4800,monthly,349,subscription,"Derived as annual/0.8 from 279; confirm on slider before hard quote","Sales a quattromilaottocento conversazioni in mensile: circa trecentoquarantanove euro al mese IVA esclusa; per il preventivo esatto parla col referente",no
+direct,plan,Sales,4800,quarterly,314,subscription,"Trimestrale: -10% vs mensile (floor 349×0.9)","Sales trimestrale a quattromilaottocento conversazioni: circa trecentoquattordici euro al mese IVA esclusa, fatturato ogni tre mesi",no
+direct,plan,Sales,4800,annual,279,subscription,"From page profile multichannel sales","Sales annuale a quattromilaottocento conversazioni: duecentosettantanove euro al mese IVA esclusa",no
+direct,rule,any,other,any,,,"Volumes 14000+ or tiers not listed","Per fasce di volume diverse da queste, il prezzo esatto lo conferma il referente Spoki",no
+direct,rule,billing_discounts,n/a,n/a,,,"UI: monthly full price; quarterly Save 10%; yearly Save 20%. Price shown is EUR per month.","Si può pagare mensile, trimestrale meno dieci percento, o annuale meno venti percento; la cifra è sempre al mese IVA esclusa",no
+direct,channel_estimate,WhatsApp_utility,n/a,payg,0.025,credit_per_conversation,"Approx from pricing page; Meta rates vary by country/category","I crediti canale WhatsApp utility sono nell'ordine di circa zero virgola zero venticinque euro a conversazione, stimati",no
+direct,channel_estimate,WhatsApp_marketing,n/a,payg,0.0658,credit_per_conversation,"Approx from pricing page","I crediti canale WhatsApp marketing sono nell'ordine di circa zero virgola zero sessantacinque euro a conversazione, stimati",no
+direct,channel_estimate,SMS,n/a,payg,0.045,credit_per_sms,"Approx from pricing page","SMS circa zero virgola zero quarantacinque euro a messaggio, stimato",no
+direct,channel_estimate,Voice_minute,n/a,payg,,credit_per_minute,"Page range about 0.05–0.30 EUR/min; exact quote referente","I minuti Voice sono a consumo, tipicamente da circa cinque a trenta centesimi al minuto; cifra esatta col referente",no
+direct,support_addon,Support_Base,n/a,monthly,0,addon,"Included guidance; up to 3 tickets/month","Supporto Base da zero euro al mese",no
+direct,support_addon,Support_Standard,n/a,monthly,49,addon,"Priority activation help; 10 tickets/month","Supporto Standard da quarantanove euro al mese IVA esclusa",no
+direct,support_addon,Support_Advanced,n/a,monthly,199,addon,"Success call; AI consulting items on page","Supporto Avanzato da centonovantanove euro al mese IVA esclusa",no
+direct,support_addon,Support_Premium,n/a,monthly,999,addon,"Dedicated AM; strategic calls","Supporto Premium da novecentonovantanove euro al mese IVA esclusa",no
+direct,rule,billing,n/a,n/a,,,"Two wallets: subscription = included conversations; prepaid credits = channel fees; credits do not expire","Il piano paga le conversazioni incluse; i crediti prepagati pagano WhatsApp Meta, SMS e Voice; i crediti non scadono",no
+direct,rule,overage,n/a,n/a,,,"Can exceed plan up to 3x included conversations at +25% per extra conversation; above 3x must upgrade; overage billed every 30 days even on quarterly/annual","Si può sforare fino a tre volte le conversazioni del piano con un sovrapprezzo del venticinque percento; le eccedenze si fatturano ogni trenta giorni anche su trimestrale o annuale",no
+direct,rule,operators,n/a,n/a,,,"No per-seat fee on paid plans; unlimited operators and contacts","Nessun costo a posto operatore: operatori e contatti illimitati sui piani a pagamento",no
+direct,rule,trial,n/a,n/a,,,"Free trial exists; no card required; not the same as Free plan","Esiste una prova gratuita senza carta; non confonderla col piano Free",no
+direct,rule,setup,n/a,n/a,,,"No setup fee on standard plans; WhatsApp Cloud API onboarding required","Nessun setup fee sui piani standard; serve onboarding per attivare WhatsApp Cloud API",no

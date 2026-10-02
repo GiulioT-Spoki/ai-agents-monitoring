@@ -1,0 +1,318 @@
+schema_version: 1
+agent:
+  account_id: "9968"
+  cliente: Spoki Demo Vendita / Spoki Commerce
+  name: "[Template] Voice — Ecommerce order status (Shopify)"
+  slug: ecommerce-orders-voice-inbound
+  tipo: Vocale
+  ambiente: Entrambi
+  link_spoki: ""
+  test_copy: true
+  twin_text_link: ""
+  test_contact: "+393349173929"
+prompt:
+  sync_date: "2026-09-29"
+  repo_path: clients-prompt/9968-ecommerce-orders-voice-inbound.md
+  version_id: "2026-09-29-pack-v1"
+packs:
+  - support
+  - voice
+variables:
+  company_name: Spoki Commerce
+  shop_tool: neew-shopify
+  real_order_id: REPLACE_WITH_REAL_ORDER
+  greeting_message: "Ciao, vorrei sapere dove è il mio ordine"
+scenarios:
+  - id: ecom.h1
+    pack: support
+    priority: p0
+    title: Intent senza re-greet
+    script:
+      - role: user
+        channel: text
+        text: "{{greeting_message}}"
+    expect:
+      rule: First Message already greeted. Do not greet again. One question.
+      prompt_section: Flow / Tone
+      client_label: Non risaluta.
+    tools_required: []
+    kb_required: false
+    side_effects: none
+    environment: twin_text
+    requires_contact_fields: true
+    classify_on_fail: prompt
+    score: pending
+
+  - id: ecom.p1
+    pack: support
+    priority: p0
+    title: Prodotto + WhatsApp PRODUCT_LINK segment
+    script:
+      - role: user
+        channel: text
+        text: Cerco un blush, mandami il link su WhatsApp
+    expect:
+      rule: search_products or get_product; write PRODUCT_LINK with product handle only (fixed WA prefix is https://spoki-dev.myshopify.com/products/); trigger_automation 571639; confirm send only after both succeed.
+      prompt_section: PRODUCT_LINK / Products
+      client_label: Scheda WA con pezzo dinamico PRODUCT_LINK.
+    tools_required:
+      - neew-shopify
+    kb_required: false
+    side_effects: none
+    environment: twin_text
+    requires_contact_fields: true
+    classify_on_fail: tool
+    score: pending
+
+  - id: ecom.o1
+    pack: support
+    priority: p0
+    title: Get Order by ID happy path
+    script:
+      - role: user
+        channel: text
+        text: "Lo stato dell'ordine {{real_order_id}}"
+    expect:
+      rule: Call get_order_by_id on neew-shopify. Speak only fulfillment status and tracking if present. Do not invent.
+      prompt_section: Order by id
+      client_label: Stato ordine reale da Shopify.
+    tools_required:
+      - neew-shopify
+    kb_required: false
+    side_effects: none
+    environment: twin_text
+    requires_contact_fields: false
+    classify_on_fail: tool
+    score: pending
+
+  - id: ecom.o2
+    pack: support
+    priority: p0
+    title: Ordine non trovato
+    script:
+      - role: user
+        channel: text
+        text: "Ordine 99999999"
+    expect:
+      rule: If tool fails or returns nothing, do not invent status; offer email lookup or person / staff note.
+      prompt_section: Order by id §4
+      client_label: Non inventa se ordine assente.
+    tools_required:
+      - neew-shopify
+    kb_required: false
+    side_effects: none
+    environment: twin_text
+    requires_contact_fields: false
+    classify_on_fail: prompt
+    score: pending
+
+  - id: ecom.c1
+    pack: support
+    priority: p0
+    title: Lista ordini per email
+    script:
+      - role: user
+        channel: text
+        text: Quali sono i miei ultimi ordini?
+    expect:
+      rule: If EMAIL already populated, confirm it aloud (closed yes/no) then get_customer_orders on neew-shopify; do not ask to dictate email or insist on order number first; summarize at most two or three recent orders.
+      prompt_section: Anagrafica / Order status
+      client_label: Conferma email popolata poi elenco Shopify.
+    tools_required:
+      - neew-shopify
+    kb_required: false
+    side_effects: none
+    environment: twin_text
+    requires_contact_fields: true
+    classify_on_fail: prompt
+    score: pending
+
+  - id: ecom.c2
+    pack: support
+    priority: p1
+    title: EMAIL popolata sbagliata — overwrite
+    script:
+      - role: user
+        channel: text
+        text: Quali sono i miei ultimi ordini?
+      - role: user
+        channel: text
+        text: No, l'email è sbagliata. Usa nuova.email@example.com
+    expect:
+      rule: After caller rejects populated EMAIL, spell/confirm new email, set_contact_field_value EMAIL, then get_customer_orders with the new value.
+      prompt_section: Anagrafica
+      client_label: Sovrascrive EMAIL se l'utente la smentisce.
+    tools_required:
+      - neew-shopify
+    kb_required: false
+    side_effects: write
+    environment: twin_text
+    requires_contact_fields: true
+    classify_on_fail: prompt
+    score: pending
+
+  - id: ecom.f1
+    pack: support
+    priority: p0
+    title: FAQ finestra reso
+    script:
+      - role: user
+        channel: text
+        text: Entro quanti giorni posso fare un reso?
+    expect:
+      rule: Call search_knowledge_base; answer only with returned return_window facts (14 days). Do not invent.
+      prompt_section: FAQ
+      client_label: Policy reso da KB.
+    tools_required:
+      - search_knowledge_base
+    kb_required: true
+    side_effects: none
+    environment: twin_text
+    requires_contact_fields: false
+    classify_on_fail: kb
+    score: pending
+
+  - id: ecom.n1
+    pack: support
+    priority: p0
+    title: Pacco danneggiato → add_note
+    script:
+      - role: user
+        channel: text
+        text: Il pacco è arrivato danneggiato, voglio un rimborso
+      - role: user
+        channel: text
+        text: Sì, fate follow-up
+    expect:
+      rule: Do not promise refund. Summarize, closed yes, then @@action:add_note@@; confirm staff follow-up within one business day. No ticket id.
+      prompt_section: Note and close
+      client_label: Nota staff senza promettere rimborso.
+    tools_required: []
+    kb_required: false
+    side_effects: none
+    environment: twin_text
+    requires_contact_fields: true
+    classify_on_fail: prompt
+    score: pending
+
+  - id: ecom.t1
+    pack: support
+    priority: p0
+    title: Persona ora
+    script:
+      - role: user
+        channel: text
+        text: Voglio parlare con una persona
+    expect:
+      rule: Accept live person. Twin uses transfer_to_human; voice uses Workflow. Optional add_note if facts already collected.
+      prompt_section: Goal / Flow §5
+      client_label: Handoff a persona.
+    tools_required:
+      - transfer_to_human
+    kb_required: false
+    side_effects: transfer
+    environment: twin_text
+    requires_contact_fields: false
+    classify_on_fail: prompt
+    score: pending
+
+  - id: ecom.g1
+    pack: support
+    priority: p1
+    title: Nessuna vendita / no draft
+    script:
+      - role: user
+        channel: text
+        text: Mi consigli un prodotto e prepari un carrello?
+    expect:
+      rule: Do not call search_products, get_product, or draft_order / create_draft_order. Stay on order/support scope.
+      prompt_section: Boundaries
+      client_label: Zero tool sales.
+    tools_required: []
+    kb_required: false
+    side_effects: none
+    environment: twin_text
+    requires_contact_fields: false
+    classify_on_fail: prompt
+    score: pending
+
+  - id: voice.short_turns
+    pack: voice
+    priority: p0
+    title: Frasi corte a voce
+    script:
+      - role: user
+        channel: spoken
+        text: "{{greeting_message}}"
+    expect:
+      rule: Two or three sentences per turn.
+      prompt_section: Tone
+      client_label: Turni brevi a voce.
+    tools_required: []
+    kb_required: false
+    side_effects: none
+    environment: voice_playground
+    requires_contact_fields: false
+    classify_on_fail: prompt
+    score: pending
+
+  - id: voice.one_question
+    pack: voice
+    priority: p0
+    title: Una domanda per turno
+    script:
+      - role: user
+        channel: spoken
+        text: "{{greeting_message}}"
+    expect:
+      rule: One question only.
+      prompt_section: Tone
+      client_label: Una domanda a voce.
+    tools_required: []
+    kb_required: false
+    side_effects: none
+    environment: voice_playground
+    requires_contact_fields: false
+    classify_on_fail: prompt
+    score: pending
+
+  - id: voice.no_tool_leak
+    pack: voice
+    priority: p0
+    title: Nessun leak tool a voce
+    script:
+      - role: user
+        channel: spoken
+        text: Dimmi lo stato del mio ordine
+    expect:
+      rule: Never read tool names, order JSON, or Workflow node names aloud.
+      prompt_section: Role / Boundaries
+      client_label: Nessun nome tool parlato.
+    tools_required: []
+    kb_required: false
+    side_effects: none
+    environment: voice_playground
+    requires_contact_fields: false
+    classify_on_fail: prompt
+    score: pending
+
+  - id: ecom.v-o1
+    pack: voice
+    priority: p0
+    title: Smoke outbound ordine reale
+    script:
+      - role: user
+        channel: spoken
+        text: "Vorrei lo stato dell'ordine {{real_order_id}}"
+    expect:
+      rule: get_order_by_id then spoken status; no URLs; confirm after tool success only.
+      prompt_section: Order by id
+      client_label: Smoke voce con contact reale.
+    tools_required:
+      - neew-shopify
+    kb_required: false
+    side_effects: none
+    environment: voice_outbound
+    requires_contact_fields: true
+    classify_on_fail: tool
+    score: pending
