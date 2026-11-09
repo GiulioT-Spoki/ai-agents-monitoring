@@ -19,7 +19,7 @@ Se il prompt vocale “sembra” un prompt WhatsApp, è già un sospetto primari
 | --- | --- | --- |
 | Canale | WhatsApp / chat | Telefono: tutto viene letto ad alta voce |
 | Output | Prosa WhatsApp-safe (no markdown nelle risposte) | Niente markdown, simboli, elenchi, URL, emoji **nel parlato** |
-| Side effect | Token `@@action:...@@` | **Mai** `@@action`; solo tool server |
+| Side effect | Token `@@action:...@@` | Token `@@action:...@@` bare e **silent** (mai annunciati al chiamante), solo azioni abilitate sull'agente, in una sezione `# Contact fields (actions)`; tool server per il resto (es. TIM RETAIL 1384) |
 | Turn design | 1–3 frasi, una domanda | Max 2–3 frasi parlate, una domanda, anti-ripetizione, silenzio/rumore |
 | Apertura | Saluto nel flusso chat | First Message = campo UI separato; prompt: non risalutare |
 | Success | Meno centrale | Success Criteria per branching automazioni |
@@ -56,7 +56,7 @@ Se il prompt vocale “sembra” un prompt WhatsApp, è già un sospetto primari
 Confronta con un template in questa cartella, poi spunta:
 
 - [ ] Nessun riferimento a WhatsApp, “scrivere”, markdown nelle **risposte**, emoji, URL da leggere
-- [ ] Nessun token `@@action:...@@`
+- [ ] Ogni `@@action:...@@` è bare (no backtick/virgolette), silent, abilitato sull'agente e con id reali; niente action copiate dalla chat senza verifica
 - [ ] Nessun preambolo Generate-with-AI / ChatGPT (“Sure! Here’s a prompt…”)
 - [ ] Header `#` solo per strutturare istruzioni; non devono finire nel parlato
 - [ ] Ruolo esplicito: assistente vocale al telefono; inbound/outbound chiaro
@@ -165,11 +165,24 @@ Post-test audio:
 
 ---
 
+### Esempio `@@action` su voce (TIM RETAIL, account 1384)
+
+```
+# Contact fields (actions)
+
+Silent background writes, never mentioned to the caller:
+
+@@action:set_contact_field_value?field_code=FIRST_NAME@@
+@@action:set_contact_field_value?field_code=PUNTO_VENDITA@@
+@@action:add_note@@
+@@action:add_tags_to_contact?tag_ids=<TAG_ID>@@
+```
+
 ## 9. Gemello testuale (se esiste)
 
 Coppia voice/text: ___
 
-- [ ] Diff: rimosso dal voice tutto ciò che è solo testo (`@@action`, regole WhatsApp, multi-step lunghi da chat)
+- [ ] Diff: rimosso dal voice tutto ciò che è solo testo (regole WhatsApp, multi-step lunghi da chat); le `@@action` restano solo se abilitate e pensate per la chiamata
 - [ ] Nel voice restano solo flusso parlato + tool server + chiusura chiamata
 - [ ] Nessun copy-paste da chat senza passare dal filtro sezione 1
 
@@ -179,7 +192,7 @@ Coppia voice/text: ___
 
 - Liste ALWAYS/NEVER sempre più lunghe per “forzare” il modello
 - Knowledge nel prompt “per essere più sicuro”
-- `@@action` su voice sperando che funzioni come in chat
+- Copiare in voce le `@@action` del gemello chat senza verificare che siano abilitate sull'agente vocale e silent
 - Debug in produzione/automation prima del Playground
 - Metadati debug dentro il prompt Spoki (tienili fuori, come appendice Dimann)
 
